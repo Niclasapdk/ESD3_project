@@ -1,2 +1,2 @@
 # ESD3_project
-All project code for our hashcracking FPGA cluster
+All Files and code for our hashcracking FPGA cluster semester project

@@ -2,7 +2,7 @@
 (In Bits)
 
 - 6 (Cost input)
-- 16*8 (salt input)
+- 16 \cdot 8 (salt input)
 - 72*8 (passwdinput)
 - 24*8 (ctext/digest)
 - 18*32 (subkeys)

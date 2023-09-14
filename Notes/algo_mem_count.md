@@ -1,4 +1,9 @@
-# Bcrypt 
+# Memory Calculation for Potential Algorithms
+These Calculations are rough estimates for the total memory cost for each of the 3 algorithms the group consideres for implementation for the FPGA cluster.
+
+
+
+## Bcrypt 
 (In Bits)
 
 - $6$ (Cost input)
@@ -14,7 +19,7 @@
 - Total: $~68000$ Bits
 - BRAM: $33344$ Bits 
 
-# SHA 2
+## SHA 2
 (In Bits times 32)
 
 - $8$ (H0-H7)
@@ -26,7 +31,7 @@
 - $32$ (digest)
 - Total: $6080$ bits
 
-# SHA 3
+## SHA 3
 (In Bytes)
 
 - $128$ (Input)

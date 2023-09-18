@@ -1,0 +1,3 @@
+[submodule "litterature/high-speed_bcrypt"]
+	path = litterature/high-speed_bcrypt
+	url = git@github.com:rub-hgi/high-speed_bcrypt.git

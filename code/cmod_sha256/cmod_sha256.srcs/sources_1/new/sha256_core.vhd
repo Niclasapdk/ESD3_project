@@ -49,6 +49,15 @@ architecture Behavioral of sha256_core is
     signal h5 : std_logic_vector(31 downto 0) := x"9b05688c";
     signal h6 : std_logic_vector(31 downto 0) := x"1f83d9ab";
     signal h7 : std_logic_vector(31 downto 0) := x"5be0cd19";
+
+    signal a : std_logic_vector(31 downto 0) := x"00000000";
+    signal b : std_logic_vector(31 downto 0) := x"00000000";
+    signal c : std_logic_vector(31 downto 0) := x"00000000";
+    signal d : std_logic_vector(31 downto 0) := x"00000000";
+    signal e : std_logic_vector(31 downto 0) := x"00000000";
+    signal f : std_logic_vector(31 downto 0) := x"00000000";
+    signal g : std_logic_vector(31 downto 0) := x"00000000";
+    signal h : std_logic_vector(31 downto 0) := x"00000000";
     
     constant k : kw_type := (
         X"428a2f98", X"71374491", X"b5c0fbcf", X"e9b5dba5",
@@ -88,10 +97,13 @@ architecture Behavioral of sha256_core is
         X"00000000", X"00000000", X"00000000", X"00000000"
     );
     signal w_buf : kw_type;
-    type sha256_core_state_type is (RESET, DONE, IDLE, PREP_MSG_0, PREP_MSG_1, PREP_MSG_2, PREP_MSG_3, HASH_1);
+    type sha256_core_state_type is (IDLE, PREP_MSG_0, PREP_MSG_1, PREP_MSG_2, PREP_MSG_3, HASH_1, HASH_2a, HASH_2b, HASH_2c, HASH_3, DONE);
     signal current_state, next_state : sha256_core_state_type;
     
     signal passwd : passwd_type;
+    
+    signal compression_counter : unsigned(6 downto 0);
+
 begin
     -- Current state logic.
     process(clk) 
@@ -101,10 +113,50 @@ begin
         end if;
     end process;
     -- Next state logic.
+    process(current_state, compression_counter, start)
+    begin
+        case current_state is 
+            when IDLE => 
+                if(start) then
+                    next_state <= PREP_MSG_0; 
+                else
+                    next_state <= IDLE;
+                end if; 
+            when PREP_MSG_0 =>
+                next_state <= PREP_MSG_1;
+            when PREP_MSG_1 => 
+                next_state <= PREP_MSG_2;
+            when PREP_MSG_2 =>     
+                next_state <= PREP_MSG_3;
+            when PREP_MSG_3 =>     
+                next_state <= HASH_1;
+            when HASH_1 =>
+                next_state <= HASH_2a;
+            when HASH_2a =>
+                if(compression_counter = 64) then
+                    next_state <= HASH_3;
+                else
+                    next_state <= HASH_2b;
+                end if;
+            when HASH_2b =>
+                next_state <= HASH_2c;
+            when HASH_2c =>
+                next_state <= HASH_2a;   
+            when HASH_3 =>
+                next_state <= DONE;   
+            when DONE =>
+                next_state <= DONE;
+        end case;
+    end process;
+
     -- Hash logic.
     process(clk, current_state)
+        variable temp1, temp2 : std_logic_vector(31 downto 0); 
     begin
         if (clk'event and clk = '1') then
+            a <= a; b <= b; c <= c; d <= d; e <= e; f <= f; g <= g; h <= h;
+            temp1 <= temp1; temp2 <= temp2; w <= w; w_buf <= w_buf;
+            passwd <= passwd; compression_counter <= compression_counter;
             case current_state is
                 when PREP_MSG_0 =>
                     w(0 to 15) <= w_buf(0 to 15);
@@ -113,7 +165,44 @@ begin
                 when PREP_MSG_2 =>
                     w(32 to 47) <= w_buf(32 to 47);
                 when PREP_MSG_3 =>
-                    w(48 to 63) <= w_buf(48 to 63);    
+                    w(48 to 63) <= w_buf(48 to 63);
+                when HASH_1 =>
+                    a <= h0;
+                    b <= h1;
+                    c <= h2;
+                    d <= h3;
+                    e <= h4;
+                    f <= h5;
+                    g <= h6;
+                    h <= h7;
+                when HASH_2a =>
+                    if (compression_counter = 64) then
+                        compression_counter <= 0;
+                    else
+                        temp1 <= std_logic_vector(unsigned(h) + unsigned(SIGMA_COMPRESS_1(e)) + unsigned((e and f) xor ((not e) and g)) + unsigned(k(compression_counter)) + unsigned(w(compression_counter)));
+                        temp2 <= std_logic_vector(unsigned(SIGMA_COMPRESS_0(a)) + unsigned((a and b) xor (a and c) xor (b and c)));
+                    end if;
+                when HASH_2b =>
+                    h <= g;
+                    g <= f;
+                    f <= e;
+                    e <= std_logic_vector(unsigned(d) + unsigned(temp1));
+                    d <= c;
+                    c <= b;
+                    b <= a;
+                    a <= std_logic_vector(unsigned(temp1) + unsigned(temp2));
+                when HASH_2c =>
+                    compression_counter <= compression_counter + 1;
+                when HASH_3 =>
+                    h0 <= std_logic_vector(unsigned(h0) + unsigned(a));
+                    h1 <= std_logic_vector(unsigned(h1) + unsigned(b));
+                    h2 <= std_logic_vector(unsigned(h2) + unsigned(c));
+                    h3 <= std_logic_vector(unsigned(h3) + unsigned(d));
+                    h4 <= std_logic_vector(unsigned(h4) + unsigned(e));
+                    h5 <= std_logic_vector(unsigned(h5) + unsigned(f));
+                    h6 <= std_logic_vector(unsigned(h6) + unsigned(g));
+                    h7 <= std_logic_vector(unsigned(h7) + unsigned(h));
+                when DONE =>
             end case;        
         end if;
     end process;
@@ -135,5 +224,8 @@ begin
     begin
         w_buf(i) <= std_logic_vector(unsigned(SIGMA_EXTEND_1(w_buf(i-2))) + unsigned(w_buf(i-7)) + unsigned(SIGMA_EXTEND_0(w_buf(i-15))) + unsigned(w_buf(i-16)));
     end generate;
+
+    done <= '1' when current_state = DONE else '0';
+    hash_out <= h0 & h1 & h2 & h3 & h4 & h5 & h6 & h7;
 
 end Behavioral;

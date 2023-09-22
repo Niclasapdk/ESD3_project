@@ -41,6 +41,8 @@ package sha256_pkg is
     function ROTL (a : std_logic_vector(31 downto 0); n : natural) return std_logic_vector;
     function SHR (a : std_logic_vector(31 downto 0); n : natural) return std_logic_vector;
     
+    function SIGMA_COMPRESS_0(x : std_logic_vector(31 downto 0)) return std_logic_vector;
+    function SIGMA_COMPRESS_1(x : std_logic_vector(31 downto 0)) return std_logic_vector;
 end package;
 
 package body sha256_pkg is
@@ -68,5 +70,15 @@ package body sha256_pkg is
     function SIGMA_EXTEND_1(x : std_logic_vector(31 downto 0)) return std_logic_vector is
     begin
         return ROTR(x,17) xor ROTR(x,19) xor SHR(x,10);
+    end function; 
+
+    function SIGMA_COMPRESS_0(x : std_logic_vector(31 downto 0)) return std_logic_vector is
+    begin
+        return ROTR(x,2) xor ROTR(x,13) xor ROTR(x,22);
+    end function;
+    
+    function SIGMA_COMPRESS_1(x : std_logic_vector(31 downto 0)) return std_logic_vector is
+    begin
+        return ROTR(x,6) xor ROTR(x,11) xor ROTR(x,25);
     end function; 
 end package body;

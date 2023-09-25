@@ -1,21 +1,21 @@
 ----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
--- 
+-- Company:
+-- Engineer:
+--
 -- Create Date: 22.09.2023 09:20:39
--- Design Name: 
+-- Design Name:
 -- Module Name: sha256_core - Behavioral
--- Project Name: 
--- Target Devices: 
--- Tool Versions: 
--- Description: 
--- 
--- Dependencies: 
--- 
+-- Project Name:
+-- Target Devices:
+-- Tool Versions:
+-- Description:
+--
+-- Dependencies:
+--
 -- Revision:
 -- Revision 0.01 - File Created
 -- Additional Comments:
--- 
+--
 ----------------------------------------------------------------------------------
 
 library IEEE;
@@ -58,7 +58,7 @@ architecture Behavioral of sha256_core is
     signal f : std_logic_vector(31 downto 0) := x"00000000";
     signal g : std_logic_vector(31 downto 0) := x"00000000";
     signal h : std_logic_vector(31 downto 0) := x"00000000";
-    
+
     constant k : kw_type := (
         X"428a2f98", X"71374491", X"b5c0fbcf", X"e9b5dba5",
         X"3956c25b", X"59f111f1", X"923f82a4", X"ab1c5ed5",
@@ -99,14 +99,14 @@ architecture Behavioral of sha256_core is
     signal w_buf : kw_type;
     type sha256_core_state_type is (IDLE, PREP_MSG_0, PREP_MSG_1, PREP_MSG_2, PREP_MSG_3, HASH_1, HASH_2a, HASH_2b, HASH_2c, HASH_3, DONE);
     signal current_state, next_state : sha256_core_state_type;
-    
+
     signal passwd : passwd_type;
-    
+
     signal compression_counter : unsigned(6 downto 0);
 
 begin
     -- Current state logic.
-    process(clk) 
+    process(clk)
     begin
         if (clk'event and clk = '1') then
             current_state <= next_state;
@@ -115,20 +115,20 @@ begin
     -- Next state logic.
     process(current_state, compression_counter, start)
     begin
-        case current_state is 
-            when IDLE => 
+        case current_state is
+            when IDLE =>
                 if(start) then
-                    next_state <= PREP_MSG_0; 
+                    next_state <= PREP_MSG_0;
                 else
                     next_state <= IDLE;
-                end if; 
+                end if;
             when PREP_MSG_0 =>
                 next_state <= PREP_MSG_1;
-            when PREP_MSG_1 => 
+            when PREP_MSG_1 =>
                 next_state <= PREP_MSG_2;
-            when PREP_MSG_2 =>     
+            when PREP_MSG_2 =>
                 next_state <= PREP_MSG_3;
-            when PREP_MSG_3 =>     
+            when PREP_MSG_3 =>
                 next_state <= HASH_1;
             when HASH_1 =>
                 next_state <= HASH_2a;
@@ -141,9 +141,9 @@ begin
             when HASH_2b =>
                 next_state <= HASH_2c;
             when HASH_2c =>
-                next_state <= HASH_2a;   
+                next_state <= HASH_2a;
             when HASH_3 =>
-                next_state <= DONE;   
+                next_state <= DONE;
             when DONE =>
                 next_state <= DONE;
         end case;
@@ -151,7 +151,7 @@ begin
 
     -- Hash logic.
     process(clk, current_state)
-        variable temp1, temp2 : std_logic_vector(31 downto 0); 
+        variable temp1, temp2 : std_logic_vector(31 downto 0);
     begin
         if (clk'event and clk = '1') then
             a <= a; b <= b; c <= c; d <= d; e <= e; f <= f; g <= g; h <= h;
@@ -203,22 +203,22 @@ begin
                     h6 <= std_logic_vector(unsigned(h6) + unsigned(g));
                     h7 <= std_logic_vector(unsigned(h7) + unsigned(h));
                 when DONE =>
-            end case;        
+            end case;
         end if;
     end process;
-    
+
     READ_PASSWD:
     for i in 0 to 15 generate
     begin -- Read password from input to internal array.
         passwd(i) <= passwd_in((i+1)*32-1 downto i*32);
     end generate;
-    
+
     POPULATE_W_BUF_0:
     for i in 0 to 15 generate
-    begin -- Read password into first 16 words into w buffer. :) 
+    begin -- Read password into first 16 words into w buffer. :)
         w_buf(i) <= passwd(i);
     end generate;
-    
+
     POPULATE_W_BUF_1:
     for i in 16 to 63 generate
     begin

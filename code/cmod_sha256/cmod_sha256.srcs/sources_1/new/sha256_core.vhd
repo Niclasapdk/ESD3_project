@@ -96,7 +96,25 @@ architecture Behavioral of sha256_core is
         X"00000000", X"00000000", X"00000000", X"00000000",
         X"00000000", X"00000000", X"00000000", X"00000000"
     );
-    signal w_buf : kw_type := w;
+    signal w_buf : kw_type := (
+        X"00000000", X"00000000", X"00000000", X"00000000",
+        X"00000000", X"00000000", X"00000000", X"00000000",
+        X"00000000", X"00000000", X"00000000", X"00000000",
+        X"00000000", X"00000000", X"00000000", X"00000000",
+        X"00000000", X"00000000", X"00000000", X"00000000",
+        X"00000000", X"00000000", X"00000000", X"00000000",
+        X"00000000", X"00000000", X"00000000", X"00000000",
+        X"00000000", X"00000000", X"00000000", X"00000000",
+        X"00000000", X"00000000", X"00000000", X"00000000",
+        X"00000000", X"00000000", X"00000000", X"00000000",
+        X"00000000", X"00000000", X"00000000", X"00000000",
+        X"00000000", X"00000000", X"00000000", X"00000000",
+        X"00000000", X"00000000", X"00000000", X"00000000",
+        X"00000000", X"00000000", X"00000000", X"00000000",
+        X"00000000", X"00000000", X"00000000", X"00000000",
+        X"00000000", X"00000000", X"00000000", X"00000000"
+    );
+    
     type sha256_core_state_type is (IDLE, RST, READ_MSG, PREP_MSG_0, PREP_MSG_1, PREP_MSG_2, PREP_MSG_3, HASH_1, HASH_2a, HASH_2b, HASH_2c, HASH_3, DONE);
     signal current_state, next_state : sha256_core_state_type;
 
@@ -114,7 +132,7 @@ begin
         end if;
     end process;
     -- Next state logic.
-    process(current_state, compression_counter, start)
+    process(current_state, compression_counter, start, reset)
     begin
         case current_state is
             when IDLE =>
@@ -163,7 +181,7 @@ begin
     begin
         if (clk'event and clk = '1') then
             a <= a; b <= b; c <= c; d <= d; e <= e; f <= f; g <= g; h <= h;
-            temp1 := temp1; temp2 := temp2; w <= w; w_buf <= w_buf;
+            temp1 := temp1; temp2 := temp2; w <= w;
             passwd <= passwd; compression_counter <= compression_counter;
             case current_state is
                 when IDLE =>

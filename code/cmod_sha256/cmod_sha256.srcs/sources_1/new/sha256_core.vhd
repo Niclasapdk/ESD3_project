@@ -32,6 +32,7 @@ entity sha256_core is
     port(
         clk : in std_logic;
         start : in std_logic;
+        reset : in std_logic;
         passwd_in : in std_logic_vector(511 downto 0);
         hash_out : out std_logic_vector(255 downto 0);
         hash_done: out std_logic
@@ -93,16 +94,16 @@ architecture Behavioral of sha256_core is
         X"00000000", X"00000000", X"00000000", X"00000000",
         X"00000000", X"00000000", X"00000000", X"00000000",
         X"00000000", X"00000000", X"00000000", X"00000000",
-        X"00000000", X"00000000", X"00000000", X"00000000",
         X"00000000", X"00000000", X"00000000", X"00000000"
     );
-    signal w_buf : kw_type;
-    type sha256_core_state_type is (IDLE, PREP_MSG_0, PREP_MSG_1, PREP_MSG_2, PREP_MSG_3, HASH_1, HASH_2a, HASH_2b, HASH_2c, HASH_3, DONE);
+    signal w_buf : kw_type := w;
+    type sha256_core_state_type is (IDLE, RST, READ_MSG, PREP_MSG_0, PREP_MSG_1, PREP_MSG_2, PREP_MSG_3, HASH_1, HASH_2a, HASH_2b, HASH_2c, HASH_3, DONE);
     signal current_state, next_state : sha256_core_state_type;
 
-    signal passwd : passwd_type;
+    signal passwd : passwd_type := (x"00000000",x"00000000", x"00000000", x"00000000", x"00000000", x"00000000", x"00000000", x"00000000", x"00000000", x"00000000", x"00000000", x"00000000", x"00000000", x"00000000", x"00000000", x"00000000");
+    signal passwd_internal : passwd_type := (x"00000000",x"00000000", x"00000000", x"00000000", x"00000000", x"00000000", x"00000000", x"00000000", x"00000000", x"00000000", x"00000000", x"00000000", x"00000000", x"00000000", x"00000000", x"00000000");
 
-    signal compression_counter : unsigned(6 downto 0);
+    signal compression_counter : unsigned(6 downto 0) := "0000000";
 
 begin
     -- Current state logic.
@@ -117,11 +118,17 @@ begin
     begin
         case current_state is
             when IDLE =>
-                if(start) then
-                    next_state <= PREP_MSG_0;
+                if (reset = '1') then
+                    next_state <= RST;
+                elsif (start = '1') then
+                    next_state <= READ_MSG;
                 else
                     next_state <= IDLE;
                 end if;
+            when RST =>
+                next_state <= IDLE;
+            when READ_MSG =>
+                next_state <= PREP_MSG_0;
             when PREP_MSG_0 =>
                 next_state <= PREP_MSG_1;
             when PREP_MSG_1 =>
@@ -146,6 +153,7 @@ begin
                 next_state <= DONE;
             when DONE =>
                 next_state <= DONE;
+            when others =>
         end case;
     end process;
 
@@ -155,9 +163,22 @@ begin
     begin
         if (clk'event and clk = '1') then
             a <= a; b <= b; c <= c; d <= d; e <= e; f <= f; g <= g; h <= h;
-            temp1 <= temp1; temp2 <= temp2; w <= w; w_buf <= w_buf;
+            temp1 := temp1; temp2 := temp2; w <= w; w_buf <= w_buf;
             passwd <= passwd; compression_counter <= compression_counter;
             case current_state is
+                when IDLE =>
+                when RST =>
+                    h0 <= x"6a09e667";
+                    h1 <= x"bb67ae85";
+                    h2 <= x"3c6ef372";
+                    h3 <= x"a54ff53a";
+                    h4 <= x"510e527f";
+                    h5 <= x"9b05688c";
+                    h6 <= x"1f83d9ab";
+                    h7 <= x"5be0cd19";
+                    compression_counter <= "0000000";
+                when READ_MSG =>
+                    passwd <= passwd_internal;
                 when PREP_MSG_0 =>
                     w(0 to 15) <= w_buf(0 to 15);
                 when PREP_MSG_1 =>
@@ -177,10 +198,10 @@ begin
                     h <= h7;
                 when HASH_2a =>
                     if (compression_counter = 64) then
-                        compression_counter <= 0;
+                        compression_counter <= "0000000";
                     else
-                        temp1 <= std_logic_vector(unsigned(h) + unsigned(SIGMA_COMPRESS_1(e)) + unsigned((e and f) xor ((not e) and g)) + unsigned(k(compression_counter)) + unsigned(w(compression_counter)));
-                        temp2 <= std_logic_vector(unsigned(SIGMA_COMPRESS_0(a)) + unsigned((a and b) xor (a and c) xor (b and c)));
+                        temp1 := std_logic_vector(unsigned(h) + unsigned(SIGMA_COMPRESS_1(e)) + unsigned((e and f) xor ((not e) and g)) + unsigned(k(to_integer(compression_counter))) + unsigned(w(to_integer(compression_counter))));
+                        temp2 := std_logic_vector(unsigned(SIGMA_COMPRESS_0(a)) + unsigned((a and b) xor (a and c) xor (b and c)));
                     end if;
                 when HASH_2b =>
                     h <= g;
@@ -203,29 +224,30 @@ begin
                     h6 <= std_logic_vector(unsigned(h6) + unsigned(g));
                     h7 <= std_logic_vector(unsigned(h7) + unsigned(h));
                 when DONE =>
+                when others =>
             end case;
         end if;
     end process;
 
     READ_PASSWD:
     for i in 0 to 15 generate
-    begin -- Read password from input to internal array.
-        passwd(i) <= passwd_in((i+1)*32-1 downto i*32);
+        -- Read password from input to internal array.
+        passwd_internal(i) <= passwd_in((i+1)*32-1 downto i*32);
     end generate;
 
     POPULATE_W_BUF_0:
     for i in 0 to 15 generate
-    begin -- Read password into first 16 words into w buffer. :)
+        -- Read password into first 16 words into w buffer. :)
         w_buf(i) <= passwd(i);
     end generate;
 
     POPULATE_W_BUF_1:
     for i in 16 to 63 generate
-    begin
+        -- Populate the remaining part of w_buf
         w_buf(i) <= std_logic_vector(unsigned(SIGMA_EXTEND_1(w_buf(i-2))) + unsigned(w_buf(i-7)) + unsigned(SIGMA_EXTEND_0(w_buf(i-15))) + unsigned(w_buf(i-16)));
     end generate;
 
-    done <= '1' when current_state = DONE else '0';
+    hash_done <= '1' when current_state = DONE else '0';
     hash_out <= h0 & h1 & h2 & h3 & h4 & h5 & h6 & h7;
 
 end Behavioral;

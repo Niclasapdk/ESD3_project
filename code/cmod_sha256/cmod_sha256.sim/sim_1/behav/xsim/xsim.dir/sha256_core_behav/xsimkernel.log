@@ -1,0 +1,7 @@
+Running: xsim.dir/sha256_core_behav/xsimk -simmode gui -wdb sha256_core_behav.wdb -simrunnum 0 -socket 44477
+Design successfully loaded
+Design Loading Memory Usage: 23380 KB (Peak: 23820 KB)
+Design Loading CPU Usage: 40 ms
+Simulation completed
+Simulation Memory Usage: 113316 KB (Peak: 162648 KB)
+Simulation CPU Usage: 70 ms

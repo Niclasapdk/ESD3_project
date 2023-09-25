@@ -58,11 +58,11 @@ begin
         hash_done => done
      );
 
-    stimulus : process
-    begin
+    -- stimulus : process
+    -- begin
         start <= '1';
         -- wait until done = '1';
-    end process;
+    -- end process;
 
 
 end Behavioral;

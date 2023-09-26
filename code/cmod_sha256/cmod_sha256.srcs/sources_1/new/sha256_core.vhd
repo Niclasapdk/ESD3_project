@@ -33,7 +33,7 @@ entity sha256_core is
         clk : in std_logic;
         start : in std_logic;
         reset : in std_logic;
-        passwd_in : in std_logic_vector(511 downto 0);
+        passwd_in : in std_logic_vector(0 to 511);
         hash_out : out std_logic_vector(255 downto 0);
         hash_done: out std_logic
         );
@@ -251,7 +251,7 @@ begin
     READ_PASSWD:
     for i in 0 to 15 generate
         -- Read password from input to internal array.
-        passwd_internal(i) <= passwd_in((i+1)*32-1 downto i*32);
+        passwd_internal(i) <= passwd_in(i*32 to (i+1)*32-1);
     end generate;
 
     POPULATE_W_BUF_0:

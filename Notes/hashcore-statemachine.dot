@@ -1,0 +1,24 @@
+digraph fsm {
+	// Graph attributes
+	rankdir=LR;
+    size="25";
+    node [shape=circle];
+    
+
+	// Edges and edge attributes
+    IDLE -> IDLE [label = "else"];
+    IDLE -> RST [label = "if reset = '1'"];
+    RST -> IDLE;
+	IDLE -> READ_MSG [label = "if start = '1'"];
+    READ_MSG -> PREP_MSG_0;
+    PREP_MSG_0 -> PREP_MSG_1 -> PREP_MSG_2;
+    PREP_MSG_2 -> PREP_MSG_3;
+    PREP_MSG_3 -> HASH_1;
+    HASH_1 -> HASH_2a;
+    HASH_2a -> HASH_2b;
+    HASH_2b -> HASH_2c;
+    HASH_2c -> HASH_2a;
+    HASH_2c -> HASH_3 [label = "if Compression counter = '64'"];
+    HASH_3 -> DONE;
+    DONE -> IDLE;
+}

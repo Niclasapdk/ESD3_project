@@ -3,13 +3,13 @@
 # SW Build 3865809 on Sun May  7 15:04:56 MDT 2023
 # IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
 # SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
-# Start of session at: Tue Sep 26 12:28:17 2023
-# Process ID: 17522
+# Start of session at: Tue Sep 26 10:22:56 2023
+# Process ID: 13287
 # Current directory: /home/markus/uni/ESD3_project/code
 # Command line: vivado
 # Log file: /home/markus/uni/ESD3_project/code/vivado.log
 # Journal file: /home/markus/uni/ESD3_project/code/vivado.jou
-# Running On: mltop, OS: Linux, CPU Frequency: 3601.397 MHz, CPU Physical cores: 4, Host memory: 16639 MB
+# Running On: mltop, OS: Linux, CPU Frequency: 3600.877 MHz, CPU Physical cores: 4, Host memory: 16639 MB
 #-----------------------------------------------------------
 start_gui
 open_project /home/markus/uni/ESD3_project/code/cmod_sha256/cmod_sha256.xpr
@@ -72,88 +72,20 @@ WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216:part0:2.0 availab
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at /home/markus/build/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at /home/markus/build/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/2.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at /home/markus/build/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+INFO: [Project 1-313] Project file moved from 'C:/Users/Markus/uni/ESD3_project/code/cmod_sha256' since last save.
 INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory '/home/markus/uni/ESD3_project/code/cmod_sha256/cmod_sha256.gen/sources_1'.
 Scanning sources...
 Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/markus/build/Xilinx/Vivado/2023.1/data/ip'.
-open_project: Time (s): cpu = 00:00:21 ; elapsed = 00:00:09 . Memory (MB): peak = 7806.648 ; gain = 373.141 ; free physical = 9431 ; free virtual = 13164
+open_project: Time (s): cpu = 00:00:20 ; elapsed = 00:00:09 . Memory (MB): peak = 7810.145 ; gain = 361.227 ; free physical = 9506 ; free virtual = 13049
 update_compile_order -fileset sources_1
-launch_simulation
-Command: launch_simulation 
-INFO: [Vivado 12-12493] Simulation top is 'sha256_core_tb'
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/markus/uni/ESD3_project/code/cmod_sha256/cmod_sha256.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-72] Using boost library from '/home/markus/build/Xilinx/Vivado/2023.1/tps/boost_1_72_0'
-INFO: [SIM-utils-54] Inspecting design source files for 'sha256_core_tb' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/markus/uni/ESD3_project/code/cmod_sha256/cmod_sha256.sim/sim_1/behav/xsim'
-xvhdl --incr --relax -prj sha256_core_tb_vhdl.prj
-Waiting for jobs to finish...
-No pending jobs, compilation finished.
-INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/markus/uni/ESD3_project/code/cmod_sha256/cmod_sha256.sim/sim_1/behav/xsim'
-xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot sha256_core_tb_behav xil_defaultlib.sha256_core_tb -log elaborate.log
-Vivado Simulator v2023.1
-Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
-Running: /home/markus/build/Xilinx/Vivado/2023.1/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot sha256_core_tb_behav xil_defaultlib.sha256_core_tb -log elaborate.log 
-Using 8 slave threads.
-Starting static elaboration
-Completed static elaboration
-INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/markus/uni/ESD3_project/code/cmod_sha256/cmod_sha256.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "sha256_core_tb_behav -key {Behavioral:sim_1:Functional:sha256_core_tb} -tclbatch {sha256_core_tb.tcl} -view {/home/markus/uni/ESD3_project/code/cmod_sha256/sha256_core_simulation.wcfg} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Time resolution is 1 ps
-open_wave_config /home/markus/uni/ESD3_project/code/cmod_sha256/sha256_core_simulation.wcfg
-source sha256_core_tb.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 1000ns
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'sha256_core_tb_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:11 ; elapsed = 00:00:06 . Memory (MB): peak = 7917.867 ; gain = 80.238 ; free physical = 9244 ; free virtual = 12999
-restart
-INFO: [Wavedata 42-604] Simulation restarted
-run 3 us
-open_run synth_1 -name synth_1
-Design is defaulting to impl run constrset: constrs_1
-Design is defaulting to synth run part: xc7a35tcpg236-1
-INFO: [Device 21-403] Loading part xc7a35tcpg236-1
-Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.02 . Memory (MB): peak = 8216.070 ; gain = 0.000 ; free physical = 8713 ; free virtual = 12492
-INFO: [Netlist 29-17] Analyzing 872 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
-WARNING: [Netlist 29-101] Netlist 'sha256_core' is not ideal for floorplanning, since the cellview 'sha256_core' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
-INFO: [Project 1-479] Netlist was created with Vivado 2023.1
-INFO: [Project 1-570] Preparing netlist for logic optimization
-INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 8368.777 ; gain = 0.000 ; free physical = 8611 ; free virtual = 12391
-INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
-
-open_run: Time (s): cpu = 00:00:15 ; elapsed = 00:00:09 . Memory (MB): peak = 8515.637 ; gain = 584.879 ; free physical = 8510 ; free virtual = 12288
 reset_run synth_1
 INFO: [Project 1-1161] Replacing file /home/markus/uni/ESD3_project/code/cmod_sha256/cmod_sha256.srcs/utils_1/imports/synth_1/sha256_core.dcp with file /home/markus/uni/ESD3_project/code/cmod_sha256/cmod_sha256.runs/synth_1/sha256_core.dcp
 launch_runs synth_1 -jobs 8
-[Tue Sep 26 13:35:05 2023] Launched synth_1...
+[Tue Sep 26 10:23:50 2023] Launched synth_1...
 Run output will be captured here: /home/markus/uni/ESD3_project/code/cmod_sha256/cmod_sha256.runs/synth_1/runme.log
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
 launch_simulation
 Command: launch_simulation 
 INFO: [Vivado 12-12493] Simulation top is 'sha256_core_tb'
@@ -166,6 +98,7 @@ INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
 INFO: [USF-XSim-2] XSim::Compile design
 INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/markus/uni/ESD3_project/code/cmod_sha256/cmod_sha256.sim/sim_1/behav/xsim'
 xvhdl --incr --relax -prj sha256_core_tb_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/markus/uni/ESD3_project/code/cmod_sha256/cmod_sha256.srcs/sources_1/new/sha256_pkg.vhd" into library xil_defaultlib
 INFO: [VRFC 10-163] Analyzing VHDL file "/home/markus/uni/ESD3_project/code/cmod_sha256/cmod_sha256.srcs/sources_1/new/sha256_core.vhd" into library xil_defaultlib
 INFO: [VRFC 10-3107] analyzing entity 'sha256_core'
 INFO: [VRFC 10-163] Analyzing VHDL file "/home/markus/uni/ESD3_project/code/cmod_sha256/cmod_sha256.srcs/sim_1/new/sha256_core_tb.vhd" into library xil_defaultlib
@@ -198,10 +131,9 @@ INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
 INFO: [USF-XSim-4] XSim::Simulate design
 INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/markus/uni/ESD3_project/code/cmod_sha256/cmod_sha256.sim/sim_1/behav/xsim'
 INFO: [USF-XSim-98] *** Running xsim
-   with args "sha256_core_tb_behav -key {Behavioral:sim_1:Functional:sha256_core_tb} -tclbatch {sha256_core_tb.tcl} -view {/home/markus/uni/ESD3_project/code/cmod_sha256/sha256_core_simulation.wcfg} -log {simulate.log}"
+   with args "sha256_core_tb_behav -key {Behavioral:sim_1:Functional:sha256_core_tb} -tclbatch {sha256_core_tb.tcl} -log {simulate.log}"
 INFO: [USF-XSim-8] Loading simulator feature
 Time resolution is 1 ps
-open_wave_config /home/markus/uni/ESD3_project/code/cmod_sha256/sha256_core_simulation.wcfg
 source sha256_core_tb.tcl
 # set curr_wave [current_wave_config]
 # if { [string length $curr_wave] == 0 } {
@@ -215,10 +147,11 @@ source sha256_core_tb.tcl
 # run 1000ns
 INFO: [USF-XSim-96] XSim completed. Design snapshot 'sha256_core_tb_behav' loaded.
 INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 8915.633 ; gain = 9.000 ; free physical = 7571 ; free virtual = 11659
+launch_simulation: Time (s): cpu = 00:00:10 ; elapsed = 00:00:07 . Memory (MB): peak = 7945.863 ; gain = 61.266 ; free physical = 9256 ; free virtual = 12794
 restart
 INFO: [Wavedata 42-604] Simulation restarted
-run 2 us
-restart
-INFO: [Wavedata 42-604] Simulation restarted
-run 1.5 us
+run 3 us
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Sep 26 10:25:25 2023...

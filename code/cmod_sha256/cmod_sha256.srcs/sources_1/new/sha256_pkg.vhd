@@ -32,6 +32,7 @@ use IEEE.NUMERIC_STD.ALL;
 package sha256_pkg is
     type kw_type is array(0 to 63) of std_logic_vector(31 downto 0);
     type passwd_type is array(0 to 15) of std_logic_vector(31 downto 0);
+    type saved_vars_type is array(0 to 1) of std_logic_vector(31 downto 0);
 
     function SIGMA_EXTEND_0(x : std_logic_vector(31 downto 0)) return std_logic_vector;
     function SIGMA_EXTEND_1(x : std_logic_vector(31 downto 0)) return std_logic_vector;

@@ -11,7 +11,7 @@
     ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 
 source sha256_core.tcl -notrace
-create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1334.840 ; gain = 0.023 ; free physical = 6932 ; free virtual = 11034
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1336.797 ; gain = 0.023 ; free physical = 6489 ; free virtual = 10565
 Command: read_checkpoint -auto_incremental -incremental /home/markus/uni/ESD3_project/code/cmod_sha256/cmod_sha256.srcs/utils_1/imports/synth_1/sha256_core.dcp
 INFO: [Vivado 12-5825] Read reference checkpoint from /home/markus/uni/ESD3_project/code/cmod_sha256/cmod_sha256.srcs/utils_1/imports/synth_1/sha256_core.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
@@ -23,17 +23,17 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 23010
+INFO: [Synth 8-7075] Helper process launched with PID 47488
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1687.672 ; gain = 352.832 ; free physical = 6287 ; free virtual = 10389
+Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1687.629 ; gain = 350.832 ; free physical = 5857 ; free virtual = 9932
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'sha256_core' [/home/markus/uni/ESD3_project/code/cmod_sha256/cmod_sha256.srcs/sources_1/new/sha256_core.vhd:43]
 INFO: [Synth 8-256] done synthesizing module 'sha256_core' (0#1) [/home/markus/uni/ESD3_project/code/cmod_sha256/cmod_sha256.srcs/sources_1/new/sha256_core.vhd:43]
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1784.641 ; gain = 449.801 ; free physical = 6179 ; free virtual = 10282
+Finished Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1783.598 ; gain = 446.801 ; free physical = 5740 ; free virtual = 9817
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1799.484 ; gain = 464.645 ; free physical = 6165 ; free virtual = 10268
+Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1798.441 ; gain = 461.645 ; free physical = 5732 ; free virtual = 9809
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
@@ -41,7 +41,7 @@ Start Loading Part and Timing Information
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1807.488 ; gain = 472.648 ; free physical = 6165 ; free virtual = 10268
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1806.445 ; gain = 469.648 ; free physical = 5732 ; free virtual = 9809
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'sha256_core'
 WARNING: [Synth 8-327] inferring latch for variable 'FSM_sequential_next_state_reg' [/home/markus/uni/ESD3_project/code/cmod_sha256/cmod_sha256.srcs/sources_1/new/sha256_core.vhd:132]
@@ -49,23 +49,22 @@ WARNING: [Synth 8-327] inferring latch for variable 'FSM_onehot_next_state_reg' 
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
-                    idle |                     000000000001 |                             0000
-                     rst |                     000000000010 |                             0001
-                read_msg |                     000000000100 |                             0010
-              prep_msg_0 |                     000000001000 |                             0011
-              prep_msg_1 |                     000000010000 |                             0100
-              prep_msg_2 |                     000000100000 |                             0101
-              prep_msg_3 |                     000001000000 |                             0110
-                  hash_1 |                     000010000000 |                             0111
-                 hash_2a |                     000100000000 |                             1000
-                  hash_3 |                     001000000000 |                             1010
-                    done |                     010000000000 |                             1011
-                 hash_2b |                     100000000000 |                             1001
+                    idle |                      00000000001 |                             0000
+                     rst |                      00000000010 |                             0001
+                read_msg |                      00000000100 |                             0010
+              prep_msg_0 |                      00000001000 |                             0011
+              prep_msg_1 |                      00000010000 |                             0100
+              prep_msg_2 |                      00000100000 |                             0101
+              prep_msg_3 |                      00001000000 |                             0110
+                  hash_1 |                      00010000000 |                             0111
+                 hash_2a |                      00100000000 |                             1000
+                  hash_3 |                      01000000000 |                             1010
+                    done |                      10000000000 |                             1011
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'one-hot' in module 'sha256_core'
 WARNING: [Synth 8-327] inferring latch for variable 'FSM_onehot_next_state_reg' [/home/markus/uni/ESD3_project/code/cmod_sha256/cmod_sha256.srcs/sources_1/new/sha256_core.vhd:132]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1837.449 ; gain = 502.609 ; free physical = 6135 ; free virtual = 10240
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1836.406 ; gain = 499.609 ; free physical = 5695 ; free virtual = 9774
 ---------------------------------------------------------------------------------
 No constraint files found.
 ---------------------------------------------------------------------------------
@@ -73,24 +72,23 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input   32 Bit       Adders := 3     
 	   4 Input   32 Bit       Adders := 48    
 	   5 Input   32 Bit       Adders := 1     
+	   3 Input   32 Bit       Adders := 1     
+	   2 Input   32 Bit       Adders := 1     
 	   2 Input    7 Bit       Adders := 1     
 +---XORs : 
 	   3 Input     32 Bit         XORs := 99    
 	   2 Input     32 Bit         XORs := 1     
 +---Registers : 
-	               32 Bit    Registers := 90    
+	               32 Bit    Registers := 88    
 	                7 Bit    Registers := 1     
 +---Muxes : 
-	  12 Input   32 Bit        Muxes := 8     
-	  12 Input   12 Bit        Muxes := 1     
-	   2 Input   12 Bit        Muxes := 3     
-	  12 Input    7 Bit        Muxes := 1     
-	  12 Input    4 Bit        Muxes := 1     
-	   2 Input    1 Bit        Muxes := 2     
-	  12 Input    1 Bit        Muxes := 5     
+	  11 Input   32 Bit        Muxes := 8     
+	  11 Input   11 Bit        Muxes := 1     
+	   2 Input   11 Bit        Muxes := 3     
+	  11 Input    4 Bit        Muxes := 1     
+	  11 Input    1 Bit        Muxes := 3     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -109,7 +107,7 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 2393.660 ; gain = 1058.820 ; free physical = 5763 ; free virtual = 9871
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:29 . Memory (MB): peak = 2394.312 ; gain = 1057.516 ; free physical = 5122 ; free virtual = 9208
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -131,13 +129,13 @@ No constraint files found.
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:30 . Memory (MB): peak = 2393.660 ; gain = 1058.820 ; free physical = 5763 ; free virtual = 9871
+Finished Timing Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:30 . Memory (MB): peak = 2394.312 ; gain = 1057.516 ; free physical = 5122 ; free virtual = 9208
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:33 ; elapsed = 00:00:33 . Memory (MB): peak = 2393.660 ; gain = 1058.820 ; free physical = 5762 ; free virtual = 9870
+Finished Technology Mapping : Time (s): cpu = 00:00:33 ; elapsed = 00:00:33 . Memory (MB): peak = 2394.312 ; gain = 1057.516 ; free physical = 5121 ; free virtual = 9207
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -155,37 +153,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:37 ; elapsed = 00:00:37 . Memory (MB): peak = 2393.660 ; gain = 1058.820 ; free physical = 5762 ; free virtual = 9870
+Finished IO Insertion : Time (s): cpu = 00:00:37 ; elapsed = 00:00:37 . Memory (MB): peak = 2394.312 ; gain = 1057.516 ; free physical = 5120 ; free virtual = 9206
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:37 ; elapsed = 00:00:37 . Memory (MB): peak = 2393.660 ; gain = 1058.820 ; free physical = 5762 ; free virtual = 9870
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:37 ; elapsed = 00:00:37 . Memory (MB): peak = 2394.312 ; gain = 1057.516 ; free physical = 5120 ; free virtual = 9206
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:37 ; elapsed = 00:00:37 . Memory (MB): peak = 2393.660 ; gain = 1058.820 ; free physical = 5762 ; free virtual = 9870
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:37 ; elapsed = 00:00:37 . Memory (MB): peak = 2394.312 ; gain = 1057.516 ; free physical = 5120 ; free virtual = 9206
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:37 ; elapsed = 00:00:37 . Memory (MB): peak = 2393.660 ; gain = 1058.820 ; free physical = 5762 ; free virtual = 9870
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:37 ; elapsed = 00:00:37 . Memory (MB): peak = 2394.312 ; gain = 1057.516 ; free physical = 5120 ; free virtual = 9206
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:37 ; elapsed = 00:00:37 . Memory (MB): peak = 2393.660 ; gain = 1058.820 ; free physical = 5762 ; free virtual = 9870
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:37 ; elapsed = 00:00:37 . Memory (MB): peak = 2394.312 ; gain = 1057.516 ; free physical = 5120 ; free virtual = 9206
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:37 ; elapsed = 00:00:37 . Memory (MB): peak = 2393.660 ; gain = 1058.820 ; free physical = 5762 ; free virtual = 9870
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:37 ; elapsed = 00:00:37 . Memory (MB): peak = 2394.312 ; gain = 1057.516 ; free physical = 5120 ; free virtual = 9206
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -202,52 +200,53 @@ Report Cell Usage:
 |      |Cell   |Count |
 +------+-------+------+
 |1     |BUFG   |     1|
-|2     |CARRY4 |   488|
-|3     |LUT2   |   425|
-|4     |LUT3   |   259|
-|5     |LUT4   |   901|
-|6     |LUT5   |  4245|
-|7     |LUT6   |  1723|
-|8     |MUXF7  |   256|
-|9     |MUXF8  |   128|
-|10    |FDRE   |  3027|
-|11    |FDSE   |   136|
-|12    |LD     |    12|
-|13    |IBUF   |   515|
-|14    |OBUF   |   257|
+|2     |CARRY4 |   480|
+|3     |LUT1   |     1|
+|4     |LUT2   |   396|
+|5     |LUT3   |   293|
+|6     |LUT4   |   869|
+|7     |LUT5   |  4276|
+|8     |LUT6   |  1757|
+|9     |MUXF7  |   256|
+|10    |MUXF8  |   128|
+|11    |FDRE   |  2962|
+|12    |FDSE   |   136|
+|13    |LD     |    11|
+|14    |IBUF   |   515|
+|15    |OBUF   |   257|
 +------+-------+------+
 
 Report Instance Areas: 
 +------+---------+-------+------+
 |      |Instance |Module |Cells |
 +------+---------+-------+------+
-|1     |top      |       | 12373|
+|1     |top      |       | 12338|
 +------+---------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:37 ; elapsed = 00:00:37 . Memory (MB): peak = 2393.660 ; gain = 1058.820 ; free physical = 5762 ; free virtual = 9870
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:37 ; elapsed = 00:00:37 . Memory (MB): peak = 2394.312 ; gain = 1057.516 ; free physical = 5120 ; free virtual = 9206
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 4 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:37 ; elapsed = 00:00:37 . Memory (MB): peak = 2393.660 ; gain = 1058.820 ; free physical = 5762 ; free virtual = 9870
-Synthesis Optimization Complete : Time (s): cpu = 00:00:37 ; elapsed = 00:00:37 . Memory (MB): peak = 2393.668 ; gain = 1058.820 ; free physical = 5762 ; free virtual = 9870
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:37 ; elapsed = 00:00:37 . Memory (MB): peak = 2394.312 ; gain = 1057.516 ; free physical = 5120 ; free virtual = 9206
+Synthesis Optimization Complete : Time (s): cpu = 00:00:37 ; elapsed = 00:00:37 . Memory (MB): peak = 2394.320 ; gain = 1057.516 ; free physical = 5120 ; free virtual = 9206
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.06 . Memory (MB): peak = 2393.668 ; gain = 0.000 ; free physical = 6057 ; free virtual = 10165
-INFO: [Netlist 29-17] Analyzing 884 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.05 . Memory (MB): peak = 2394.320 ; gain = 0.000 ; free physical = 5414 ; free virtual = 9500
+INFO: [Netlist 29-17] Analyzing 875 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 WARNING: [Netlist 29-101] Netlist 'sha256_core' is not ideal for floorplanning, since the cellview 'sha256_core' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2449.688 ; gain = 0.000 ; free physical = 6056 ; free virtual = 10164
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2450.340 ; gain = 0.000 ; free physical = 5413 ; free virtual = 9499
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 12 instances were transformed.
-  LD => LDCE: 12 instances
+  A total of 11 instances were transformed.
+  LD => LDCE: 11 instances
 
-Synth Design complete | Checksum: 655579c6
+Synth Design complete | Checksum: fb087f57
 INFO: [Common 17-83] Releasing license: Synthesis
 20 Infos, 5 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:45 ; elapsed = 00:00:42 . Memory (MB): peak = 2449.688 ; gain = 1114.848 ; free physical = 6056 ; free virtual = 10164
-INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2060.654; main = 1730.964; forked = 381.726
-INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3362.930; main = 2449.688; forked = 969.270
+synth_design: Time (s): cpu = 00:00:45 ; elapsed = 00:00:42 . Memory (MB): peak = 2450.340 ; gain = 1113.543 ; free physical = 5413 ; free virtual = 9499
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2061.325; main = 1731.858; forked = 381.694
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3363.586; main = 2450.340; forked = 969.273
 INFO: [Common 17-1381] The checkpoint '/home/markus/uni/ESD3_project/code/cmod_sha256/cmod_sha256.runs/synth_1/sha256_core.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file sha256_core_utilization_synth.rpt -pb sha256_core_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Sep 26 13:35:59 2023...
+INFO: [Common 17-206] Exiting Vivado at Tue Sep 26 16:00:52 2023...

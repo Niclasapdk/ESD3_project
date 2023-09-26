@@ -159,13 +159,11 @@ begin
             when HASH_1 =>
                 next_state <= HASH_2a;
             when HASH_2a =>
-                if(compression_counter = 64) then
+                if(compression_counter = 63) then
                     next_state <= HASH_3;
                 else
-                    next_state <= HASH_2b;
+                    next_state <= HASH_2a;
                 end if;
-            when HASH_2b =>
-                next_state <= HASH_2a;
             when HASH_3 =>
                 next_state <= DONE;
             when DONE =>
@@ -177,9 +175,18 @@ begin
     -- Hash logic.
     process(clk, current_state)
         variable temp1, temp2 : std_logic_vector(31 downto 0);
+        variable tmp_a : std_logic_vector(31 downto 0) := x"00000000";
+        variable tmp_b : std_logic_vector(31 downto 0) := x"00000000";
+        variable tmp_c : std_logic_vector(31 downto 0) := x"00000000";
+        variable tmp_d : std_logic_vector(31 downto 0) := x"00000000";
+        variable tmp_e : std_logic_vector(31 downto 0) := x"00000000";
+        variable tmp_f : std_logic_vector(31 downto 0) := x"00000000";
+        variable tmp_g : std_logic_vector(31 downto 0) := x"00000000";
+        variable tmp_h : std_logic_vector(31 downto 0) := x"00000000";
     begin
         if (clk'event and clk = '1') then
             a <= a; b <= b; c <= c; d <= d; e <= e; f <= f; g <= g; h <= h;
+            tmp_a := tmp_a; tmp_b := tmp_b; tmp_c := tmp_c; tmp_d := tmp_d; tmp_e := tmp_e; tmp_f := tmp_f; tmp_g := tmp_g; tmp_h := tmp_h;
             temp1 := temp1; temp2 := temp2; w <= w;
             passwd <= passwd; compression_counter <= compression_counter;
             case current_state is
@@ -213,23 +220,46 @@ begin
                     f <= h5;
                     g <= h6;
                     h <= h7;
+                    tmp_a := h0;
+                    tmp_b := h1;
+                    tmp_c := h2;
+                    tmp_d := h3;
+                    tmp_e := h4;
+                    tmp_f := h5;
+                    tmp_g := h6;
+                    tmp_h := h7;
                 when HASH_2a =>
-                    if (compression_counter = 64) then
+                    tmp_a := a;
+                    tmp_b := b;
+                    tmp_c := c;
+                    tmp_d := d;
+                    tmp_e := e;
+                    tmp_f := f;
+                    tmp_g := g;
+                    tmp_h := h;
+                    temp1 := std_logic_vector(unsigned(tmp_h) + unsigned(SIGMA_COMPRESS_1(tmp_e)) + unsigned((tmp_e and tmp_f) xor ((not tmp_e) and tmp_g)) + unsigned(k(to_integer(compression_counter))) + unsigned(w(to_integer(compression_counter))));
+                    temp2 := std_logic_vector(unsigned(SIGMA_COMPRESS_0(tmp_a)) + unsigned((tmp_a and tmp_b) xor (tmp_a and tmp_c) xor (tmp_b and tmp_c)));
+                    tmp_h := tmp_g;
+                    tmp_g := tmp_f;
+                    tmp_f := tmp_e;
+                    tmp_e := std_logic_vector(unsigned(d) + unsigned(temp1));
+                    tmp_d := tmp_c;
+                    tmp_c := tmp_b;
+                    tmp_b := tmp_a;
+                    tmp_a := std_logic_vector(unsigned(temp1) + unsigned(temp2));
+                    a <= tmp_a;
+                    b <= tmp_b;
+                    c <= tmp_c;
+                    d <= tmp_d;
+                    e <= tmp_e;
+                    f <= tmp_f;
+                    g <= tmp_g;
+                    h <= tmp_h;
+                    if (compression_counter = 63) then
                         compression_counter <= "0000000";
                     else
-                        temp1 := std_logic_vector(unsigned(h) + unsigned(SIGMA_COMPRESS_1(e)) + unsigned((e and f) xor ((not e) and g)) + unsigned(k(to_integer(compression_counter))) + unsigned(w(to_integer(compression_counter))));
-                        temp2 := std_logic_vector(unsigned(SIGMA_COMPRESS_0(a)) + unsigned((a and b) xor (a and c) xor (b and c)));
+                        compression_counter <= compression_counter + 1;
                     end if;
-                when HASH_2b =>
-                    h <= g;
-                    g <= f;
-                    f <= e;
-                    e <= std_logic_vector(unsigned(d) + unsigned(temp1));
-                    d <= c;
-                    c <= b;
-                    b <= a;
-                    a <= std_logic_vector(unsigned(temp1) + unsigned(temp2));
-                    compression_counter <= compression_counter + 1;
                 when HASH_3 =>
                     h0 <= std_logic_vector(unsigned(h0) + unsigned(a));
                     h1 <= std_logic_vector(unsigned(h1) + unsigned(b));

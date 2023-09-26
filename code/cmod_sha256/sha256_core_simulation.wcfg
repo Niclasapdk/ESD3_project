@@ -12,14 +12,14 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0.000 ns"></ZoomStartTime>
-      <ZoomEndTime time="3,000.001 ns"></ZoomEndTime>
-      <Cursor1Time time="2,054.526 ns"></Cursor1Time>
+      <ZoomEndTime time="85.551 ns"></ZoomEndTime>
+      <Cursor1Time time="5.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="276"></NameColumnWidth>
-      <ValueColumnWidth column_width="120"></ValueColumnWidth>
+      <ValueColumnWidth column_width="102"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="19" />
+   <WVObjectSize size="26" />
    <wvobject type="logic" fp_name="/sha256_core_tb/clk">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -92,8 +92,36 @@
       <obj_property name="ElementShortName">passwd[0:15][31:0]</obj_property>
       <obj_property name="ObjectShortName">passwd[0:15][31:0]</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/sha256_core_tb/uut/w">
-      <obj_property name="ElementShortName">w[0:63][31:0]</obj_property>
-      <obj_property name="ObjectShortName">w[0:63][31:0]</obj_property>
+   <wvobject type="array" fp_name="/sha256_core_tb/uut/a">
+      <obj_property name="ElementShortName">a[31:0]</obj_property>
+      <obj_property name="ObjectShortName">a[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/sha256_core_tb/uut/b">
+      <obj_property name="ElementShortName">b[31:0]</obj_property>
+      <obj_property name="ObjectShortName">b[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/sha256_core_tb/uut/c">
+      <obj_property name="ElementShortName">c[31:0]</obj_property>
+      <obj_property name="ObjectShortName">c[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/sha256_core_tb/uut/d">
+      <obj_property name="ElementShortName">d[31:0]</obj_property>
+      <obj_property name="ObjectShortName">d[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/sha256_core_tb/uut/e">
+      <obj_property name="ElementShortName">e[31:0]</obj_property>
+      <obj_property name="ObjectShortName">e[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/sha256_core_tb/uut/f">
+      <obj_property name="ElementShortName">f[31:0]</obj_property>
+      <obj_property name="ObjectShortName">f[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/sha256_core_tb/uut/g">
+      <obj_property name="ElementShortName">g[31:0]</obj_property>
+      <obj_property name="ObjectShortName">g[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/sha256_core_tb/uut/h">
+      <obj_property name="ElementShortName">h[31:0]</obj_property>
+      <obj_property name="ObjectShortName">h[31:0]</obj_property>
    </wvobject>
 </wave_config>

@@ -116,7 +116,8 @@ architecture Behavioral of sha256_core is
     );
     
     type sha256_core_state_type is (IDLE, RST, READ_MSG, PREP_MSG_0, PREP_MSG_1, PREP_MSG_2, PREP_MSG_3, HASH_1, HASH_2a, HASH_2b, HASH_2c, HASH_3, DONE);
-    signal current_state, next_state : sha256_core_state_type;
+    signal current_state : sha256_core_state_type := IDLE;
+    signal next_state : sha256_core_state_type := IDLE;
 
     signal passwd : passwd_type := (x"00000000",x"00000000", x"00000000", x"00000000", x"00000000", x"00000000", x"00000000", x"00000000", x"00000000", x"00000000", x"00000000", x"00000000", x"00000000", x"00000000", x"00000000", x"00000000");
     signal passwd_internal : passwd_type := (x"00000000",x"00000000", x"00000000", x"00000000", x"00000000", x"00000000", x"00000000", x"00000000", x"00000000", x"00000000", x"00000000", x"00000000", x"00000000", x"00000000", x"00000000", x"00000000");

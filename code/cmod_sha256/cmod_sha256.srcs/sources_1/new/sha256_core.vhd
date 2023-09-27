@@ -115,7 +115,7 @@ architecture Behavioral of sha256_core is
         X"00000000", X"00000000", X"00000000", X"00000000"
     );
     
-    type sha256_core_state_type is (IDLE, RST, READ_MSG, PREP_MSG_0, PREP_MSG_1, PREP_MSG_2, PREP_MSG_3, HASH_1, HASH_2a, HASH_2b, HASH_3, DONE);
+    type sha256_core_state_type is (IDLE, RST, READ_MSG, PREP_MSG_0, PREP_MSG_1, PREP_MSG_2, PREP_MSG_3, HASH_1, HASH_2, HASH_2b, HASH_3, DONE);
     signal current_state : sha256_core_state_type := IDLE;
     signal next_state : sha256_core_state_type := IDLE;
 
@@ -157,12 +157,12 @@ begin
             when PREP_MSG_3 =>
                 next_state <= HASH_1;
             when HASH_1 =>
-                next_state <= HASH_2a;
-            when HASH_2a =>
+                next_state <= HASH_2;
+            when HASH_2 =>
                 if(compression_counter = 63) then
                     next_state <= HASH_3;
                 else
-                    next_state <= HASH_2a;
+                    next_state <= HASH_2;
                 end if;
             when HASH_3 =>
                 next_state <= DONE;
@@ -228,7 +228,7 @@ begin
                     tmp_f := h5;
                     tmp_g := h6;
                     tmp_h := h7;
-                when HASH_2a =>
+                when HASH_2 =>
                     tmp_a := a;
                     tmp_b := b;
                     tmp_c := c;

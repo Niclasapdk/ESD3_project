@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-10-02T13:40:12.047Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/118.0" etag="btJFCYy3GWnlmkUdwDEX" version="22.0.0" type="github">
+<mxfile host="app.diagrams.net" modified="2023-10-02T13:40:49.115Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/118.0" etag="-NoG4dRCLzR8G5sPDkjC" version="22.0.0" type="github">
   <diagram name="Page-1" id="oHbBpfMNV7-MWkwOHZMf">
     <mxGraphModel dx="1050" dy="654" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -134,7 +134,7 @@
         <mxCell id="EGrysA47NTrs74HKjs9L-36" value="Memory" style="swimlane;childLayout=stackLayout;resizeParent=1;resizeParentMax=0;startSize=20;html=1;" parent="1" vertex="1">
           <mxGeometry x="160" y="10" width="120" height="240" as="geometry" />
         </mxCell>
-        <mxCell id="EGrysA47NTrs74HKjs9L-37" value="Password" style="swimlane;startSize=20;html=1;" parent="EGrysA47NTrs74HKjs9L-36" vertex="1">
+        <mxCell id="EGrysA47NTrs74HKjs9L-37" value="Password (40 bytes)" style="swimlane;startSize=20;html=1;" parent="EGrysA47NTrs74HKjs9L-36" vertex="1">
           <mxGeometry y="20" width="120" height="220" as="geometry" />
         </mxCell>
         <mxCell id="EGrysA47NTrs74HKjs9L-51" value="Password 1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="EGrysA47NTrs74HKjs9L-37" vertex="1">

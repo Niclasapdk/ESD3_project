@@ -19,7 +19,7 @@ passwd_len = 39
 hash_cycles = 71
 
 # Define busses
-busses = {"USB 2.0": 480e6/8, "USB 3.0": 5e9/8}
+busses = {"USB 2.0": 480e6/8, "USB 3.0": 5e9/8, "PCIe 3.x x16": 15.75e9}
 core_counts = [5, 10]
 
 # Define a function to calculate s_p and mem based on n and f_target
@@ -51,32 +51,32 @@ for bus_name, bus_speed in busses.items():
 
         if log:
             # Plot s_p on the left axis
-            ax1_n.loglog(n_values, s_p_values, label=f'{bus_name}, {c} cores - $s_p$', linewidth=LINEWIDTH)
+            ax1_n.loglog(n_values, s_p_values, label=f'{bus_name}, {c} cores', linewidth=LINEWIDTH)
             
             # Plot mem on the right axis
-            ax2_n.loglog(n_values, mem_values, label=f'{bus_name}, {c} cores - mem', linestyle='--', linewidth=LINEWIDTH)
+            ax2_n.loglog(n_values, mem_values, linestyle='--', linewidth=LINEWIDTH)
 
             if i == 1:
                 f_target_values = n_values * c * (f_clk/71)
                 # Plot s_p on the left axis
-                ax1_f.loglog(f_target_values, s_p_values, label=f'{bus_name} - $s_p$', linewidth=LINEWIDTH)
+                ax1_f.loglog(f_target_values, s_p_values, label=f'{bus_name}', linewidth=LINEWIDTH)
                 
                 # Plot mem on the right axis
-                ax2_f.loglog(f_target_values, mem_values, label=f'{bus_name} - mem', linestyle='--', linewidth=LINEWIDTH)
+                ax2_f.loglog(f_target_values, mem_values, linestyle='--', linewidth=LINEWIDTH)
         else:
             # Plot s_p on the left axis
-            ax1_n.plot(n_values, s_p_values, label=f'{bus_name}, {c} cores - $s_p$', linewidth=LINEWIDTH)
+            ax1_n.plot(n_values, s_p_values, label=f'{bus_name}, {c} cores', linewidth=LINEWIDTH)
             
             # Plot mem on the right axis
-            ax2_n.plot(n_values, mem_values, label=f'{bus_name}, {c} cores - mem', linestyle='--', linewidth=LINEWIDTH)
+            ax2_n.plot(n_values, mem_values, linestyle='--', linewidth=LINEWIDTH)
 
             if i == 1:
                 f_target_values = n_values * c * (f_clk/71)
                 # Plot s_p on the left axis
-                ax1_f.plot(f_target_values, s_p_values, label=f'{bus_name} - $s_p$', linewidth=LINEWIDTH)
+                ax1_f.plot(f_target_values, s_p_values, label=f'{bus_name}', linewidth=LINEWIDTH)
                 
                 # Plot mem on the right axis
-                ax2_f.plot(f_target_values, mem_values, label=f'{bus_name} - mem', linestyle='--', linewidth=LINEWIDTH)
+                ax2_f.plot(f_target_values, mem_values, linestyle='--', linewidth=LINEWIDTH)
 
 # Set labels for the axes
 ax1_n.set_xlabel('number of nodes, $n$')
@@ -88,14 +88,8 @@ ax2_f.set_ylabel('memory required for hashes struct array\n[Bytes]')
 
 # Add legends
 lines, labels = ax1_n.get_legend_handles_labels()
-lines2, labels2 = ax2_n.get_legend_handles_labels()
 lines_f, labels_f = ax1_f.get_legend_handles_labels()
-lines2_f, labels2_f = ax2_f.get_legend_handles_labels()
-lines.extend(lines2)
-labels.extend(labels2)
-ax1_n.legend(lines, labels, loc='upper left')
-lines_f.extend(lines2_f)
-labels_f.extend(labels2_f)
+ax1_n.legend(lines, labels, loc='upper left', bbox_to_anchor=(0, 1.1))
 ax1_f.legend(lines_f, labels_f, loc='upper left')
 
 # Show the plot

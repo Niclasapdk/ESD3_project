@@ -89,7 +89,7 @@ ax2_f.set_ylabel('memory required for hashes struct array\n[Bytes]')
 # Add legends
 lines, labels = ax1_n.get_legend_handles_labels()
 lines_f, labels_f = ax1_f.get_legend_handles_labels()
-ax1_n.legend(lines, labels, loc='upper left')
+ax1_n.legend(lines, labels, loc='upper left', bbox_to_anchor=(0, 1.1))
 ax1_f.legend(lines_f, labels_f, loc='upper left')
 
 # Show the plot

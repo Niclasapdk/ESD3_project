@@ -18,7 +18,7 @@ f_clk = 100e6
 passwd_len = 39
 hash_cycles = 71
 
-# Define busses log
+# Define busses
 busses = {"USB 2.0": 480e6/8, "USB 3.0": 5e9/8, "PCIe 3.x x16": 15.75e9}
 core_counts = [5, 10]
 

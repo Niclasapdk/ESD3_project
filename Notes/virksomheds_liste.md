@@ -56,30 +56,33 @@
     - Regulering
     - Embedded software
     - Software
-45. NIRAS
+38. Shure
+    - Microphones
+    - Communication
+39. NIRAS
     - Konsulenthus
     - Software
     - Måske noget andet?
-51. Forsvaret
+40. Forsvaret
     - Kommunikation
     - Kontrol 
     - Software
     - Sikkerhedsgodkendelse
-54. Novo Nordisk
+41. Novo Nordisk
     - Kontrol
     - Statistik
     - Software 
     - Regulering 
-55. Danske maritime
+42. Danske maritime
     - Både?
     - Antenner
     - Kommunikation
     - Software
-59. RTX
+43. RTX
     - Kommunikation
     - Wireless
     - 5G, IOT
-70. Siemens gamesa
+44. Siemens gamesa
     - Centrifuger
     - Hård hvidvare 
     - Kommunikation

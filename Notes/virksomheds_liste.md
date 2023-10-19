@@ -90,3 +90,7 @@
     - Software
     - Dynamiske systemer
     - Embedded programmering
+
+# Tier list
+
+![Tierlist](tierlist.png)

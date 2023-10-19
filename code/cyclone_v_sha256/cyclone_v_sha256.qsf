@@ -59,20 +59,63 @@ set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_location_assignment PIN_U13 -to B1
-set_location_assignment PIN_V13 -to B2
-set_location_assignment PIN_T13 -to B3
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to B1
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to B2
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to B3
-set_location_assignment PIN_AA2 -to LED1
-set_location_assignment PIN_AA1 -to LED2
-set_location_assignment PIN_W2 -to LED3
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to LED1
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to LED2
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to LED3
+set_global_assignment -name VHDL_FILE src/data_link.vhd
 set_global_assignment -name SDC_FILE cyclone_v_sha256.out.sdc
 set_global_assignment -name VHDL_FILE src/test_top.vhd
 set_global_assignment -name VHDL_FILE src/sha256_core.vhd
 set_global_assignment -name VHDL_FILE src/sha256_pkg.vhd
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to data_bus[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to data_bus[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to com_clk
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to data_rx[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to data_tx[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to data_tx[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to data_tx[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to data_tx[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to data_tx[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to data_tx[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to data_tx[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to data_tx[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to r_nw
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to data_bus[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to data_bus[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to data_bus[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to data_bus[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to data_bus[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to data_bus[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to data_rx[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to data_rx[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to data_rx[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to data_rx[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to data_rx[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to data_rx[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to data_rx[1]
+set_location_assignment PIN_AB12 -to com_clk
+set_location_assignment PIN_U17 -to data_bus[7]
+set_location_assignment PIN_Y17 -to data_bus[6]
+set_location_assignment PIN_V14 -to data_bus[5]
+set_location_assignment PIN_AA10 -to data_bus[4]
+set_location_assignment PIN_AB18 -to data_bus[3]
+set_location_assignment PIN_AA19 -to data_bus[2]
+set_location_assignment PIN_Y22 -to data_bus[1]
+set_location_assignment PIN_W22 -to data_bus[0]
+set_location_assignment PIN_AB13 -to r_nw
+set_location_assignment PIN_AA2 -to data_rx[0]
+set_location_assignment PIN_AA1 -to data_rx[1]
+set_location_assignment PIN_W2 -to data_rx[2]
+set_location_assignment PIN_Y3 -to data_rx[3]
+set_location_assignment PIN_N1 -to data_rx[5]
+set_location_assignment PIN_N2 -to data_rx[4]
+set_location_assignment PIN_U2 -to data_rx[6]
+set_location_assignment PIN_U1 -to data_rx[7]
+set_location_assignment PIN_AA13 -to data_tx[7]
+set_location_assignment PIN_AA14 -to data_tx[6]
+set_location_assignment PIN_AB15 -to data_tx[5]
+set_location_assignment PIN_AA15 -to data_tx[4]
+set_location_assignment PIN_T12 -to data_tx[3]
+set_location_assignment PIN_T13 -to data_tx[2]
+set_location_assignment PIN_V13 -to data_tx[1]
+set_location_assignment PIN_U13 -to data_tx[0]
+set_location_assignment PIN_N9 -to dbg_int_r_nw
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to dbg_int_r_nw
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

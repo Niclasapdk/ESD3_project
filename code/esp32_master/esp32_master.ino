@@ -1,37 +1,63 @@
-#include <soc/gpio_sig_map.h>
+#include <soc/soc.h>
+#include <soc/gpio_reg.h>
 #include <driver/gpio.h>
 #include <driver/dedic_gpio.h>
 #include <freertos/FreeRTOS.h>
 #include <freertos/task.h>
 #include <freertos/timers.h>
 
-#define ADDR_GPIO_PIN_L GPIO_NUM_2 // GPIO2
-#define ADDR_GPIO_PIN_H GPIO_NUM_3 // GPIO3
-#define RW_GPIO_PIN     GPIO_NUM_4 // GPIO4
+////////////////GPIO map//////////////////
+// Data bus
+// D[0]: GPIO9
+// D[1]: GPIO8
+// D[2]: GPIO7
+// D[3]: GPIO6
+// D[4]: GPIO5
+// D[5]: GPIO4
+// D[6]: GPIO18
+// D[7]: GPIO19
+// Address bus
+// A[0]: GPIO1
+// A[1]: GPIO0
+// CLK:  GPIO2
+// R_NW: GPIO3
 
-const int dedic_gpios[] = {4, 5};
-dedic_gpio_bundle_handle_t dedicHandle = NULL;
+#define ADDR0    1
+#define ADDR1    0
+#define CLK_PIN  2
+#define R_NW_PIN 3
+
+const int data_gpios[] = {9, 8, 7, 6, 5, 4, 18, 19};
+dedic_gpio_bundle_handle_t dataDedicHandle = NULL;
 
 SemaphoreHandle_t timerSemaphore;
 
+// Protocol control variables
+uint32_t data;
+uint32_t r_nw;
+uint32_t node_addr;
+
 void setupPlusBus() {
-// configure GPIO
+    // configure GPIO
+    // Create dataDedicHandle, input/output
     gpio_config_t io_conf = {
-        .mode = GPIO_MODE_OUTPUT,
+        .mode = GPIO_MODE_INPUT_OUTPUT,
     };
-    for (int i = 0; i < sizeof(dedic_gpios) / sizeof(dedic_gpios[0]); i++) {
-        io_conf.pin_bit_mask = 1ULL << dedic_gpios[i];
+    for (int i = 0; i < sizeof(data_gpios) / sizeof(data_gpios[0]); i++) {
+        io_conf.pin_bit_mask = 1ULL << data_gpios[i];
         gpio_config(&io_conf);
     }
-    // Create dedic_, output only
-    dedic_gpio_bundle_config_t dedic_config = {
-        .gpio_array = dedic_gpios,
-        .array_size = sizeof(dedic_gpios) / sizeof(dedic_gpios[0]),
+    dedic_gpio_bundle_config_t data_dedic_config = {
+        .gpio_array = data_gpios,
+        .array_size = sizeof(data_gpios) / sizeof(data_gpios[0]),
         .flags = {
+            .in_en = 1,
             .out_en = 1,
         },
     };
-    ESP_ERROR_CHECK(dedic_gpio_new_bundle(&dedic_config, &dedicHandle));
+    ESP_ERROR_CHECK(dedic_gpio_new_bundle(&data_dedic_config, &dataDedicHandle));
+
+    REG_WRITE(GPIO_ENABLE_REG, (1<<ADDR0) | (1<<ADDR1) | (1<<CLK_PIN) | (1<<R_NW_PIN));
 }
 
 // Timer callback function
@@ -43,18 +69,24 @@ void timerCallback(TimerHandle_t xTimer) {
 void clkEventTask(void *pvParameters) {
     (void)pvParameters; // We don't use the task parameter
 
+    uint32_t edgeType;
     setupPlusBus();
-    uint32_t dedicMask;
     while (1) {
         if (xSemaphoreTake(timerSemaphore, portMAX_DELAY) == pdTRUE) {
-            //GPIO.out_w1ts = (uint32_t)((1u<<2) | (1u<<4));
-            dedic_gpio_get_out_mask(dedicHandle, &dedicMask);
-            dedic_gpio_bundle_write(dedicHandle, dedicMask, 0xff);
+            edgeType = !((REG_READ(GPIO_IN_REG)>>CLK_PIN)&1);
+            if (edgeType) { // Rising Edge
+                REG_WRITE(GPIO_OUT_W1TS_REG, 1<<CLK_PIN);
+            }
+            else { // Falling Edge
+                REG_WRITE(GPIO_OUT_W1TC_REG, 1<<CLK_PIN);
+                //dedic_gpio_bundle_write(dataDedicHandle, 0xff, data);
+            }
         }
     }
 }
 
 void setup() {
+    Serial.begin(112500);
     // Create a timer semaphore
     timerSemaphore = xSemaphoreCreateBinary();
 

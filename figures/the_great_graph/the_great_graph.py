@@ -14,6 +14,7 @@ except:
     log = False
 
 # Define constants
+n_rounds = 5000
 f_clk = 100e6
 passwd_len = 39
 hash_cycles = 71
@@ -24,7 +25,7 @@ core_counts = [5, 10]
 
 # Define a function to calculate s_p and mem based on n and f_target
 def calculate_values(n, c, d_bus):
-    s_p = 8 * passwd_len * n * c * (f_clk/71) / d_bus
+    s_p = 8 * passwd_len * n * c * (f_clk/(hash_cycles * n_rounds)) / d_bus
     mem = s_p * 8 * (16+32+40)
     return s_p, mem
 

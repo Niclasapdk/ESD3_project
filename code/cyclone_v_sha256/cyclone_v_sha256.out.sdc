@@ -64,19 +64,9 @@ create_clock -name {clk} -period 10.000 -waveform { 0.000 5.000 }
 # Set Input Delay
 #**************************************************************
 
-set_input_delay -add_delay  -clock [get_clocks {clk}]  0 [get_ports {B1}]
-set_input_delay -add_delay  -clock [get_clocks {clk}]  0 [get_ports {B2}]
-set_input_delay -add_delay  -clock [get_clocks {clk}]  0 [get_ports {B3}]
-
-
 #**************************************************************
 # Set Output Delay
 #**************************************************************
-
-
-set_output_delay -add_delay  -clock [get_clocks {clk}]  0 [get_ports {LED1}]
-set_output_delay -add_delay  -clock [get_clocks {clk}]  0 [get_ports {LED2}]
-set_output_delay -add_delay  -clock [get_clocks {clk}]  0 [get_ports {LED3}]
 
 
 #**************************************************************

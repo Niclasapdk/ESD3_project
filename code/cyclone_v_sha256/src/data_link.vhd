@@ -31,10 +31,10 @@ begin
             addr_I := addr_bus;
             r_nw_I := r_nw;
 
-            if r_nw_I = '1' then
+            if addr_I = ADDR then
+            -- we are the ones being talked to
+                if r_nw_I = '1' then
                 -- slave will write to data bus
-                if addr_I = ADDR then
-                    -- we are the ones being talked to
                     for i in 0 to 7 loop
                         if data_tx(i) = '1' then
                             data_bus(i) <= 'Z';
@@ -42,6 +42,8 @@ begin
                             data_bus(i) <= '0';
                         end if;
                     end loop;
+                else
+                    data_bus <= "ZZZZZZZZ";
                 end if;
             else
                 data_bus <= "ZZZZZZZZ";

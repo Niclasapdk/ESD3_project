@@ -32,6 +32,7 @@ dedic_gpio_bundle_handle_t dataDedicHandle = NULL;
 
 SemaphoreHandle_t timerSemaphore;
 QueueHandle_t txQueue, rxQueue;
+TimerHandle_t timer;
 
 #define TX_Q_LEN 100
 #define RX_Q_LEN 100
@@ -111,6 +112,7 @@ void clkEventTask(void *pvParameters) {
                 // Falling Edge
                 REG_WRITE(GPIO_OUT_W1TC_REG, 1<<CLK_PIN);
 
+                xTimerStop(timer, 0);
                 if (txMsg.r_nw) {
                     // Receive data from node
                     rxMsg.data = dedic_gpio_bundle_read_in(dataDedicHandle);
@@ -119,6 +121,7 @@ void clkEventTask(void *pvParameters) {
                 }
 
                 xQueueReceive(txQueue, &txMsg, portMAX_DELAY);
+                xTimerReset(timer, 0);
 
                 // Setup r_nw, node_addr and clk
                 out = 0 | (txMsg.r_nw<<R_NW_PIN) | ((txMsg.node_addr&0x1)<<ADDR0) | ((txMsg.node_addr>>1)&1);
@@ -187,7 +190,6 @@ void bridgeTask(void *pvParameters) {
                 default:
                     state = BR_S_IDLE;
             }
-            Serial.println((int)state);
         }
 
         if (xQueueReceive(rxQueue, &rxMsg, 0) == pdTRUE)
@@ -223,9 +225,9 @@ void setup() {
             );
 
     // Create a timer to trigger the semaphore every second
-    TimerHandle_t timer = xTimerCreate(
+    timer = xTimerCreate(
             "Timer",                    // Timer name (not required)
-            pdMS_TO_TICKS(1),         // Timer period in milliseconds
+            1,         // Timer period in ticks
             pdTRUE,                      // Auto-reload timer
             0,                          // Timer ID (not required)
             timerCallback               // Timer callback function

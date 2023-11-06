@@ -142,7 +142,11 @@ begin
             when HASH_3 =>
                 next_state <= DONE;
             when DONE =>
-                next_state <= DONE;
+                if (reset = '1') then
+                    next_state <= RST;
+                else
+                    next_state <= DONE;
+                end if;
             when others =>
         end case;
     end process;

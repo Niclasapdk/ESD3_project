@@ -34,7 +34,7 @@ SemaphoreHandle_t timerSemaphore;
 QueueHandle_t txQueue, rxQueue;
 TimerHandle_t timer;
 
-#define TX_Q_LEN 100
+#define TX_Q_LEN 40000
 #define RX_Q_LEN 100
 
 typedef struct msg {

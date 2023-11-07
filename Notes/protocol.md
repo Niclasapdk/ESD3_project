@@ -29,3 +29,13 @@ GND,  12,   GND
 
 1. **Write**: Master drives data and addr bus and pulls Read/Write low (write).
 2. **Read**: Master drives addr bus and sets Read/Write high (read). Slave drives data bus.
+
+## L3
+
+### Passwords
+Password is padded before it is sent.
+Padded password: `MSG + '1' + k*'0' + L as uint64`
+
+- Start-of-text (start of password): 0x02
+- End-of-text (end of password): 0x03
+- Escape character: 0x10

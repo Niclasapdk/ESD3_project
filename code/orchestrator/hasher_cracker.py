@@ -42,7 +42,7 @@ def main():
     parser = argparse.ArgumentParser(description="PlusBUS Inc. hasher cracker orchestrator 9000")
     parser.add_argument("-p", "--port", required=True, help="Serial port name (e.g., COM1 or /dev/ttyUSB0)")
     parser.add_argument("-b", "--baudrate", type=int, default=115200, help="Baud rate (default: 115200)")
-    parser.add_argument("-w", "--wordlist", required=True, help="Wordlist (e.g., rockyou.txt)")
+    parser.add_argument("-w", "--wordlist", required=False, default="/etc/passwd", help="Wordlist (e.g., rockyou.txt)")
 
     args = parser.parse_args()
 

@@ -2,13 +2,12 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
 
-
 entity passwd_expander is
 	generic(
 				-- Constants
 				stx : std_logic_vector(7 downto 0);
 				etx : std_logic_vector(7 downto 0);
-				dle : std_logic_vector(7 downto 0);
+				dle : std_logic_vector(7 downto 0)
 			);
     port(
             -- Outputs
@@ -17,7 +16,7 @@ entity passwd_expander is
 
             -- Inputs
             data_in : in std_logic_vector(7 downto 0);
-            com_clk : in std_logic;
+            com_clk : in std_logic
         );
 end passwd_expander;
 
@@ -53,7 +52,7 @@ begin
 			when DATA =>
 				if (data_in = dle) then
 					next_state <= ESCAPE;
-				else if (data_in = etx) then
+                elsif (data_in = etx) then
 					next_state <= STOP;
 				else
 					next_state <= DATA;
@@ -62,23 +61,23 @@ begin
 	end process;
 	
 	--
-	process(com_clk, current_state, data_in)
-		variable idx : integer;
+    process(com_clk, current_state, data_in) is
+		variable idx : integer := 0;
 	begin
 		case current_state is
 			
 			when START =>
-				output_valid := 0;
+				output_valid <= '0';
 				idx := 0;
 				passwd(idx+7 downto idx) <= data_in;
 			when DATA =>
-				if (data_in != dle) then
+				if (data_in /= dle) then
 					passwd(idx+7 downto idx) <= data_in;
 				end if;
 			when ESCAPE =>
 				passwd(idx+7 downto idx) <= data_in;
 			when STOP =>
-				output_valid := 1;
+				output_valid <= '1';
 			when others =>
 		end case;
 	end process;

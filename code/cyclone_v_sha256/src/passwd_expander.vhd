@@ -27,7 +27,6 @@ architecture Behaviorial of passwd_expander is
 	signal current_state : passwd_expander_state_type := STOP;
 	signal next_state : passwd_expander_state_type := STOP;
 
-
 -- Current state logic like in hash core :3
 begin
 	process(com_clk)
@@ -62,13 +61,14 @@ begin
 		end case;
 	end process;
 	
-	--
+	-- 
 	process(com_clk, current_state, data_in)
 		variable idx : integer;
 	begin
 		case current_state is
 			
 			when START =>
+				output_valid := 0;
 				idx := 0;
 				passwd(idx+7 downto idx) <= data_in;
 			when DATA =>
@@ -77,6 +77,8 @@ begin
 				end if;
 			when ESCAPE =>
 				passwd(idx+7 downto idx) <= data_in;
+			when STOP =>
+				output_valid := 1;
 			when others =>
 		end case;
 	end process;

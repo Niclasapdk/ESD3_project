@@ -62,7 +62,7 @@ begin
 		end case;
 	end process;
 	
-	-- 
+	--
 	process(com_clk, current_state, data_in)
 		variable idx : integer;
 	begin

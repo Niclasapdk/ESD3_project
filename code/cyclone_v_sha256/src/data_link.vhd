@@ -48,8 +48,9 @@ begin
             else
                 data_bus <= "ZZZZZZZZ";
             end if;
+        end if;
 
-        elsif falling_edge(com_clk) then
+        if falling_edge(com_clk) then
             if addr_I = ADDR then
                 -- we are the ones being talked to
                 if r_nw_I = '0' then

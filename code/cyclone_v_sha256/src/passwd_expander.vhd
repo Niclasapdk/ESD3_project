@@ -64,22 +64,28 @@ begin
     process(com_clk, current_state, data_in) is
 		variable idx : integer := 0;
 	begin
-		case current_state is
-			
-			when START =>
-				output_valid <= '0';
-				idx := 0;
-				passwd(idx+7 downto idx) <= data_in;
-			when DATA =>
-				if (data_in /= dle) then
-					passwd(idx+7 downto idx) <= data_in;
-				end if;
-			when ESCAPE =>
-				passwd(idx+7 downto idx) <= data_in;
-			when STOP =>
-				output_valid <= '1';
-			when others =>
-		end case;
+		if rising_edge(com_clk) then
+            case current_state is
+                when START =>
+                    output_valid <= '0';
+                    idx := 0;
+                    passwd(idx+7 downto idx) <= data_in;
+                    idx := idx + 8;
+                when DATA =>
+                    if (idx < 512) then
+                        if (data_in /= dle) then
+                            passwd(idx+7 downto idx) <= data_in;
+                            idx := idx + 8;
+                        end if;
+                    end if;
+                when ESCAPE =>
+                    passwd(idx+7 downto idx) <= data_in;
+                    idx := idx + 8;
+                when STOP =>
+                    output_valid <= '1';
+                when others =>
+            end case;
+        end if;
 	end process;
 	
 end Behaviorial;

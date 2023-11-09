@@ -1,0 +1,25 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:04:56 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Thu Nov  9 14:27:45 2023
+# Process ID: 17435
+# Current directory: /home/markus/uni/ESD3_project/code/cmod_sha256/cmod_sha256.srcs/sources_1/new
+# Command line: vivado
+# Log file: /home/markus/uni/ESD3_project/code/cmod_sha256/cmod_sha256.srcs/sources_1/new/vivado.log
+# Journal file: /home/markus/uni/ESD3_project/code/cmod_sha256/cmod_sha256.srcs/sources_1/new/vivado.jou
+# Running On: mltop, OS: Linux, CPU Frequency: 3528.353 MHz, CPU Physical cores: 4, Host memory: 16639 MB
+#-----------------------------------------------------------
+start_gui
+open_project /home/markus/uni/ESD3_project/code/cmod_sha256/cmod_sha256.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+open_wave_config /home/markus/uni/ESD3_project/code/cmod_sha256/sha256_core_simulation.wcfg
+open_wave_config /home/markus/uni/ESD3_project/code/cmod_sha256/passwd_expander_tb_behav.wcfg
+source passwd_expander_tb.tcl
+restart
+run 500 ms
+restart
+run 500 us
+close_sim

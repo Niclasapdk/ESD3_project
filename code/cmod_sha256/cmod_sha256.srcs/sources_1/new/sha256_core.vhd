@@ -1,32 +1,7 @@
-----------------------------------------------------------------------------------
--- Company:
--- Engineer:
---
--- Create Date: 22.09.2023 09:20:39
--- Design Name:
--- Module Name: sha256_core - Behavioral
--- Project Name:
--- Target Devices:
--- Tool Versions:
--- Description:
---
--- Dependencies:
---
--- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
---
-----------------------------------------------------------------------------------
-
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use work.sha256_pkg.ALL;
 use IEEE.NUMERIC_STD.ALL;
-
--- Uncomment the following library declaration if instantiating
--- any Xilinx leaf cells in this code.
---library UNISIM;
---use UNISIM.VComponents.all;
 
 entity sha256_core is
     port(
@@ -167,7 +142,11 @@ begin
             when HASH_3 =>
                 next_state <= DONE;
             when DONE =>
-                next_state <= DONE;
+                if (reset = '1') then
+                    next_state <= RST;
+                else
+                    next_state <= DONE;
+                end if;
             when others =>
         end case;
     end process;

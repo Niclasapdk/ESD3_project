@@ -28,7 +28,7 @@ eval( EAInclude(ISEJScriptLib) );
 
 
 ISEStep( "vivado",
-         "-log sha256_core.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source sha256_core.tcl" );
+         "-log test_top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source test_top.tcl" );
 
 
 

@@ -7,4 +7,4 @@
 # Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 #
 
-vivado -log sha256_core.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source sha256_core.tcl
+vivado -log test_top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source test_top.tcl

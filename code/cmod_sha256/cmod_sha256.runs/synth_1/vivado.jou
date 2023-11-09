@@ -3,12 +3,12 @@
 # SW Build 3865809 on Sun May  7 15:04:56 MDT 2023
 # IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
 # SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
-# Start of session at: Tue Sep 26 16:00:01 2023
-# Process ID: 47470
+# Start of session at: Thu Nov  9 14:19:55 2023
+# Process ID: 16808
 # Current directory: /home/markus/uni/ESD3_project/code/cmod_sha256/cmod_sha256.runs/synth_1
-# Command line: vivado -log sha256_core.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source sha256_core.tcl
-# Log file: /home/markus/uni/ESD3_project/code/cmod_sha256/cmod_sha256.runs/synth_1/sha256_core.vds
+# Command line: vivado -log test_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source test_top.tcl
+# Log file: /home/markus/uni/ESD3_project/code/cmod_sha256/cmod_sha256.runs/synth_1/test_top.vds
 # Journal file: /home/markus/uni/ESD3_project/code/cmod_sha256/cmod_sha256.runs/synth_1/vivado.jou
-# Running On: mltop, OS: Linux, CPU Frequency: 3529.194 MHz, CPU Physical cores: 4, Host memory: 16639 MB
+# Running On: mltop, OS: Linux, CPU Frequency: 3578.126 MHz, CPU Physical cores: 4, Host memory: 16639 MB
 #-----------------------------------------------------------
-source sha256_core.tcl -notrace
+source test_top.tcl -notrace

@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "/home/markus/uni/ESD3_project/code/cmod_sha256/cmod_sha256.runs/synth_1/sha256_core.tcl"
+  variable script "/home/markus/uni/ESD3_project/code/cmod_sha256/cmod_sha256.runs/synth_1/test_top.tcl"
   variable category "vivado_synth"
 }
 
@@ -85,8 +85,9 @@ set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_vhdl -library xil_defaultlib {
-  /home/markus/uni/ESD3_project/code/cmod_sha256/cmod_sha256.srcs/sources_1/new/sha256_pkg.vhd
-  /home/markus/uni/ESD3_project/code/cmod_sha256/cmod_sha256.srcs/sources_1/new/sha256_core.vhd
+  /home/markus/uni/ESD3_project/code/cmod_sha256/cmod_sha256.srcs/sources_1/new/data_link.vhd
+  /home/markus/uni/ESD3_project/code/cmod_sha256/cmod_sha256.srcs/sources_1/new/passwd_expander.vhd
+  /home/markus/uni/ESD3_project/code/cmod_sha256/cmod_sha256.srcs/sources_1/new/test_top.vhd
 }
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -103,7 +104,7 @@ read_checkpoint -auto_incremental -incremental /home/markus/uni/ESD3_project/cod
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }
-synth_design -top sha256_core -part xc7a35tcpg236-1
+synth_design -top test_top -part xc7a35tcpg236-1
 OPTRACE "synth_design" END { }
 if { [get_msg_config -count -severity {CRITICAL WARNING}] > 0 } {
  send_msg_id runtcl-6 info "Synthesis results are not added to the cache due to CRITICAL_WARNING"
@@ -113,10 +114,10 @@ if { [get_msg_config -count -severity {CRITICAL WARNING}] > 0 } {
 OPTRACE "write_checkpoint" START { CHECKPOINT }
 # disable binary constraint mode for synth run checkpoints
 set_param constraints.enableBinaryConstraints false
-write_checkpoint -force -noxdef sha256_core.dcp
+write_checkpoint -force -noxdef test_top.dcp
 OPTRACE "write_checkpoint" END { }
 OPTRACE "synth reports" START { REPORT }
-create_report "synth_1_synth_report_utilization_0" "report_utilization -file sha256_core_utilization_synth.rpt -pb sha256_core_utilization_synth.pb"
+create_report "synth_1_synth_report_utilization_0" "report_utilization -file test_top_utilization_synth.rpt -pb test_top_utilization_synth.pb"
 OPTRACE "synth reports" END { }
 file delete __synthesis_is_running__
 close [open __synthesis_is_complete__ w]

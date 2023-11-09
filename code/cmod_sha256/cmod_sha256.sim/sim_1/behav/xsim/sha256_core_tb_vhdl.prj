@@ -1,8 +1,0 @@
-# compile vhdl design source files
-vhdl xil_defaultlib  \
-"../../../../cmod_sha256.srcs/sources_1/new/sha256_pkg.vhd" \
-"../../../../cmod_sha256.srcs/sources_1/new/sha256_core.vhd" \
-"../../../../cmod_sha256.srcs/sim_1/new/sha256_core_tb.vhd" \
-
-# Do not sort compile order
-nosort

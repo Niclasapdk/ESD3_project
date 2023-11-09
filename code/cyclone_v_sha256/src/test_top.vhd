@@ -4,7 +4,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity test_top is
     port(
         -- inputs
-        --clk      : in STD_LOGIC; -- system clock
+        clk      : in STD_LOGIC; -- system clock
         com_clk  : in STD_LOGIC;
         r_nw     : in STD_LOGIC; -- R/not_W signal (read active high) (as seen by the master)
         addr_bus : in STD_LOGIC_VECTOR(1 downto 0);
@@ -24,6 +24,7 @@ begin
     DL : entity work.data_link
     generic map(ADDR => "10")
     port map(
+                clk => clk,
                 com_clk => com_clk,
                 r_nw => r_nw,
                 addr_bus => addr_bus,
@@ -32,18 +33,18 @@ begin
                 data_rx => data_rx
             );
 
-    PE : entity work.passwd_expander
-    generic map(
-                   stx => x"02",
-                   etx => x"03",
-                   dle => x"10"
-               )
-    port map(
-                com_clk => com_clk,
-                passwd => passwd,
-                output_valid => output_valid,
-                data_in => data_rx
-            );
+--    PE : entity work.passwd_expander
+--    generic map(
+--                   stx => x"02",
+--                   etx => x"03",
+--                   dle => x"10"
+--               )
+--    port map(
+--                com_clk => com_clk,
+--                passwd => passwd,
+--                output_valid => output_valid,
+--                data_in => data_rx
+--            );
 
 end Behavioral;
 

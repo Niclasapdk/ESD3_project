@@ -1,9 +1,0 @@
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/markus/uni/ESD3_project/code/cmod_sha256/cmod_sha256.srcs/sources_1/new/sha256_pkg.vhd" into library xil_defaultlib
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/markus/uni/ESD3_project/code/cmod_sha256/cmod_sha256.srcs/sources_1/new/sha256_core.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'sha256_core'
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/markus/uni/ESD3_project/code/cmod_sha256/cmod_sha256.srcs/sources_1/new/data_link.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'data_link'
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/markus/uni/ESD3_project/code/cmod_sha256/cmod_sha256.srcs/sources_1/new/passwd_expander.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'passwd_expander'
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/markus/uni/ESD3_project/code/cmod_sha256/cmod_sha256.srcs/sources_1/new/passwd_expander_tb.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'passwd_expander_tb'

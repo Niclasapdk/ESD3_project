@@ -15,6 +15,7 @@ entity data_link is
         -- inout
         data_bus : inout STD_LOGIC_VECTOR(7 downto 0);
         -- outputs
+        tx_success : out std_logic; -- flag to show if data was sent
         data_rx  : out STD_LOGIC_VECTOR(7 downto 0)
         );
 end data_link;
@@ -37,6 +38,7 @@ begin
 
             -- com_clk rising edge
             if r3_com_clk = '0' and r2_com_clk = '1' then
+                tx_success <= '0';
                 addr_I := addr_bus;
                 r_nw_I := r_nw;
 
@@ -44,6 +46,7 @@ begin
                 -- we are the ones being talked to
                     if r_nw_I = '1' then
                     -- slave will write to data bus
+                    tx_success <= '1';
                         for i in 0 to 7 loop
                             if data_tx(i) = '1' then
                                 data_bus(i) <= 'Z';

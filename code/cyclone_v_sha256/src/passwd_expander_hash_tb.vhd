@@ -1,10 +1,10 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
-entity passwd_expander_tb is
-end passwd_expander_tb;
+entity passwd_expander_hash_tb is
+end passwd_expander_hash_tb;
 
-architecture Behavioral of passwd_expander_tb is
+architecture Behavioral of passwd_expander_hash_tb is
     signal clk  : STD_LOGIC := '0';
     signal com_clk  : STD_LOGIC := '0';
     signal passwd : std_logic_vector(0 to 511) := (others => '0');
@@ -12,11 +12,12 @@ architecture Behavioral of passwd_expander_tb is
     signal r_nw     : STD_LOGIC := '0'; -- R/not_W signal (read active high) (as seen by the master)
     signal addr_bus : STD_LOGIC_VECTOR(1 downto 0) := "10";
     signal data_tx  : STD_LOGIC_VECTOR(7 downto 0) := x"00";
+    signal tx_success : std_logic;
     signal data_bus : STD_LOGIC_VECTOR(7 downto 0) := x"00";
     signal data_rx  : STD_LOGIC_VECTOR(7 downto 0) := x"00";
     constant pkt : std_logic_vector(527 downto 0) := x"03a8000000000000000000000000000000000000000000000000000000000000000000000000000000000080706f6e6d6c6b696a6867666564636261656c70704102";
     constant CLK_PERIOD : time := 10 ns;
-    constant COM_CLK_PERIOD : time := 1 ms;
+    constant COM_CLK_PERIOD : time := 1 us;
     signal hash : std_logic_vector(255 downto 0) := (others => '0');
     signal hash_done : std_logic := '0';
     signal rst_core : std_logic := '0';
@@ -32,15 +33,11 @@ begin
                 addr_bus => addr_bus,
                 data_tx  => data_tx,
                 data_bus => data_bus,
-                data_rx  => data_rx
+                data_rx  => data_rx,
+                tx_success => tx_success
             );
 
     PE : entity work.passwd_expander
-    generic map(
-                   stx => x"02",
-                   etx => x"03",
-                   dle => x"10"
-               )
     port map(
                 clk          => clk,
                 com_clk      => com_clk,

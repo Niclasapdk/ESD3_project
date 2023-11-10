@@ -5,4 +5,14 @@ Running: /home/markus/build/Xilinx/Vivado/2023.1/bin/unwrapped/lnx64.o/xelab --i
 Using 8 slave threads.
 Starting static elaboration
 Completed static elaboration
-INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.data_link [\data_link(addr="10")\]
+Compiling architecture behaviorial of entity xil_defaultlib.passwd_expander [\passwd_expander(stx="00000010",...]
+Compiling architecture behavioral of entity xil_defaultlib.passwd_expander_tb
+Built simulation snapshot passwd_expander_tb_behav

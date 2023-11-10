@@ -11,8 +11,7 @@ entity test_top is
         data_tx  : in STD_LOGIC_VECTOR(7 downto 0);
         -- inout
         data_bus : inout STD_LOGIC_VECTOR(7 downto 0);
-        -- outputs
-        data_rx  : buffer STD_LOGIC_VECTOR(7 downto 0)
+        data_rx  : inout STD_LOGIC_VECTOR(7 downto 0)
         );
 end test_top;
 
@@ -33,18 +32,19 @@ begin
                 data_rx => data_rx
             );
 
---    PE : entity work.passwd_expander
---    generic map(
---                   stx => x"02",
---                   etx => x"03",
---                   dle => x"10"
---               )
---    port map(
---                com_clk => com_clk,
---                passwd => passwd,
---                output_valid => output_valid,
---                data_in => data_rx
---            );
+    PE : entity work.passwd_expander
+    generic map(
+                   stx => x"02",
+                   etx => x"03",
+                   dle => x"10"
+               )
+    port map(
+                clk => clk,
+                com_clk => com_clk,
+                passwd => passwd,
+                output_valid => output_valid,
+                data_in => data_rx
+            );
 
 end Behavioral;
 

@@ -20,6 +20,7 @@ entity data_link is
 end data_link;
 
 architecture Behavioral of data_link is
+    -- Clock synchronization
     signal r1_com_clk : std_logic;
     signal r2_com_clk : std_logic;
     signal r3_com_clk : std_logic;

@@ -1,5 +1,6 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
 
 entity passwd_expander_hash_tb is
 end passwd_expander_hash_tb;
@@ -15,12 +16,13 @@ architecture Behavioral of passwd_expander_hash_tb is
     signal tx_success : std_logic;
     signal data_bus : STD_LOGIC_VECTOR(7 downto 0) := x"00";
     signal data_rx  : STD_LOGIC_VECTOR(7 downto 0) := x"00";
-    constant pkt : std_logic_vector(527 downto 0) := x"03a8000000000000000000000000000000000000000000000000000000000000000000000000000000000080706f6e6d6c6b696a6867666564636261656c70704102";
+    constant pkt : std_logic_vector(0 to 527) := x"024170706c6561626364656667686a696b6c6d6e6f70800000000000000000000000000000000000000000000000000000000000000000000000000000000000a803";
     constant CLK_PERIOD : time := 10 ns;
     constant COM_CLK_PERIOD : time := 1 us;
     signal hash : std_logic_vector(255 downto 0) := (others => '0');
     signal hash_done : std_logic := '0';
     signal rst_core : std_logic := '0';
+    signal rounds : unsigned(31 downto 0) := x"00000002";
 begin
     clk <= not clk after CLK_PERIOD/2;
     com_clk <= not com_clk after COM_CLK_PERIOD/2;
@@ -49,6 +51,7 @@ begin
     rst_core <= not passwd_valid;
     C1 : entity work.sha256_core
     port map (
+                 rounds => rounds,
                  clk       => clk,
                  start     => passwd_valid,
                  reset     => rst_core,
@@ -66,7 +69,7 @@ begin
                 idx := 0;
             end if;
 
-            data_bus <= pkt(idx+7 downto idx);
+            data_bus <= pkt(idx to idx+7);
             idx := idx + 8;
         end if;
     end process;

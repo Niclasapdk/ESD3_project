@@ -6,19 +6,20 @@
       <db_ref path="passwd_expander_tb_behav.wdb" id="1">
          <top_modules>
             <top_module name="passwd_expander_tb" />
+            <top_module name="sha256_pkg" />
          </top_modules>
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="659,143 ps"></ZoomStartTime>
-      <ZoomEndTime time="664,184 ps"></ZoomEndTime>
-      <Cursor1Time time="661,563 ps"></Cursor1Time>
+      <ZoomStartTime time="67,500,754.500 ns"></ZoomStartTime>
+      <ZoomEndTime time="67,500,929.201 ns"></ZoomEndTime>
+      <Cursor1Time time="67,500,000.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="263"></NameColumnWidth>
+      <NameColumnWidth column_width="251"></NameColumnWidth>
       <ValueColumnWidth column_width="91"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="13" />
+   <WVObjectSize size="17" />
    <wvobject type="logic" fp_name="/passwd_expander_tb/DL/com_clk">
       <obj_property name="ElementShortName">com_clk</obj_property>
       <obj_property name="ObjectShortName">com_clk</obj_property>
@@ -44,31 +45,47 @@
       <obj_property name="ObjectShortName">data_rx[7:0]</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/passwd_expander_tb/PE/passwd">
-      <obj_property name="ElementShortName">passwd[511:0]</obj_property>
-      <obj_property name="ObjectShortName">passwd[511:0]</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/passwd_expander_tb/PE/output_valid">
-      <obj_property name="ElementShortName">output_valid</obj_property>
-      <obj_property name="ObjectShortName">output_valid</obj_property>
+      <obj_property name="ElementShortName">passwd[0:511]</obj_property>
+      <obj_property name="ObjectShortName">passwd[0:511]</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/passwd_expander_tb/PE/data_in">
       <obj_property name="ElementShortName">data_in[7:0]</obj_property>
       <obj_property name="ObjectShortName">data_in[7:0]</obj_property>
    </wvobject>
+   <wvobject type="logic" fp_name="/passwd_expander_tb/passwd_valid">
+      <obj_property name="ElementShortName">passwd_valid</obj_property>
+      <obj_property name="ObjectShortName">passwd_valid</obj_property>
+   </wvobject>
    <wvobject type="other" fp_name="/passwd_expander_tb/PE/current_state">
       <obj_property name="ElementShortName">current_state</obj_property>
       <obj_property name="ObjectShortName">current_state</obj_property>
    </wvobject>
-   <wvobject type="other" fp_name="/passwd_expander_tb/idx_debug">
-      <obj_property name="ElementShortName">idx_debug</obj_property>
-      <obj_property name="ObjectShortName">idx_debug</obj_property>
-   </wvobject>
-   <wvobject type="other" fp_name="/passwd_expander_tb/PE/idx_debug_exp">
-      <obj_property name="ElementShortName">idx_debug_exp</obj_property>
-      <obj_property name="ObjectShortName">idx_debug_exp</obj_property>
-   </wvobject>
    <wvobject type="other" fp_name="/passwd_expander_tb/PE/next_state">
       <obj_property name="ElementShortName">next_state</obj_property>
       <obj_property name="ObjectShortName">next_state</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/passwd_expander_tb/hash">
+      <obj_property name="ElementShortName">hash[255:0]</obj_property>
+      <obj_property name="ObjectShortName">hash[255:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/passwd_expander_tb/hash_done">
+      <obj_property name="ElementShortName">hash_done</obj_property>
+      <obj_property name="ObjectShortName">hash_done</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/passwd_expander_tb/rst_core">
+      <obj_property name="ElementShortName">rst_core</obj_property>
+      <obj_property name="ObjectShortName">rst_core</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/passwd_expander_tb/C1/passwd_in">
+      <obj_property name="ElementShortName">passwd_in[0:511]</obj_property>
+      <obj_property name="ObjectShortName">passwd_in[0:511]</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/passwd_expander_tb/C1/current_state">
+      <obj_property name="ElementShortName">current_state</obj_property>
+      <obj_property name="ObjectShortName">current_state</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/passwd_expander_tb/C1/passwd_internal">
+      <obj_property name="ElementShortName">passwd_internal[0:15][31:0]</obj_property>
+      <obj_property name="ObjectShortName">passwd_internal[0:15][31:0]</obj_property>
    </wvobject>
 </wave_config>

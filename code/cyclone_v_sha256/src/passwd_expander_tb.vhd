@@ -39,6 +39,7 @@ begin
                    dle => x"10"
                )
     port map(
+                clk => clk,
                 com_clk => com_clk,
                 passwd => passwd,
                 output_valid => output_valid,

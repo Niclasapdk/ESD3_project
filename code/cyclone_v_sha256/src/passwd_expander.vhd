@@ -15,6 +15,7 @@ entity passwd_expander is
             output_valid : out std_logic;
 
             -- Inputs
+            clk : in std_logic; -- System clock
             data_in : in std_logic_vector(7 downto 0);
             com_clk : in std_logic
         );
@@ -26,16 +27,14 @@ architecture Behaviorial of passwd_expander is
 	signal current_state : passwd_expander_state_type := STOP;
 	signal next_state : passwd_expander_state_type := STOP;
 
--- Current state logic like in hash core :3
+    -- Clock synchronization
+    signal r1_com_clk : std_logic;
+    signal r2_com_clk : std_logic;
+    signal r3_com_clk : std_logic;
+
 begin
-	process(com_clk)
-	begin
-		if rising_edge(com_clk) then
-			current_state <= next_state;
-		end if;
-	end process;
 	
--- Next state logic	
+    -- Next state logic	
 	process(current_state, data_in)
 	begin
 		case current_state is
@@ -60,31 +59,40 @@ begin
 		end case;
 	end process;
 	
-	--
-    process(com_clk, current_state, data_in) is
+	-- Combinatorial and current state logic
+    process(clk, com_clk, current_state, data_in) is
 		variable idx : integer := 0;
 	begin
-		if rising_edge(com_clk) then
-            case current_state is
-                when START =>
-                    output_valid <= '0';
-                    idx := 0;
-                    passwd(idx+7 downto idx) <= data_in;
-                    idx := idx + 8;
-                when DATA =>
-                    if (idx < 512) then
-                        if (data_in /= dle) then
-                            passwd(idx+7 downto idx) <= data_in;
-                            idx := idx + 8;
+		if rising_edge(clk) then
+
+            r1_com_clk <= com_clk;
+            r2_com_clk <= r1_com_clk;
+            r3_com_clk <= r2_com_clk;
+
+            -- com_clk rising edge
+            if r3_com_clk = '0' and r2_com_clk = '1' then
+                current_state <= next_state;
+                case current_state is
+                    when START =>
+                        output_valid <= '0';
+                        idx := 0;
+                        passwd(idx+7 downto idx) <= data_in;
+                        idx := idx + 8;
+                    when DATA =>
+                        if (idx < 512) then
+                            if (data_in /= dle) then
+                                passwd(idx+7 downto idx) <= data_in;
+                                idx := idx + 8;
+                            end if;
                         end if;
-                    end if;
-                when ESCAPE =>
-                    passwd(idx+7 downto idx) <= data_in;
-                    idx := idx + 8;
-                when STOP =>
-                    output_valid <= '1';
-                when others =>
-            end case;
+                    when ESCAPE =>
+                        passwd(idx+7 downto idx) <= data_in;
+                        idx := idx + 8;
+                    when STOP =>
+                        output_valid <= '1';
+                    when others =>
+                end case;
+            end if;
         end if;
 	end process;
 	

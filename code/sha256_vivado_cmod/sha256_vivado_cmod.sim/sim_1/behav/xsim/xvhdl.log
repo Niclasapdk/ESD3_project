@@ -1,0 +1,2 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/markus/uni/ESD3_project/code/cyclone_v_sha256/src/passwd_expander_hash_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'passwd_expander_hash_tb'

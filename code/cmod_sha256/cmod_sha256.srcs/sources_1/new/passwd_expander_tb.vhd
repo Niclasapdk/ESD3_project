@@ -5,6 +5,7 @@ entity passwd_expander_tb is
 end passwd_expander_tb;
 
 architecture Behavioral of passwd_expander_tb is
+    signal clk  : STD_LOGIC := '0';
     signal com_clk  : STD_LOGIC := '0';
     signal passwd : std_logic_vector(511 downto 0) := (others => '0');
     signal output_valid : std_logic := '0';
@@ -15,12 +16,14 @@ architecture Behavioral of passwd_expander_tb is
     signal data_rx  : STD_LOGIC_VECTOR(7 downto 0) := x"00";
     constant pkt : std_logic_vector(527 downto 0) := x"03a8000000000000000000000000000000000000000000000000000000000000000000000000000000000080706f6e6d6c6b696a6867666564636261656c70704102";
     constant CLK_PERIOD : time := 10 ns;
-    signal idx_debug : integer := 0;
+    constant COM_CLK_PERIOD : time := 1 ms;
 begin
-    com_clk <= not com_clk after CLK_PERIOD/2;
+    clk <= not clk after CLK_PERIOD/2;
+    com_clk <= not com_clk after COM_CLK_PERIOD/2;
     DL : entity work.data_link
     generic map(ADDR => "10")
     port map(
+                clk => clk,
                 com_clk => com_clk,
                 r_nw => r_nw,
                 addr_bus => addr_bus,
@@ -36,6 +39,7 @@ begin
                    dle => x"10"
                )
     port map(
+                clk => clk,
                 com_clk => com_clk,
                 passwd => passwd,
                 output_valid => output_valid,
@@ -45,7 +49,6 @@ begin
     process(com_clk)
         variable idx : integer := 0;
     begin
-        idx_debug <= idx;
         if rising_edge(com_clk) then
             if idx = 528 then
                 idx := 0;

@@ -18,6 +18,7 @@ end test_top;
 architecture Behavioral of test_top is
     signal passwd : std_logic_vector(511 downto 0);
     signal output_valid : std_logic;
+    signal tx_success : std_logic;
 begin
 
     DL : entity work.data_link
@@ -29,15 +30,11 @@ begin
                 addr_bus => addr_bus,
                 data_tx => data_tx,
                 data_bus => data_bus,
-                data_rx => data_rx
+                data_rx => data_rx,
+                tx_success => tx_success
             );
 
     PE : entity work.passwd_expander
-    generic map(
-                   stx => x"02",
-                   etx => x"03",
-                   dle => x"10"
-               )
     port map(
                 clk => clk,
                 com_clk => com_clk,
@@ -47,4 +44,3 @@ begin
             );
 
 end Behavioral;
-

@@ -90,6 +90,8 @@ read_vhdl -library xil_defaultlib {
   /home/markus/uni/ESD3_project/code/cyclone_v_sha256/src/data_link.vhd
   /home/markus/uni/ESD3_project/code/cyclone_v_sha256/src/plusbus_pkg.vhd
   /home/markus/uni/ESD3_project/code/cyclone_v_sha256/src/passwd_expander.vhd
+  /home/markus/uni/ESD3_project/code/cyclone_v_sha256/src/sha256_pkg.vhd
+  /home/markus/uni/ESD3_project/code/cyclone_v_sha256/src/sha256_core.vhd
   /home/markus/uni/ESD3_project/code/cyclone_v_sha256/src/test_top.vhd
 }
 OPTRACE "Adding files" END { }
@@ -102,6 +104,8 @@ foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
 set_param ips.enableIPCacheLiteLoad 1
+
+read_checkpoint -auto_incremental -incremental /home/markus/uni/ESD3_project/code/sha256_vivado_cmod/sha256_vivado_cmod.srcs/utils_1/imports/synth_1/test_top.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }

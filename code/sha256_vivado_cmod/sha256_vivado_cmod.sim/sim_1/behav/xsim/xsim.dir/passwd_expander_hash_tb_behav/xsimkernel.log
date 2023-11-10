@@ -1,4 +1,7 @@
-Running: xsim.dir/passwd_expander_hash_tb_behav/xsimk -simmode gui -wdb passwd_expander_hash_tb_behav.wdb -simrunnum 0 -socket 55025
+Running: xsim.dir/passwd_expander_hash_tb_behav/xsimk -simmode gui -wdb passwd_expander_hash_tb_behav.wdb -simrunnum 0 -socket 34453
 Design successfully loaded
 Design Loading Memory Usage: 23260 KB (Peak: 23844 KB)
 Design Loading CPU Usage: 20 ms
+Simulation completed
+Simulation Memory Usage: 104996 KB (Peak: 162528 KB)
+Simulation CPU Usage: 80 ms

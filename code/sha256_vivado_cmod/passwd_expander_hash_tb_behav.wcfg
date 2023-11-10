@@ -12,12 +12,12 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="66,499,330.839 ns"></ZoomStartTime>
-      <ZoomEndTime time="66,501,152.840 ns"></ZoomEndTime>
-      <Cursor1Time time="66,500,746.839 ns"></Cursor1Time>
+      <ZoomStartTime time="67,133.900 ns"></ZoomStartTime>
+      <ZoomEndTime time="67,359.006 ns"></ZoomEndTime>
+      <Cursor1Time time="70,000.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="239"></NameColumnWidth>
+      <NameColumnWidth column_width="227"></NameColumnWidth>
       <ValueColumnWidth column_width="91"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="4" />
@@ -27,7 +27,7 @@
       <obj_property name="ObjectShortName">clk</obj_property>
       <obj_property name="label">FPGA clk</obj_property>
    </wvobject>
-   <wvobject type="group" fp_name="group48">
+   <wvobject type="group" fp_name="group134">
       <obj_property name="label">Com. Wires</obj_property>
       <obj_property name="DisplayName">label</obj_property>
       <obj_property name="isExpanded"></obj_property>
@@ -48,8 +48,8 @@
          <obj_property name="ObjectShortName">data_bus[7:0]</obj_property>
       </wvobject>
    </wvobject>
-   <wvobject type="group" fp_name="group50">
-      <obj_property name="label">Com. L3</obj_property>
+   <wvobject type="group" fp_name="group156">
+      <obj_property name="label">Com. L2+L3</obj_property>
       <obj_property name="DisplayName">label</obj_property>
       <obj_property name="isExpanded"></obj_property>
       <wvobject type="other" fp_name="/passwd_expander_hash_tb/PE/current_state">
@@ -57,6 +57,24 @@
          <obj_property name="ElementShortName">current_state</obj_property>
          <obj_property name="ObjectShortName">current_state</obj_property>
          <obj_property name="label">com state</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/passwd_expander_hash_tb/PE/r1_com_clk">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">r1_com_clk</obj_property>
+         <obj_property name="ObjectShortName">r1_com_clk</obj_property>
+         <obj_property name="label">clk sync 1</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/passwd_expander_hash_tb/PE/r2_com_clk">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">r2_com_clk</obj_property>
+         <obj_property name="ObjectShortName">r2_com_clk</obj_property>
+         <obj_property name="label">clk sync 2</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/passwd_expander_hash_tb/PE/r3_com_clk">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">r3_com_clk</obj_property>
+         <obj_property name="ObjectShortName">r3_com_clk</obj_property>
+         <obj_property name="label">clk sync 3</obj_property>
       </wvobject>
       <wvobject type="array" fp_name="/passwd_expander_hash_tb/data_rx">
          <obj_property name="ElementShortName">data_rx[7:0]</obj_property>
@@ -71,7 +89,7 @@
          <obj_property name="ObjectShortName">passwd_valid</obj_property>
       </wvobject>
    </wvobject>
-   <wvobject type="group" fp_name="group51">
+   <wvobject type="group" fp_name="group157">
       <obj_property name="label">Hash Core</obj_property>
       <obj_property name="DisplayName">label</obj_property>
       <obj_property name="isExpanded"></obj_property>
@@ -79,13 +97,21 @@
          <obj_property name="ElementShortName">rst_core</obj_property>
          <obj_property name="ObjectShortName">rst_core</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="/passwd_expander_hash_tb/hash">
-         <obj_property name="ElementShortName">hash[255:0]</obj_property>
-         <obj_property name="ObjectShortName">hash[255:0]</obj_property>
+      <wvobject type="array" fp_name="/passwd_expander_hash_tb/C1/passwd">
+         <obj_property name="ElementShortName">passwd[0:15][31:0]</obj_property>
+         <obj_property name="ObjectShortName">passwd[0:15][31:0]</obj_property>
       </wvobject>
       <wvobject type="logic" fp_name="/passwd_expander_hash_tb/hash_done">
          <obj_property name="ElementShortName">hash_done</obj_property>
          <obj_property name="ObjectShortName">hash_done</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/passwd_expander_hash_tb/hash">
+         <obj_property name="ElementShortName">hash[255:0]</obj_property>
+         <obj_property name="ObjectShortName">hash[255:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/passwd_expander_hash_tb/rounds">
+         <obj_property name="ElementShortName">rounds[31:0]</obj_property>
+         <obj_property name="ObjectShortName">rounds[31:0]</obj_property>
       </wvobject>
       <wvobject type="other" fp_name="/passwd_expander_hash_tb/C1/current_state">
          <obj_property name="DisplayName">label</obj_property>

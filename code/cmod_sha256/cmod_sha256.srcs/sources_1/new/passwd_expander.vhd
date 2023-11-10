@@ -11,7 +11,7 @@ entity passwd_expander is
 			);
     port(
             -- Outputs
-            passwd : out std_logic_vector(511 downto 0);
+            passwd : out std_logic_vector(0 to 511);
             output_valid : out std_logic;
 
             -- Inputs
@@ -37,6 +37,7 @@ begin
     -- Next state logic	
 	process(current_state, data_in)
 	begin
+        output_valid <= '0';
 		case current_state is
 			when STOP =>
 				if (data_in = stx) then
@@ -44,6 +45,7 @@ begin
 				else
 					next_state <= STOP;
 				end if;
+                output_valid <= '1';
 			when START =>
 				next_state <= DATA;
 			when ESCAPE =>
@@ -74,22 +76,19 @@ begin
                 current_state <= next_state;
                 case current_state is
                     when START =>
-                        output_valid <= '0';
                         idx := 0;
-                        passwd(idx+7 downto idx) <= data_in;
+                        passwd(idx to idx+7) <= data_in;
                         idx := idx + 8;
                     when DATA =>
                         if (idx < 512) then
                             if (data_in /= dle) then
-                                passwd(idx+7 downto idx) <= data_in;
+                                passwd(idx to idx+7) <= data_in;
                                 idx := idx + 8;
                             end if;
                         end if;
                     when ESCAPE =>
-                        passwd(idx+7 downto idx) <= data_in;
+                        passwd(idx to idx+7) <= data_in;
                         idx := idx + 8;
-                    when STOP =>
-                        output_valid <= '1';
                     when others =>
                 end case;
             end if;

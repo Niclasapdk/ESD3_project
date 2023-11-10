@@ -12,7 +12,9 @@ Compiling package std.standard
 Compiling package std.textio
 Compiling package ieee.std_logic_1164
 Compiling package ieee.numeric_std
+Compiling package xil_defaultlib.sha256_pkg
 Compiling architecture behavioral of entity xil_defaultlib.data_link [\data_link(addr="10")\]
 Compiling architecture behaviorial of entity xil_defaultlib.passwd_expander [\passwd_expander(stx="00000010",...]
+Compiling architecture behavioral of entity xil_defaultlib.sha256_core [sha256_core_default]
 Compiling architecture behavioral of entity xil_defaultlib.passwd_expander_tb
 Built simulation snapshot passwd_expander_tb_behav

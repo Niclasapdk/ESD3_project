@@ -1,5 +1,6 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
 
 entity test_top is
     port(
@@ -17,8 +18,12 @@ end test_top;
 
 architecture Behavioral of test_top is
     signal passwd : std_logic_vector(511 downto 0);
-    signal output_valid : std_logic;
+    signal passwd_valid : std_logic;
     signal tx_success : std_logic;
+    signal rst_core : std_logic := '0';
+    signal hash : std_logic_vector(255 downto 0) := (others => '0');
+    signal hash_done : std_logic := '0';
+    signal rounds : unsigned(31 downto 0) := x"00000002";
 begin
 
     DL : entity work.data_link
@@ -39,8 +44,18 @@ begin
                 clk => clk,
                 com_clk => com_clk,
                 passwd => passwd,
-                output_valid => output_valid,
+                output_valid => passwd_valid,
                 data_in => data_rx
             );
 
+    rst_core <= not passwd_valid;
+    C1 : entity work.sha256_core
+    port map (
+                 clk       => clk,
+                 start     => passwd_valid,
+                 reset     => rst_core,
+                 passwd_in => passwd,
+                 hash_out  => hash,
+                 hash_done => hash_done
+             );
 end Behavioral;

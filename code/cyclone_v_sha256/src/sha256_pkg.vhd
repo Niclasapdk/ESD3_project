@@ -17,6 +17,9 @@ package sha256_pkg is
 
     function SIGMA_COMPRESS_0(x : std_logic_vector(31 downto 0)) return std_logic_vector;
     function SIGMA_COMPRESS_1(x : std_logic_vector(31 downto 0)) return std_logic_vector;
+
+    -- pad hash digest (for multi-round hashing)
+    function pad_hash_digest(hash : std_logic_vector(255 downto 0)) return std_logic_vector;
 end package;
 
 package body sha256_pkg is
@@ -54,5 +57,10 @@ package body sha256_pkg is
     function SIGMA_COMPRESS_1(x : std_logic_vector(31 downto 0)) return std_logic_vector is
     begin
         return ROTR(x,6) xor ROTR(x,11) xor ROTR(x,25);
+    end function;
+
+    function pad_hash_digest(hash : std_logic_vector(255 downto 0)) return std_logic_vector is
+    begin
+        return hash & x"80" & x"0000000000000000000000000000000000000000000000" & x"0000000000000100";
     end function;
 end package body;

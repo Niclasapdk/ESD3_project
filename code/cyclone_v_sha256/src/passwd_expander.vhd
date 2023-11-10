@@ -75,9 +75,11 @@ begin
                         passwd(to_integer(idx) to to_integer(idx)+7) <= data_in;
                         idx := idx + 8;
                     when DATA =>
-                        if (data_in /= PLUSBUS_DLE) then
-                            passwd(to_integer(idx) to to_integer(idx)+7) <= data_in;
-                            idx := idx + 8;
+                        if (idx /= "000000000") then
+                            if (data_in /= PLUSBUS_DLE) then
+                                passwd(to_integer(idx) to to_integer(idx)+7) <= data_in;
+                                idx := idx + 8;
+                            end if;
                         end if;
                     when ESCAPE =>
                         passwd(to_integer(idx) to to_integer(idx)+7) <= data_in;

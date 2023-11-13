@@ -21,7 +21,6 @@ architecture Behavioral of multi_round_hasher is
     signal core_done : std_logic;
     signal core_hash : std_logic_vector(255 downto 0);
     signal core_in : std_logic_vector(0 to 511);
-    signal core_rst : std_logic;
     signal core_start : std_logic;
 
     type multi_round_state_t is (IDLE_RESET, START_WAIT_CORE, RUNNING, RUNNING_CORE_READY, RUNNING_CORE_WAIT, START_CORE_READY, DONE, DONE_CORE_WAIT);

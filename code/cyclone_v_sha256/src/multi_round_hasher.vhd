@@ -24,13 +24,9 @@ architecture Behavioral of multi_round_hasher is
     signal core_rst : std_logic;
     signal core_start : std_logic;
 
-    type multi_round_state_t is (IDLE_RESET, START, RUNNING, DONE);
+    type multi_round_state_t is (IDLE_RESET, START_WAIT_CORE, RUNNING, RUNNING_CORE_READY, RUNNING_CORE_WAIT, START_CORE_READY, DONE, DONE_CORE_WAIT);
     signal current_state : multi_round_state_t := IDLE_RESET;
     signal next_state : multi_round_state_t := IDLE_RESET;
-
-    type round_state_t is (WAIT_CORE, CORE_READY);
-    signal current_round_state : multi_round_state_t := CORE_READY;
-    signal next_round_state : multi_round_state_t := CORE_READY;
 
     signal rounds_internal : unsigned(31 downto 0);
     signal rounds_ctr : unsigned(31 downto 0);
@@ -55,22 +51,38 @@ begin
     end process;
 
     -- Next-state logic
-    process(current_state, rounds_internal, rounds_ctr, start, reset)
+    process(current_state, rounds_internal, rounds_ctr, reset, start, core_done)
     begin
         case current_state is
             when IDLE_RESET =>
                 if start = '1' then
-                    next_state <= START;
+                    next_state <= START_CORE_WAIT;
                 else
                     next_state <= IDLE_RESET;
                 end if;
-            when START =>
-                next_state <= RUNNING;
-            when RUNNING =>
-                if rounds_internal = rounds_ctr+1 then
+            when START_CORE_WAIT =>
+                if core_done = '1' then
+                    next_state <= START_CORE_READY;
+                else
+                    next_state <= START_CORE_WAIT;
+                end if;
+            when START_CORE_READY =>
+                next_state <= RUNNING_CORE_WAIT;
+            when RUNNING_CORE_WAIT =>
+                if rounds_internal = rounds_ctr + 1 then
+                    next_state <= DONE_CORE_WAIT;
+                elsif core_done = '1' then
+                    next_state <= RUNNING_CORE_READY;
+                else
+                    next_state <= RUNNING_CORE_WAIT;
+                end if;
+            when RUNNING_CORE_READY =>
+                next_state <= RUNNING_CORE_WAIT;
+            when DONE_CORE_WAIT =>
+                if core_done = '1' then
                     next_state <= DONE;
                 else
-                    next_state <= RUNNING;
+                    next_state <= DONE_CORE_WAIT;
                 end if;
             when DONE =>
                 if reset = '1' then

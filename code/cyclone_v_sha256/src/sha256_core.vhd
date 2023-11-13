@@ -7,7 +7,6 @@ entity sha256_core is
     port(
         clk : in std_logic;
         start : in std_logic;
-        reset : in std_logic;
         passwd_in : in std_logic_vector(0 to 511);
         hash_out : out std_logic_vector(255 downto 0);
         hash_done: out std_logic
@@ -90,7 +89,7 @@ architecture Behavioral of sha256_core is
         X"00000000", X"00000000", X"00000000", X"00000000"
     );
     
-    type sha256_core_state_type is (IDLE, RST, READ_MSG, PREP_MSG_0, PREP_MSG_1, PREP_MSG_2, PREP_MSG_3, HASH_1, HASH_2, HASH_2b, HASH_3, DONE);
+    type sha256_core_state_type is (IDLE, READ_MSG, PREP_MSG_0, PREP_MSG_1, PREP_MSG_2, PREP_MSG_3, HASH_1, HASH_2, HASH_2b, HASH_3, DONE);
     signal current_state : sha256_core_state_type := IDLE;
     signal next_state : sha256_core_state_type := IDLE;
 
@@ -108,19 +107,15 @@ begin
         end if;
     end process;
     -- Next state logic.
-    process(current_state, compression_counter, start, reset)
+    process(current_state, compression_counter, start)
     begin
         case current_state is
             when IDLE =>
-                if (reset = '1') then
-                    next_state <= RST;
-                elsif (start = '1') then
+                if (start = '1') then
                     next_state <= READ_MSG;
                 else
                     next_state <= IDLE;
                 end if;
-            when RST =>
-                next_state <= IDLE;
             when READ_MSG =>
                 next_state <= PREP_MSG_0;
             when PREP_MSG_0 =>
@@ -142,8 +137,8 @@ begin
             when HASH_3 =>
                 next_state <= DONE;
             when DONE =>
-                if (reset = '1') then
-                    next_state <= RST;
+                if (start = '1') then
+                    next_state <= READ_MSG;
                 else
                     next_state <= DONE;
                 end if;
@@ -170,7 +165,7 @@ begin
             passwd <= passwd; compression_counter <= compression_counter;
             case current_state is
                 when IDLE =>
-                when RST =>
+                when READ_MSG =>
                     h0 <= x"6a09e667";
                     h1 <= x"bb67ae85";
                     h2 <= x"3c6ef372";
@@ -180,7 +175,6 @@ begin
                     h6 <= x"1f83d9ab";
                     h7 <= x"5be0cd19";
                     compression_counter <= "0000000";
-                when READ_MSG =>
                     passwd <= passwd_internal;
                 when PREP_MSG_0 =>
                     w(0 to 15) <= w_buf(0 to 15);

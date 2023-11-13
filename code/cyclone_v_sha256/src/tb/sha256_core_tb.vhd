@@ -9,7 +9,6 @@ architecture Behavioral of sha256_core_tb is
     constant CLK_PERIOD : time := 10 ns;
     signal clk          : std_logic := '0'; -- clock signal
     signal start        : std_logic;        -- start signal (enable high)
-    signal rst          : std_logic;        -- reset signal (enable high)
     signal passwd       : std_logic_vector(511 downto 0) := x"414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141418000000000000001b8";
     signal hash         : std_logic_vector(255 downto 0);
     signal done         : std_logic;
@@ -22,7 +21,6 @@ begin
     port map (
         clk       => clk,
         start     => start,
-        reset     => rst,
         passwd_in => passwd,
         hash_out  => hash,
         hash_done => done

@@ -35,7 +35,6 @@ begin
     port map (
                  clk       => clk,
                  start     => core_start,
-                 reset     => core_rst,
                  passwd_in => core_in,
                  hash_out  => core_hash,
                  hash_done => core_done

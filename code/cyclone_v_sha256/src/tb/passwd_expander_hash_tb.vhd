@@ -25,7 +25,6 @@ architecture Behavioral of passwd_expander_hash_tb is
     constant COM_CLK_PERIOD : time := 1 us;
     signal hash : std_logic_vector(255 downto 0) := (others => '0');
     signal hash_done : std_logic := '0';
-    signal rst_core : std_logic := '0';
     signal rounds : unsigned(31 downto 0) := x"00000002";
     signal pidx : unsigned(0 downto 0) := "0";
     signal cur_pkt : std_logic_vector(0 to 527);
@@ -54,12 +53,10 @@ begin
                 data_in      => data_rx
             );
 
-    rst_core <= not passwd_valid;
     C1 : entity work.sha256_core
     port map (
                  clk       => clk,
                  start     => passwd_valid,
-                 reset     => rst_core,
                  passwd_in => passwd,
                  hash_out  => hash,
                  hash_done => hash_done

@@ -51,7 +51,6 @@ begin
     rst_core <= not passwd_valid;
     C1 : entity work.sha256_core
     port map (
-                 rounds => rounds,
                  clk       => clk,
                  start     => passwd_valid,
                  reset     => rst_core,

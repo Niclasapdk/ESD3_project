@@ -15,8 +15,13 @@ proto_spec = {
         }
 
 class Orchestrator:
-    def __init__(self, port: str, baudrate: int, proto_spec: dict, wordlist: str, hashlist: str):
-        self.serial = serial.Serial(port, baudrate=baudrate)
+    def __init__(self, port: str, baudrate: int, proto_spec: dict, wordlist: str, hashlist: str, verbose: bool):
+        if verbose:
+            self.verbose = True
+        if port == "/dev/null":
+            self.noserial = True
+        else:
+            self.serial = serial.Serial(port, baudrate=baudrate)
         self.proto_spec = proto_spec
         self.wordlist = self.read_wordlist(wordlist)
         self.hashlist = self.read_hashlist(hashlist)
@@ -49,7 +54,10 @@ class Orchestrator:
         for b in data:
             self.pkt[self.data_idx] = bytes([b])
             self.pkt[self.addr_idx] = f"{node_addr}".encode()
-            self.serial.write(b"".join(self.pkt))
+            if not self.noserial:
+                self.serial.write(b"".join(self.pkt))
+            else:
+                pass
 
     def sha256_pad(self, passwd: bytes):
         l = 8*len(passwd)
@@ -70,6 +78,8 @@ class Orchestrator:
             return
         padded_passwd = self.sha256_pad(passwd+salz)
         passwd_pkt = self.proto_spec["stx"] + self.escape_passwd(padded_passwd) + self.proto_spec["etx"]
+        if self.verbose:
+            print(f"Sending password packet: {passwd_pkt.hex()}")
         self.send_to_node(node_addr, passwd_pkt)
 
     def ruuuuuunnn(self, nodes: list):
@@ -83,10 +93,11 @@ def main():
     parser.add_argument("-b", "--baudrate", type=int, default=115200, help="Baud rate (default: 115200)")
     parser.add_argument("-w", "--wordlist", required=False, default="wordlist.txt", help="Wordlist (e.g., rockyou.txt)")
     parser.add_argument("-t", "--hashlist", required=False, default="hashlist.txt", help="File containing list of hashes")
+    parser.add_argument("-v", "--verbose", help="verbose mode", action="store_true")
 
     args = parser.parse_args()
 
-    orch = Orchestrator(args.port, args.baudrate, proto_spec, args.wordlist, args.hashlist)
+    orch = Orchestrator(args.port, args.baudrate, proto_spec, args.wordlist, args.hashlist, args.verbose)
     orch.ruuuuuunnn([2])
 
 if __name__ == "__main__":

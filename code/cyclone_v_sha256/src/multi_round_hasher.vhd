@@ -44,7 +44,6 @@ begin
     begin
         if rising_edge(clk) then
             current_state <= next_state;
-            current_round_state <= next_round_state;
         end if;
     end process;
 
@@ -67,7 +66,7 @@ begin
             when START_CORE_READY =>
                 next_state <= RUNNING_CORE_WAIT;
             when RUNNING_CORE_WAIT =>
-                if rounds_internal = rounds_ctr + 1 then
+                if rounds_internal = rounds_ctr then
                     next_state <= DONE_CORE_WAIT;
                 elsif core_done = '1' then
                     next_state <= RUNNING_CORE_READY;
@@ -97,11 +96,23 @@ begin
             case current_state is
                 when IDLE_RESET =>
                     rounds_ctr <= (others => '0');
-                when START =>
+                when START_CORE_WAIT =>
+                    core_start <= '0';
                     rounds_internal <= rounds;
                     rounds_ctr <= (others => '0');
+                when START_CORE_READY =>
+                    core_start <= '1';
+                    rounds_ctr <= unsigned(to_integer(rounds_ctr) + 1);
                     core_in <= passwd_in;
-                when RUNNING =>
+                when RUNNING_CORE_WAIT =>
+                    core_start <= '0';
+                when RUNNING_CORE_READY =>
+                    core_start <= '1';
+                    rounds_ctr <= unsigned(to_integer(rounds_ctr) + 1);
+                    core_in <= pad_hash_digest(core_hash);
+                when DONE_CORE_WAIT =>
+                    core_start <= '0';
+                when DONE =>
         end if;
     end process;
 

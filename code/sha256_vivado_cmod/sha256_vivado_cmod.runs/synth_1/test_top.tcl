@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "/home/markus/uni/ESD3_project/code/sha256_vivado_cmod/sha256_vivado_cmod.runs/synth_1/test_top.tcl"
+  variable script "C:/Users/nicla/Documents/GitHub/ESD3_project/code/sha256_vivado_cmod/sha256_vivado_cmod.runs/synth_1/test_top.tcl"
   variable category "vivado_synth"
 }
 
@@ -76,23 +76,23 @@ create_project -in_memory -part xc7a35tcpg236-1
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir /home/markus/uni/ESD3_project/code/sha256_vivado_cmod/sha256_vivado_cmod.cache/wt [current_project]
-set_property parent.project_path /home/markus/uni/ESD3_project/code/sha256_vivado_cmod/sha256_vivado_cmod.xpr [current_project]
+set_property webtalk.parent_dir C:/Users/nicla/Documents/GitHub/ESD3_project/code/sha256_vivado_cmod/sha256_vivado_cmod.cache/wt [current_project]
+set_property parent.project_path C:/Users/nicla/Documents/GitHub/ESD3_project/code/sha256_vivado_cmod/sha256_vivado_cmod.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
-set_property board_part_repo_paths {/home/markus/.Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store} [current_project]
+set_property board_part_repo_paths {C:/Users/nicla/AppData/Roaming/Xilinx/Vivado/2023.1/xhub/board_store/xilinx_board_store} [current_project]
 set_property board_part digilentinc.com:cmod_a7-35t:part0:1.2 [current_project]
-set_property ip_output_repo /home/markus/uni/ESD3_project/code/sha256_vivado_cmod/sha256_vivado_cmod.cache/ip [current_project]
+set_property ip_output_repo c:/Users/nicla/Documents/GitHub/ESD3_project/code/sha256_vivado_cmod/sha256_vivado_cmod.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_vhdl -library xil_defaultlib {
-  /home/markus/uni/ESD3_project/code/cyclone_v_sha256/src/data_link.vhd
-  /home/markus/uni/ESD3_project/code/cyclone_v_sha256/src/plusbus_pkg.vhd
-  /home/markus/uni/ESD3_project/code/cyclone_v_sha256/src/passwd_expander.vhd
-  /home/markus/uni/ESD3_project/code/cyclone_v_sha256/src/sha256_pkg.vhd
-  /home/markus/uni/ESD3_project/code/cyclone_v_sha256/src/sha256_core.vhd
-  /home/markus/uni/ESD3_project/code/cyclone_v_sha256/src/test_top.vhd
+  C:/Users/nicla/Documents/GitHub/ESD3_project/code/cyclone_v_sha256/src/data_link.vhd
+  C:/Users/nicla/Documents/GitHub/ESD3_project/code/cyclone_v_sha256/src/sha256_pkg.vhd
+  C:/Users/nicla/Documents/GitHub/ESD3_project/code/cyclone_v_sha256/src/sha256_core.vhd
+  C:/Users/nicla/Documents/GitHub/ESD3_project/code/cyclone_v_sha256/src/plusbus_pkg.vhd
+  C:/Users/nicla/Documents/GitHub/ESD3_project/code/cyclone_v_sha256/src/passwd_expander.vhd
+  C:/Users/nicla/Documents/GitHub/ESD3_project/code/cyclone_v_sha256/src/test_top.vhd
 }
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -105,7 +105,7 @@ foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
 }
 set_param ips.enableIPCacheLiteLoad 1
 
-read_checkpoint -auto_incremental -incremental /home/markus/uni/ESD3_project/code/sha256_vivado_cmod/sha256_vivado_cmod.srcs/utils_1/imports/synth_1/test_top.dcp
+read_checkpoint -auto_incremental -incremental C:/Users/nicla/Documents/GitHub/ESD3_project/code/sha256_vivado_cmod/sha256_vivado_cmod.srcs/utils_1/imports/synth_1/test_top.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }

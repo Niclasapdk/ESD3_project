@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="multi_round_hasher_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="multi_round_hasher_tb" />
+            <top_module name="sha256_pkg" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="550.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="1,286.001 ns"></ZoomEndTime>
+      <Cursor1Time time="1,629.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="393"></NameColumnWidth>
+      <ValueColumnWidth column_width="238"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="4" />
+   <wvobject fp_name="/multi_round_hasher_tb/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="group34" type="group">
+      <obj_property name="label">tb</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/multi_round_hasher_tb/start" type="logic">
+         <obj_property name="ElementShortName">start</obj_property>
+         <obj_property name="ObjectShortName">start</obj_property>
+      </wvobject>
+      <wvobject fp_name="/multi_round_hasher_tb/passwd" type="array">
+         <obj_property name="ElementShortName">passwd[511:0]</obj_property>
+         <obj_property name="ObjectShortName">passwd[511:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/multi_round_hasher_tb/hash" type="array">
+         <obj_property name="ElementShortName">hash[255:0]</obj_property>
+         <obj_property name="ObjectShortName">hash[255:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/multi_round_hasher_tb/done" type="logic">
+         <obj_property name="ElementShortName">done</obj_property>
+         <obj_property name="ObjectShortName">done</obj_property>
+      </wvobject>
+      <wvobject fp_name="/multi_round_hasher_tb/reset" type="logic">
+         <obj_property name="ElementShortName">reset</obj_property>
+         <obj_property name="ObjectShortName">reset</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group35" type="group">
+      <obj_property name="label">multi_round</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/multi_round_hasher_tb/uut/core_start" type="logic">
+         <obj_property name="ElementShortName">core_start</obj_property>
+         <obj_property name="ObjectShortName">core_start</obj_property>
+      </wvobject>
+      <wvobject fp_name="/multi_round_hasher_tb/uut/core_in" type="array">
+         <obj_property name="ElementShortName">core_in[0:511]</obj_property>
+         <obj_property name="ObjectShortName">core_in[0:511]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/multi_round_hasher_tb/uut/core_done" type="logic">
+         <obj_property name="ElementShortName">core_done</obj_property>
+         <obj_property name="ObjectShortName">core_done</obj_property>
+      </wvobject>
+      <wvobject fp_name="/multi_round_hasher_tb/uut/core_hash" type="array">
+         <obj_property name="ElementShortName">core_hash[255:0]</obj_property>
+         <obj_property name="ObjectShortName">core_hash[255:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/multi_round_hasher_tb/uut/current_state" type="other">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">current_state</obj_property>
+         <obj_property name="ObjectShortName">current_state</obj_property>
+         <obj_property name="label">multi_round state</obj_property>
+      </wvobject>
+      <wvobject fp_name="/multi_round_hasher_tb/uut/rounds_ctr" type="array">
+         <obj_property name="ElementShortName">rounds_ctr[31:0]</obj_property>
+         <obj_property name="ObjectShortName">rounds_ctr[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/multi_round_hasher_tb/uut/rounds_internal" type="array">
+         <obj_property name="ElementShortName">rounds_internal[31:0]</obj_property>
+         <obj_property name="ObjectShortName">rounds_internal[31:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group72" type="group">
+      <obj_property name="label">HASH CORE</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/multi_round_hasher_tb/uut/HC/current_state" type="other">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">current_state</obj_property>
+         <obj_property name="ObjectShortName">current_state</obj_property>
+         <obj_property name="label">core_state</obj_property>
+      </wvobject>
+      <wvobject fp_name="/multi_round_hasher_tb/uut/HC/passwd" type="array">
+         <obj_property name="ElementShortName">passwd[0:15][31:0]</obj_property>
+         <obj_property name="ObjectShortName">passwd[0:15][31:0]</obj_property>
+      </wvobject>
+   </wvobject>
+</wave_config>

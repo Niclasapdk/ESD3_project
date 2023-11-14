@@ -1,20 +1,20 @@
 #-----------------------------------------------------------
 # Vivado v2023.1 (64-bit)
-# SW Build 3865809 on Sun May  7 15:04:56 MDT 2023
+# SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
 # IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
 # SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
-# Start of session at: Mon Nov 13 09:49:45 2023
-# Process ID: 6982
-# Current directory: /home/markus/uni/ESD3_project/code/sha256_vivado_cmod/sha256_vivado_cmod.runs/synth_1
-# Command line: vivado -log test_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source test_top.tcl
-# Log file: /home/markus/uni/ESD3_project/code/sha256_vivado_cmod/sha256_vivado_cmod.runs/synth_1/test_top.vds
-# Journal file: /home/markus/uni/ESD3_project/code/sha256_vivado_cmod/sha256_vivado_cmod.runs/synth_1/vivado.jou
-# Running On: mltop, OS: Linux, CPU Frequency: 3529.651 MHz, CPU Physical cores: 4, Host memory: 16639 MB
+# Start of session at: Tue Nov 14 10:49:55 2023
+# Process ID: 24476
+# Current directory: C:/Users/nicla/Documents/GitHub/ESD3_project/code/sha256_vivado_cmod/sha256_vivado_cmod.runs/synth_1
+# Command line: vivado.exe -log test_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source test_top.tcl
+# Log file: C:/Users/nicla/Documents/GitHub/ESD3_project/code/sha256_vivado_cmod/sha256_vivado_cmod.runs/synth_1/test_top.vds
+# Journal file: C:/Users/nicla/Documents/GitHub/ESD3_project/code/sha256_vivado_cmod/sha256_vivado_cmod.runs/synth_1\vivado.jou
+# Running On: Niclas-Laptop, OS: Windows, CPU Frequency: 3194 MHz, CPU Physical cores: 16, Host memory: 14702 MB
 #-----------------------------------------------------------
 source test_top.tcl -notrace
-create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1335.988 ; gain = 0.023 ; free physical = 9212 ; free virtual = 12333
-Command: read_checkpoint -auto_incremental -incremental /home/markus/uni/ESD3_project/code/sha256_vivado_cmod/sha256_vivado_cmod.srcs/utils_1/imports/synth_1/test_top.dcp
-INFO: [Vivado 12-5825] Read reference checkpoint from /home/markus/uni/ESD3_project/code/sha256_vivado_cmod/sha256_vivado_cmod.srcs/utils_1/imports/synth_1/test_top.dcp for incremental synthesis
+create_project: Time (s): cpu = 00:00:03 ; elapsed = 00:00:09 . Memory (MB): peak = 454.605 ; gain = 158.516
+Command: read_checkpoint -auto_incremental -incremental C:/Users/nicla/Documents/GitHub/ESD3_project/code/sha256_vivado_cmod/sha256_vivado_cmod.srcs/utils_1/imports/synth_1/test_top.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/nicla/Documents/GitHub/ESD3_project/code/sha256_vivado_cmod/sha256_vivado_cmod.srcs/utils_1/imports/synth_1/test_top.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
 Command: synth_design -top test_top -part xc7a35tcpg236-1
 Starting synth_design
@@ -22,26 +22,26 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
-INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 7002
+INFO: [Synth 8-7075] Helper process launched with PID 4464
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1687.820 ; gain = 351.832 ; free physical = 8605 ; free virtual = 11698
+Starting Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 901.203 ; gain = 411.891
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'test_top' [/home/markus/uni/ESD3_project/code/cyclone_v_sha256/src/test_top.vhd:19]
-INFO: [Synth 8-638] synthesizing module 'data_link' [/home/markus/uni/ESD3_project/code/cyclone_v_sha256/src/data_link.vhd:23]
+INFO: [Synth 8-638] synthesizing module 'test_top' [C:/Users/nicla/Documents/GitHub/ESD3_project/code/cyclone_v_sha256/src/test_top.vhd:19]
+INFO: [Synth 8-638] synthesizing module 'data_link' [C:/Users/nicla/Documents/GitHub/ESD3_project/code/cyclone_v_sha256/src/data_link.vhd:23]
 	Parameter ADDR bound to: 2'b10 
-INFO: [Synth 8-256] done synthesizing module 'data_link' (0#1) [/home/markus/uni/ESD3_project/code/cyclone_v_sha256/src/data_link.vhd:23]
-INFO: [Synth 8-638] synthesizing module 'passwd_expander' [/home/markus/uni/ESD3_project/code/cyclone_v_sha256/src/passwd_expander.vhd:19]
-INFO: [Synth 8-256] done synthesizing module 'passwd_expander' (0#1) [/home/markus/uni/ESD3_project/code/cyclone_v_sha256/src/passwd_expander.vhd:19]
-INFO: [Synth 8-638] synthesizing module 'sha256_core' [/home/markus/uni/ESD3_project/code/cyclone_v_sha256/src/sha256_core.vhd:18]
-INFO: [Synth 8-256] done synthesizing module 'sha256_core' (0#1) [/home/markus/uni/ESD3_project/code/cyclone_v_sha256/src/sha256_core.vhd:18]
-INFO: [Synth 8-256] done synthesizing module 'test_top' (0#1) [/home/markus/uni/ESD3_project/code/cyclone_v_sha256/src/test_top.vhd:19]
+INFO: [Synth 8-256] done synthesizing module 'data_link' (0#1) [C:/Users/nicla/Documents/GitHub/ESD3_project/code/cyclone_v_sha256/src/data_link.vhd:23]
+INFO: [Synth 8-638] synthesizing module 'passwd_expander' [C:/Users/nicla/Documents/GitHub/ESD3_project/code/cyclone_v_sha256/src/passwd_expander.vhd:19]
+INFO: [Synth 8-256] done synthesizing module 'passwd_expander' (0#1) [C:/Users/nicla/Documents/GitHub/ESD3_project/code/cyclone_v_sha256/src/passwd_expander.vhd:19]
+INFO: [Synth 8-638] synthesizing module 'sha256_core' [C:/Users/nicla/Documents/GitHub/ESD3_project/code/cyclone_v_sha256/src/sha256_core.vhd:17]
+INFO: [Synth 8-256] done synthesizing module 'sha256_core' (0#1) [C:/Users/nicla/Documents/GitHub/ESD3_project/code/cyclone_v_sha256/src/sha256_core.vhd:17]
+INFO: [Synth 8-256] done synthesizing module 'test_top' (0#1) [C:/Users/nicla/Documents/GitHub/ESD3_project/code/cyclone_v_sha256/src/test_top.vhd:19]
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1787.789 ; gain = 451.801 ; free physical = 8486 ; free virtual = 11582
+Finished Synthesize : Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 1028.332 ; gain = 539.020
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1802.633 ; gain = 466.645 ; free physical = 8475 ; free virtual = 11571
+Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:10 . Memory (MB): peak = 1028.332 ; gain = 539.020
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
@@ -49,7 +49,7 @@ Start Loading Part and Timing Information
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1810.637 ; gain = 474.648 ; free physical = 8475 ; free virtual = 11571
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:10 . Memory (MB): peak = 1028.332 ; gain = 539.020
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'passwd_expander'
 INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'sha256_core'
@@ -62,27 +62,26 @@ INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in modul
                   escape |                               11 |                               10
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'sequential' in module 'passwd_expander'
-WARNING: [Synth 8-327] inferring latch for variable 'FSM_sequential_next_state_reg' [/home/markus/uni/ESD3_project/code/cyclone_v_sha256/src/sha256_core.vhd:107]
-WARNING: [Synth 8-327] inferring latch for variable 'FSM_onehot_next_state_reg' [/home/markus/uni/ESD3_project/code/cyclone_v_sha256/src/sha256_core.vhd:107]
+WARNING: [Synth 8-327] inferring latch for variable 'FSM_sequential_next_state_reg' [C:/Users/nicla/Documents/GitHub/ESD3_project/code/cyclone_v_sha256/src/sha256_core.vhd:106]
+WARNING: [Synth 8-327] inferring latch for variable 'FSM_onehot_next_state_reg' [C:/Users/nicla/Documents/GitHub/ESD3_project/code/cyclone_v_sha256/src/sha256_core.vhd:106]
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
-                    idle |                      00000000001 |                             0000
-                read_msg |                      00000000010 |                             0010
-              prep_msg_0 |                      00000000100 |                             0011
-              prep_msg_1 |                      00000001000 |                             0100
-              prep_msg_2 |                      00000010000 |                             0101
-              prep_msg_3 |                      00000100000 |                             0110
-                  hash_1 |                      00001000000 |                             0111
-                  hash_2 |                      00010000000 |                             1000
-                  hash_3 |                      00100000000 |                             1010
-                    done |                      01000000000 |                             1011
-                     rst |                      10000000000 |                             0001
+                    idle |                       0000000001 |                             0000
+                read_msg |                       0000000010 |                             0001
+              prep_msg_0 |                       0000000100 |                             0010
+              prep_msg_1 |                       0000001000 |                             0011
+              prep_msg_2 |                       0000010000 |                             0100
+              prep_msg_3 |                       0000100000 |                             0101
+                  hash_1 |                       0001000000 |                             0110
+                  hash_2 |                       0010000000 |                             0111
+                  hash_3 |                       0100000000 |                             1001
+                    done |                       1000000000 |                             1010
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'one-hot' in module 'sha256_core'
-WARNING: [Synth 8-327] inferring latch for variable 'FSM_onehot_next_state_reg' [/home/markus/uni/ESD3_project/code/cyclone_v_sha256/src/sha256_core.vhd:107]
+WARNING: [Synth 8-327] inferring latch for variable 'FSM_onehot_next_state_reg' [C:/Users/nicla/Documents/GitHub/ESD3_project/code/cyclone_v_sha256/src/sha256_core.vhd:106]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1842.668 ; gain = 506.680 ; free physical = 8427 ; free virtual = 11540
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 1028.332 ; gain = 539.020
 ---------------------------------------------------------------------------------
 No constraint files found.
 ---------------------------------------------------------------------------------
@@ -110,18 +109,18 @@ Detailed RTL Component Info :
 +---Muxes : 
 	   2 Input  512 Bit        Muxes := 3     
 	   4 Input  512 Bit        Muxes := 2     
-	  11 Input   32 Bit        Muxes := 8     
-	  11 Input   11 Bit        Muxes := 1     
-	   2 Input   11 Bit        Muxes := 4     
+	  10 Input   32 Bit        Muxes := 8     
+	  10 Input   10 Bit        Muxes := 1     
+	   2 Input   10 Bit        Muxes := 3     
 	   4 Input    9 Bit        Muxes := 1     
 	   2 Input    8 Bit        Muxes := 6     
-	  11 Input    4 Bit        Muxes := 1     
+	  10 Input    4 Bit        Muxes := 1     
 	   2 Input    2 Bit        Muxes := 3     
 	   4 Input    2 Bit        Muxes := 1     
 	   3 Input    2 Bit        Muxes := 1     
 	   2 Input    1 Bit        Muxes := 3     
 	   4 Input    1 Bit        Muxes := 2     
-	  11 Input    1 Bit        Muxes := 3     
+	  10 Input    1 Bit        Muxes := 3     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -141,7 +140,6 @@ Start Cross Boundary and Area Optimization
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 WARNING: [Synth 8-3332] Sequential element (FSM_sequential_current_state_reg[1]) is unused and will be removed from module passwd_expander.
 WARNING: [Synth 8-3332] Sequential element (FSM_sequential_current_state_reg[0]) is unused and will be removed from module passwd_expander.
-WARNING: [Synth 8-3332] Sequential element (FSM_onehot_current_state_reg[10]) is unused and will be removed from module sha256_core.
 WARNING: [Synth 8-3332] Sequential element (FSM_onehot_current_state_reg[9]) is unused and will be removed from module sha256_core.
 WARNING: [Synth 8-3332] Sequential element (FSM_onehot_current_state_reg[8]) is unused and will be removed from module sha256_core.
 WARNING: [Synth 8-3332] Sequential element (FSM_onehot_current_state_reg[7]) is unused and will be removed from module sha256_core.
@@ -152,7 +150,6 @@ WARNING: [Synth 8-3332] Sequential element (FSM_onehot_current_state_reg[3]) is 
 WARNING: [Synth 8-3332] Sequential element (FSM_onehot_current_state_reg[2]) is unused and will be removed from module sha256_core.
 WARNING: [Synth 8-3332] Sequential element (FSM_onehot_current_state_reg[1]) is unused and will be removed from module sha256_core.
 WARNING: [Synth 8-3332] Sequential element (FSM_onehot_current_state_reg[0]) is unused and will be removed from module sha256_core.
-WARNING: [Synth 8-3332] Sequential element (FSM_onehot_next_state_reg[10]) is unused and will be removed from module sha256_core.
 WARNING: [Synth 8-3332] Sequential element (FSM_onehot_next_state_reg[9]) is unused and will be removed from module sha256_core.
 WARNING: [Synth 8-3332] Sequential element (FSM_onehot_next_state_reg[8]) is unused and will be removed from module sha256_core.
 WARNING: [Synth 8-3332] Sequential element (FSM_onehot_next_state_reg[7]) is unused and will be removed from module sha256_core.
@@ -164,7 +161,7 @@ WARNING: [Synth 8-3332] Sequential element (FSM_onehot_next_state_reg[2]) is unu
 WARNING: [Synth 8-3332] Sequential element (FSM_onehot_next_state_reg[1]) is unused and will be removed from module sha256_core.
 WARNING: [Synth 8-3332] Sequential element (FSM_onehot_next_state_reg[0]) is unused and will be removed from module sha256_core.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:11 . Memory (MB): peak = 1941.207 ; gain = 605.219 ; free physical = 8281 ; free virtual = 11432
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:26 . Memory (MB): peak = 1205.457 ; gain = 716.145
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -186,13 +183,13 @@ No constraint files found.
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:11 . Memory (MB): peak = 1941.207 ; gain = 605.219 ; free physical = 8281 ; free virtual = 11431
+Finished Timing Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:26 . Memory (MB): peak = 1206.812 ; gain = 717.500
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:12 ; elapsed = 00:00:11 . Memory (MB): peak = 1941.207 ; gain = 605.219 ; free physical = 8281 ; free virtual = 11431
+Finished Technology Mapping : Time (s): cpu = 00:00:11 ; elapsed = 00:00:26 . Memory (MB): peak = 1207.043 ; gain = 717.730
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -210,37 +207,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1941.207 ; gain = 605.219 ; free physical = 8298 ; free virtual = 11438
+Finished IO Insertion : Time (s): cpu = 00:00:15 ; elapsed = 00:00:31 . Memory (MB): peak = 1207.043 ; gain = 717.730
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1941.207 ; gain = 605.219 ; free physical = 8298 ; free virtual = 11438
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:15 ; elapsed = 00:00:31 . Memory (MB): peak = 1207.043 ; gain = 717.730
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1941.207 ; gain = 605.219 ; free physical = 8298 ; free virtual = 11438
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:15 ; elapsed = 00:00:31 . Memory (MB): peak = 1207.043 ; gain = 717.730
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1941.207 ; gain = 605.219 ; free physical = 8298 ; free virtual = 11438
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:15 ; elapsed = 00:00:31 . Memory (MB): peak = 1207.043 ; gain = 717.730
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1941.207 ; gain = 605.219 ; free physical = 8298 ; free virtual = 11438
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:31 . Memory (MB): peak = 1207.043 ; gain = 717.730
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1941.207 ; gain = 605.219 ; free physical = 8298 ; free virtual = 11438
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:15 ; elapsed = 00:00:31 . Memory (MB): peak = 1207.043 ; gain = 717.730
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -275,29 +272,27 @@ Report Instance Areas:
 |2     |  DL     |data_link |    27|
 +------+---------+----------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1941.207 ; gain = 605.219 ; free physical = 8298 ; free virtual = 11438
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:15 ; elapsed = 00:00:31 . Memory (MB): peak = 1207.043 ; gain = 717.730
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 28 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1941.207 ; gain = 605.219 ; free physical = 8298 ; free virtual = 11438
-Synthesis Optimization Complete : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1941.215 ; gain = 605.219 ; free physical = 8298 ; free virtual = 11437
+Synthesis finished with 0 errors, 0 critical warnings and 26 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:31 . Memory (MB): peak = 1207.043 ; gain = 717.730
+Synthesis Optimization Complete : Time (s): cpu = 00:00:15 ; elapsed = 00:00:31 . Memory (MB): peak = 1207.043 ; gain = 717.730
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1949.145 ; gain = 0.000 ; free physical = 8581 ; free virtual = 11723
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1218.922 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 8 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2067.922 ; gain = 0.000 ; free physical = 8514 ; free virtual = 11665
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1301.887 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 8 instances were transformed.
   IOBUF => IOBUF (IBUF, OBUFT): 8 instances
 
 Synth Design complete | Checksum: e12c0b92
 INFO: [Common 17-83] Releasing license: Synthesis
-28 Infos, 28 Warnings, 0 Critical Warnings and 0 Errors encountered.
+28 Infos, 26 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:19 ; elapsed = 00:00:16 . Memory (MB): peak = 2067.922 ; gain = 731.934 ; free physical = 8514 ; free virtual = 11665
-INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1591.206; main = 1346.365; forked = 379.125
-INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 2902.477; main = 2067.922; forked = 969.277
-INFO: [Common 17-1381] The checkpoint '/home/markus/uni/ESD3_project/code/sha256_vivado_cmod/sha256_vivado_cmod.runs/synth_1/test_top.dcp' has been generated.
+synth_design: Time (s): cpu = 00:00:16 ; elapsed = 00:00:33 . Memory (MB): peak = 1301.887 ; gain = 821.109
+INFO: [Common 17-1381] The checkpoint 'C:/Users/nicla/Documents/GitHub/ESD3_project/code/sha256_vivado_cmod/sha256_vivado_cmod.runs/synth_1/test_top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file test_top_utilization_synth.rpt -pb test_top_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Nov 13 09:50:11 2023...
+INFO: [Common 17-206] Exiting Vivado at Tue Nov 14 10:50:44 2023...

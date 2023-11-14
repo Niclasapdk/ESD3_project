@@ -12,8 +12,9 @@ architecture Behavioral of multi_round_hasher_tb is
     signal passwd       : std_logic_vector(511 downto 0) := x"414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141418000000000000001b8";
     signal hash         : std_logic_vector(255 downto 0);
     signal done         : std_logic;
-    signal rounds       : unsigned(31 downto 0) := x"00000002";
-    -- Expected hash:
+    signal rounds       : unsigned(31 downto 0) := x"00001388";
+    signal reset        : std_logic := '0';
+    -- Expected hash: ff7d9978045a76d74350c1b7866cf3cfe058a8c6249213a69aed843ba1e1680f
 begin
     clk <= not clk after CLK_PERIOD/2;
 
@@ -23,7 +24,9 @@ begin
         start     => start,
         passwd_in => passwd,
         hash_out  => hash,
-        hash_done => done
+        hash_done => done,
+        reset => reset,
+        rounds => rounds
      );
 
     start <= '1';

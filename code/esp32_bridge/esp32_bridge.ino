@@ -139,14 +139,30 @@ void sendMsg(msg_t *msg) {
     Serial.println(msg->data, HEX);
 }
 
+// Sends number of free spaces
+
+/*    
+void sendStatus()  {
+    uint32_t freeSpace = uxQueueSpacesAvailable(txQueue);
+    while(1){
+          Serial.print("Free Space: ");
+          Serial.print(freeSpace); 
+    }
+}
+*/
+
+void orchestratorCommunication(void *pvParameters) {
+  (void)pvParameters;
+  sendStatus();
+}
+
 void bridgeTask(void *pvParameters) {
     (void)pvParameters; // We don't use the task parameter
-
+    
     uint8_t c;
     msg_t rxMsg;
     msg_t txMsg;
     enum BRIDGE_STATE state = BR_S_IDLE;
-    Serial.begin(115200);
     while (1) {
         if (Serial.available()) {
             c = Serial.read();
@@ -224,6 +240,19 @@ void setup() {
             NULL              // Task handle (not used)
             );
 
+    // Creates the task for sending data back to orchestrator
+/*
+    // Create a FreeRTOS task
+    xTaskCreate(
+            orchestratorCommunication,
+            "orchestratorCommunication",
+            1000,
+            NULL,
+            1,
+            NULL
+            );
+*/
+
     // Create a timer to trigger the semaphore every second
     timer = xTimerCreate(
             "Timer",                    // Timer name (not required)
@@ -235,6 +264,7 @@ void setup() {
 
     // Start the timer
     xTimerStart(timer, 0);
+    Serial.begin(115200);
 }
 
 void loop() {

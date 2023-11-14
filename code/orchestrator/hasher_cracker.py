@@ -83,6 +83,14 @@ class Orchestrator:
         self.send_to_node(node_addr, passwd_pkt)
 
     def ruuuuuunnn(self, nodes: list):
+        
+        #Supposed to check if there is enough space to send more data
+        #while True:
+        #    recievedData = self.serial.readline().decode.strip()
+        #
+        #    print(f'Received data: {recievedData}')
+        #    break;
+        
         for salz in self.salts:
             for i, p in enumerate(self.wordlist):
                 self.schick_passwort(nodes[i%len(nodes)], p, salz)

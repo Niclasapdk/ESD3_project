@@ -23,7 +23,7 @@ architecture Behavioral of multi_round_hasher is
     signal core_in : std_logic_vector(0 to 511);
     signal core_start : std_logic;
 
-    type multi_round_state_t is (IDLE_RESET, START_WAIT_CORE, RUNNING, RUNNING_CORE_READY, RUNNING_CORE_WAIT, START_CORE_READY, DONE, DONE_CORE_WAIT);
+    type multi_round_state_t is (IDLE_RESET, START_CORE, RUNNING_CORE_READY, RUNNING_CORE_WAIT, DONE, DONE_CORE_WAIT);
     signal current_state : multi_round_state_t := IDLE_RESET;
     signal next_state : multi_round_state_t := IDLE_RESET;
 
@@ -53,17 +53,11 @@ begin
         case current_state is
             when IDLE_RESET =>
                 if start = '1' then
-                    next_state <= START_CORE_WAIT;
+                    next_state <= START_CORE;
                 else
                     next_state <= IDLE_RESET;
                 end if;
-            when START_CORE_WAIT =>
-                if core_done = '1' then
-                    next_state <= START_CORE_READY;
-                else
-                    next_state <= START_CORE_WAIT;
-                end if;
-            when START_CORE_READY =>
+            when START_CORE =>
                 next_state <= RUNNING_CORE_WAIT;
             when RUNNING_CORE_WAIT =>
                 if rounds_internal = rounds_ctr then
@@ -87,6 +81,7 @@ begin
                 else
                     next_state <= DONE;
                 end if;
+            end case;
     end process;
 
     -- Real logic
@@ -96,25 +91,28 @@ begin
             case current_state is
                 when IDLE_RESET =>
                     rounds_ctr <= (others => '0');
-                when START_CORE_WAIT =>
-                    core_start <= '0';
-                    rounds_internal <= rounds;
-                    rounds_ctr <= (others => '0');
-                when START_CORE_READY =>
+                when START_CORE =>
                     core_start <= '1';
-                    rounds_ctr <= unsigned(to_integer(rounds_ctr) + 1);
+                    rounds_ctr <= x"00000001";
+                    rounds_internal <= rounds;
                     core_in <= passwd_in;
                 when RUNNING_CORE_WAIT =>
                     core_start <= '0';
                 when RUNNING_CORE_READY =>
-                    core_start <= '1';
-                    rounds_ctr <= unsigned(to_integer(rounds_ctr) + 1);
-                    core_in <= pad_hash_digest(core_hash);
+                    rounds_ctr <= to_unsigned(to_integer(rounds_ctr) + 1, 32);
                 when DONE_CORE_WAIT =>
                     core_start <= '0';
                 when DONE =>
+             end case;
         end if;
+        
+        if (current_state = RUNNING_CORE_READY) then
+            core_start <= '1';
+            core_in <= pad_hash_digest(core_hash);
+        end if;
+    
     end process;
 
     hash_done <= '1' when current_state = DONE else '0';
+    hash_out <= core_hash;
 end Behavioral;

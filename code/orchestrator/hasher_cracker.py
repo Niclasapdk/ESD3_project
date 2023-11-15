@@ -93,8 +93,8 @@ class Orchestrator:
             for i, p in enumerate(self.wordlist):
                 #Supposed to check if there is enough space to send more data
                 while self.txQueueMsgsWaiting() > self.txQueueCeiling:
-                    pass                  
-                
+                    pass
+
                 self.schick_passwort(nodes[i%len(nodes)], p, salz)
 
 def main():

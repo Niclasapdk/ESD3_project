@@ -15,17 +15,15 @@ proto_spec = {
         }
 
 class Orchestrator:
-    def __init__(self, port: str, baudrate: int, proto_spec: dict, wordlist: str, hashlist: str, verbose: bool):
-        if verbose:
-            self.verbose = True
-        if port == "/dev/null":
-            self.noserial = True
-        else:
-            self.serial = serial.Serial(port, baudrate=baudrate)
+    def __init__(self, port: str, baudrate: int, proto_spec: dict, wordlist: str, hashlist: str, verbose: bool, ceiling: int):
+        self.verbose = True if verbose else False #Because python doesn't like types :((
+        self.noserial = True if port == "/dev/null" else False
+        self.serial = serial.Serial(port, baudrate=baudrate)
         self.proto_spec = proto_spec
         self.wordlist = self.read_wordlist(wordlist)
         self.hashlist = self.read_hashlist(hashlist)
         self.salts = [b"abcdefghjiklmnop"]
+        self.txQueueCeiling = ceiling
         self.prep_pkt()
 
     def read_hashlist(self, hashlist: str):
@@ -50,6 +48,13 @@ class Orchestrator:
         self.data_idx = self.pkt.index(b"DATA")
         self.addr_idx = self.pkt.index(b"ADDR")
 
+    def txQueueMsgsWaiting(self):
+        data = self.serial.readline().decode().strip().split(": ")
+        if data[0] == "txMsgsWaiting":
+            return int(data[1])
+        else:
+            return 10**9
+
     def send_to_node(self, node_addr: int, data: bytes):
         for b in data:
             self.pkt[self.data_idx] = bytes([b])
@@ -72,6 +77,7 @@ class Orchestrator:
         return passwd
 
     def schick_passwort(self, node_addr: int, passwd: bytes, salz: bytes):
+
         if len(passwd) > 39 or len(salz) != 16:
             print("Too long password oder du hasst salz")
             print("Youuusa make big dooo doo this time")
@@ -83,16 +89,12 @@ class Orchestrator:
         self.send_to_node(node_addr, passwd_pkt)
 
     def ruuuuuunnn(self, nodes: list):
-        
-        #Supposed to check if there is enough space to send more data
-        #while True:
-        #    recievedData = self.serial.readline().decode.strip()
-        #
-        #    print(f'Received data: {recievedData}')
-        #    break;
-        
         for salz in self.salts:
             for i, p in enumerate(self.wordlist):
+                #Supposed to check if there is enough space to send more data
+                while self.txQueueMsgsWaiting() > self.txQueueCeiling:
+                    pass                  
+                
                 self.schick_passwort(nodes[i%len(nodes)], p, salz)
 
 def main():
@@ -102,10 +104,11 @@ def main():
     parser.add_argument("-w", "--wordlist", required=False, default="wordlist.txt", help="Wordlist (e.g., rockyou.txt)")
     parser.add_argument("-t", "--hashlist", required=False, default="hashlist.txt", help="File containing list of hashes")
     parser.add_argument("-v", "--verbose", help="verbose mode", action="store_true")
+    parser.add_argument("-c", "--ceiling", help="txQueue wait ceiling in bytes (default: 10)", default=10, type=int)
 
     args = parser.parse_args()
 
-    orch = Orchestrator(args.port, args.baudrate, proto_spec, args.wordlist, args.hashlist, args.verbose)
+    orch = Orchestrator(args.port, args.baudrate, proto_spec, args.wordlist, args.hashlist, args.verbose, args.ceiling)
     orch.ruuuuuunnn([2])
 
 if __name__ == "__main__":

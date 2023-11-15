@@ -30,8 +30,10 @@
 const int data_gpios[] = {9, 8, 7, 6, 5, 4, 18, 19};
 dedic_gpio_bundle_handle_t dataDedicHandle = NULL;
 
+SemaphoreHandle_t txQueueHealthTimerSemaphore;
 SemaphoreHandle_t timerSemaphore;
 QueueHandle_t txQueue, rxQueue;
+TimerHandle_t txQueueHealthTimer;
 TimerHandle_t timer;
 
 #define TX_Q_LEN 40000
@@ -74,12 +76,16 @@ void setupPlusBus() {
     };
     ESP_ERROR_CHECK(dedic_gpio_new_bundle(&data_dedic_config, &dataDedicHandle));
 
-    REG_WRITE(GPIO_ENABLE_REG, (1<<ADDR0) | (1<<ADDR1) | (1<<CLK_PIN) | (1<<R_NW_PIN));
+    REG_WRITE(GPIO_ENABLE_REG, (1 << ADDR0) | (1 << ADDR1) | (1 << CLK_PIN) | (1 << R_NW_PIN));
 }
 
 // Timer callback function
 void timerCallback(TimerHandle_t xTimer) {
     xSemaphoreGive(timerSemaphore);
+}
+
+void txQueueHealthTimerCallback(TimerHandle_t xTimer) {
+    xSemaphoreGive(txQueueHealthTimerSemaphore);
 }
 
 // Task function
@@ -94,11 +100,11 @@ void clkEventTask(void *pvParameters) {
     uint32_t out;
     while (1) {
         if (xSemaphoreTake(timerSemaphore, portMAX_DELAY) == pdTRUE) {
-            edgeType = !((REG_READ(GPIO_IN_REG)>>CLK_PIN)&1);
+            edgeType = !((REG_READ(GPIO_IN_REG) >> CLK_PIN) & 1);
 
             if (edgeType) {
                 // Rising Edge
-                REG_WRITE(GPIO_OUT_W1TS_REG, 1<<CLK_PIN);
+                REG_WRITE(GPIO_OUT_W1TS_REG, 1 << CLK_PIN);
                 if (txMsg.r_nw) {
                     // Receive data from node
                     dedic_gpio_bundle_write(dataDedicHandle, 0xff, 0xff); // setup bus for receiving
@@ -110,7 +116,7 @@ void clkEventTask(void *pvParameters) {
             }
             else if (!edgeType) {
                 // Falling Edge
-                REG_WRITE(GPIO_OUT_W1TC_REG, 1<<CLK_PIN);
+                REG_WRITE(GPIO_OUT_W1TC_REG, 1 << CLK_PIN);
 
                 xTimerStop(timer, 0);
                 if (txMsg.r_nw) {
@@ -122,9 +128,8 @@ void clkEventTask(void *pvParameters) {
 
                 xQueueReceive(txQueue, &txMsg, portMAX_DELAY);
                 xTimerReset(timer, 0);
-
                 // Setup r_nw, node_addr and clk
-                out = 0 | (txMsg.r_nw<<R_NW_PIN) | ((txMsg.node_addr&0x1)<<ADDR0) | ((txMsg.node_addr>>1)&1);
+                out = 0 | (txMsg.r_nw << R_NW_PIN) | ((txMsg.node_addr & 0x1) << ADDR0) | ((txMsg.node_addr >> 1) & 1);
                 REG_WRITE(GPIO_OUT_W1TS_REG, out);
                 REG_WRITE(GPIO_OUT_W1TC_REG, ~out);
             }
@@ -139,6 +144,21 @@ void sendMsg(msg_t *msg) {
     Serial.println(msg->data, HEX);
 }
 
+// Sends number of free spaces
+
+void txQueueHealthCheckTask(void *pvParameters)  {
+    (void)pvParameters;
+
+    uint32_t txMsgsWaiting;
+    while (1) {
+        if (xSemaphoreTake(txQueueHealthTimerSemaphore, portMAX_DELAY) == pdTRUE) {
+            txMsgsWaiting = uxQueueMessagesWaiting(txQueue);
+            Serial.print("txMsgsWaiting: ");
+            Serial.println(txMsgsWaiting);
+        }
+    }
+}
+
 void bridgeTask(void *pvParameters) {
     (void)pvParameters; // We don't use the task parameter
 
@@ -146,11 +166,10 @@ void bridgeTask(void *pvParameters) {
     msg_t rxMsg;
     msg_t txMsg;
     enum BRIDGE_STATE state = BR_S_IDLE;
-    Serial.begin(115200);
     while (1) {
         if (Serial.available()) {
             c = Serial.read();
-            switch(state) {
+            switch (state) {
                 case BR_S_IDLE:
                     if (c == BR_START) {
                         memset(&txMsg, 0, sizeof(msg_t));
@@ -183,8 +202,9 @@ void bridgeTask(void *pvParameters) {
                     state = BR_S_STOP;
                     break;
                 case BR_S_STOP:
-                    if (c == BR_STOP)
+                    if (c == BR_STOP) {
                         xQueueSend(txQueue, &txMsg, portMAX_DELAY);
+                    }
                     state = BR_S_IDLE;
                     break;
                 default:
@@ -200,14 +220,15 @@ void bridgeTask(void *pvParameters) {
 void setup() {
     // Create a timer semaphore
     timerSemaphore = xSemaphoreCreateBinary();
+    txQueueHealthTimerSemaphore = xSemaphoreCreateBinary();
 
     txQueue = xQueueCreate(TX_Q_LEN, sizeof(msg_t));
     rxQueue = xQueueCreate(RX_Q_LEN, sizeof(msg_t));
 
     // Create a FreeRTOS task
     xTaskCreate(
-            bridgeTask,        // Function that implements the task
-            "bridgeTask",      // Name for the task (not required)
+            bridgeTask,       // Function that implements the task
+            "bridgeTask",     // Name for the task (not required)
             10000,            // Stack size (words, not bytes)
             NULL,             // Task parameter (not used)
             1,                // Priority (0 is idle priority)
@@ -218,23 +239,48 @@ void setup() {
     xTaskCreate(
             clkEventTask,        // Function that implements the task
             "clkEventTask",      // Name for the task (not required)
-            10000,            // Stack size (words, not bytes)
-            NULL,             // Task parameter (not used)
-            1,                // Priority (1 is the highest priority)
-            NULL              // Task handle (not used)
+            10000,               // Stack size (words, not bytes)
+            NULL,                // Task parameter (not used)
+            1,                   // Priority (1 is the highest priority)
+            NULL                 // Task handle (not used)
+            );
+
+    // Creates the task for sending data back to orchestrator
+
+    // Create a FreeRTOS task
+    xTaskCreate(
+            txQueueHealthCheckTask,
+            "txQueueHealthCheckTask",
+            1000,
+            NULL,
+            1,
+            NULL
             );
 
     // Create a timer to trigger the semaphore every second
     timer = xTimerCreate(
             "Timer",                    // Timer name (not required)
-            1,         // Timer period in ticks
-            pdTRUE,                      // Auto-reload timer
+            1,                          // Timer period in ticks
+            pdTRUE,                     // Auto-reload timer
             0,                          // Timer ID (not required)
             timerCallback               // Timer callback function
             );
 
+    // Create a timer to trigger the semaphore every second
+    txQueueHealthTimer = xTimerCreate(
+            "Timer",                    // Timer name (not required)
+            100,                        // Timer period in ticks
+            pdTRUE,                     // Auto-reload timer
+            0,                          // Timer ID (not required)
+            txQueueHealthTimerCallback  // Timer callback function
+            );
+
     // Start the timer
     xTimerStart(timer, 0);
+    xTimerStart(txQueueHealthTimer, 0);
+
+
+    Serial.begin(115200);
 }
 
 void loop() {

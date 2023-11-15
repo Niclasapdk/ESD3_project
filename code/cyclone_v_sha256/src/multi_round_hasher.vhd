@@ -105,12 +105,12 @@ begin
                 when DONE =>
              end case;
         end if;
-        
+
         if (current_state = RUNNING_CORE_READY) then
             core_start <= '1';
             core_in <= pad_hash_digest(core_hash);
         end if;
-    
+
     end process;
 
     hash_done <= '1' when current_state = DONE else '0';

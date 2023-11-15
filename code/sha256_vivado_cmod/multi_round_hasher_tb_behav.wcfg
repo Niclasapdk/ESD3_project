@@ -53,33 +53,33 @@
       <obj_property name="label">multi_round</obj_property>
       <obj_property name="DisplayName">label</obj_property>
       <obj_property name="isExpanded"></obj_property>
-      <wvobject fp_name="/multi_round_hasher_tb/uut/core_start" type="logic">
+      <wvobject fp_name="/multi_round_hasher_tb/DUT/core_start" type="logic">
          <obj_property name="ElementShortName">core_start</obj_property>
          <obj_property name="ObjectShortName">core_start</obj_property>
       </wvobject>
-      <wvobject fp_name="/multi_round_hasher_tb/uut/core_in" type="array">
+      <wvobject fp_name="/multi_round_hasher_tb/DUT/core_in" type="array">
          <obj_property name="ElementShortName">core_in[0:511]</obj_property>
          <obj_property name="ObjectShortName">core_in[0:511]</obj_property>
       </wvobject>
-      <wvobject fp_name="/multi_round_hasher_tb/uut/core_done" type="logic">
+      <wvobject fp_name="/multi_round_hasher_tb/DUT/core_done" type="logic">
          <obj_property name="ElementShortName">core_done</obj_property>
          <obj_property name="ObjectShortName">core_done</obj_property>
       </wvobject>
-      <wvobject fp_name="/multi_round_hasher_tb/uut/core_hash" type="array">
+      <wvobject fp_name="/multi_round_hasher_tb/DUT/core_hash" type="array">
          <obj_property name="ElementShortName">core_hash[255:0]</obj_property>
          <obj_property name="ObjectShortName">core_hash[255:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/multi_round_hasher_tb/uut/current_state" type="other">
+      <wvobject fp_name="/multi_round_hasher_tb/DUT/current_state" type="other">
          <obj_property name="DisplayName">label</obj_property>
          <obj_property name="ElementShortName">current_state</obj_property>
          <obj_property name="ObjectShortName">current_state</obj_property>
          <obj_property name="label">multi_round state</obj_property>
       </wvobject>
-      <wvobject fp_name="/multi_round_hasher_tb/uut/rounds_ctr" type="array">
+      <wvobject fp_name="/multi_round_hasher_tb/DUT/rounds_ctr" type="array">
          <obj_property name="ElementShortName">rounds_ctr[31:0]</obj_property>
          <obj_property name="ObjectShortName">rounds_ctr[31:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/multi_round_hasher_tb/uut/rounds_internal" type="array">
+      <wvobject fp_name="/multi_round_hasher_tb/DUT/rounds_internal" type="array">
          <obj_property name="ElementShortName">rounds_internal[31:0]</obj_property>
          <obj_property name="ObjectShortName">rounds_internal[31:0]</obj_property>
       </wvobject>
@@ -88,13 +88,13 @@
       <obj_property name="label">HASH CORE</obj_property>
       <obj_property name="DisplayName">label</obj_property>
       <obj_property name="isExpanded"></obj_property>
-      <wvobject fp_name="/multi_round_hasher_tb/uut/HC/current_state" type="other">
+      <wvobject fp_name="/multi_round_hasher_tb/DUT/HC/current_state" type="other">
          <obj_property name="DisplayName">label</obj_property>
          <obj_property name="ElementShortName">current_state</obj_property>
          <obj_property name="ObjectShortName">current_state</obj_property>
          <obj_property name="label">core_state</obj_property>
       </wvobject>
-      <wvobject fp_name="/multi_round_hasher_tb/uut/HC/passwd" type="array">
+      <wvobject fp_name="/multi_round_hasher_tb/DUT/HC/passwd" type="array">
          <obj_property name="ElementShortName">passwd[0:15][31:0]</obj_property>
          <obj_property name="ObjectShortName">passwd[0:15][31:0]</obj_property>
       </wvobject>

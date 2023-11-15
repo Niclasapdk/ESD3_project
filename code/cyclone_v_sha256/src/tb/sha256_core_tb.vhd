@@ -17,7 +17,7 @@ architecture Behavioral of sha256_core_tb is
 begin
     clk <= not clk after CLK_PERIOD/2;
 
-    uut : entity work.sha256_core
+    DUT : entity work.sha256_core
     port map (
         clk       => clk,
         start     => start,

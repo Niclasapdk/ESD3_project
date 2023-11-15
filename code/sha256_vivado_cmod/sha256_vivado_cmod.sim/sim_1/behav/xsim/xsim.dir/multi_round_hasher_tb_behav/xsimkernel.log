@@ -1,4 +1,7 @@
-Running: xsim.dir/multi_round_hasher_tb_behav/xsimk.exe -simmode gui -wdb multi_round_hasher_tb_behav.wdb -simrunnum 0 -socket 62683
+Running: xsim.dir/multi_round_hasher_tb_behav/xsimk -simmode gui -wdb multi_round_hasher_tb_behav.wdb -simrunnum 0 -socket 58155
 Design successfully loaded
-Design Loading Memory Usage: 8124 KB (Peak: 8124 KB)
-Design Loading CPU Usage: 0 ms
+Design Loading Memory Usage: 23252 KB (Peak: 23840 KB)
+Design Loading CPU Usage: 20 ms
+Simulation completed
+Simulation Memory Usage: 113188 KB (Peak: 162520 KB)
+Simulation CPU Usage: 40 ms

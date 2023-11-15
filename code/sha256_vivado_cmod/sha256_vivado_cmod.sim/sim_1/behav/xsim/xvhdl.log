@@ -1,2 +1,2 @@
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/nicla/Documents/GitHub/ESD3_project/code/cyclone_v_sha256/src/tb/multi_round_hasher_tb.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'multi_round_hasher_tb'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/markus/uni/ESD3_project/code/cyclone_v_sha256/src/tb/slave_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'slave_tb'

@@ -1,8 +1,13 @@
 0.7
 2020.2
 May  7 2023
-15:24:31
-C:/Users/nicla/Documents/GitHub/ESD3_project/code/cyclone_v_sha256/src/multi_round_hasher.vhd,1699957025,vhdl,C:/Users/nicla/Documents/GitHub/ESD3_project/code/cyclone_v_sha256/src/tb/multi_round_hasher_tb.vhd,,,multi_round_hasher,,,,,,,,
-C:/Users/nicla/Documents/GitHub/ESD3_project/code/cyclone_v_sha256/src/sha256_core.vhd,1699875268,vhdl,C:/Users/nicla/Documents/GitHub/ESD3_project/code/cyclone_v_sha256/src/multi_round_hasher.vhd,,,sha256_core,,,,,,,,
-C:/Users/nicla/Documents/GitHub/ESD3_project/code/cyclone_v_sha256/src/sha256_pkg.vhd,1699870843,vhdl,C:/Users/nicla/Documents/GitHub/ESD3_project/code/cyclone_v_sha256/src/multi_round_hasher.vhd;C:/Users/nicla/Documents/GitHub/ESD3_project/code/cyclone_v_sha256/src/sha256_core.vhd,,,sha256_pkg,,,,,,,,
-C:/Users/nicla/Documents/GitHub/ESD3_project/code/cyclone_v_sha256/src/tb/multi_round_hasher_tb.vhd,1699957213,vhdl,,,,multi_round_hasher_tb,,,,,,,,
+15:10:42
+/home/markus/uni/ESD3_project/code/cyclone_v_sha256/src/core_controller.vhd,1700056873,vhdl,/home/markus/uni/ESD3_project/code/cyclone_v_sha256/src/tb/slave_tb.vhd,,,core_controller,,,,,,,,
+/home/markus/uni/ESD3_project/code/cyclone_v_sha256/src/data_link.vhd,1700037060,vhdl,/home/markus/uni/ESD3_project/code/cyclone_v_sha256/src/tb/slave_tb.vhd,,,data_link,,,,,,,,
+/home/markus/uni/ESD3_project/code/cyclone_v_sha256/src/multi_round_hasher.vhd,1700056544,vhdl,/home/markus/uni/ESD3_project/code/cyclone_v_sha256/src/core_controller.vhd,,,multi_round_hasher,,,,,,,,
+/home/markus/uni/ESD3_project/code/cyclone_v_sha256/src/passwd_expander.vhd,1700037060,vhdl,/home/markus/uni/ESD3_project/code/cyclone_v_sha256/src/tb/slave_tb.vhd,,,passwd_expander,,,,,,,,
+/home/markus/uni/ESD3_project/code/cyclone_v_sha256/src/plusbus_pkg.vhd,1700037060,vhdl,/home/markus/uni/ESD3_project/code/cyclone_v_sha256/src/passwd_expander.vhd,,,plusbus_pkg,,,,,,,,
+/home/markus/uni/ESD3_project/code/cyclone_v_sha256/src/sha256_core.vhd,1700056308,vhdl,/home/markus/uni/ESD3_project/code/cyclone_v_sha256/src/multi_round_hasher.vhd,,,sha256_core,,,,,,,,
+/home/markus/uni/ESD3_project/code/cyclone_v_sha256/src/sha256_pkg.vhd,1700037060,vhdl,/home/markus/uni/ESD3_project/code/cyclone_v_sha256/src/core_controller.vhd;/home/markus/uni/ESD3_project/code/cyclone_v_sha256/src/multi_round_hasher.vhd;/home/markus/uni/ESD3_project/code/cyclone_v_sha256/src/sha256_core.vhd,,,sha256_pkg,,,,,,,,
+/home/markus/uni/ESD3_project/code/cyclone_v_sha256/src/tb/multi_round_hasher_tb.vhd,1700056308,vhdl,,,,multi_round_hasher_tb,,,,,,,,
+/home/markus/uni/ESD3_project/code/cyclone_v_sha256/src/tb/slave_tb.vhd,1700059678,vhdl,,,,slave_tb,,,,,,,,

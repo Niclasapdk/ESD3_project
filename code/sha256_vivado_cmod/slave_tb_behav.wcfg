@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="slave_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="plusbus_pkg" />
+            <top_module name="sha256_pkg" />
+            <top_module name="slave_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000000 us"></ZoomStartTime>
+      <ZoomEndTime time="3,700.000001 us"></ZoomEndTime>
+      <Cursor1Time time="0.000000 us"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="221"></NameColumnWidth>
+      <ValueColumnWidth column_width="91"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="5" />
+   <wvobject type="logic" fp_name="/slave_tb/CC/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/slave_tb/CC/passwd">
+      <obj_property name="ElementShortName">passwd[0:511]</obj_property>
+      <obj_property name="ObjectShortName">passwd[0:511]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/slave_tb/CC/passwd_valid">
+      <obj_property name="ElementShortName">passwd_valid</obj_property>
+      <obj_property name="ObjectShortName">passwd_valid</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/slave_tb/CC/rounds">
+      <obj_property name="ElementShortName">rounds[31:0]</obj_property>
+      <obj_property name="ObjectShortName">rounds[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/slave_tb/CC/target_hash">
+      <obj_property name="ElementShortName">target_hash[255:0]</obj_property>
+      <obj_property name="ObjectShortName">target_hash[255:0]</obj_property>
+   </wvobject>
+</wave_config>

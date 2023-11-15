@@ -1,1 +1,1 @@
---incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "secureip" --snapshot "multi_round_hasher_tb_behav" "xil_defaultlib.multi_round_hasher_tb" -log "elaborate.log" 
+--incr --debug "typical" --relax --mt "8" -L "xil_defaultlib" -L "secureip" --snapshot "multi_round_hasher_tb_behav" "xil_defaultlib.multi_round_hasher_tb" -log "elaborate.log" 

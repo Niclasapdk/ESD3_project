@@ -1,9 +1,0 @@
-# compile vhdl design source files
-vhdl xil_defaultlib  \
-"../../../../../cyclone_v_sha256/src/sha256_pkg.vhd" \
-"../../../../../cyclone_v_sha256/src/sha256_core.vhd" \
-"../../../../../cyclone_v_sha256/src/multi_round_hasher.vhd" \
-"../../../../../cyclone_v_sha256/src/tb/multi_round_hasher_tb.vhd" \
-
-# Do not sort compile order
-nosort

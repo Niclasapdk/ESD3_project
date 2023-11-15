@@ -1,22 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1699955390" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/test_top.dcp">
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1700058764" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/test_top.dcp">
+  <File Type="RDS-DCP" Name="test_top.dcp"/>
+  <File Type="RDS-UTIL-PB" Name="test_top_utilization_synth.pb"/>
   <File Type="PA-TCL" Name="test_top.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="test_top_drc_synth.rpt"/>
+  <File Type="RDS-UTIL" Name="test_top_utilization_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="test_top_reports.tcl"/>
   <File Type="RDS-RDS" Name="test_top.vds"/>
-  <File Type="RDS-UTIL" Name="test_top_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="test_top_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="test_top.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="test_top_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="test_top_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PPRDIR/../cyclone_v_sha256/src/data_link.vhd">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PPRDIR/../cyclone_v_sha256/src/sha256_pkg.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -24,6 +15,24 @@
       </FileInfo>
     </File>
     <File Path="$PPRDIR/../cyclone_v_sha256/src/sha256_core.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../cyclone_v_sha256/src/multi_round_hasher.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../cyclone_v_sha256/src/core_controller.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../cyclone_v_sha256/src/data_link.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -54,13 +63,6 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../cyclone_v_sha256/src/core_controller.vhd">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PPRDIR/../cyclone_v_sha256/src/tb/sha256_core_tb.vhd">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
@@ -82,7 +84,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../cyclone_v_sha256/src/multi_round_hasher.vhd">
+    <File Path="$PPRDIR/../cyclone_v_sha256/src/tb/slave_tb.vhd">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>

@@ -18,7 +18,7 @@ architecture Behavioral of multi_round_hasher_tb is
 begin
     clk <= not clk after CLK_PERIOD/2;
 
-    uut : entity work.multi_round_hasher
+    DUT : entity work.multi_round_hasher
     port map (
         clk       => clk,
         start     => start,

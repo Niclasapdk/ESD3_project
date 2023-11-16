@@ -106,12 +106,12 @@ begin
                 when DONE =>
              end case;
         end if;
-        
+
         if (current_state = RUNNING_CORE_READY) then
             core_start <= '1';
             core_in <= pad_hash_digest(core_hash);
         end if;
-    
+
     end process;
 
     idle <= '1' when current_state = IDLE_RESET else '0';

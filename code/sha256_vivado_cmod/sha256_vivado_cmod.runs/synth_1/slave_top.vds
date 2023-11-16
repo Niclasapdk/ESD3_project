@@ -1,0 +1,346 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:04:56 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Thu Nov 16 14:29:08 2023
+# Process ID: 28199
+# Current directory: /home/markus/uni/ESD3_project/code/sha256_vivado_cmod/sha256_vivado_cmod.runs/synth_1
+# Command line: vivado -log slave_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source slave_top.tcl
+# Log file: /home/markus/uni/ESD3_project/code/sha256_vivado_cmod/sha256_vivado_cmod.runs/synth_1/slave_top.vds
+# Journal file: /home/markus/uni/ESD3_project/code/sha256_vivado_cmod/sha256_vivado_cmod.runs/synth_1/vivado.jou
+# Running On: mltop, OS: Linux, CPU Frequency: 3781.863 MHz, CPU Physical cores: 4, Host memory: 16639 MB
+#-----------------------------------------------------------
+source slave_top.tcl -notrace
+create_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1335.871 ; gain = 0.023 ; free physical = 8148 ; free virtual = 12091
+Command: read_checkpoint -auto_incremental -incremental /home/markus/uni/ESD3_project/code/sha256_vivado_cmod/sha256_vivado_cmod.srcs/utils_1/imports/synth_1/test_top.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from /home/markus/uni/ESD3_project/code/sha256_vivado_cmod/sha256_vivado_cmod.srcs/utils_1/imports/synth_1/test_top.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top slave_top -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 28229
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1689.672 ; gain = 353.801 ; free physical = 7460 ; free virtual = 11435
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'slave_top' [/home/markus/uni/ESD3_project/code/cyclone_v_sha256/src/slave_top.vhd:24]
+INFO: [Synth 8-638] synthesizing module 'data_link' [/home/markus/uni/ESD3_project/code/cyclone_v_sha256/src/data_link.vhd:23]
+	Parameter ADDR bound to: 2'b10 
+INFO: [Synth 8-256] done synthesizing module 'data_link' (0#1) [/home/markus/uni/ESD3_project/code/cyclone_v_sha256/src/data_link.vhd:23]
+INFO: [Synth 8-638] synthesizing module 'passwd_expander' [/home/markus/uni/ESD3_project/code/cyclone_v_sha256/src/passwd_expander.vhd:19]
+INFO: [Synth 8-256] done synthesizing module 'passwd_expander' (0#1) [/home/markus/uni/ESD3_project/code/cyclone_v_sha256/src/passwd_expander.vhd:19]
+INFO: [Synth 8-638] synthesizing module 'core_controller' [/home/markus/uni/ESD3_project/code/cyclone_v_sha256/src/core_controller.vhd:23]
+WARNING: [Synth 8-6774] Null subtype or type declaration found [/home/markus/uni/ESD3_project/code/cyclone_v_sha256/src/core_controller.vhd:32]
+WARNING: [Synth 8-3919] null assignment ignored [/home/markus/uni/ESD3_project/code/cyclone_v_sha256/src/core_controller.vhd:32]
+WARNING: [Synth 8-6774] Null subtype or type declaration found [/home/markus/uni/ESD3_project/code/cyclone_v_sha256/src/core_controller.vhd:33]
+WARNING: [Synth 8-3919] null assignment ignored [/home/markus/uni/ESD3_project/code/cyclone_v_sha256/src/core_controller.vhd:33]
+WARNING: [Synth 8-6774] Null subtype or type declaration found [/home/markus/uni/ESD3_project/code/cyclone_v_sha256/src/core_controller.vhd:34]
+WARNING: [Synth 8-3919] null assignment ignored [/home/markus/uni/ESD3_project/code/cyclone_v_sha256/src/core_controller.vhd:34]
+WARNING: [Synth 8-6774] Null subtype or type declaration found [/home/markus/uni/ESD3_project/code/cyclone_v_sha256/src/core_controller.vhd:35]
+WARNING: [Synth 8-3919] null assignment ignored [/home/markus/uni/ESD3_project/code/cyclone_v_sha256/src/core_controller.vhd:35]
+WARNING: [Synth 8-6774] Null subtype or type declaration found [/home/markus/uni/ESD3_project/code/cyclone_v_sha256/src/core_controller.vhd:39]
+WARNING: [Synth 8-3919] null assignment ignored [/home/markus/uni/ESD3_project/code/cyclone_v_sha256/src/core_controller.vhd:39]
+WARNING: [Synth 8-6774] Null subtype or type declaration found [/home/markus/uni/ESD3_project/code/cyclone_v_sha256/src/core_controller.vhd:42]
+WARNING: [Synth 8-3919] null assignment ignored [/home/markus/uni/ESD3_project/code/cyclone_v_sha256/src/core_controller.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'core_controller' (0#1) [/home/markus/uni/ESD3_project/code/cyclone_v_sha256/src/core_controller.vhd:23]
+INFO: [Synth 8-256] done synthesizing module 'slave_top' (0#1) [/home/markus/uni/ESD3_project/code/cyclone_v_sha256/src/slave_top.vhd:24]
+WARNING: [Synth 8-6014] Unused sequential element passwd_buf_reg was removed.  [/home/markus/uni/ESD3_project/code/cyclone_v_sha256/src/core_controller.vhd:121]
+WARNING: [Synth 8-3848] Net passwd_out in module/entity core_controller does not have driver. [/home/markus/uni/ESD3_project/code/cyclone_v_sha256/src/core_controller.vhd:18]
+WARNING: [Synth 8-7129] Port passwd_out[0] in module core_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port passwd_out[1] in module core_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port passwd_out[2] in module core_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port passwd_out[3] in module core_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port passwd_out[4] in module core_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port passwd_out[5] in module core_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port passwd_out[6] in module core_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port passwd_out[7] in module core_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port passwd_out[8] in module core_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port passwd_out[9] in module core_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port passwd_out[10] in module core_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port passwd_out[11] in module core_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port passwd_out[12] in module core_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port passwd_out[13] in module core_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port passwd_out[14] in module core_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port passwd_out[15] in module core_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port passwd_out[16] in module core_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port passwd_out[17] in module core_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port passwd_out[18] in module core_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port passwd_out[19] in module core_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port passwd_out[20] in module core_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port passwd_out[21] in module core_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port passwd_out[22] in module core_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port passwd_out[23] in module core_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port passwd_out[24] in module core_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port passwd_out[25] in module core_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port passwd_out[26] in module core_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port passwd_out[27] in module core_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port passwd_out[28] in module core_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port passwd_out[29] in module core_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port passwd_out[30] in module core_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port passwd_out[31] in module core_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port passwd_out[32] in module core_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port passwd_out[33] in module core_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port passwd_out[34] in module core_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port passwd_out[35] in module core_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port passwd_out[36] in module core_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port passwd_out[37] in module core_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port passwd_out[38] in module core_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port passwd_out[39] in module core_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port passwd_out[40] in module core_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port passwd_out[41] in module core_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port passwd_out[42] in module core_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port passwd_out[43] in module core_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port passwd_out[44] in module core_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port passwd_out[45] in module core_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port passwd_out[46] in module core_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port passwd_out[47] in module core_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port passwd_out[48] in module core_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port passwd_out[49] in module core_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port passwd_out[50] in module core_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port passwd_out[51] in module core_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port passwd_out[52] in module core_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port passwd_out[53] in module core_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port passwd_out[54] in module core_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port passwd_out[55] in module core_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port passwd_out[56] in module core_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port passwd_out[57] in module core_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port passwd_out[58] in module core_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port passwd_out[59] in module core_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port passwd_out[60] in module core_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port passwd_out[61] in module core_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port passwd_out[62] in module core_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port passwd_out[63] in module core_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port passwd_out[64] in module core_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port passwd_out[65] in module core_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port passwd_out[66] in module core_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port passwd_out[67] in module core_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port passwd_out[68] in module core_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port passwd_out[69] in module core_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port passwd_out[70] in module core_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port passwd_out[71] in module core_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port passwd_out[72] in module core_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port passwd_out[73] in module core_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port passwd_out[74] in module core_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port passwd_out[75] in module core_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port passwd_out[76] in module core_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port passwd_out[77] in module core_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port passwd_out[78] in module core_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port passwd_out[79] in module core_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port passwd_out[80] in module core_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port passwd_out[81] in module core_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port passwd_out[82] in module core_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port passwd_out[83] in module core_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port passwd_out[84] in module core_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port passwd_out[85] in module core_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port passwd_out[86] in module core_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port passwd_out[87] in module core_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port passwd_out[88] in module core_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port passwd_out[89] in module core_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port passwd_out[90] in module core_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port passwd_out[91] in module core_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port passwd_out[92] in module core_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port passwd_out[93] in module core_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port passwd_out[94] in module core_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port passwd_out[95] in module core_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port passwd_out[96] in module core_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port passwd_out[97] in module core_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port passwd_out[98] in module core_controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port passwd_out[99] in module core_controller is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1757.641 ; gain = 421.770 ; free physical = 7381 ; free virtual = 11357
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1772.484 ; gain = 436.613 ; free physical = 7373 ; free virtual = 11348
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1780.488 ; gain = 444.617 ; free physical = 7373 ; free virtual = 11348
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'passwd_expander'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    stop |                               00 |                               00
+                   start |                               01 |                               01
+                    data |                               10 |                               11
+                  escape |                               11 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'sequential' in module 'passwd_expander'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1797.402 ; gain = 461.531 ; free physical = 7351 ; free virtual = 11327
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    9 Bit       Adders := 2     
++---Registers : 
+	              512 Bit    Registers := 1     
+	                9 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 11    
++---Muxes : 
+	   2 Input  512 Bit        Muxes := 3     
+	   4 Input  512 Bit        Muxes := 2     
+	   4 Input    9 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 6     
+	   2 Input    2 Bit        Muxes := 3     
+	   4 Input    2 Bit        Muxes := 1     
+	   3 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 5     
+	   4 Input    1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-3332] Sequential element (FSM_sequential_current_state_reg[1]) is unused and will be removed from module passwd_expander.
+WARNING: [Synth 8-3332] Sequential element (FSM_sequential_current_state_reg[0]) is unused and will be removed from module passwd_expander.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1920.816 ; gain = 584.945 ; free physical = 7195 ; free virtual = 11174
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1920.816 ; gain = 584.945 ; free physical = 7194 ; free virtual = 11174
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1920.816 ; gain = 584.945 ; free physical = 7194 ; free virtual = 11174
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1920.816 ; gain = 584.945 ; free physical = 7172 ; free virtual = 11171
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1920.816 ; gain = 584.945 ; free physical = 7172 ; free virtual = 11171
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1920.816 ; gain = 584.945 ; free physical = 7172 ; free virtual = 11171
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1920.816 ; gain = 584.945 ; free physical = 7172 ; free virtual = 11171
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1920.816 ; gain = 584.945 ; free physical = 7172 ; free virtual = 11171
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1920.816 ; gain = 584.945 ; free physical = 7172 ; free virtual = 11171
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+------+------+
+|      |Cell  |Count |
++------+------+------+
+|1     |BUFG  |     1|
+|2     |LUT2  |     1|
+|3     |LUT4  |     3|
+|4     |LUT5  |     1|
+|5     |LUT6  |     8|
+|6     |FDRE  |    22|
+|7     |IBUF  |    13|
+|8     |IOBUF |     8|
+|9     |OBUF  |     8|
++------+------+------+
+
+Report Instance Areas: 
++------+---------+----------+------+
+|      |Instance |Module    |Cells |
++------+---------+----------+------+
+|1     |top      |          |    65|
+|2     |  DL     |data_link |    27|
++------+---------+----------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1920.816 ; gain = 584.945 ; free physical = 7172 ; free virtual = 11171
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1329 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1920.816 ; gain = 584.945 ; free physical = 7172 ; free virtual = 11171
+Synthesis Optimization Complete : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1920.824 ; gain = 584.945 ; free physical = 7172 ; free virtual = 11171
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1926.754 ; gain = 0.000 ; free physical = 7457 ; free virtual = 11456
+INFO: [Netlist 29-17] Analyzing 8 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2059.469 ; gain = 0.000 ; free physical = 7396 ; free virtual = 11380
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 8 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 8 instances
+
+Synth Design complete | Checksum: ff94b812
+INFO: [Common 17-83] Releasing license: Synthesis
+27 Infos, 117 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:15 . Memory (MB): peak = 2059.469 ; gain = 723.598 ; free physical = 7396 ; free virtual = 11380
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1587.486; main = 1344.110; forked = 380.138
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 2890.094; main = 2059.469; forked = 969.277
+INFO: [Common 17-1381] The checkpoint '/home/markus/uni/ESD3_project/code/sha256_vivado_cmod/sha256_vivado_cmod.runs/synth_1/slave_top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file slave_top_utilization_synth.rpt -pb slave_top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Nov 16 14:29:33 2023...

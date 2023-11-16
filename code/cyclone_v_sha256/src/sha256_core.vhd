@@ -88,7 +88,7 @@ architecture Behavioral of sha256_core is
         X"00000000", X"00000000", X"00000000", X"00000000",
         X"00000000", X"00000000", X"00000000", X"00000000"
     );
-    
+
     type sha256_core_state_type is (IDLE, READ_MSG, PREP_MSG_0, PREP_MSG_1, PREP_MSG_2, PREP_MSG_3, HASH_1, HASH_2, HASH_2b, HASH_3, DONE);
     signal current_state : sha256_core_state_type := IDLE;
     signal next_state : sha256_core_state_type := IDLE;

@@ -12,6 +12,7 @@ entity multi_round_hasher is
         passwd_in : in std_logic_vector(0 to 511);
         rounds : in unsigned(31 downto 0);
         -- outputs
+        idle : out std_logic;
         hash_out : out std_logic_vector(255 downto 0);
         hash_done: out std_logic
         );
@@ -112,6 +113,8 @@ begin
         end if;
 
     end process;
+
+    idle <= '1' when current_state = IDLE_RESET else '0';
 
     hash_done <= '1' when current_state = DONE else '0';
     hash_out <= core_hash;

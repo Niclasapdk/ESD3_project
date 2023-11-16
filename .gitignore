@@ -2,3 +2,6 @@ code/*vivado*/*vivado*.cache
 code/*vivado*/*vivado*.runs
 code/*vivado*/*vivado*.sim
 code/*vivado*/*vivado*.hw
+
+pcb/*/*Logs*
+pcb/*/*Outputs*

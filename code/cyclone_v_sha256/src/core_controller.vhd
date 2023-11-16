@@ -21,9 +21,11 @@ entity core_controller is
 end core_controller;
 
 architecture Behavioral of core_controller is
-    type core_controller_type_t is (IDLE, PASSWD_RECV, CORE_DONE);
-    signal current_state : core_controller_type_t := IDLE;
-    signal next_state : core_controller_type_t := IDLE;
+    type core_controller_type_t is (CORE_SERVICE, PASSWD_RECV);
+    signal current_state : core_controller_type_t := CORE_SERVICE;
+    signal next_state : core_controller_type_t := CORE_SERVICE;
+
+    signal ready_for_new_passwd_sig : std_logic := '1';
 
     -- Core flags arrays
     type core_flag_ar_t is array(0 to N-1) of std_logic;
@@ -38,6 +40,8 @@ architecture Behavioral of core_controller is
 
     type core_passwd_ar_t is array(0 to N-1) of std_logic_vector(0 to 511);
     signal core_passwd_ar : core_passwd_ar_t := (others => (others => '0'));
+
+    signal passwd_buf : std_logic_vector(0 to 511) := (others => '0');
 begin
 
     -- Instantiate hash cores
@@ -64,44 +68,62 @@ begin
     end process;
 
     -- Next State Logic
-    process(current_state, passwd_valid)
+    process(current_state, passwd_valid, core_done_flags)
     begin
-        if (rising_edge(clk)) then
-            case current_state is
-                when IDLE =>
-                    next_state <= IDLE;
-                    for i in 0 to N-1 loop
-                        if (core_done_flags(i) = '1') then
-                            next_state <= CORE_DONE;
-                        end if;
-                    end loop;
-                when others =>
-            end case;
-        end if;
+        case current_state is
+            when CORE_SERVICE =>
+                next_state <= CORE_SERVICE; -- default
+
+                if (passwd_valid = '1') then
+                    next_state <= PASSWD_RECV;
+                end if;
+
+            when PASSWD_RECV =>
+                -- Always continue to CORE_SERVICE state
+                next_state <= CORE_SERVICE;
+
+        end case;
     end process;
 
-    -- Clock sensitive logic
+    -- Real logic
     process(clk, current_state, core_done_flags, core_hash_ar)
     begin
         if (rising_edge(clk)) then
+
+            -- Check for done cores
+            passwd_found <= '0';
+            core_reset_flags <= (others => '0');
+            core_start_flags <= (others => '0');
+            for i in 0 to N-1 loop
+                if (core_done_flags(i) = '1') then
+                    core_reset_flags(i) <= '1';
+                    if (core_hash_ar(i) = target_hash) then
+                        passwd_out <= core_passwd_ar(i);
+                        passwd_found <= '1';
+                    end if;
+                end if;
+            end loop;
+
             case current_state is
-                when IDLE =>
+                when CORE_SERVICE =>
+                    if (ready_for_new_passwd_sig <= '0') then
+                        for i in 0 to N-1 loop
+                            if (core_idle_flags(i) = '1') then
+                                core_passwd_ar(i) <= passwd_buf;
+                                core_start_flags(i) <= '1';
+                                ready_for_new_passwd_sig <= '1';
+                                exit;
+                            end if;
+                        end loop;
+                    end if;
                 when PASSWD_RECV =>
-                when CORE_DONE =>
+                    if (ready_for_new_passwd_sig = '1') then
+                        passwd_buf <= passwd;
+                        ready_for_new_passwd_sig <= '0';
+                    end if;
             end case;
         end if;
     end process;
 
-    -- Clock insensitive logic
-    process(core_done_flags, core_hash_ar, target_hash)
-    begin
-        for i in 0 to N-1 loop
-            if (core_done_flags(i) = '1') then
-                if (core_hash_ar(i) = target_hash) then
-                    passwd_out <= core_passwd_ar(i);
-                    passwd_found <= '1';
-                end if;
-            end if;
-        end loop;
-    end process;
+    ready_for_new_passwd <= ready_for_new_passwd_sig;
 end Behavioral;

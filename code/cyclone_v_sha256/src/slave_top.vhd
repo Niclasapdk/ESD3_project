@@ -56,6 +56,7 @@ begin
             );
 
     CC : entity work.core_controller
+    generic map ( N => 2 )
     port map (
                  clk => clk,
                  passwd => passwd,

@@ -4,7 +4,7 @@ use IEEE.NUMERIC_STD.ALL;
 use work.sha256_pkg.ALL;
 
 entity core_controller is
-    generic( N : in integer := 0); -- number of cores
+    generic( N : in integer := 1); -- number of cores
     port(
             -- Inputs
             clk : in std_logic;

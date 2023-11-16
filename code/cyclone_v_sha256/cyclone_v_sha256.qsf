@@ -39,7 +39,7 @@
 
 set_global_assignment -name FAMILY "Cyclone V"
 set_global_assignment -name DEVICE 5CEBA4F23C7
-set_global_assignment -name TOP_LEVEL_ENTITY test_top
+set_global_assignment -name TOP_LEVEL_ENTITY slave_top
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 22.1STD.2
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "10:45:18  OCTOBER 09, 2023"
 set_global_assignment -name LAST_QUARTUS_VERSION "22.1std.2 Lite Edition"
@@ -56,34 +56,6 @@ set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_boundary_scan
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to addr_bus[1]
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to addr_bus[0]
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to com_clk
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to r_nw
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to data_tx[7]
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to data_tx[6]
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to data_tx[5]
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to data_tx[4]
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to data_tx[3]
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to data_tx[2]
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to data_tx[1]
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to data_tx[0]
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to data_bus[7]
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to data_bus[6]
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to data_bus[5]
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to data_bus[4]
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to data_bus[3]
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to data_bus[2]
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to data_bus[1]
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to data_bus[0]
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to data_rx[7]
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to data_rx[6]
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to data_rx[5]
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to data_rx[4]
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to data_rx[3]
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to data_rx[2]
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to data_rx[1]
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to data_rx[0]
 set_location_assignment PIN_C15 -to com_clk
 set_location_assignment PIN_E14 -to r_nw
 set_location_assignment PIN_F13 -to data_bus[7]
@@ -114,9 +86,7 @@ set_location_assignment PIN_V13 -to data_tx[1]
 set_location_assignment PIN_U13 -to data_tx[0]
 
 
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name VHDL_FILE src/slave_top.vhd
 set_global_assignment -name VHDL_FILE src/tb/sha256_core_tb.vhd
 set_global_assignment -name VHDL_FILE src/tb/passwd_expander_hash_tb.vhd
 set_global_assignment -name VHDL_FILE src/tb/multi_round_hasher_tb.vhd
@@ -128,7 +98,37 @@ set_global_assignment -name VHDL_FILE src/passwd_expander_tb.vhd
 set_global_assignment -name VHDL_FILE src/passwd_expander.vhd
 set_global_assignment -name VHDL_FILE src/data_link.vhd
 set_global_assignment -name SDC_FILE cyclone_v_sha256.out.sdc
-set_global_assignment -name VHDL_FILE src/test_top.vhd
 set_global_assignment -name VHDL_FILE src/sha256_core.vhd
 set_global_assignment -name VHDL_FILE src/sha256_pkg.vhd
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to addr_bus[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to addr_bus[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to com_clk
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to r_nw
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to data_tx[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to data_tx[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to data_tx[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to data_tx[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to data_tx[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to data_tx[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to data_tx[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to data_tx[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to data_bus[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to data_bus[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to data_bus[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to data_bus[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to data_bus[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to data_bus[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to data_bus[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to data_bus[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to data_rx[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to data_rx[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to data_rx[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to data_rx[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to data_rx[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to data_rx[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to data_rx[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to data_rx[0]
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

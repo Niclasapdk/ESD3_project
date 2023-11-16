@@ -100,16 +100,13 @@ begin
                 when RUNNING_CORE_WAIT =>
                     core_start <= '0';
                 when RUNNING_CORE_READY =>
+                    core_start <= '1';
+                    core_in <= pad_hash_digest(core_hash);
                     rounds_ctr <= to_unsigned(to_integer(rounds_ctr) + 1, 32);
                 when DONE_CORE_WAIT =>
                     core_start <= '0';
                 when DONE =>
              end case;
-        end if;
-
-        if (current_state = RUNNING_CORE_READY) then
-            core_start <= '1';
-            core_in <= pad_hash_digest(core_hash);
         end if;
 
     end process;

@@ -117,7 +117,7 @@ begin
                         end loop;
                     end if;
                 when PASSWD_RECV =>
-                    if (ready_for_new_passwd_sig = '1') then
+                    if (ready_for_new_passwd_sig = '1' and passwd_buf /= passwd) then
                         passwd_buf <= passwd;
                         ready_for_new_passwd_sig <= '0';
                     end if;

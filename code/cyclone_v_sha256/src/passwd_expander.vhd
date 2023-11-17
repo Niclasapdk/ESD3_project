@@ -18,9 +18,9 @@ end passwd_expander;
 
 architecture Behaviorial of passwd_expander is
 
-    type passwd_expander_state_type is (STOP, START, ESCAPE, DATA);
-    signal current_state : passwd_expander_state_type := STOP;
-    signal next_state : passwd_expander_state_type := STOP;
+    type passwd_expander_state_type is (IDLE, STOP, START, ESCAPE, DATA);
+    signal current_state : passwd_expander_state_type := IDLE;
+    signal next_state : passwd_expander_state_type := IDLE;
 
     -- Clock synchronization
     signal r1_com_clk : std_logic;
@@ -34,6 +34,12 @@ begin
     begin
         output_valid <= '0';
         case current_state is
+            when IDLE =>
+                if (data_in = PLUSBUS_STX) then
+                    next_state <= START;
+                else
+                    next_state <= IDLE;
+                end if;
             when STOP =>
                 if (data_in = PLUSBUS_STX) then
                     next_state <= START;

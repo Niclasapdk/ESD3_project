@@ -30,6 +30,10 @@ architecture Behavioral of multi_round_hasher is
 
     signal rounds_internal : unsigned(31 downto 0);
     signal rounds_ctr : unsigned(31 downto 0);
+
+    -- Counter to not continue from waiting too soon
+    -- set to 1 when starting core and not continuing until wait_ctr = 0
+    signal wait_ctr : unsigned(2 downto 0) := "001";
 begin
     HC : entity work.sha256_core
     port map (
@@ -58,30 +62,36 @@ begin
                 else
                     next_state <= IDLE_RESET;
                 end if;
+
             when START_CORE =>
                 next_state <= RUNNING_CORE_WAIT;
+
             when RUNNING_CORE_WAIT =>
                 if rounds_internal = rounds_ctr then
                     next_state <= DONE_CORE_WAIT;
-                elsif core_done = '1' then
+                elsif core_done = '1' and wait_ctr = "000" then
                     next_state <= RUNNING_CORE_READY;
                 else
                     next_state <= RUNNING_CORE_WAIT;
                 end if;
+
             when RUNNING_CORE_READY =>
                 next_state <= RUNNING_CORE_WAIT;
+
             when DONE_CORE_WAIT =>
-                if core_done = '1' then
+                if core_done = '1' and wait_ctr = "000" then
                     next_state <= DONE;
                 else
                     next_state <= DONE_CORE_WAIT;
                 end if;
+
             when DONE =>
                 if reset = '1' then
                     next_state <= IDLE_RESET;
                 else
                     next_state <= DONE;
                 end if;
+
             end case;
     end process;
 
@@ -97,14 +107,22 @@ begin
                     rounds_ctr <= x"00000001";
                     rounds_internal <= rounds;
                     core_in <= passwd_in;
+                    wait_ctr <= "001";
                 when RUNNING_CORE_WAIT =>
                     core_start <= '0';
+                    if (wait_ctr /= "000") then
+                        wait_ctr <= to_unsigned(to_integer(wait_ctr)+1, 3);
+                    end if;
                 when RUNNING_CORE_READY =>
                     core_start <= '1';
                     core_in <= pad_hash_digest(core_hash);
                     rounds_ctr <= to_unsigned(to_integer(rounds_ctr) + 1, 32);
+                    wait_ctr <= "001";
                 when DONE_CORE_WAIT =>
                     core_start <= '0';
+                    if (wait_ctr /= "000") then
+                        wait_ctr <= to_unsigned(to_integer(wait_ctr)+1, 3);
+                    end if;
                 when DONE =>
              end case;
         end if;

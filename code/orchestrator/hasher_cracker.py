@@ -19,7 +19,8 @@ class Orchestrator:
     def __init__(self, port: str, baudrate: int, proto_spec: dict, wordlist: str, hashlist: str, verbose: bool, ceiling: int):
         self.verbose = True if verbose else False #Because python doesn't like types :((
         self.noserial = True if port == "/dev/null" else False
-        self.serial = serial.Serial(port, baudrate=baudrate)
+        if not self.noserial:
+            self.serial = serial.Serial(port, baudrate=baudrate)
         self.proto_spec = proto_spec
         self.wordlist = self.read_wordlist(wordlist)
         self.hashlist = self.read_hashlist(hashlist)
@@ -50,6 +51,8 @@ class Orchestrator:
         self.addr_idx = self.pkt.index(b"ADDR")
 
     def txQueueMsgsWaiting(self):
+        if self.noserial:
+            return 0
         data = self.serial.readline().decode().strip().split(": ")
         if data[0] == "txMsgsWaiting":
             return int(data[1])

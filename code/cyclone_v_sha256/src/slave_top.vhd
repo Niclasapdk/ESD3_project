@@ -6,7 +6,8 @@ use work.sha256_pkg.ALL;
 entity slave_top is
     generic(
                slave_addr : in std_logic_vector(1 downto 0) := "10";
-               target_hash : in std_logic_vector(255 downto 0) := x"ff7d9978045a76d74350c1b7866cf3cfe058a8c6249213a69aed843ba1e1680f"
+               --target_hash : in std_logic_vector(255 downto 0) := x"ff7d9978045a76d74350c1b7866cf3cfe058a8c6249213a69aed843ba1e1680f" -- 2 rounds
+               target_hash : in std_logic_vector(255 downto 0) := x"bf23c3b7661e33d361c1b1b89389349a941313f5b2ff1c57b2c2204313e2f316" -- 5000 rounds
            );
     port(
         -- inputs
@@ -27,7 +28,7 @@ architecture Behavioral of slave_top is
     signal tx_success : std_logic;
     signal hash : std_logic_vector(255 downto 0) := (others => '0');
     signal hash_done : std_logic := '0';
-    signal rounds : unsigned(31 downto 0) := x"00000002";
+    signal rounds : unsigned(31 downto 0) := x"00001388";
     signal cc_ready_for_passwd : std_logic;
     signal passwd_out : std_logic_vector(0 to 511);
     signal passwd_found : std_logic;

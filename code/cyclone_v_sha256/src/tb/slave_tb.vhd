@@ -13,14 +13,15 @@ architecture Behavioral of slave_tb is
     signal data_tx  : STD_LOGIC_VECTOR(7 downto 0) := x"00";
     signal data_bus : STD_LOGIC_VECTOR(7 downto 0) := x"00";
     signal data_rx  : STD_LOGIC_VECTOR(7 downto 0) := x"00";
-    type pkt_ar_t is array(0 to 1) of std_logic_vector(0 to 527);
+    type pkt_ar_t is array(0 to 2) of std_logic_vector(0 to 527);
     constant pkt : pkt_ar_t := (
-        x"02414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141418000000000000001b803",
-        x"0249636520637265616d61626364656667686a696b6c6d6e6f708000000000000000000000000000000000000000000000000000000000000000000000000000c803"
+        x"0249636520637265616d61626364656667686a696b6c6d6e6f708000000000000000000000000000000000000000000000000000000000000000000000000000c803",
+        x"02436f6666656561626364656667686a696b6c6d6e6f708000000000000000000000000000000000000000000000000000000000000000000000000000000000b003",
+        x"02414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141418000000000000001b803"
     );
     constant CLK_PERIOD : time := 10 ns;
     constant COM_CLK_PERIOD : time := 1 us;
-    signal pidx : unsigned(0 downto 0) := "0";
+    signal pidx : integer range 0 to 2;
     signal cur_pkt : std_logic_vector(0 to 527);
 begin
     clk <= not clk after CLK_PERIOD/2;
@@ -40,14 +41,18 @@ begin
         );
 
 
-    cur_pkt <= pkt(to_integer(pidx));
+    cur_pkt <= pkt(pidx);
     process(com_clk)
         variable idx : integer := 0;
     begin
         if rising_edge(com_clk) then
             if idx = 528 then
                 idx := 0;
-                pidx <= not pidx;
+                if (pidx < 2) then
+                    pidx <= pidx + 1;
+                else
+                    pidx <= 0;
+                end if;
             end if;
 
             data_bus <= cur_pkt(idx to idx+7);

@@ -53,7 +53,7 @@ begin
     end process;
 
     -- Next-state logic
-    process(current_state, rounds_internal, rounds_ctr, reset, start, core_done)
+    process(current_state, rounds_internal, rounds_ctr, reset, start, core_done, wait_ctr)
     begin
         case current_state is
             when IDLE_RESET =>

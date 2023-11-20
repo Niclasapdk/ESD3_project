@@ -30,6 +30,14 @@ GND,  12,   GND
 1. **Write**: Master drives data and addr bus and pulls Read/Write low (write).
 2. **Read**: Master drives addr bus and sets Read/Write high (read). Slave drives data bus.
 
+**Data:**
+- Latch: Falling Edge
+- Setup: Rising Edge
+
+**Address:**
+- Latch: Rising Edge
+- Setup: Falling Edge
+
 ## L3
 
 ### Passwords

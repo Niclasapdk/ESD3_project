@@ -26,8 +26,7 @@ architecture Behavioral of data_link is
     signal r2_com_clk : std_logic;
     signal r3_com_clk : std_logic;
 begin
-
-    process(clk)
+    process(clk, com_clk, addr_bus, r_nw, data_tx)
         variable addr_I : STD_LOGIC_VECTOR(1 downto 0);
         variable r_nw_I : STD_LOGIC;
     begin

@@ -17,7 +17,6 @@ entity passwd_expander is
 end passwd_expander;
 
 architecture Behaviorial of passwd_expander is
-
     type passwd_expander_state_type is (IDLE, STOP, START, ESCAPE, DATA);
     signal current_state : passwd_expander_state_type := IDLE;
     signal next_state : passwd_expander_state_type := IDLE;
@@ -26,7 +25,6 @@ architecture Behaviorial of passwd_expander is
     signal r1_com_clk : std_logic;
     signal r2_com_clk : std_logic;
     signal r3_com_clk : std_logic;
-
 begin
 
     -- Next state logic	
@@ -63,11 +61,10 @@ begin
     end process;
 
     -- Combinatorial and current state logic
-    process(clk, com_clk, current_state, data_in) is
+    process(clk, com_clk, current_state, next_state, data_in) is
         variable idx : unsigned(8 downto 0) := (others => '0');
     begin
         if rising_edge(clk) then
-
             r1_com_clk <= com_clk;
             r2_com_clk <= r1_com_clk;
             r3_com_clk <= r2_com_clk;

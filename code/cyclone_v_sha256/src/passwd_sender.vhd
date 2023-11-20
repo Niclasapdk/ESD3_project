@@ -61,7 +61,7 @@ begin
     end process;
 
     -- Combinatorial and next state logic
-    flags <= "11" & ready_for_passwd & "00000";
+    flags <= "10" & ready_for_passwd & "00000";
     process(clk, com_clk, current_state, next_state, passwd_buf, passwd, idx, tx_success, flags)
     begin
         if (rising_edge(clk)) then

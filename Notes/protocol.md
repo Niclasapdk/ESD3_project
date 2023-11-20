@@ -54,6 +54,6 @@ Slave status flags are transmitted as a single byte.
 This byte will be allocated as follows:
 
 - Bit 7: Identifier, always HIGH
-- Bit 6: Identifier, always HIGH
+- Bit 6: Identifier, always LOW
 - Bit 5: Ready for new passwd flag, HIGH if ready
 - Bit 4-0: Reserved

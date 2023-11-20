@@ -44,8 +44,8 @@ begin
                 if addr_I = ADDR then
                 -- we are the ones being talked to
                     if r_nw_I = '1' then
-                    -- slave will write to data bus
-                    tx_success <= '1';
+                        -- slave will write to data bus
+                        tx_success <= '1';
                         for i in 0 to 7 loop
                             if data_tx(i) = '1' then
                                 data_bus(i) <= 'Z';

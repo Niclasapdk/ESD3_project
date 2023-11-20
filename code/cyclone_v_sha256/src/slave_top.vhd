@@ -72,11 +72,12 @@ begin
 
     PS : entity work.passwd_sender
     port map(
-                clk          => clk,
-                com_clk      => com_clk,
-                passwd       => passwd_out,
-                passwd_valid => passwd_found,
-                tx_success   => tx_success,
-                data_tx      => data_tx
+                clk              => clk,
+                com_clk          => com_clk,
+                passwd           => passwd_out,
+                passwd_valid     => passwd_found,
+                ready_for_passwd => cc_ready_for_passwd,
+                tx_success       => tx_success,
+                data_tx          => data_tx
             );
 end Behavioral;

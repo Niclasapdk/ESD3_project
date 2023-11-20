@@ -9,8 +9,12 @@ entity passwd_sender is
         clk : in std_logic;
         com_clk  : in std_logic;
         passwd : in std_logic_vector(0 to 511);
+
+        -- flags
         passwd_valid : in std_logic;
+        ready_for_passwd : in std_logic;
         tx_success : in std_logic;
+
         -- Outputs
         data_tx : out std_logic_vector(7 downto 0)
         );
@@ -23,6 +27,8 @@ architecture Behavioral of passwd_sender is
 
     signal passwd_buf : std_logic_vector(0 to 439) := (others => '0');
     signal idx : integer range 0 to 440 := 0;
+
+    signal flags : std_logic_vector(7 downto 0);
 
     -- Clock synchronization
     signal r1_com_clk : std_logic;
@@ -54,8 +60,9 @@ begin
         end case;
     end process;
 
-    -- Real logic
-    process(clk, com_clk, current_state, next_state, passwd_buf, passwd, idx, tx_success)
+    -- Combinatorial and next state logic
+    flags <= "11" & ready_for_passwd & "00000";
+    process(clk, com_clk, current_state, next_state, passwd_buf, passwd, idx, tx_success, flags)
     begin
         if (rising_edge(clk)) then
             r1_com_clk <= com_clk;
@@ -68,7 +75,7 @@ begin
 
                 case current_state is
                     when IDLE =>
-                        data_tx <= x"ab"; -- TODO flags
+                        data_tx <= flags;
                     when START =>
                         passwd_buf <= passwd(0 to 439);
                         data_tx <= PLUSBUS_STX;

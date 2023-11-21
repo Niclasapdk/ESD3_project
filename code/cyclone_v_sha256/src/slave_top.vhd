@@ -11,12 +11,14 @@ entity slave_top is
            );
     port(
         -- inputs
-        clk      : in STD_LOGIC; -- system clock
+        clk50    : in STD_LOGIC; -- external oscillator (50 MHz)
         com_clk  : in STD_LOGIC;
         r_nw     : in STD_LOGIC; -- R/not_W signal (read active high) (as seen by the master)
         addr_bus : in STD_LOGIC_VECTOR(1 downto 0);
         -- inout
-        data_bus : inout STD_LOGIC_VECTOR(7 downto 0)
+        data_bus : inout STD_LOGIC_VECTOR(7 downto 0);
+        -- outputs
+        blink    : out std_logic -- sign-of-life
         );
 end slave_top;
 
@@ -33,10 +35,36 @@ architecture Behavioral of slave_top is
     signal data_rx : std_logic_vector(7 downto 0);
     signal data_tx : std_logic_vector(7 downto 0);
     signal tx_success : std_logic;
+
+    signal clk : std_logic;
+
+    signal pll_rst : std_logic;
+    component pll_0002 is
+        port (
+                 refclk   : in  std_logic := 'X'; -- clk
+                 rst      : in  std_logic := 'X'; -- reset
+                 outclk_0 : out std_logic;        -- clk
+                 locked   : out std_logic         -- export
+             );
+    end component pll_0002;
 begin
 
+    pll_inst : component pll_0002
+    port map (
+                 refclk   => clk50, --  refclk.clk
+                 rst      => pll_rst,   --   reset.reset
+                 outclk_0 => clk,   -- outclk0.clk
+                 locked   => open      -- (terminated)
+             );
+
+    LIFE : entity work.sign_of_life
+    port map(
+                clk => clk,
+                blink => blink
+            );
+
     DL : entity work.data_link
-    generic map(ADDR => "10")
+    generic map(ADDR => slave_addr)
     port map(
                 clk        => clk,
                 com_clk    => com_clk,

@@ -40,8 +40,10 @@ begin
     begin
         case current_state is
             when IDLE =>
-                if (passwd_valid = '1' and passwd_buf /= passwd) then
+                if (passwd_valid = '1' and passwd_buf /= passwd(0 to 439)) then
                     next_state <= START;
+                else
+                    next_state <= IDLE;
                 end if;
             when START =>
                     next_state <= DATA;

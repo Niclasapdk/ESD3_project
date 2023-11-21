@@ -25,51 +25,76 @@ architecture Behavioral of data_link is
     signal r1_com_clk : std_logic;
     signal r2_com_clk : std_logic;
     signal r3_com_clk : std_logic;
+    signal addr_I : STD_LOGIC_VECTOR(1 downto 0);
+    signal r_nw_I : STD_LOGIC;
+    signal a : std_logic := '0';
 begin
+    data_bus(7) <= a;
     process(clk, com_clk, addr_bus, r_nw, data_tx)
-        variable addr_I : STD_LOGIC_VECTOR(1 downto 0);
-        variable r_nw_I : STD_LOGIC;
     begin
         if rising_edge(clk) then
+            a <= not a; --mht
             r1_com_clk <= com_clk;
             r2_com_clk <= r1_com_clk;
             r3_com_clk <= r2_com_clk;
 
             -- com_clk rising edge
             if r3_com_clk = '0' and r2_com_clk = '1' then
-                tx_success <= '0';
-                addr_I := addr_bus;
-                r_nw_I := r_nw;
-
-                if addr_I = ADDR then
-                -- we are the ones being talked to
-                    if r_nw_I = '1' then
-                        -- slave will write to data bus
-                        tx_success <= '1';
-                        for i in 0 to 7 loop
-                            if data_tx(i) = '1' then
-                                data_bus(i) <= 'Z';
-                            else
-                                data_bus(i) <= '0';
-                            end if;
-                        end loop;
-                    else
-                        data_bus <= "ZZZZZZZZ";
-                    end if;
-                else
-                    data_bus <= "ZZZZZZZZ";
-                end if;
+            -------
+            data_bus(6 downto 5) <= "ZZ";
+            if (com_clk = '0') then
+                data_bus(4) <= 'Z';
+            else
+                data_bus(4) <= '0';
             end if;
-
-            -- com_clk falling edge
-            if r3_com_clk = '1' and r2_com_clk = '0' then
-                if addr_I = ADDR then
-                    -- we are the ones being talked to
-                    if r_nw_I = '0' then
-                        -- latch input from master
-                        data_rx <= data_bus;
-                    end if;
+            if (r_nw = '1') then
+                data_bus(2) <= 'Z';
+                data_bus(3) <= '0';
+            else
+                data_bus(2) <= '0';
+                data_bus(3) <= 'Z';
+            end if;
+            for i in 0 to 1 loop
+                if addr_bus(i) = '1' then
+                    data_bus(i) <= 'Z';
+                else
+                    data_bus(i) <= '0';
                 end if;
+            end loop;
+            ----------
+--                tx_success <= '0';
+--                addr_I <= addr_bus;
+--                r_nw_I <= r_nw;
+--
+--                if addr_I = ADDR then
+--                -- we are the ones being talked to
+--                    if r_nw_I = '1' then
+--                        -- slave will write to data bus
+--                        tx_success <= '1';
+--                        for i in 0 to 7 loop
+--                            if data_tx(i) = '1' then
+--                                data_bus(i) <= 'Z';
+--                            else
+--                                data_bus(i) <= '0';
+--                            end if;
+--                        end loop;
+--                    else
+--                        data_bus <= "ZZZZZZZZ";
+--                    end if;
+--                else
+--                    data_bus <= "ZZZZZZZZ";
+--                end if;
+--            end if;
+--
+--            -- com_clk falling edge
+--            if r3_com_clk = '1' and r2_com_clk = '0' then
+--                if addr_I = ADDR then
+--                    -- we are the ones being talked to
+--                    if r_nw_I = '0' then
+--                        -- latch input from master
+--                        data_rx <= data_bus;
+--                    end if;
+--                end if;
             end if;
         end if;
     end process;

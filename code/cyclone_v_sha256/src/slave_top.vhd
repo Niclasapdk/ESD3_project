@@ -39,6 +39,7 @@ architecture Behavioral of slave_top is
     signal clk : std_logic;
 
     signal pll_rst : std_logic;
+    signal pll_lock : std_logic;
     component pll_0002 is
         port (
                  refclk   : in  std_logic := 'X'; -- clk
@@ -54,7 +55,7 @@ begin
                  refclk   => clk50, --  refclk.clk
                  rst      => pll_rst,   --   reset.reset
                  outclk_0 => clk,   -- outclk0.clk
-                 locked   => open      -- (terminated)
+                 locked   => pll_lock -- (terminated)
              );
 
     LIFE : entity work.sign_of_life

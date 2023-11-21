@@ -10,9 +10,9 @@ entity sign_of_life is
 end sign_of_life;
 
 architecture Behavioral of sign_of_life is
-    signal ctr : unsigned(0 to 26) := (others => '0');
+    signal ctr : unsigned(26 downto 0) := (others => '0');
 begin
-    blink <= ctr(20);
+    blink <= ctr(22);
     process(clk)
     begin
         if rising_edge(clk) then

@@ -86,7 +86,7 @@ begin
     end process;
 
     -- Real logic
-    process(clk, current_state, core_done_flags, core_hash_ar)
+    process(clk, current_state, core_done_flags, core_hash_ar, ready_for_new_passwd_sig, core_idle_flags, passwd_buf, passwd)
     begin
         if (rising_edge(clk)) then
 
@@ -106,7 +106,7 @@ begin
 
             case current_state is
                 when CORE_SERVICE =>
-                    if (ready_for_new_passwd_sig <= '0') then
+                    if (ready_for_new_passwd_sig = '0') then
                         for i in 0 to N-1 loop
                             if (core_idle_flags(i) = '1') then
                                 core_passwd_ar(i) <= passwd_buf;

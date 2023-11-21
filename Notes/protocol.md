@@ -47,3 +47,13 @@ Padded password: `MSG + '1' + k*'0' + L as uint64`
 - Start-of-text (start of password): 0x02
 - End-of-text (end of password): 0x03
 - Escape character: 0x10
+
+### Slave status flags
+
+Slave status flags are transmitted as a single byte.
+This byte will be allocated as follows:
+
+- Bit 7: Identifier, always HIGH
+- Bit 6: Identifier, always LOW
+- Bit 5: Ready for new passwd flag, HIGH if ready
+- Bit 4-0: Reserved

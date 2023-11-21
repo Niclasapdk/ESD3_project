@@ -68,38 +68,8 @@ set_location_assignment PIN_J17 -to data_bus[1]
 set_location_assignment PIN_K16 -to data_bus[0]
 set_location_assignment PIN_E15 -to addr_bus[1]
 set_location_assignment PIN_E16 -to addr_bus[0]
-set_location_assignment PIN_AA2 -to data_rx[0]
-set_location_assignment PIN_AA1 -to data_rx[1]
-set_location_assignment PIN_W2 -to data_rx[2]
-set_location_assignment PIN_Y3 -to data_rx[3]
-set_location_assignment PIN_N1 -to data_rx[5]
-set_location_assignment PIN_N2 -to data_rx[4]
-set_location_assignment PIN_U2 -to data_rx[6]
-set_location_assignment PIN_U1 -to data_rx[7]
-set_location_assignment PIN_AA13 -to data_tx[7]
-set_location_assignment PIN_AA14 -to data_tx[6]
-set_location_assignment PIN_AB15 -to data_tx[5]
-set_location_assignment PIN_AA15 -to data_tx[4]
-set_location_assignment PIN_T12 -to data_tx[3]
-set_location_assignment PIN_T13 -to data_tx[2]
-set_location_assignment PIN_V13 -to data_tx[1]
-set_location_assignment PIN_U13 -to data_tx[0]
+set_location_assignment PIN_AA2 -to blink
 
-
-set_global_assignment -name VHDL_FILE src/slave_top.vhd
-set_global_assignment -name VHDL_FILE src/tb/sha256_core_tb.vhd
-set_global_assignment -name VHDL_FILE src/tb/passwd_expander_hash_tb.vhd
-set_global_assignment -name VHDL_FILE src/tb/multi_round_hasher_tb.vhd
-set_global_assignment -name VHDL_FILE src/passwd_sender.vhd
-set_global_assignment -name VHDL_FILE src/multi_round_hasher.vhd
-set_global_assignment -name VHDL_FILE src/core_controller.vhd
-set_global_assignment -name VHDL_FILE src/plusbus_pkg.vhd
-set_global_assignment -name VHDL_FILE src/passwd_expander_tb.vhd
-set_global_assignment -name VHDL_FILE src/passwd_expander.vhd
-set_global_assignment -name VHDL_FILE src/data_link.vhd
-set_global_assignment -name SDC_FILE cyclone_v_sha256.out.sdc
-set_global_assignment -name VHDL_FILE src/sha256_core.vhd
-set_global_assignment -name VHDL_FILE src/sha256_pkg.vhd
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
@@ -107,14 +77,6 @@ set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to addr_bus[1]
 set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to addr_bus[0]
 set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to com_clk
 set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to r_nw
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to data_tx[7]
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to data_tx[6]
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to data_tx[5]
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to data_tx[4]
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to data_tx[3]
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to data_tx[2]
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to data_tx[1]
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to data_tx[0]
 set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to data_bus[7]
 set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to data_bus[6]
 set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to data_bus[5]
@@ -123,12 +85,25 @@ set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to data_bus[3]
 set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to data_bus[2]
 set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to data_bus[1]
 set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to data_bus[0]
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to data_rx[7]
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to data_rx[6]
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to data_rx[5]
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to data_rx[4]
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to data_rx[3]
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to data_rx[2]
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to data_rx[1]
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to data_rx[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to blink
+
+set_global_assignment -name VHDL_FILE src/sign_of_life.vhd
+set_global_assignment -name VHDL_FILE src/slave_top.vhd
+set_global_assignment -name VHDL_FILE src/tb/sha256_core_tb.vhd
+set_global_assignment -name VHDL_FILE src/tb/passwd_expander_hash_tb.vhd
+set_global_assignment -name VHDL_FILE src/tb/multi_round_hasher_tb.vhd
+set_global_assignment -name VHDL_FILE src/passwd_sender.vhd
+set_global_assignment -name VHDL_FILE src/multi_round_hasher.vhd
+set_global_assignment -name VHDL_FILE src/core_controller.vhd
+set_global_assignment -name VHDL_FILE src/plusbus_pkg.vhd
+set_global_assignment -name VHDL_FILE src/passwd_expander.vhd
+set_global_assignment -name VHDL_FILE src/data_link.vhd
+set_global_assignment -name SDC_FILE cyclone_v_sha256.out.sdc
+set_global_assignment -name VHDL_FILE src/sha256_core.vhd
+set_global_assignment -name VHDL_FILE src/sha256_pkg.vhd
+
+set_location_assignment PIN_M9 -to clk50
+
+set_global_assignment -name QIP_FILE src/ip/pll.qip
+set_global_assignment -name SIP_FILE src/ip/pll.sip
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

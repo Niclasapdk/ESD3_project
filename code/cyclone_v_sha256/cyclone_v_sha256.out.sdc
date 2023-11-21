@@ -20,7 +20,7 @@
 ## PROGRAM "Quartus Prime"
 ## VERSION "Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition"
 
-## DATE    "Mon Oct  9 13:09:33 2023"
+## DATE    "Tue Nov 21 10:10:17 2023"
 
 ##
 ## DEVICE  "5CEBA4F23C7"
@@ -39,8 +39,8 @@ set_time_format -unit ns -decimal_places 3
 # Create Clock
 #**************************************************************
 
-create_clock -name {clk} -period 10.000 -waveform { 0.000 5.000 }
-
+create_clock -name {clk50} -period 20.000 -waveform { 0.000 10.000 } [get_ports { clk50 }]
+derive_pll_clocks
 
 #**************************************************************
 # Create Generated Clock
@@ -58,15 +58,40 @@ create_clock -name {clk} -period 10.000 -waveform { 0.000 5.000 }
 # Set Clock Uncertainty
 #**************************************************************
 
+derive_clock_uncertainty
 
 
 #**************************************************************
 # Set Input Delay
 #**************************************************************
 
+set_input_delay -add_delay -max -clock [get_clocks {clk50}]  10.000 [get_ports {addr_bus[0]}]
+set_input_delay -add_delay -max -clock [get_clocks {clk50}]  10.000 [get_ports {addr_bus[1]}]
+set_input_delay -add_delay -max -clock [get_clocks {clk50}]  10.000 [get_ports {com_clk}]
+set_input_delay -add_delay -max -clock [get_clocks {clk50}]  10.000 [get_ports {data_bus[0]}]
+set_input_delay -add_delay -max -clock [get_clocks {clk50}]  10.000 [get_ports {data_bus[1]}]
+set_input_delay -add_delay -max -clock [get_clocks {clk50}]  10.000 [get_ports {data_bus[2]}]
+set_input_delay -add_delay -max -clock [get_clocks {clk50}]  10.000 [get_ports {data_bus[3]}]
+set_input_delay -add_delay -max -clock [get_clocks {clk50}]  10.000 [get_ports {data_bus[4]}]
+set_input_delay -add_delay -max -clock [get_clocks {clk50}]  10.000 [get_ports {data_bus[5]}]
+set_input_delay -add_delay -max -clock [get_clocks {clk50}]  10.000 [get_ports {data_bus[6]}]
+set_input_delay -add_delay -max -clock [get_clocks {clk50}]  10.000 [get_ports {data_bus[7]}]
+set_input_delay -add_delay -max -clock [get_clocks {clk50}]  10.000 [get_ports {r_nw}]
+
+
 #**************************************************************
 # Set Output Delay
 #**************************************************************
+
+set_output_delay -add_delay -max -clock [get_clocks {clk50}]  10.000 [get_ports {data_bus[0]}]
+set_output_delay -add_delay -max -clock [get_clocks {clk50}]  10.000 [get_ports {data_bus[1]}]
+set_output_delay -add_delay -max -clock [get_clocks {clk50}]  10.000 [get_ports {data_bus[2]}]
+set_output_delay -add_delay -max -clock [get_clocks {clk50}]  10.000 [get_ports {data_bus[3]}]
+set_output_delay -add_delay -max -clock [get_clocks {clk50}]  10.000 [get_ports {data_bus[4]}]
+set_output_delay -add_delay -max -clock [get_clocks {clk50}]  10.000 [get_ports {data_bus[5]}]
+set_output_delay -add_delay -max -clock [get_clocks {clk50}]  10.000 [get_ports {data_bus[6]}]
+set_output_delay -add_delay -max -clock [get_clocks {clk50}]  10.000 [get_ports {data_bus[7]}]
+set_output_delay -add_delay -max -clock [get_clocks {clk50}]  10.000 [get_ports {blink}]
 
 
 #**************************************************************

@@ -12,15 +12,18 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="7,512.935000 us"></ZoomStartTime>
-      <ZoomEndTime time="7,528.425001 us"></ZoomEndTime>
-      <Cursor1Time time="7,524.525000 us"></Cursor1Time>
+      <ZoomStartTime time="3,812.575000 us"></ZoomStartTime>
+      <ZoomEndTime time="3,843.915001 us"></ZoomEndTime>
+      <Cursor1Time time="3,832.575000 us"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="359"></NameColumnWidth>
-      <ValueColumnWidth column_width="181"></ValueColumnWidth>
+      <ValueColumnWidth column_width="163"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="5" />
+   <wave_markers>
+      <marker label="" time="132555000" />
+   </wave_markers>
    <wvobject type="logic" fp_name="/slave_tb/DUT/CC/clk">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -76,6 +79,7 @@
    <wvobject type="group" fp_name="group154">
       <obj_property name="label">Core Controller</obj_property>
       <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
       <wvobject type="other" fp_name="/slave_tb/DUT/CC/current_state">
          <obj_property name="ElementShortName">current_state</obj_property>
          <obj_property name="ObjectShortName">current_state</obj_property>
@@ -115,6 +119,7 @@
       <wvobject type="group" fp_name="group161">
          <obj_property name="label">Core Signals</obj_property>
          <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
          <wvobject type="array" fp_name="/slave_tb/DUT/CC/core_start_flags">
             <obj_property name="ElementShortName">core_start_flags[0:1]</obj_property>
             <obj_property name="ObjectShortName">core_start_flags[0:1]</obj_property>
@@ -238,6 +243,10 @@
       <obj_property name="label">Passwd Sender</obj_property>
       <obj_property name="DisplayName">label</obj_property>
       <obj_property name="isExpanded"></obj_property>
+      <wvobject type="other" fp_name="/slave_tb/DUT/PS/current_state">
+         <obj_property name="ElementShortName">current_state</obj_property>
+         <obj_property name="ObjectShortName">current_state</obj_property>
+      </wvobject>
       <wvobject type="logic" fp_name="/slave_tb/DUT/PS/com_clk">
          <obj_property name="ElementShortName">com_clk</obj_property>
          <obj_property name="ObjectShortName">com_clk</obj_property>
@@ -250,6 +259,10 @@
          <obj_property name="ElementShortName">passwd_valid</obj_property>
          <obj_property name="ObjectShortName">passwd_valid</obj_property>
       </wvobject>
+      <wvobject type="logic" fp_name="/slave_tb/DUT/PS/ready_for_passwd">
+         <obj_property name="ElementShortName">ready_for_passwd</obj_property>
+         <obj_property name="ObjectShortName">ready_for_passwd</obj_property>
+      </wvobject>
       <wvobject type="logic" fp_name="/slave_tb/DUT/PS/tx_success">
          <obj_property name="ElementShortName">tx_success</obj_property>
          <obj_property name="ObjectShortName">tx_success</obj_property>
@@ -258,13 +271,94 @@
          <obj_property name="ElementShortName">data_tx[7:0]</obj_property>
          <obj_property name="ObjectShortName">data_tx[7:0]</obj_property>
       </wvobject>
-      <wvobject type="other" fp_name="/slave_tb/DUT/PS/current_state">
-         <obj_property name="ElementShortName">current_state</obj_property>
-         <obj_property name="ObjectShortName">current_state</obj_property>
+      <wvobject type="array" fp_name="/slave_tb/DUT/PS/flags">
+         <obj_property name="ElementShortName">flags[7:0]</obj_property>
+         <obj_property name="ObjectShortName">flags[7:0]</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject type="logic" fp_name="/slave_tb/DUT/PS/flags[7]">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">[7]</obj_property>
+            <obj_property name="ObjectShortName">[7]</obj_property>
+            <obj_property name="label">identifier</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/slave_tb/DUT/PS/flags[6]">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">[6]</obj_property>
+            <obj_property name="ObjectShortName">[6]</obj_property>
+            <obj_property name="label">identifier</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/slave_tb/DUT/PS/flags[5]">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">[5]</obj_property>
+            <obj_property name="ObjectShortName">[5]</obj_property>
+            <obj_property name="label">ready_for_passwd</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/slave_tb/DUT/PS/flags[4]">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">[4]</obj_property>
+            <obj_property name="ObjectShortName">[4]</obj_property>
+            <obj_property name="label">reserved</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/slave_tb/DUT/PS/flags[3]">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">[3]</obj_property>
+            <obj_property name="ObjectShortName">[3]</obj_property>
+            <obj_property name="label">reserved</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/slave_tb/DUT/PS/flags[2]">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">[2]</obj_property>
+            <obj_property name="ObjectShortName">[2]</obj_property>
+            <obj_property name="label">reserved</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/slave_tb/DUT/PS/flags[1]">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">[1]</obj_property>
+            <obj_property name="ObjectShortName">[1]</obj_property>
+            <obj_property name="label">reserved</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/slave_tb/DUT/PS/flags[0]">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">[0]</obj_property>
+            <obj_property name="ObjectShortName">[0]</obj_property>
+            <obj_property name="label">reserved</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/slave_tb/DUT/PS/flags[7]">
+            <obj_property name="ElementShortName">[7]</obj_property>
+            <obj_property name="ObjectShortName">[7]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/slave_tb/DUT/PS/flags[6]">
+            <obj_property name="ElementShortName">[6]</obj_property>
+            <obj_property name="ObjectShortName">[6]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/slave_tb/DUT/PS/flags[5]">
+            <obj_property name="ElementShortName">[5]</obj_property>
+            <obj_property name="ObjectShortName">[5]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/slave_tb/DUT/PS/flags[4]">
+            <obj_property name="ElementShortName">[4]</obj_property>
+            <obj_property name="ObjectShortName">[4]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/slave_tb/DUT/PS/flags[3]">
+            <obj_property name="ElementShortName">[3]</obj_property>
+            <obj_property name="ObjectShortName">[3]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/slave_tb/DUT/PS/flags[2]">
+            <obj_property name="ElementShortName">[2]</obj_property>
+            <obj_property name="ObjectShortName">[2]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/slave_tb/DUT/PS/flags[1]">
+            <obj_property name="ElementShortName">[1]</obj_property>
+            <obj_property name="ObjectShortName">[1]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/slave_tb/DUT/PS/flags[0]">
+            <obj_property name="ElementShortName">[0]</obj_property>
+            <obj_property name="ObjectShortName">[0]</obj_property>
+         </wvobject>
       </wvobject>
       <wvobject type="array" fp_name="/slave_tb/DUT/PS/passwd_buf">
-         <obj_property name="ElementShortName">passwd_buf[0:511]</obj_property>
-         <obj_property name="ObjectShortName">passwd_buf[0:511]</obj_property>
+         <obj_property name="ElementShortName">passwd_buf[0:439]</obj_property>
+         <obj_property name="ObjectShortName">passwd_buf[0:439]</obj_property>
       </wvobject>
       <wvobject type="other" fp_name="/slave_tb/DUT/PS/idx">
          <obj_property name="ElementShortName">idx</obj_property>

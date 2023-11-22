@@ -8,7 +8,7 @@ entity passwd_sender is
         -- Inputs
         clk : in std_logic;
         com_clk  : in std_logic;
-        passwd : in std_logic_vector(0 to 511);
+        passwd : in std_logic_vector(0 to 439);
 
         -- flags
         passwd_valid : in std_logic;
@@ -21,7 +21,7 @@ entity passwd_sender is
 end passwd_sender;
 
 architecture Behavioral of passwd_sender is
-    type passwd_sender_state_t is (IDLE, START, DATA, STOP);
+    type passwd_sender_state_t is (IDLE, PRE_START, START, DATA, STOP);
     signal current_state : passwd_sender_state_t := IDLE;
     signal next_state : passwd_sender_state_t := IDLE;
 
@@ -34,19 +34,43 @@ architecture Behavioral of passwd_sender is
     signal r1_com_clk : std_logic;
     signal r2_com_clk : std_logic;
     signal r3_com_clk : std_logic;
+    signal s1_com_clk : std_logic;
+    signal s2_com_clk : std_logic;
+    signal s3_com_clk : std_logic;
 begin
+    -- Current state logic
+    process(clk, next_state, com_clk)
+    begin
+        if (rising_edge(clk)) then
+            s1_com_clk <= com_clk;
+            s2_com_clk <= s1_com_clk;
+            s3_com_clk <= s2_com_clk;
+
+            -- com_clk rising edge
+            if s3_com_clk = '1' and s2_com_clk = '0' then
+                current_state <= next_state;
+            end if;
+        end if;
+    end process;
+
     -- Next state logic
-    process(current_state, passwd_valid, passwd_buf, passwd, idx)
+    process(current_state, passwd_valid, passwd_buf, idx, tx_success)
     begin
         case current_state is
             when IDLE =>
-                if (passwd_valid = '1' and passwd_buf /= passwd(0 to 439)) then
-                    next_state <= START;
+                if (passwd_valid = '1') then
+                    next_state <= PRE_START;
                 else
                     next_state <= IDLE;
                 end if;
+            when PRE_START => -- TODO fix this shit with double STX
+                next_state <= START;
             when START =>
+                if (tx_success = '1') then
                     next_state <= DATA;
+                else
+                    next_state <= START;
+                end if;
             when DATA =>
                 if (idx = 432) then
                     next_state <= STOP;
@@ -73,22 +97,30 @@ begin
 
             -- com_clk rising edge
             if r3_com_clk = '0' and r2_com_clk = '1' then
-                current_state <= next_state;
-
                 case current_state is
                     when IDLE =>
                         data_tx <= flags;
+                    when PRE_START =>
+                        passwd_buf <= passwd(0 to 439);
+                        data_tx <= PLUSBUS_STX;
                     when START =>
                         passwd_buf <= passwd(0 to 439);
                         data_tx <= PLUSBUS_STX;
-                        idx <= 0;
+                    when DATA =>
+                        data_tx <= passwd_buf(idx to idx+7);
+                    when STOP =>
+                        data_tx <= PLUSBUS_ETX;
+                end case;
+            end if;
+
+            -- com_clk falling edge
+            if r3_com_clk = '1' and r2_com_clk = '0' then
+                case current_state is
                     when DATA =>
                         if (tx_success = '1') then
                             idx <= idx + 8;
                         end if;
-                        data_tx <= passwd_buf(idx to idx+7);
-                    when STOP =>
-                        data_tx <= PLUSBUS_ETX;
+                    when others =>
                         idx <= 0;
                 end case;
             end if;

@@ -15,7 +15,7 @@ entity data_link is
         -- inout
         data_bus : inout STD_LOGIC_VECTOR(7 downto 0);
         -- outputs
-        tx_success : out std_logic; -- flag to show if data was sent
+        tx_success : inout std_logic; -- flag to show if data was sent
         data_rx  : out STD_LOGIC_VECTOR(7 downto 0)
         );
 end data_link;
@@ -25,7 +25,11 @@ architecture Behavioral of data_link is
     signal r1_com_clk : std_logic;
     signal r2_com_clk : std_logic;
     signal r3_com_clk : std_logic;
+
+    signal addr_latch : std_logic_vector(1 downto 0);
+    signal r_nw_latch : std_logic;
 begin
+    --data_bus(0) <= 'Z' when tx_success = '1' else '0'; --mht
     process(clk, com_clk, addr_bus, r_nw, data_tx)
     begin
         if rising_edge(clk) then
@@ -36,13 +40,15 @@ begin
             -- com_clk rising edge
             if r3_com_clk = '0' and r2_com_clk = '1' then
                 tx_success <= '0';
+                addr_latch <= addr_bus;
+                r_nw_latch <= r_nw;
 
                 if addr_bus = ADDR then
                 -- we are the ones being talked to
                     if r_nw = '1' then
                         -- slave will write to data bus
                         tx_success <= '1';
-                        for i in 0 to 7 loop
+                        for i in 0 to 7 loop --mht
                             if data_tx(i) = '1' then
                                 data_bus(i) <= 'Z';
                             else
@@ -59,9 +65,9 @@ begin
 
             -- com_clk falling edge
             if r3_com_clk = '1' and r2_com_clk = '0' then
-                if addr_bus = ADDR then
+                if addr_latch = ADDR then
                     -- we are the ones being talked to
-                    if r_nw = '0' then
+                    if r_nw_latch = '0' then
                         -- latch input from master
                         data_rx <= data_bus;
                     end if;

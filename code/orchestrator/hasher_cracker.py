@@ -164,6 +164,9 @@ def main():
     logging.basicConfig(level=args.loglevel)
     orch = Orchestrator(args.port, args.baudrate, proto_spec, args.wordlist, args.hashlist, args.ceiling, args.addrs)
     orch.ruuuuuunnn()
+    #while True:
+        #for node in args.addrs:
+            #orch.read_from_node(node)
 
 if __name__ == "__main__":
     main()

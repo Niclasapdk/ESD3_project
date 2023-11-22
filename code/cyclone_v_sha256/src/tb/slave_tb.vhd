@@ -19,19 +19,23 @@ architecture Behavioral of slave_tb is
         x"02436f6666656561626364656667686a696b6c6d6e6f708000000000000000000000000000000000000000000000000000000000000000000000000000000000b003",
         x"02414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141418000000000000001b803"
     );
-    constant CLK_PERIOD : time := 10 ns;
-    constant COM_CLK_PERIOD : time := 1 us;
+    constant CLK_PERIOD : time := 333 ns;
+    constant COM_CLK_PERIOD : time := 1000 us;
+    constant N_CORES : integer := 3;
+    signal cores_running : std_logic_vector(0 to N_CORES-1) := (others => '0');
 begin
     clk <= not clk after CLK_PERIOD/2;
     com_clk <= not com_clk after COM_CLK_PERIOD/2;
 
-    DUT : entity work.slave_top
+    DUT : entity work.slave
+    generic map( N_CORES => N_CORES )
     port map(
-        clk      => clk,
-        com_clk  => com_clk,
-        r_nw     => r_nw,
-        addr_bus => addr_bus,
-        data_bus => data_bus
+        clk           => clk,
+        com_clk       => com_clk,
+        r_nw          => r_nw,
+        addr_bus      => addr_bus,
+        data_bus      => data_bus,
+        cores_running => cores_running
         );
 
     process(com_clk)

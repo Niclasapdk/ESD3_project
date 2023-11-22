@@ -33,7 +33,7 @@ class Orchestrator:
     def __init__(self, port: str, baudrate: int, proto_spec: dict, wordlist: str, hashlist: str, ceiling: int, nodes: list):
         self.noserial = True if port == "/dev/null" else False
         if not self.noserial:
-            self.serial = serial.Serial(port, baudrate=baudrate, timeout=0.05)
+            self.serial = serial.Serial(port, baudrate=baudrate, timeout=0.5)
         self.proto_spec = proto_spec
         self.wordlist = self.read_wordlist(wordlist)
         self.hashlist = self.read_hashlist(hashlist)
@@ -76,7 +76,9 @@ class Orchestrator:
     def read_from_node(self, node_addr):
         if not self.noserial:
             data = None
-            self.serial.read(size=self.serial.out_waiting) # silencio? ;>
+            disc = self.serial.read(size=self.serial.out_waiting) # silencio? ;>
+            if len(disc) != 0:
+                logging.debug(f"Discarding output buffer: {disc}")
             txpkt = self.prep_pkt(self.proto_spec["read"], str(node_addr).encode(), b"\xff")
             self.serial.write(txpkt)
             self.serial.read_until(self.proto_spec["start"])
@@ -107,7 +109,6 @@ class Orchestrator:
     def schick_passwort(self, node_addr: int, passwd: bytes, salz: bytes):
         if len(passwd) > 39 or len(salz) != 16:
             logging.error("Too long password oder du hasst salz")
-            self.fuck()
             return
         padded_passwd = self.sha256_pad(passwd+salz)
         passwd_pkt = self.proto_spec["stx"] + self.escape_passwd(padded_passwd) + self.proto_spec["etx"]
@@ -121,7 +122,9 @@ class Orchestrator:
                 data = self.read_from_node(node)
                 if data != None:
                     if data & FLAGS_MASK == FLAGS_IDENTIFIER:
+                        logging.debug(f"Flags from node {node}: ready for passwd:{data&READY_FOR_PASSWD_MASK!=0}")
                         if data & READY_FOR_PASSWD_MASK:
+                            logging.debug(f"Node {node} is ready for new password")
                             ready_node = node
                     elif data == self.proto_spec["stx"]:
                         self.receive_passwd(node)
@@ -141,7 +144,8 @@ class Orchestrator:
 
     def ruuuuuunnn(self):
         for salz in self.salts:
-            for i, p in enumerate(self.wordlist):
+            for p in self.wordlist:
+                logging.info(f"Password candidate: {p.decode()}")
                 node = self.check_flags_and_find_ready_node()
                 self.schick_passwort(node, p, salz)
 

@@ -69,6 +69,10 @@ set_location_assignment PIN_K16 -to data_bus[0]
 set_location_assignment PIN_E15 -to addr_bus[1]
 set_location_assignment PIN_E16 -to addr_bus[0]
 set_location_assignment PIN_AA2 -to blink
+set_location_assignment PIN_U2 -to cores_running[3]
+set_location_assignment PIN_U1 -to cores_running[2]
+set_location_assignment PIN_L2 -to cores_running[1]
+set_location_assignment PIN_L1 -to cores_running[0]
 
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
@@ -86,6 +90,10 @@ set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to data_bus[2]
 set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to data_bus[1]
 set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to data_bus[0]
 set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to blink
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to cores_running[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to cores_running[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to cores_running[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to cores_running[0]
 
 set_global_assignment -name VHDL_FILE src/sign_of_life.vhd
 set_global_assignment -name VHDL_FILE src/slave_top.vhd
@@ -106,4 +114,5 @@ set_location_assignment PIN_M9 -to clk50
 
 set_global_assignment -name QIP_FILE src/ip/pll.qip
 set_global_assignment -name SIP_FILE src/ip/pll.sip
+
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

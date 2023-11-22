@@ -16,7 +16,8 @@ entity core_controller is
             -- Outputs
             ready_for_new_passwd : out std_logic;
             passwd_out : out std_logic_vector(0 to 511);
-            passwd_found : out std_logic
+            passwd_found : out std_logic;
+            cores_running : out std_logic_vector(0 to N-1)
         );
 end core_controller;
 
@@ -28,11 +29,10 @@ architecture Behavioral of core_controller is
     signal ready_for_new_passwd_sig : std_logic := '1';
 
     -- Core flags arrays
-    type core_flag_ar_t is array(0 to N-1) of std_logic;
-    signal core_start_flags : core_flag_ar_t := (others => '0');
-    signal core_idle_flags : core_flag_ar_t := (others => '0');
-    signal core_reset_flags : core_flag_ar_t := (others => '0');
-    signal core_done_flags : core_flag_ar_t := (others => '0');
+    signal core_start_flags : std_logic_vector(0 to N-1) := (others => '0');
+    signal core_idle_flags : std_logic_vector(0 to N-1) := (others => '0');
+    signal core_reset_flags : std_logic_vector(0 to N-1) := (others => '0');
+    signal core_done_flags : std_logic_vector(0 to N-1) := (others => '0');
 
     -- Core output hash arrays
     type core_hash_ar_t is array(0 to N-1) of std_logic_vector(255 downto 0);
@@ -126,4 +126,5 @@ begin
     end process;
 
     ready_for_new_passwd <= ready_for_new_passwd_sig;
+    cores_running <= not core_idle_flags;
 end Behavioral;

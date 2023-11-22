@@ -2,6 +2,7 @@
 import serial
 import argparse
 import struct
+import logging
 
 BR_PKT_LEN = 5
 BR_DATA_IDX = 3
@@ -29,9 +30,7 @@ proto_spec = {
         }
 
 class Orchestrator:
-    def __init__(self, port: str, baudrate: int, proto_spec: dict, wordlist: str, hashlist: str, verbose: bool, ceiling: int, nodes: list):
-        self.verbose = True if verbose else False #Because python doesn't like types :((
-        self.verbose2 = False # TODO add cli arg for different verbose levels
+    def __init__(self, port: str, baudrate: int, proto_spec: dict, wordlist: str, hashlist: str, ceiling: int, nodes: list):
         self.noserial = True if port == "/dev/null" else False
         if not self.noserial:
             self.serial = serial.Serial(port, baudrate=baudrate, timeout=0.05)
@@ -85,8 +84,7 @@ class Orchestrator:
             if len(pkt) == BR_PKT_LEN:
                 if pkt[BR_ADDR_IDX] == node_addr and pkt[BR_ACTION_IDX] == ord(self.proto_spec["slave"]):
                     data = pkt[BR_DATA_IDX]
-                    if self.verbose2:
-                        print("recv", node_addr, hex(data))
+                    logging.debug(f"recv from {node_addr} data {hex(data)}")
             return data
         else:
             return None
@@ -98,8 +96,7 @@ class Orchestrator:
         return passwd + b"\x80" + b"\x00"*k_bytes + struct.pack(">Q", l)
 
     def fuck(self, dm="Youuusa make big dooo doo this time"):
-        print(dm)
-        self.fuckfuckfuck()
+        logging.critical(dm)
 
     def escape_passwd(self, passwd: bytes):
         passwd = passwd.replace(self.proto_spec["dle"], self.proto_spec["dle"] + self.proto_spec["dle"])
@@ -109,13 +106,12 @@ class Orchestrator:
 
     def schick_passwort(self, node_addr: int, passwd: bytes, salz: bytes):
         if len(passwd) > 39 or len(salz) != 16:
-            print("Too long password oder du hasst salz")
+            logging.error("Too long password oder du hasst salz")
             self.fuck()
             return
         padded_passwd = self.sha256_pad(passwd+salz)
         passwd_pkt = self.proto_spec["stx"] + self.escape_passwd(padded_passwd) + self.proto_spec["etx"]
-        if self.verbose:
-            print(f"Sending password packet: {passwd_pkt.hex()} to node {node_addr}")
+        logging.info(f"Sending password packet: {passwd_pkt.hex()} to node {node_addr}")
         self.send_to_node(node_addr, passwd_pkt)
 
     def check_flags_and_find_ready_node(self):
@@ -140,7 +136,7 @@ class Orchestrator:
         while data != self.proto_spec["etx"]:
             passwd += data
             data = self.read_from_node(node_addr)
-        print(f"Password found: {passwd}")
+        logging.info(f"Password found: {passwd}")
         return passwd
 
     def ruuuuuunnn(self):
@@ -155,13 +151,14 @@ def main():
     parser.add_argument("-b", "--baudrate", type=int, default=115200, help="Baud rate (default: 115200)")
     parser.add_argument("-w", "--wordlist", required=False, default="wordlist.txt", help="Wordlist (e.g., rockyou.txt)")
     parser.add_argument("-t", "--hashlist", required=False, default="hashlist.txt", help="File containing list of hashes")
-    parser.add_argument("-v", "--verbose", help="verbose mode", action="store_true")
+    parser.add_argument("-l", "--loglevel", help="log level", required=False, choices=['DEBUG', 'INFO', 'WARNING', 'ERROR', 'CRITICAL'], default='INFO')
     parser.add_argument("-c", "--ceiling", help="txQueue wait ceiling in bytes (default: 10)", default=10, type=int)
     parser.add_argument("-a", "--addrs", nargs="*", help="Slave addresses (default: 2)", default=[2], type=int)
 
     args = parser.parse_args()
 
-    orch = Orchestrator(args.port, args.baudrate, proto_spec, args.wordlist, args.hashlist, args.verbose, args.ceiling, args.addrs)
+    logging.basicConfig(level=args.loglevel)
+    orch = Orchestrator(args.port, args.baudrate, proto_spec, args.wordlist, args.hashlist, args.ceiling, args.addrs)
     orch.ruuuuuunnn()
 
 if __name__ == "__main__":

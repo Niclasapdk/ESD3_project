@@ -5,6 +5,8 @@ import struct
 
 BR_PKT_LEN = 5
 BR_DATA_IDX = 3
+BR_ADDR_IDX = 2
+BR_ACTION_IDX = 1
 FLAGS_MASK = 0xc0
 FLAGS_IDENTIFIER = 0x80
 READY_FOR_PASSWD_MASK = 0x20
@@ -29,6 +31,7 @@ proto_spec = {
 class Orchestrator:
     def __init__(self, port: str, baudrate: int, proto_spec: dict, wordlist: str, hashlist: str, verbose: bool, ceiling: int, nodes: list):
         self.verbose = True if verbose else False #Because python doesn't like types :((
+        self.verbose2 = False # TODO add cli arg for different verbose levels
         self.noserial = True if port == "/dev/null" else False
         if not self.noserial:
             self.serial = serial.Serial(port, baudrate=baudrate, timeout=0.05)
@@ -74,14 +77,16 @@ class Orchestrator:
     def read_from_node(self, node_addr):
         if not self.noserial:
             data = None
-            self.serial.write(self.prep_pkt(self.proto_spec["read"], str(node_addr).encode(), b"\xff"))
+            self.serial.read(size=self.serial.out_waiting) # silencio? ;>
+            txpkt = self.prep_pkt(self.proto_spec["read"], str(node_addr).encode(), b"\xff")
+            self.serial.write(txpkt)
             self.serial.read_until(self.proto_spec["start"])
             pkt = self.proto_spec["start"] + self.serial.read_until(self.proto_spec["stop"])
             if len(pkt) == BR_PKT_LEN:
-                data = pkt[BR_DATA_IDX]
-            else:
-                return None
-            print(data)
+                if pkt[BR_ADDR_IDX] == node_addr and pkt[BR_ACTION_IDX] == ord(self.proto_spec["slave"]):
+                    data = pkt[BR_DATA_IDX]
+                    if self.verbose2:
+                        print("recv", node_addr, hex(data))
             return data
         else:
             return None

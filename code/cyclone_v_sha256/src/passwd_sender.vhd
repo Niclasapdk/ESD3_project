@@ -25,6 +25,7 @@ architecture Behavioral of passwd_sender is
     signal current_state : passwd_sender_state_t := IDLE;
     signal next_state : passwd_sender_state_t := IDLE;
 
+    signal passwd_valid_latch : std_logic := '0';
     signal passwd_buf : std_logic_vector(0 to 439) := (others => '0');
     signal idx : integer range 0 to 440 := 0;
 
@@ -54,11 +55,11 @@ begin
     end process;
 
     -- Next state logic
-    process(current_state, passwd_valid, passwd_buf, idx, tx_success)
+    process(current_state, passwd_valid_latch, passwd_buf, idx, tx_success)
     begin
         case current_state is
             when IDLE =>
-                if (passwd_valid = '1') then
+                if (passwd_valid_latch = '1') then
                     next_state <= PRE_START;
                 else
                     next_state <= IDLE;
@@ -86,11 +87,16 @@ begin
         end case;
     end process;
 
-    -- Combinatorial and next state logic
+    -- Combinatorial logic
     flags <= "10" & ready_for_passwd & "00000";
     process(clk, com_clk, current_state, next_state, passwd_buf, passwd, idx, tx_success, flags)
     begin
         if (rising_edge(clk)) then
+            -- Latch passwd_valid high for next com_clk cycle
+            if (passwd_valid = '1') then
+                passwd_valid_latch <= '1';
+            end if;
+
             r1_com_clk <= com_clk;
             r2_com_clk <= r1_com_clk;
             r3_com_clk <= r2_com_clk;
@@ -110,6 +116,7 @@ begin
                         data_tx <= passwd_buf(idx to idx+7);
                     when STOP =>
                         data_tx <= PLUSBUS_ETX;
+                        passwd_valid_latch <= '0';
                 end case;
             end if;
 

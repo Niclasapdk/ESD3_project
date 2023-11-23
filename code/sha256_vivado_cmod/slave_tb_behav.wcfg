@@ -12,13 +12,13 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="255,710,971.500 ns"></ZoomStartTime>
-      <ZoomEndTime time="255,714,117.501 ns"></ZoomEndTime>
-      <Cursor1Time time="255,712,729.500 ns"></Cursor1Time>
+      <ZoomStartTime time="249,993.387200 us"></ZoomStartTime>
+      <ZoomEndTime time="250,001.322561 us"></ZoomEndTime>
+      <Cursor1Time time="250,000.000000 us"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="359"></NameColumnWidth>
-      <ValueColumnWidth column_width="157"></ValueColumnWidth>
+      <ValueColumnWidth column_width="151"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="5" />
    <wave_markers>
@@ -274,6 +274,10 @@
       <wvobject type="logic" fp_name="/slave_tb/DUT/PS/passwd_valid">
          <obj_property name="ElementShortName">passwd_valid</obj_property>
          <obj_property name="ObjectShortName">passwd_valid</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/slave_tb/DUT/PS/passwd_valid_latch">
+         <obj_property name="ElementShortName">passwd_valid_latch</obj_property>
+         <obj_property name="ObjectShortName">passwd_valid_latch</obj_property>
       </wvobject>
       <wvobject type="logic" fp_name="/slave_tb/DUT/PS/ready_for_passwd">
          <obj_property name="ElementShortName">ready_for_passwd</obj_property>

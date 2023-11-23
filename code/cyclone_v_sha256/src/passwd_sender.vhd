@@ -10,6 +10,7 @@ entity passwd_sender is
         rising_trig : in std_logic;
         falling_trig : in std_logic;
         passwd : in std_logic_vector(0 to 439);
+        reset : in std_logic;
 
         -- flags
         passwd_valid : in std_logic;
@@ -22,7 +23,7 @@ entity passwd_sender is
 end passwd_sender;
 
 architecture Behavioral of passwd_sender is
-    type passwd_sender_state_t is (IDLE, START, DATA, STOP);
+    type passwd_sender_state_t is (IDLE, RST, START, DATA, STOP);
     signal current_state : passwd_sender_state_t := IDLE;
     signal next_state : passwd_sender_state_t := IDLE;
 
@@ -33,7 +34,7 @@ architecture Behavioral of passwd_sender is
     signal flags : std_logic_vector(7 downto 0);
 begin
     -- Next state logic
-    process(current_state, passwd_valid_latch, passwd_buf, idx, tx_success)
+    process(current_state, passwd_valid_latch, passwd_buf, idx, tx_success, reset)
     begin
         case current_state is
             when IDLE =>
@@ -42,6 +43,8 @@ begin
                 else
                     next_state <= IDLE;
                 end if;
+            when RST =>
+                next_state <= IDLE;
             when START =>
                 if (tx_success = '1') then
                     next_state <= DATA;
@@ -61,6 +64,9 @@ begin
             when STOP =>
                 next_state <= IDLE;
         end case;
+        if (reset = '1') then
+            next_state <= RST;
+        end if;
     end process;
 
     -- Combinatorial and current state logic
@@ -69,7 +75,9 @@ begin
     begin
         if (rising_edge(clk)) then
             -- Latch passwd_valid high for next com_clk cycle
-            if (passwd_valid = '1') then
+            if (current_state = RST) then
+                passwd_valid_latch <= '0';
+            elsif (passwd_valid = '1') then
                 passwd_valid_latch <= '1';
             end if;
 
@@ -81,13 +89,16 @@ begin
                 case current_state is
                     when START =>
                         passwd_buf <= passwd(0 to 439);
+                        idx <= 0;
                     when DATA =>
                         if (tx_success = '1') then
                             idx <= idx + 8;
                         end if;
                     when STOP =>
                         passwd_valid_latch <= '0';
+                        idx <= 0;
                     when others =>
+                        idx <= 0;
                 end case;
             end if;
         end if;
@@ -105,6 +116,8 @@ begin
                 data_tx <= passwd_buf(idx to idx+7);
             when STOP =>
                 data_tx <= PLUSBUS_ETX;
+            when RST =>
+                data_tx <= x"55";
         end case;
    end process;
 end Behavioral;

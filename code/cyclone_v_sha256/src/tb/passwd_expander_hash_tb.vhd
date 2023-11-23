@@ -8,6 +8,7 @@ end passwd_expander_hash_tb;
 architecture Behavioral of passwd_expander_hash_tb is
     signal clk  : STD_LOGIC := '0';
     signal com_clk  : STD_LOGIC := '0';
+    signal reset : std_logic := '0';
     signal passwd : std_logic_vector(0 to 511) := (others => '0');
     signal passwd_valid : std_logic := '0';
     signal r_nw     : STD_LOGIC := '0'; -- R/not_W signal (read active high) (as seen by the master)
@@ -63,17 +64,19 @@ begin
                 rising_trig  => rising_trig,
 				falling_trig => falling_trig,
                 passwd       => passwd,
+                reset        => reset,
                 output_valid => passwd_valid,
                 data_in      => data_rx
             );
 
     C1 : entity work.sha256_core
     port map (
-                 clk       => clk,
-                 start     => passwd_valid,
-                 passwd_in => passwd,
-                 hash_out  => hash,
-                 hash_done => hash_done
+                clk       => clk,
+                start     => passwd_valid,
+                reset     => reset,
+                passwd_in => passwd,
+                hash_out  => hash,
+                hash_done => hash_done
              );
 
 

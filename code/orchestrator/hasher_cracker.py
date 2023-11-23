@@ -26,7 +26,9 @@ proto_spec = {
         # L3
         "stx":   b"\x02",
         "etx":   b"\x03",
-        "dle":   b"\x10"
+        "dle":   b"\x10",
+        "rst":   b"\x11",
+        "nop":   b"\x12",
         }
 
 class Orchestrator:
@@ -40,6 +42,12 @@ class Orchestrator:
         self.salts = [b"abcdefghjiklmnop"]
         self.txQueueCeiling = ceiling
         self.nodes = nodes
+        self.reset_nodes()
+
+    def reset_nodes(self):
+        for node in self.nodes:
+            self.send_to_node(node, self.proto_spec["rst"])
+            self.send_to_node(node, self.proto_spec["nop"])
 
     def read_hashlist(self, hashlist: str):
         # TODO: parse hashlist

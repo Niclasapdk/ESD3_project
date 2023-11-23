@@ -1,6 +1,7 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
+use work.plusbus_pkg.ALL;
 
 entity slave is
     generic(
@@ -37,8 +38,9 @@ architecture Behavioral of slave is
     signal tx_success : std_logic;
 
     -- Clock Synchronization
-	signal rising_trig  : std_logic := '0';
-	signal falling_trig : std_logic := '0';
+    signal rising_trig  : std_logic := '0';
+    signal falling_trig : std_logic := '0';
+    signal reset        : std_logic := '0';
 begin
 
     CSM : entity work.clock_sync_mod
@@ -54,7 +56,7 @@ begin
     port map(
                 clk          => clk,
                 rising_trig  => rising_trig,
-				falling_trig => falling_trig,
+                falling_trig => falling_trig,
                 r_nw         => r_nw,
                 addr_bus     => addr_bus,
                 data_tx      => data_tx,
@@ -62,15 +64,17 @@ begin
                 data_rx      => data_rx,
                 tx_success   => tx_success
             );
+    reset <= '1' when data_rx = PLUSBUS_RST else '0';
 
     PE : entity work.passwd_expander
     port map(
                 clk          => clk,
                 rising_trig  => rising_trig,
-				falling_trig => falling_trig,
+                falling_trig => falling_trig,
                 passwd       => passwd,
                 output_valid => passwd_valid,
-                data_in      => data_rx
+                data_in      => data_rx,
+                reset        => reset
             );
 
     CC : entity work.core_controller
@@ -81,6 +85,7 @@ begin
                  passwd_valid         => passwd_valid,
                  rounds               => rounds,
                  target_hash          => target_hash,
+                 reset                => reset,
                  ready_for_new_passwd => cc_ready_for_passwd,
                  passwd_out           => passwd_out,
                  passwd_found         => passwd_found,
@@ -88,12 +93,14 @@ begin
              );
     flags_out(0) <= cc_ready_for_passwd;
     flags_out(1) <= passwd_found;
+    flags_out(2) <= reset;
 
     PS : entity work.passwd_sender
     port map(
                 clk              => clk,
                 rising_trig      => rising_trig,
-				falling_trig     => falling_trig,
+                falling_trig     => falling_trig,
+                reset            => reset,
                 passwd           => passwd_out(0 to 439),
                 --passwd           => x"666c61677b79617979797d8000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
                 passwd_valid     => passwd_found,

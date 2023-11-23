@@ -39,6 +39,7 @@ begin
     port map (
                  clk       => clk,
                  start     => core_start,
+                 reset     => reset,
                  passwd_in => core_in,
                  hash_out  => core_hash,
                  hash_done => core_done
@@ -86,13 +87,13 @@ begin
                 end if;
 
             when DONE =>
-                if reset = '1' then
-                    next_state <= IDLE_RESET;
-                else
-                    next_state <= DONE;
-                end if;
+                next_state <= DONE;
 
             end case;
+
+            if (reset = '1') then
+                next_state <= IDLE_RESET;
+            end if;
     end process;
 
     -- Real logic

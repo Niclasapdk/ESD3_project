@@ -12,6 +12,7 @@ entity core_controller is
             passwd_valid : in std_logic;
             rounds : in unsigned(31 downto 0);
             target_hash : in std_logic_vector(255 downto 0);
+            reset : in std_logic;
 
             -- Outputs
             ready_for_new_passwd : out std_logic;
@@ -22,7 +23,7 @@ entity core_controller is
 end core_controller;
 
 architecture Behavioral of core_controller is
-    type core_controller_type_t is (CORE_SERVICE, PASSWD_RECV);
+    type core_controller_type_t is (RST, CORE_SERVICE, PASSWD_RECV);
     signal current_state : core_controller_type_t := CORE_SERVICE;
     signal next_state : core_controller_type_t := CORE_SERVICE;
 
@@ -68,9 +69,13 @@ begin
     end process;
 
     -- Next State Logic
-    process(current_state, passwd_valid, core_done_flags)
+    process(current_state, passwd_valid, core_done_flags, reset)
     begin
         case current_state is
+
+            when RST =>
+                next_state <= CORE_SERVICE;
+
             when CORE_SERVICE =>
                 next_state <= CORE_SERVICE; -- default
 
@@ -83,29 +88,36 @@ begin
                 next_state <= CORE_SERVICE;
 
         end case;
+        if (reset = '1') then
+            next_state <= RST;
+        end if;
     end process;
 
     -- Real logic
     process(clk, current_state, core_done_flags, core_hash_ar, ready_for_new_passwd_sig, core_idle_flags, passwd_buf, passwd)
     begin
         if (rising_edge(clk)) then
-
-            -- Check for done cores
-            passwd_found <= '0';
-            core_reset_flags <= (others => '0');
-            core_start_flags <= (others => '0');
-            for i in 0 to N-1 loop
-                if (core_done_flags(i) = '1') then
-                    core_reset_flags(i) <= '1';
-                    if (core_hash_ar(i) = target_hash) then
-                        passwd_out <= core_passwd_ar(i);
-                        passwd_found <= '1';
-                    end if;
-                end if;
-            end loop;
-
             case current_state is
+                when RST =>
+                    core_reset_flags <= (others => '1');
+                    core_start_flags <= (others => '0');
+                    passwd_found <= '0';
+                    ready_for_new_passwd_sig <= '1';
                 when CORE_SERVICE =>
+                    -- Check for done cores
+                    passwd_found <= '0';
+                    core_reset_flags <= (others => '0');
+                    core_start_flags <= (others => '0');
+                    for i in 0 to N-1 loop
+                        if (core_done_flags(i) = '1') then
+                            core_reset_flags(i) <= '1';
+                            if (core_hash_ar(i) = target_hash) then
+                                passwd_out <= core_passwd_ar(i);
+                                passwd_found <= '1';
+                            end if;
+                        end if;
+                    end loop;
+                    -- Start first ready core
                     if (ready_for_new_passwd_sig = '0') then
                         for i in 0 to N-1 loop
                             if (core_idle_flags(i) = '1') then

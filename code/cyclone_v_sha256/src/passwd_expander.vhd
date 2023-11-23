@@ -13,7 +13,8 @@ entity passwd_expander is
             clk : in std_logic; -- System clock
             data_in : in std_logic_vector(7 downto 0);
             rising_trig : in std_logic;
-            falling_trig : in std_logic
+            falling_trig : in std_logic;
+            reset : in std_logic
         );
 end passwd_expander;
 
@@ -25,7 +26,7 @@ architecture Behaviorial of passwd_expander is
 begin
 
     -- Next state logic	
-    process(current_state, data_in)
+    process(current_state, data_in, reset)
     begin
         output_valid <= '0';
         case current_state is
@@ -55,6 +56,9 @@ begin
                     next_state <= DATA;
                 end if;
         end case;
+        if (reset = '1') then
+            next_state <= IDLE;
+        end if;
     end process;
 
     -- Combinatorial and current state logic

@@ -7,6 +7,7 @@ entity sha256_core is
     port(
         clk : in std_logic;
         start : in std_logic;
+        reset : in std_logic;
         passwd_in : in std_logic_vector(0 to 511);
         hash_out : out std_logic_vector(255 downto 0);
         hash_done: out std_logic
@@ -89,9 +90,9 @@ architecture Behavioral of sha256_core is
         X"00000000", X"00000000", X"00000000", X"00000000"
     );
 
-    type sha256_core_state_type is (IDLE, READ_MSG, PREP_MSG_0, PREP_MSG_1, PREP_MSG_2, PREP_MSG_3, HASH_1, HASH_2, HASH_2b, HASH_3, DONE);
-    signal current_state : sha256_core_state_type := IDLE;
-    signal next_state : sha256_core_state_type := IDLE;
+    type sha256_core_state_type is (IDLE_RESET, READ_MSG, PREP_MSG_0, PREP_MSG_1, PREP_MSG_2, PREP_MSG_3, HASH_1, HASH_2, HASH_2b, HASH_3, DONE);
+    signal current_state : sha256_core_state_type := IDLE_RESET;
+    signal next_state : sha256_core_state_type := IDLE_RESET;
 
     signal passwd : passwd_type := (x"00000000",x"00000000", x"00000000", x"00000000", x"00000000", x"00000000", x"00000000", x"00000000", x"00000000", x"00000000", x"00000000", x"00000000", x"00000000", x"00000000", x"00000000", x"00000000");
     signal passwd_internal : passwd_type := (x"00000000",x"00000000", x"00000000", x"00000000", x"00000000", x"00000000", x"00000000", x"00000000", x"00000000", x"00000000", x"00000000", x"00000000", x"00000000", x"00000000", x"00000000", x"00000000");
@@ -107,14 +108,14 @@ begin
         end if;
     end process;
     -- Next state logic.
-    process(current_state, compression_counter, start)
+    process(current_state, compression_counter, start, reset)
     begin
         case current_state is
-            when IDLE =>
+            when IDLE_RESET =>
                 if (start = '1') then
                     next_state <= READ_MSG;
                 else
-                    next_state <= IDLE;
+                    next_state <= IDLE_RESET;
                 end if;
             when READ_MSG =>
                 next_state <= PREP_MSG_0;
@@ -144,6 +145,9 @@ begin
                 end if;
             when others =>
         end case;
+        if (reset = '1') then
+            next_state <= IDLE_RESET;
+        end if;
     end process;
 
     -- Hash logic.
@@ -164,7 +168,7 @@ begin
             temp1 := temp1; temp2 := temp2; w <= w;
             passwd <= passwd; compression_counter <= compression_counter;
             case current_state is
-                when IDLE =>
+                when IDLE_RESET =>
                 when READ_MSG =>
                     h0 <= x"6a09e667";
                     h1 <= x"bb67ae85";

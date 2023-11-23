@@ -14,6 +14,7 @@ architecture Behavioral of sha256_core_tb is
     signal done         : std_logic;
     signal rounds       : unsigned(31 downto 0) := x"00000002";
     -- Expected hash: 8963cc0afd622cc7574ac2011f93a3059b3d65548a77542a1559e3d202e6ab00
+    signal reset        : std_logic := '0';
 begin
     clk <= not clk after CLK_PERIOD/2;
 
@@ -21,6 +22,7 @@ begin
     port map (
         clk       => clk,
         start     => start,
+        reset     => reset,
         passwd_in => passwd,
         hash_out  => hash,
         hash_done => done

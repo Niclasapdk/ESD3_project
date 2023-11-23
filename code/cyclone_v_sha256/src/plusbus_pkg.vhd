@@ -7,4 +7,5 @@ package plusbus_pkg is
     constant PLUSBUS_STX : std_logic_vector(7 downto 0) := x"02";
     constant PLUSBUS_ETX : std_logic_vector(7 downto 0) := x"03";
     constant PLUSBUS_DLE : std_logic_vector(7 downto 0) := x"10";
+    constant PLUSBUS_RST : std_logic_vector(7 downto 0) := x"11";
 end package;

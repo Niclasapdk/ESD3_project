@@ -12,21 +12,25 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="418.839576834 ms"></ZoomStartTime>
-      <ZoomEndTime time="434.809576835 ms"></ZoomEndTime>
-      <Cursor1Time time="421.729576834 ms"></Cursor1Time>
+      <ZoomStartTime time="0.000000000 ms"></ZoomStartTime>
+      <ZoomEndTime time="1,192.294246500 ms"></ZoomEndTime>
+      <Cursor1Time time="1,192.294246500 ms"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="359"></NameColumnWidth>
-      <ValueColumnWidth column_width="133"></ValueColumnWidth>
+      <ValueColumnWidth column_width="109"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="6" />
+   <WVObjectSize size="7" />
    <wave_markers>
       <marker label="" time="132555000" />
    </wave_markers>
    <wvobject type="logic" fp_name="/slave_tb/DUT/CC/clk">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/slave_tb/DUT/reset">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
    </wvobject>
    <wvobject type="group" fp_name="group674">
       <obj_property name="label">Clock Sync Mod</obj_property>
@@ -104,6 +108,7 @@
    <wvobject type="group" fp_name="group145">
       <obj_property name="label">Passwd Expander</obj_property>
       <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
       <wvobject type="other" fp_name="/slave_tb/DUT/PE/current_state">
          <obj_property name="ElementShortName">current_state</obj_property>
          <obj_property name="ObjectShortName">current_state</obj_property>
@@ -124,9 +129,14 @@
    <wvobject type="group" fp_name="group154">
       <obj_property name="label">Core Controller</obj_property>
       <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
       <wvobject type="other" fp_name="/slave_tb/DUT/CC/current_state">
          <obj_property name="ElementShortName">current_state</obj_property>
          <obj_property name="ObjectShortName">current_state</obj_property>
+      </wvobject>
+      <wvobject type="other" fp_name="/slave_tb/DUT/CC/next_state">
+         <obj_property name="ElementShortName">next_state</obj_property>
+         <obj_property name="ObjectShortName">next_state</obj_property>
       </wvobject>
       <wvobject type="array" fp_name="/slave_tb/DUT/CC/rounds">
          <obj_property name="ElementShortName">rounds[31:0]</obj_property>
@@ -163,6 +173,7 @@
       <wvobject type="group" fp_name="group161">
          <obj_property name="label">Core Signals</obj_property>
          <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
          <wvobject type="array" fp_name="/slave_tb/DUT/CC/core_start_flags">
             <obj_property name="ElementShortName">core_start_flags[0:2]</obj_property>
             <obj_property name="ObjectShortName">core_start_flags[0:2]</obj_property>
@@ -182,7 +193,6 @@
          <wvobject type="array" fp_name="/slave_tb/DUT/CC/core_hash_ar">
             <obj_property name="ElementShortName">core_hash_ar[0:2][255:0]</obj_property>
             <obj_property name="ObjectShortName">core_hash_ar[0:2][255:0]</obj_property>
-            <obj_property name="isExpanded"></obj_property>
          </wvobject>
          <wvobject type="array" fp_name="/slave_tb/DUT/CC/core_passwd_ar">
             <obj_property name="ElementShortName">core_passwd_ar[0:2][0:511]</obj_property>

@@ -1,6 +1,7 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
+use work.plusbus_pkg.ALL;
 
 entity slave_tb is
 end slave_tb;
@@ -22,7 +23,12 @@ architecture Behavioral of slave_tb is
     constant CLK_PERIOD : time := 333 ns;
     constant COM_CLK_PERIOD : time := 1000 us;
     constant N_CORES : integer := 3;
-    signal cores_running : std_logic_vector(0 to N_CORES-1) := (others => '0');
+    signal cores_running : std_logic_vector(0 to N_CORES-1);
+    signal flags_out : std_logic_vector(5 downto 0);
+
+
+    --mht
+    signal passwd_received : std_logic := '0';
 begin
     clk <= not clk after CLK_PERIOD/2;
     com_clk <= not com_clk after COM_CLK_PERIOD/2;
@@ -35,18 +41,27 @@ begin
         r_nw          => r_nw,
         addr_bus      => addr_bus,
         data_bus      => data_bus,
-        cores_running => cores_running
+        cores_running => cores_running,
+        flags_out     => flags_out
         );
 
-    process(com_clk)
+    process(com_clk, flags_out, r_nw, passwd_received)
         variable pidx : integer range 0 to 2 := 0;
         variable cur_pkt : std_logic_vector(0 to 527) := pkt(0);
         variable idx : integer := 0;
         variable read_from_slave : std_logic := '0';
         variable read_ctr : integer := 0;
+        variable rst : std_logic := '0';
+        variable rst_wait : integer := 0;
     begin
         cur_pkt := pkt(pidx);
         if rising_edge(com_clk) then
+            rst_wait := rst_wait + 1;
+            if (rst_wait > 450) then
+                rst := '1';
+                passwd_received <= '0';
+                rst_wait := 0;
+            end if;
             if (read_from_slave = '0') then
                 if idx = 528 then
                     idx := 0;
@@ -59,8 +74,14 @@ begin
                     end if;
                 end if;
 
-                data_bus <= cur_pkt(idx to idx+7);
-                idx := idx + 8;
+                if (rst = '1') then
+                    data_bus <= PLUSBUS_RST;
+                    rst := '0';
+                    read_from_slave := '0';
+                else
+                    data_bus <= cur_pkt(idx to idx+7);
+                    idx := idx + 8;
+                end if;
             else
                 if (read_ctr > 20) then
                     read_ctr := 0;
@@ -69,6 +90,9 @@ begin
                     read_ctr := read_ctr + 1;
                 end if;
                 data_bus <= "ZZZZZZZZ";
+                if (data_bus = x"03") then
+                    passwd_received <= '1';
+                end if;
             end if;
         end if;
 

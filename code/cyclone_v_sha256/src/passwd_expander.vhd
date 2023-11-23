@@ -12,7 +12,8 @@ entity passwd_expander is
             -- Inputs
             clk : in std_logic; -- System clock
             data_in : in std_logic_vector(7 downto 0);
-            com_clk : in std_logic
+            rising_trig : in std_logic;
+            falling_trig : in std_logic
         );
 end passwd_expander;
 
@@ -21,10 +22,6 @@ architecture Behaviorial of passwd_expander is
     signal current_state : passwd_expander_state_type := IDLE;
     signal next_state : passwd_expander_state_type := IDLE;
 
-    -- Clock synchronization
-    signal r1_com_clk : std_logic;
-    signal r2_com_clk : std_logic;
-    signal r3_com_clk : std_logic;
 begin
 
     -- Next state logic	
@@ -61,16 +58,12 @@ begin
     end process;
 
     -- Combinatorial and current state logic
-    process(clk, com_clk, current_state, next_state, data_in) is
+    process(clk, rising_trig, current_state, next_state, data_in) is
         variable idx : unsigned(8 downto 0) := (others => '0');
     begin
         if rising_edge(clk) then
-            r1_com_clk <= com_clk;
-            r2_com_clk <= r1_com_clk;
-            r3_com_clk <= r2_com_clk;
-
             -- com_clk rising edge
-            if r3_com_clk = '0' and r2_com_clk = '1' then
+            if (rising_trig = '1') then
                 current_state <= next_state;
                 case current_state is
                     when START =>

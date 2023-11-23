@@ -28,26 +28,40 @@ architecture Behavioral of passwd_expander_hash_tb is
     signal rounds : unsigned(31 downto 0) := x"00000002";
     signal pidx : unsigned(0 downto 0) := "0";
     signal cur_pkt : std_logic_vector(0 to 527);
+    -- Clock Synchronization
+	signal rising_trig  : std_logic := '0';
+	signal falling_trig : std_logic := '0';
 begin
     clk <= not clk after CLK_PERIOD/2;
     com_clk <= not com_clk after COM_CLK_PERIOD/2;
-    DL : entity work.data_link
-    generic map(ADDR => "10")
+
+    CSM : entity work.clock_sync_mod
     port map(
-                clk      => clk,
-                com_clk  => com_clk,
-                r_nw     => r_nw,
-                addr_bus => addr_bus,
-                data_tx  => data_tx,
-                data_bus => data_bus,
-                data_rx  => data_rx,
-                tx_success => tx_success
+                sys_clk      => clk,
+                sync_clk     => com_clk,
+                rising_trig  => rising_trig,
+                falling_trig => falling_trig
+            );
+
+    DL : entity work.data_link
+    generic map(ADDR         => "10")
+    port map(
+                clk          => clk,
+                rising_trig  => rising_trig,
+				falling_trig => falling_trig,
+                r_nw         => r_nw,
+                addr_bus     => addr_bus,
+                data_tx      => data_tx,
+                data_bus     => data_bus,
+                data_rx      => data_rx,
+                tx_success   => tx_success
             );
 
     PE : entity work.passwd_expander
     port map(
                 clk          => clk,
-                com_clk      => com_clk,
+                rising_trig  => rising_trig,
+				falling_trig => falling_trig,
                 passwd       => passwd,
                 output_valid => passwd_valid,
                 data_in      => data_rx

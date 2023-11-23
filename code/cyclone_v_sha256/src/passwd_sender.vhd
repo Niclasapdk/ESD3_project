@@ -7,7 +7,8 @@ entity passwd_sender is
     port(
         -- Inputs
         clk : in std_logic;
-        com_clk  : in std_logic;
+        rising_trig : in std_logic;
+        falling_trig : in std_logic;
         passwd : in std_logic_vector(0 to 439);
 
         -- flags
@@ -30,25 +31,13 @@ architecture Behavioral of passwd_sender is
     signal idx : integer range 0 to 440 := 0;
 
     signal flags : std_logic_vector(7 downto 0);
-
-    -- Clock synchronization
-    signal r1_com_clk : std_logic;
-    signal r2_com_clk : std_logic;
-    signal r3_com_clk : std_logic;
-    signal s1_com_clk : std_logic;
-    signal s2_com_clk : std_logic;
-    signal s3_com_clk : std_logic;
 begin
     -- Current state logic
-    process(clk, next_state, com_clk)
+    process(clk, next_state, rising_trig)
     begin
         if (rising_edge(clk)) then
-            s1_com_clk <= com_clk;
-            s2_com_clk <= s1_com_clk;
-            s3_com_clk <= s2_com_clk;
-
             -- com_clk rising edge
-            if s3_com_clk = '1' and s2_com_clk = '0' then
+            if (rising_trig = '1') then -- TODO move to other process statement
                 current_state <= next_state;
             end if;
         end if;
@@ -60,7 +49,7 @@ begin
         case current_state is
             when IDLE =>
                 if (passwd_valid_latch = '1') then
-                    next_state <= PRE_START;
+                    next_state <= START;
                 else
                     next_state <= IDLE;
                 end if;
@@ -89,7 +78,7 @@ begin
 
     -- Combinatorial logic
     flags <= "10" & ready_for_passwd & "00000";
-    process(clk, com_clk, current_state, next_state, passwd_buf, passwd, idx, tx_success, flags)
+    process(clk, rising_trig, falling_trig, current_state, next_state, passwd_buf, passwd, idx, tx_success, flags)
     begin
         if (rising_edge(clk)) then
             -- Latch passwd_valid high for next com_clk cycle
@@ -97,18 +86,14 @@ begin
                 passwd_valid_latch <= '1';
             end if;
 
-            r1_com_clk <= com_clk;
-            r2_com_clk <= r1_com_clk;
-            r3_com_clk <= r2_com_clk;
-
             -- com_clk rising edge
-            if r3_com_clk = '0' and r2_com_clk = '1' then
+            if (rising_trig = '1') then
                 case current_state is
                     when IDLE =>
                         data_tx <= flags;
                     when PRE_START =>
                         passwd_buf <= passwd(0 to 439);
-                        data_tx <= PLUSBUS_STX;
+                        data_tx <= x"55";
                     when START =>
                         passwd_buf <= passwd(0 to 439);
                         data_tx <= PLUSBUS_STX;
@@ -121,7 +106,7 @@ begin
             end if;
 
             -- com_clk falling edge
-            if r3_com_clk = '1' and r2_com_clk = '0' then
+            if (falling_trig = '1') then
                 case current_state is
                     when DATA =>
                         if (tx_success = '1') then

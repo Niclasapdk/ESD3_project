@@ -8,7 +8,8 @@ entity data_link is
     port(
         -- inputs
         clk      : in STD_LOGIC; -- system clock
-        com_clk  : in STD_LOGIC;
+        rising_trig : in std_logic;
+        falling_trig : in std_logic;
         r_nw     : in STD_LOGIC; -- R/not_W signal (read active high) (as seen by the master)
         addr_bus : in STD_LOGIC_VECTOR(1 downto 0);
         data_tx  : in STD_LOGIC_VECTOR(7 downto 0);
@@ -21,24 +22,15 @@ entity data_link is
 end data_link;
 
 architecture Behavioral of data_link is
-    -- Clock synchronization
-    signal r1_com_clk : std_logic;
-    signal r2_com_clk : std_logic;
-    signal r3_com_clk : std_logic;
-
     signal addr_latch : std_logic_vector(1 downto 0);
     signal r_nw_latch : std_logic;
 begin
     --data_bus(0) <= 'Z' when tx_success = '1' else '0'; --mht
-    process(clk, com_clk, addr_bus, r_nw, data_tx)
+    process(clk, rising_trig, falling_trig, addr_bus, r_nw, data_tx)
     begin
         if rising_edge(clk) then
-            r1_com_clk <= com_clk;
-            r2_com_clk <= r1_com_clk;
-            r3_com_clk <= r2_com_clk;
-
             -- com_clk rising edge
-            if r3_com_clk = '0' and r2_com_clk = '1' then
+            if (rising_trig = '1') then
                 tx_success <= '0';
                 addr_latch <= addr_bus;
                 r_nw_latch <= r_nw;
@@ -64,7 +56,7 @@ begin
             end if;
 
             -- com_clk falling edge
-            if r3_com_clk = '1' and r2_com_clk = '0' then
+            if (falling_trig = '1') then
                 if addr_latch = ADDR then
                     -- we are the ones being talked to
                     if r_nw_latch = '0' then

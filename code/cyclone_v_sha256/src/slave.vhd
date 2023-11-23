@@ -35,25 +35,39 @@ architecture Behavioral of slave is
     signal data_rx : std_logic_vector(7 downto 0);
     signal data_tx : std_logic_vector(7 downto 0);
     signal tx_success : std_logic;
+
+    -- Clock Synchronization
+	signal rising_trig  : std_logic := '0';
+	signal falling_trig : std_logic := '0';
 begin
 
-    DL : entity work.data_link
-    generic map(ADDR => slave_addr)
+    CSM : entity work.clock_sync_mod
     port map(
-                clk        => clk,
-                com_clk    => com_clk,
-                r_nw       => r_nw,
-                addr_bus   => addr_bus,
-                data_tx    => data_tx,
-                data_bus   => data_bus,
-                data_rx    => data_rx,
-                tx_success => tx_success
+                sys_clk      => clk,
+                sync_clk     => com_clk,
+                rising_trig  => rising_trig,
+                falling_trig => falling_trig
+            );
+
+    DL : entity work.data_link
+    generic map(ADDR         => slave_addr)
+    port map(
+                clk          => clk,
+                rising_trig  => rising_trig,
+				falling_trig => falling_trig,
+                r_nw         => r_nw,
+                addr_bus     => addr_bus,
+                data_tx      => data_tx,
+                data_bus     => data_bus,
+                data_rx      => data_rx,
+                tx_success   => tx_success
             );
 
     PE : entity work.passwd_expander
     port map(
                 clk          => clk,
-                com_clk      => com_clk,
+                rising_trig  => rising_trig,
+				falling_trig => falling_trig,
                 passwd       => passwd,
                 output_valid => passwd_valid,
                 data_in      => data_rx
@@ -78,7 +92,8 @@ begin
     PS : entity work.passwd_sender
     port map(
                 clk              => clk,
-                com_clk          => com_clk,
+                rising_trig      => rising_trig,
+				falling_trig     => falling_trig,
                 passwd           => passwd_out(0 to 439),
                 --passwd           => x"666c61677b79617979797d8000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
                 passwd_valid     => passwd_found,

@@ -84,7 +84,7 @@ class Orchestrator:
             self.serial.read_until(self.proto_spec["start"])
             pkt = self.proto_spec["start"] + self.serial.read_until(self.proto_spec["stop"])
             if len(pkt) == BR_PKT_LEN:
-                if pkt[BR_ADDR_IDX] == node_addr and pkt[BR_ACTION_IDX] == ord(self.proto_spec["slave"]):
+                if self.cmp_byte_with_data(pkt[BR_ADDR_IDX], node_addr) and self.cmp_byte_with_data(pkt[BR_ACTION_IDX], self.proto_spec["slave"]):
                     data = pkt[BR_DATA_IDX]
                     logging.debug(f"recv from {node_addr} data {hex(data)}")
             return data
@@ -99,6 +99,14 @@ class Orchestrator:
 
     def fuck(self, dm="Youuusa make big dooo doo this time"):
         logging.critical(dm)
+        exit(-69)
+
+    def cmp_byte_with_data(self, x, y):
+        if isinstance(x, bytes):
+            x = ord(x)
+        if isinstance(y, bytes):
+            y = ord(y)
+        return x == y
 
     def escape_passwd(self, passwd: bytes):
         passwd = passwd.replace(self.proto_spec["dle"], self.proto_spec["dle"] + self.proto_spec["dle"])
@@ -126,7 +134,7 @@ class Orchestrator:
                         if data & READY_FOR_PASSWD_MASK:
                             logging.debug(f"Node {node} is ready for new password")
                             ready_node = node
-                    elif data == self.proto_spec["stx"]:
+                    elif self.cmp_byte_with_data(data, self.proto_spec["stx"]):
                         self.receive_passwd(node)
         return ready_node
 
@@ -136,10 +144,13 @@ class Orchestrator:
 
         passwd = b""
         data = self.read_from_node(node_addr)
-        while data != self.proto_spec["etx"]:
-            passwd += data
+        while not self.cmp_byte_with_data(data, self.proto_spec["etx"]):
+            if self.cmp_byte_with_data(data, 0x80) or data is None:
+                self.fuck("pls reset fpga cuz it's acting up")
+            passwd += bytes([data])
             data = self.read_from_node(node_addr)
-        logging.info(f"Password found: {passwd}")
+        passwd = passwd[:-16] # Remove salt from received passwd
+        logging.info(f"\033[92m\U0001F9a7Password found: {passwd.decode()}\033[0m")
         return passwd
 
     def ruuuuuunnn(self):

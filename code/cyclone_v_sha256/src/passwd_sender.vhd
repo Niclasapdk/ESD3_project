@@ -22,7 +22,7 @@ entity passwd_sender is
 end passwd_sender;
 
 architecture Behavioral of passwd_sender is
-    type passwd_sender_state_t is (IDLE, PRE_START, START, DATA, STOP);
+    type passwd_sender_state_t is (IDLE, START, DATA, STOP);
     signal current_state : passwd_sender_state_t := IDLE;
     signal next_state : passwd_sender_state_t := IDLE;
 
@@ -32,17 +32,6 @@ architecture Behavioral of passwd_sender is
 
     signal flags : std_logic_vector(7 downto 0);
 begin
-    -- Current state logic
-    process(clk, next_state, rising_trig)
-    begin
-        if (rising_edge(clk)) then
-            -- com_clk rising edge
-            if (rising_trig = '1') then -- TODO move to other process statement
-                current_state <= next_state;
-            end if;
-        end if;
-    end process;
-
     -- Next state logic
     process(current_state, passwd_valid_latch, passwd_buf, idx, tx_success)
     begin
@@ -53,8 +42,6 @@ begin
                 else
                     next_state <= IDLE;
                 end if;
-            when PRE_START => -- TODO fix this shit with double STX
-                next_state <= START;
             when START =>
                 if (tx_success = '1') then
                     next_state <= DATA;
@@ -76,9 +63,9 @@ begin
         end case;
     end process;
 
-    -- Combinatorial logic
+    -- Combinatorial and current state logic
     flags <= "10" & ready_for_passwd & "00000";
-    process(clk, rising_trig, falling_trig, current_state, next_state, passwd_buf, passwd, idx, tx_success, flags)
+    process(clk, rising_trig, current_state, next_state, passwd_buf, passwd, idx, tx_success, flags)
     begin
         if (rising_edge(clk)) then
             -- Latch passwd_valid high for next com_clk cycle
@@ -88,34 +75,36 @@ begin
 
             -- com_clk rising edge
             if (rising_trig = '1') then
+                -- Current state logic
+                current_state <= next_state;
+
                 case current_state is
-                    when IDLE =>
-                        data_tx <= flags;
-                    when PRE_START =>
-                        passwd_buf <= passwd(0 to 439);
-                        data_tx <= x"55";
                     when START =>
                         passwd_buf <= passwd(0 to 439);
-                        data_tx <= PLUSBUS_STX;
-                    when DATA =>
-                        data_tx <= passwd_buf(idx to idx+7);
-                    when STOP =>
-                        data_tx <= PLUSBUS_ETX;
-                        passwd_valid_latch <= '0';
-                end case;
-            end if;
-
-            -- com_clk falling edge
-            if (falling_trig = '1') then
-                case current_state is
                     when DATA =>
                         if (tx_success = '1') then
                             idx <= idx + 8;
                         end if;
+                    when STOP =>
+                        passwd_valid_latch <= '0';
                     when others =>
-                        idx <= 0;
                 end case;
             end if;
         end if;
     end process;
+
+    -- Moore outputs
+    process(current_state, passwd_buf, idx, flags)
+    begin
+        case current_state is
+            when IDLE =>
+                data_tx <= flags;
+            when START =>
+                data_tx <= PLUSBUS_STX;
+            when DATA =>
+                data_tx <= passwd_buf(idx to idx+7);
+            when STOP =>
+                data_tx <= PLUSBUS_ETX;
+        end case;
+   end process;
 end Behavioral;

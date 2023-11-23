@@ -43,6 +43,7 @@ begin
         variable cur_pkt : std_logic_vector(0 to 527) := pkt(0);
         variable idx : integer := 0;
         variable read_from_slave : std_logic := '0';
+        variable read_ctr : integer := 0;
     begin
         cur_pkt := pkt(pidx);
         if rising_edge(com_clk) then
@@ -52,13 +53,21 @@ begin
                     if (pidx < 2) then
                         pidx := pidx + 1;
                     else
+                        read_ctr := 0;
                         read_from_slave := '1';
+                        pidx := 0;
                     end if;
                 end if;
 
                 data_bus <= cur_pkt(idx to idx+7);
                 idx := idx + 8;
             else
+                if (read_ctr > 20) then
+                    read_ctr := 0;
+                    read_from_slave := '0';
+                else
+                    read_ctr := read_ctr + 1;
+                end if;
                 data_bus <= "ZZZZZZZZ";
             end if;
         end if;

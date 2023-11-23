@@ -24,34 +24,24 @@ end data_link;
 architecture Behavioral of data_link is
     signal addr_latch : std_logic_vector(1 downto 0);
     signal r_nw_latch : std_logic;
+    signal drive_data : std_logic := '0';
 begin
-    --data_bus(0) <= 'Z' when tx_success = '1' else '0'; --mht
     process(clk, rising_trig, falling_trig, addr_bus, r_nw, data_tx)
     begin
         if rising_edge(clk) then
             -- com_clk rising edge
             if (rising_trig = '1') then
-                tx_success <= '0';
+                drive_data <= '0';
                 addr_latch <= addr_bus;
                 r_nw_latch <= r_nw;
 
+                -- Data bus drive logic
                 if addr_bus = ADDR then
                 -- we are the ones being talked to
                     if r_nw = '1' then
                         -- slave will write to data bus
-                        tx_success <= '1';
-                        for i in 0 to 7 loop --mht
-                            if data_tx(i) = '1' then
-                                data_bus(i) <= 'Z';
-                            else
-                                data_bus(i) <= '0';
-                            end if;
-                        end loop;
-                    else
-                        data_bus <= "ZZZZZZZZ";
+                        drive_data <= '1';
                     end if;
-                else
-                    data_bus <= "ZZZZZZZZ";
                 end if;
             end if;
 
@@ -60,11 +50,19 @@ begin
                 if addr_latch = ADDR then
                     -- we are the ones being talked to
                     if r_nw_latch = '0' then
+                        tx_success <= '0';
                         -- latch input from master
                         data_rx <= data_bus;
+                    else
+                        tx_success <= '1';
                     end if;
                 end if;
             end if;
         end if;
     end process;
+
+    -- Moore outputs
+    DATA_DRIVER : for i in 0 to 7 generate
+        data_bus(i) <= '0' when drive_data = '1' and data_tx(i) = '0' else 'Z';
+    end generate;
 end Behavioral;

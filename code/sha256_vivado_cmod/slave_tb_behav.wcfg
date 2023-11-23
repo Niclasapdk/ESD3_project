@@ -12,15 +12,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="249,993.387200 us"></ZoomStartTime>
-      <ZoomEndTime time="250,001.322561 us"></ZoomEndTime>
-      <Cursor1Time time="250,000.000000 us"></Cursor1Time>
+      <ZoomStartTime time="418.839576834 ms"></ZoomStartTime>
+      <ZoomEndTime time="434.809576835 ms"></ZoomEndTime>
+      <Cursor1Time time="421.729576834 ms"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="359"></NameColumnWidth>
-      <ValueColumnWidth column_width="151"></ValueColumnWidth>
+      <ValueColumnWidth column_width="133"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="5" />
+   <WVObjectSize size="6" />
    <wave_markers>
       <marker label="" time="132555000" />
    </wave_markers>
@@ -28,14 +28,42 @@
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
    </wvobject>
+   <wvobject type="group" fp_name="group674">
+      <obj_property name="label">Clock Sync Mod</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="logic" fp_name="/slave_tb/DUT/CSM/sys_clk">
+         <obj_property name="ElementShortName">sys_clk</obj_property>
+         <obj_property name="ObjectShortName">sys_clk</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/slave_tb/DUT/CSM/sync_clk">
+         <obj_property name="ElementShortName">sync_clk</obj_property>
+         <obj_property name="ObjectShortName">sync_clk</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/slave_tb/DUT/CSM/rising_trig">
+         <obj_property name="ElementShortName">rising_trig</obj_property>
+         <obj_property name="ObjectShortName">rising_trig</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/slave_tb/DUT/CSM/falling_trig">
+         <obj_property name="ElementShortName">falling_trig</obj_property>
+         <obj_property name="ObjectShortName">falling_trig</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/slave_tb/DUT/CSM/r1_sync_clk">
+         <obj_property name="ElementShortName">r1_sync_clk</obj_property>
+         <obj_property name="ObjectShortName">r1_sync_clk</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/slave_tb/DUT/CSM/r2_sync_clk">
+         <obj_property name="ElementShortName">r2_sync_clk</obj_property>
+         <obj_property name="ObjectShortName">r2_sync_clk</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/slave_tb/DUT/CSM/r3_sync_clk">
+         <obj_property name="ElementShortName">r3_sync_clk</obj_property>
+         <obj_property name="ObjectShortName">r3_sync_clk</obj_property>
+      </wvobject>
+   </wvobject>
    <wvobject type="group" fp_name="group140">
       <obj_property name="label">Data Link</obj_property>
       <obj_property name="DisplayName">label</obj_property>
       <obj_property name="isExpanded"></obj_property>
-      <wvobject type="logic" fp_name="/slave_tb/DUT/DL/com_clk">
-         <obj_property name="ElementShortName">com_clk</obj_property>
-         <obj_property name="ObjectShortName">com_clk</obj_property>
-      </wvobject>
       <wvobject type="logic" fp_name="/slave_tb/DUT/DL/r_nw">
          <obj_property name="ElementShortName">r_nw</obj_property>
          <obj_property name="ObjectShortName">r_nw</obj_property>
@@ -55,6 +83,10 @@
       <wvobject type="array" fp_name="/slave_tb/DUT/DL/data_bus">
          <obj_property name="ElementShortName">data_bus[7:0]</obj_property>
          <obj_property name="ObjectShortName">data_bus[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/slave_tb/DUT/DL/drive_data">
+         <obj_property name="ElementShortName">drive_data</obj_property>
+         <obj_property name="ObjectShortName">drive_data</obj_property>
       </wvobject>
       <wvobject type="array" fp_name="/slave_tb/DUT/DL/data_rx">
          <obj_property name="ElementShortName">data_rx[7:0]</obj_property>
@@ -92,7 +124,6 @@
    <wvobject type="group" fp_name="group154">
       <obj_property name="label">Core Controller</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="isExpanded"></obj_property>
       <wvobject type="other" fp_name="/slave_tb/DUT/CC/current_state">
          <obj_property name="ElementShortName">current_state</obj_property>
          <obj_property name="ObjectShortName">current_state</obj_property>
@@ -255,6 +286,14 @@
       <obj_property name="label">Passwd Sender</obj_property>
       <obj_property name="DisplayName">label</obj_property>
       <obj_property name="isExpanded"></obj_property>
+      <wvobject type="logic" fp_name="/slave_tb/DUT/PS/rising_trig">
+         <obj_property name="ElementShortName">rising_trig</obj_property>
+         <obj_property name="ObjectShortName">rising_trig</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/slave_tb/DUT/PS/falling_trig">
+         <obj_property name="ElementShortName">falling_trig</obj_property>
+         <obj_property name="ObjectShortName">falling_trig</obj_property>
+      </wvobject>
       <wvobject type="other" fp_name="/slave_tb/DUT/PS/current_state">
          <obj_property name="ElementShortName">current_state</obj_property>
          <obj_property name="ObjectShortName">current_state</obj_property>
@@ -262,10 +301,6 @@
       <wvobject type="other" fp_name="/slave_tb/DUT/PS/next_state">
          <obj_property name="ElementShortName">next_state</obj_property>
          <obj_property name="ObjectShortName">next_state</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/slave_tb/DUT/PS/com_clk">
-         <obj_property name="ElementShortName">com_clk</obj_property>
-         <obj_property name="ObjectShortName">com_clk</obj_property>
       </wvobject>
       <wvobject type="array" fp_name="/slave_tb/DUT/PS/passwd">
          <obj_property name="ElementShortName">passwd[0:439]</obj_property>

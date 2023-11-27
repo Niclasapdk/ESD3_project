@@ -13,14 +13,14 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0.000000000 ms"></ZoomStartTime>
-      <ZoomEndTime time="1,192.294246500 ms"></ZoomEndTime>
-      <Cursor1Time time="1,192.294246500 ms"></Cursor1Time>
+      <ZoomEndTime time="15.580000001 ms"></ZoomEndTime>
+      <Cursor1Time time="1.200000000 ms"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="359"></NameColumnWidth>
-      <ValueColumnWidth column_width="109"></ValueColumnWidth>
+      <ValueColumnWidth column_width="103"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="7" />
+   <WVObjectSize size="8" />
    <wave_markers>
       <marker label="" time="132555000" />
    </wave_markers>
@@ -67,7 +67,6 @@
    <wvobject type="group" fp_name="group140">
       <obj_property name="label">Data Link</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="isExpanded"></obj_property>
       <wvobject type="logic" fp_name="/slave_tb/DUT/DL/r_nw">
          <obj_property name="ElementShortName">r_nw</obj_property>
          <obj_property name="ObjectShortName">r_nw</obj_property>
@@ -105,10 +104,38 @@
          <obj_property name="ObjectShortName">tx_success</obj_property>
       </wvobject>
    </wvobject>
+   <wvobject type="group" fp_name="group170">
+      <obj_property name="label">Hash Expander</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="other" fp_name="/slave_tb/DUT/HE/current_state">
+         <obj_property name="ElementShortName">current_state</obj_property>
+         <obj_property name="ObjectShortName">current_state</obj_property>
+      </wvobject>
+      <wvobject type="other" fp_name="/slave_tb/DUT/HE/next_state">
+         <obj_property name="ElementShortName">next_state</obj_property>
+         <obj_property name="ObjectShortName">next_state</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/slave_tb/DUT/HE/data_in">
+         <obj_property name="ElementShortName">data_in[7:0]</obj_property>
+         <obj_property name="ObjectShortName">data_in[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/slave_tb/DUT/HE/hash">
+         <obj_property name="ElementShortName">hash[255:0]</obj_property>
+         <obj_property name="ObjectShortName">hash[255:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/slave_tb/DUT/HE/rising_trig">
+         <obj_property name="ElementShortName">rising_trig</obj_property>
+         <obj_property name="ObjectShortName">rising_trig</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/slave_tb/DUT/HE/falling_trig">
+         <obj_property name="ElementShortName">falling_trig</obj_property>
+         <obj_property name="ObjectShortName">falling_trig</obj_property>
+      </wvobject>
+   </wvobject>
    <wvobject type="group" fp_name="group145">
       <obj_property name="label">Passwd Expander</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="isExpanded"></obj_property>
       <wvobject type="other" fp_name="/slave_tb/DUT/PE/current_state">
          <obj_property name="ElementShortName">current_state</obj_property>
          <obj_property name="ObjectShortName">current_state</obj_property>
@@ -129,7 +156,6 @@
    <wvobject type="group" fp_name="group154">
       <obj_property name="label">Core Controller</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="isExpanded"></obj_property>
       <wvobject type="other" fp_name="/slave_tb/DUT/CC/current_state">
          <obj_property name="ElementShortName">current_state</obj_property>
          <obj_property name="ObjectShortName">current_state</obj_property>
@@ -295,7 +321,6 @@
    <wvobject type="group" fp_name="group197">
       <obj_property name="label">Passwd Sender</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="isExpanded"></obj_property>
       <wvobject type="logic" fp_name="/slave_tb/DUT/PS/rising_trig">
          <obj_property name="ElementShortName">rising_trig</obj_property>
          <obj_property name="ObjectShortName">rising_trig</obj_property>

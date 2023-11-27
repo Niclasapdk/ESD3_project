@@ -14,21 +14,20 @@ architecture Behavioral of slave_tb is
     signal data_tx  : STD_LOGIC_VECTOR(7 downto 0) := x"00";
     signal data_bus : STD_LOGIC_VECTOR(7 downto 0) := x"ff";
     signal data_rx  : STD_LOGIC_VECTOR(7 downto 0) := x"00";
-    type pkt_ar_t is array(0 to 2) of std_logic_vector(0 to 527);
+    constant MAXPKT : integer := 3;
+    type pkt_ar_t is array(0 to MAXPKT) of std_logic_vector(0 to 527);
     constant pkt : pkt_ar_t := (
+        --x"1a1be6973c2c542457c1921bbf2add1010c241b2fdaccbbd69ab2ff49fda14f964190300000000000000000000000000000000000000000000000000000000000000", -- target_hash setup
+        x"1a74229c2bfd101141533bcc54bf0f2b6ebdc2e5ca2ad55879fe31932bd14241933d0300000000000000000000000000000000000000000000000000000000000000", -- target_hash setup
         x"0249636520637265616d61626364656667686a696b6c6d6e6f708000000000000000000000000000000000000000000000000000000000000000000000000000c803",
         x"02436f6666656561626364656667686a696b6c6d6e6f708000000000000000000000000000000000000000000000000000000000000000000000000000000000b003",
-        x"02414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141414141418000000000000001b803"
+        x"024170706c6561626364656667686a696b6c6d6e6f70800000000000000000000000000000000000000000000000000000000000000000000000000000000000a803"
     );
     constant CLK_PERIOD : time := 333 ns;
     constant COM_CLK_PERIOD : time := 1000 us;
     constant N_CORES : integer := 3;
     signal cores_running : std_logic_vector(0 to N_CORES-1);
     signal flags_out : std_logic_vector(5 downto 0);
-
-
-    --mht
-    signal passwd_received : std_logic := '0';
 begin
     clk <= not clk after CLK_PERIOD/2;
     com_clk <= not com_clk after COM_CLK_PERIOD/2;
@@ -45,8 +44,8 @@ begin
         flags_out     => flags_out
         );
 
-    process(com_clk, flags_out, r_nw, passwd_received)
-        variable pidx : integer range 0 to 2 := 0;
+    process(com_clk, flags_out, r_nw)
+        variable pidx : integer range 0 to MAXPKT := 0;
         variable cur_pkt : std_logic_vector(0 to 527) := pkt(0);
         variable idx : integer := 0;
         variable read_from_slave : std_logic := '0';
@@ -54,19 +53,18 @@ begin
         variable rst : std_logic := '0';
         variable rst_wait : integer := 0;
     begin
-        cur_pkt := pkt(pidx);
         if rising_edge(com_clk) then
             rst_wait := rst_wait + 1;
             if (rst_wait > 450) then
                 rst := '1';
-                passwd_received <= '0';
                 rst_wait := 0;
             end if;
             if (read_from_slave = '0') then
                 if idx = 528 then
                     idx := 0;
-                    if (pidx < 2) then
+                    if (pidx < MAXPKT) then
                         pidx := pidx + 1;
+                        cur_pkt := pkt(pidx);
                     else
                         read_ctr := 0;
                         read_from_slave := '1';
@@ -90,9 +88,6 @@ begin
                     read_ctr := read_ctr + 1;
                 end if;
                 data_bus <= "ZZZZZZZZ";
-                if (data_bus = x"03") then
-                    passwd_received <= '1';
-                end if;
             end if;
         end if;
 

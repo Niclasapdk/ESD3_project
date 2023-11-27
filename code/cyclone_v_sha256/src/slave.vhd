@@ -6,8 +6,7 @@ use work.plusbus_pkg.ALL;
 entity slave is
     generic(
                N_CORES : in integer := 3;
-               slave_addr : in std_logic_vector(1 downto 0) := "10";
-               target_hash : in std_logic_vector(255 downto 0) := x"ec56a99b7b5c725a4a9e194f9fa784d6456272f00a1d44b8dddf6f095745628f" -- 5000 rounds (passwd + salt < maxlen)
+               slave_addr : in std_logic_vector(1 downto 0) := "10"
            );
     port(
         -- inputs
@@ -26,6 +25,7 @@ end slave;
 architecture Behavioral of slave is
     signal passwd : std_logic_vector(511 downto 0);
     signal passwd_valid : std_logic;
+    signal target_hash : std_logic_vector(255 downto 0) := x"ec56a99b7b5c725a4a9e194f9fa784d6456272f00a1d44b8dddf6f095745628f"; -- 5000 rounds (passwd + salt < maxlen)
     signal hash : std_logic_vector(255 downto 0) := (others => '0');
     signal hash_done : std_logic := '0';
     signal rounds : unsigned(31 downto 0) := x"00001388";
@@ -41,6 +41,9 @@ architecture Behavioral of slave is
     signal rising_trig  : std_logic := '0';
     signal falling_trig : std_logic := '0';
     signal reset        : std_logic := '0';
+    signal escape_glob  : std_logic := '0';
+    signal escape_pe    : std_logic := '0';
+    signal escape_he    : std_logic := '0';
 begin
 
     CSM : entity work.clock_sync_mod
@@ -64,7 +67,19 @@ begin
                 data_rx      => data_rx,
                 tx_success   => tx_success
             );
-    reset <= '1' when data_rx = PLUSBUS_RST else '0';
+    reset <= '1' when data_rx = PLUSBUS_RST and escape_glob = '0' else '0';
+    escape_glob <= escape_pe or escape_he;
+
+    HE : entity work.hash_expander
+    port map(
+                clk          => clk,
+                rising_trig  => rising_trig,
+                falling_trig => falling_trig,
+                hash         => target_hash,
+                esc          => escape_he,
+                data_in      => data_rx,
+                reset        => reset
+            );
 
     PE : entity work.passwd_expander
     port map(
@@ -72,6 +87,7 @@ begin
                 rising_trig  => rising_trig,
                 falling_trig => falling_trig,
                 passwd       => passwd,
+                esc          => escape_pe,
                 output_valid => passwd_valid,
                 data_in      => data_rx,
                 reset        => reset

@@ -3,6 +3,7 @@ import serial
 import argparse
 import struct
 import logging
+from time import time, sleep
 
 BR_PKT_LEN = 5
 BR_DATA_IDX = 3
@@ -25,6 +26,8 @@ proto_spec = {
 
         # L3
         "stx":   b"\x02",
+        "hsh":   b"\x1a",
+        "rds":   b"\x07",
         "etx":   b"\x03",
         "dle":   b"\x10",
         "rst":   b"\x11",
@@ -37,22 +40,28 @@ class Orchestrator:
         if not self.noserial:
             self.serial = serial.Serial(port, baudrate=baudrate, timeout=0.5)
         self.proto_spec = proto_spec
-        self.wordlist = self.read_wordlist(wordlist)
-        self.hashlist = self.read_hashlist(hashlist)
+        self.passwds = self.read_wordlist(wordlist)
+        self.hashes = self.read_hashlist(hashlist)
         self.salts = [b"abcdefghjiklmnop"]
         self.txQueueCeiling = ceiling
         self.nodes = nodes
-        self.reset_nodes()
 
     def reset_nodes(self):
         for node in self.nodes:
+            logging.info(f"Resetting node {node}")
             self.send_to_node(node, self.proto_spec["rst"])
             self.send_to_node(node, self.proto_spec["nop"])
+
+    def setup_nodes(self, rounds, hash):
+        self.reset_nodes()
+        for node in self.nodes:
+            self.schick_hash(node, hash)
+            self.schick_rounds(node, rounds)
 
     def read_hashlist(self, hashlist: str):
         # TODO: parse hashlist
         with open(hashlist, "r") as f:
-            return list(map(lambda x: x.strip().encode(), f.readlines()))
+            return list(map(lambda x: bytes.fromhex(x.strip()), f.readlines()))
 
     def read_wordlist(self, wordlist: str):
         with open(wordlist, "r") as f:
@@ -81,6 +90,7 @@ class Orchestrator:
             else:
                 pass
 
+    # Will return None if no data is received
     def read_from_node(self, node_addr):
         if not self.noserial:
             data = None
@@ -116,20 +126,35 @@ class Orchestrator:
             y = ord(y)
         return x == y
 
-    def escape_passwd(self, passwd: bytes):
-        passwd = passwd.replace(self.proto_spec["dle"], self.proto_spec["dle"] + self.proto_spec["dle"])
-        passwd = passwd.replace(self.proto_spec["stx"], self.proto_spec["dle"] + self.proto_spec["stx"])
-        passwd = passwd.replace(self.proto_spec["etx"], self.proto_spec["dle"] + self.proto_spec["etx"])
-        return passwd
+    def escape_l3(self, data: bytes):
+        data = data.replace(self.proto_spec["dle"], self.proto_spec["dle"] + self.proto_spec["dle"])
+        data = data.replace(self.proto_spec["stx"], self.proto_spec["dle"] + self.proto_spec["stx"])
+        data = data.replace(self.proto_spec["etx"], self.proto_spec["dle"] + self.proto_spec["etx"])
+        data = data.replace(self.proto_spec["hsh"], self.proto_spec["dle"] + self.proto_spec["hsh"])
+        data = data.replace(self.proto_spec["rds"], self.proto_spec["dle"] + self.proto_spec["rds"])
+        data = data.replace(self.proto_spec["rst"], self.proto_spec["dle"] + self.proto_spec["rst"])
+        return data
 
     def schick_passwort(self, node_addr: int, passwd: bytes, salz: bytes):
         if len(passwd) > 39 or len(salz) != 16:
             logging.error("Too long password oder du hasst salz")
             return
         padded_passwd = self.sha256_pad(passwd+salz)
-        passwd_pkt = self.proto_spec["stx"] + self.escape_passwd(padded_passwd) + self.proto_spec["etx"]
+        passwd_pkt = self.proto_spec["stx"] + self.escape_l3(padded_passwd) + self.proto_spec["etx"]
+        logging.info(f"Trying salted passwd: {padded_passwd}, {len(padded_passwd)}")
         logging.info(f"Sending password packet: {passwd_pkt.hex()} to node {node_addr}")
         self.send_to_node(node_addr, passwd_pkt)
+
+    def schick_hash(self, node_addr: int, hash: bytes):
+        pkt = self.proto_spec["hsh"] + self.escape_l3(hash) + self.proto_spec["etx"]
+        logging.info(f"Sending hash packet: {pkt.hex()} to node {node_addr}")
+        self.send_to_node(node_addr, pkt)
+
+    def schick_rounds(self, node_addr: int, rounds: int):
+        logging.warning(f"Ignoring rounds={rounds} packet as sending rounds is not implemented yet")
+        #pkt = self.proto_spec["rds"] + self.escape_l3(int.to_bytes(rounds).ljust(4, b"\x00")) + self.proto_spec["etx"]
+        #logging.info(f"Sending hash packet: {pkt.hex()} to node {node_addr}")
+        #self.send_to_node(node_addr, pkt)
 
     def check_flags_and_find_ready_node(self):
         ready_node = None
@@ -144,7 +169,17 @@ class Orchestrator:
                             ready_node = node
                     elif self.cmp_byte_with_data(data, self.proto_spec["stx"]):
                         self.receive_passwd(node)
+                        return -1
         return ready_node
+
+    def wait_for_nodes(self, t):
+        logging.info(f"Waiting {t} s for nodes to finish")
+        tstart = time()
+        while time() - tstart < t:
+            sleep(t/10)
+            for node in self.nodes:
+                if self.receive_passwd(node) is not None:
+                    return
 
     def receive_passwd(self, node_addr: int):
         if self.noserial:
@@ -153,6 +188,10 @@ class Orchestrator:
         passwd = b""
         data = self.read_from_node(node_addr)
         while not self.cmp_byte_with_data(data, self.proto_spec["etx"]):
+            if data is None:
+                continue
+            if data < 0x20 or data > 0x7f:
+                return None
             if self.cmp_byte_with_data(data, 0x80) or data is None:
                 self.fuck("pls reset fpga cuz it's acting up")
             passwd += bytes([data])
@@ -162,11 +201,22 @@ class Orchestrator:
         return passwd
 
     def ruuuuuunnn(self):
-        for salz in self.salts:
-            for p in self.wordlist:
-                logging.info(f"Password candidate: {p.decode()}")
-                node = self.check_flags_and_find_ready_node()
-                self.schick_passwort(node, p, salz)
+        for hash in self.hashes:
+            passwd_found = False
+            logging.info(f"Cracking hash: {hash.hex()}")
+            self.setup_nodes(5000, hash)
+            for salz in self.salts:
+                if passwd_found == True:
+                    break
+                for p in self.passwds:
+                    logging.info(f"Password candidate: {p.decode()}")
+                    node = self.check_flags_and_find_ready_node()
+                    if node == -1:
+                        passwd_found = True
+                        break
+                    self.schick_passwort(node, p, salz)
+                if not passwd_found:
+                    self.wait_for_nodes(5)
 
 def main():
     parser = argparse.ArgumentParser(description="PlusBUS Inc. hasher cracker orchestrator 9000")
@@ -183,9 +233,6 @@ def main():
     logging.basicConfig(level=args.loglevel)
     orch = Orchestrator(args.port, args.baudrate, proto_spec, args.wordlist, args.hashlist, args.ceiling, args.addrs)
     orch.ruuuuuunnn()
-    #while True:
-        #for node in args.addrs:
-            #orch.read_from_node(node)
 
 if __name__ == "__main__":
     main()

@@ -1,5 +1,5 @@
 --IP Functional Simulation Model
---VERSION_BEGIN 22.1 cbx_mgl 2023:07:21:07:12:36:SC cbx_simgen 2023:07:21:07:12:21:SC  VERSION_END
+--VERSION_BEGIN 22.1 cbx_mgl 2023:07:20:14:14:26:SC cbx_simgen 2023:07:20:14:03:03:SC  VERSION_END
 
 
 -- Copyright (C) 2023  Intel Corporation. All rights reserved.
@@ -231,7 +231,7 @@
 		n_cnt_odd_div_duty_en => "false",
 		number_of_clocks => 1,
 		operation_mode => "direct",
-		output_clock_frequency0 => "10.000000 MHz",
+		output_clock_frequency0 => "6.250000 MHz",
 		output_clock_frequency1 => "0 MHz",
 		output_clock_frequency10 => "0 MHz",
 		output_clock_frequency11 => "0 MHz",

@@ -94,7 +94,13 @@ set_output_delay -add_delay -max -clock [get_clocks {clk50}]  1.000 [get_ports {
 set_output_delay -add_delay -max -clock [get_clocks {clk50}]  1.000 [get_ports {blink}]
 set_output_delay -add_delay -max -clock [get_clocks {clk50}]  1.000 [get_ports {flags_out[0]}]
 set_output_delay -add_delay -max -clock [get_clocks {clk50}]  1.000 [get_ports {flags_out[1]}]
+set_output_delay -add_delay -max -clock [get_clocks {clk50}]  1.000 [get_ports {flags_out[2]}]
+set_output_delay -add_delay -max -clock [get_clocks {clk50}]  1.000 [get_ports {flags_out[3]}]
+set_output_delay -add_delay -max -clock [get_clocks {clk50}]  1.000 [get_ports {flags_out[4]}]
+set_output_delay -add_delay -max -clock [get_clocks {clk50}]  1.000 [get_ports {flags_out[5]}]
 set_output_delay -add_delay -max -clock [get_clocks {clk50}]  1.000 [get_ports {cores_running[0]}]
+set_output_delay -add_delay -max -clock [get_clocks {clk50}]  1.000 [get_ports {cores_running[1]}]
+set_output_delay -add_delay -max -clock [get_clocks {clk50}]  1.000 [get_ports {cores_running[2]}]
 
 
 #**************************************************************

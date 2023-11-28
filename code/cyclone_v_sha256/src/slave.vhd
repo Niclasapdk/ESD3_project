@@ -44,6 +44,7 @@ architecture Behavioral of slave is
     signal escape_glob  : std_logic := '0';
     signal escape_pe    : std_logic := '0';
     signal escape_he    : std_logic := '0';
+    signal escape_re    : std_logic := '0';
 begin
 
     CSM : entity work.clock_sync_mod
@@ -68,7 +69,7 @@ begin
                 tx_success   => tx_success
             );
     reset <= '1' when data_rx = PLUSBUS_RST and escape_glob = '0' else '0';
-    escape_glob <= escape_pe or escape_he;
+    escape_glob <= escape_pe or escape_he or escape_re;
 
     HE : entity work.hash_expander
     port map(
@@ -77,6 +78,17 @@ begin
                 falling_trig => falling_trig,
                 hash         => target_hash,
                 esc          => escape_he,
+                data_in      => data_rx,
+                reset        => reset
+            );
+
+    RE : entity work.rounds_expander
+    port map(
+                clk          => clk,
+                rising_trig  => rising_trig,
+                falling_trig => falling_trig,
+                rounds       => rounds,
+                esc          => escape_re,
                 data_in      => data_rx,
                 reset        => reset
             );

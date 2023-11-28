@@ -151,10 +151,9 @@ class Orchestrator:
         self.send_to_node(node_addr, pkt)
 
     def schick_rounds(self, node_addr: int, rounds: int):
-        logging.warning(f"Ignoring rounds={rounds} packet as sending rounds is not implemented yet")
-        #pkt = self.proto_spec["rds"] + self.escape_l3(int.to_bytes(rounds).ljust(4, b"\x00")) + self.proto_spec["etx"]
-        #logging.info(f"Sending hash packet: {pkt.hex()} to node {node_addr}")
-        #self.send_to_node(node_addr, pkt)
+        pkt = self.proto_spec["rds"] + self.escape_l3(int.to_bytes(rounds, 4)[::-1]) + self.proto_spec["etx"]
+        logging.info(f"Sending rounds packet: {pkt.hex()} to node {node_addr}")
+        self.send_to_node(node_addr, pkt)
 
     def check_flags_and_find_ready_node(self):
         ready_node = None

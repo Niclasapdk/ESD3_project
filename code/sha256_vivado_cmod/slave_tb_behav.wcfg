@@ -12,15 +12,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0.000000000 ms"></ZoomStartTime>
-      <ZoomEndTime time="15.580000001 ms"></ZoomEndTime>
-      <Cursor1Time time="1.200000000 ms"></Cursor1Time>
+      <ZoomStartTime time="236.466231026 ms"></ZoomStartTime>
+      <ZoomEndTime time="277.108627195 ms"></ZoomEndTime>
+      <Cursor1Time time="270.334894500 ms"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="359"></NameColumnWidth>
-      <ValueColumnWidth column_width="103"></ValueColumnWidth>
+      <ValueColumnWidth column_width="97"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="8" />
+   <WVObjectSize size="9" />
    <wave_markers>
       <marker label="" time="132555000" />
    </wave_markers>
@@ -107,7 +107,6 @@
    <wvobject type="group" fp_name="group170">
       <obj_property name="label">Hash Expander</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="isExpanded"></obj_property>
       <wvobject type="other" fp_name="/slave_tb/DUT/HE/current_state">
          <obj_property name="ElementShortName">current_state</obj_property>
          <obj_property name="ObjectShortName">current_state</obj_property>
@@ -121,14 +120,50 @@
          <obj_property name="ObjectShortName">data_in[7:0]</obj_property>
       </wvobject>
       <wvobject type="array" fp_name="/slave_tb/DUT/HE/hash">
-         <obj_property name="ElementShortName">hash[255:0]</obj_property>
-         <obj_property name="ObjectShortName">hash[255:0]</obj_property>
+         <obj_property name="ElementShortName">hash[0:255]</obj_property>
+         <obj_property name="ObjectShortName">hash[0:255]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/slave_tb/DUT/HE/esc">
+         <obj_property name="ElementShortName">esc</obj_property>
+         <obj_property name="ObjectShortName">esc</obj_property>
       </wvobject>
       <wvobject type="logic" fp_name="/slave_tb/DUT/HE/rising_trig">
          <obj_property name="ElementShortName">rising_trig</obj_property>
          <obj_property name="ObjectShortName">rising_trig</obj_property>
       </wvobject>
       <wvobject type="logic" fp_name="/slave_tb/DUT/HE/falling_trig">
+         <obj_property name="ElementShortName">falling_trig</obj_property>
+         <obj_property name="ObjectShortName">falling_trig</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group263">
+      <obj_property name="label">Rounds Expander</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="other" fp_name="/slave_tb/DUT/RE/current_state">
+         <obj_property name="ElementShortName">current_state</obj_property>
+         <obj_property name="ObjectShortName">current_state</obj_property>
+      </wvobject>
+      <wvobject type="other" fp_name="/slave_tb/DUT/RE/next_state">
+         <obj_property name="ElementShortName">next_state</obj_property>
+         <obj_property name="ObjectShortName">next_state</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/slave_tb/DUT/RE/data_in">
+         <obj_property name="ElementShortName">data_in[7:0]</obj_property>
+         <obj_property name="ObjectShortName">data_in[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/slave_tb/DUT/RE/rounds">
+         <obj_property name="ElementShortName">rounds[0:31]</obj_property>
+         <obj_property name="ObjectShortName">rounds[0:31]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/slave_tb/DUT/RE/esc">
+         <obj_property name="ElementShortName">esc</obj_property>
+         <obj_property name="ObjectShortName">esc</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/slave_tb/DUT/RE/rising_trig">
+         <obj_property name="ElementShortName">rising_trig</obj_property>
+         <obj_property name="ObjectShortName">rising_trig</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/slave_tb/DUT/RE/falling_trig">
          <obj_property name="ElementShortName">falling_trig</obj_property>
          <obj_property name="ObjectShortName">falling_trig</obj_property>
       </wvobject>

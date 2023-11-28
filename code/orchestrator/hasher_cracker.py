@@ -61,7 +61,7 @@ class Orchestrator:
     def read_hashlist(self, hashlist: str):
         # TODO: parse hashlist
         with open(hashlist, "r") as f:
-            return list(map(lambda x: bytes.fromhex(x.strip()), f.readlines()))
+            return list(map(lambda x: (int(x.split("$")[0]), bytes.fromhex(x.split("$")[1].strip())), f.readlines()))
 
     def read_wordlist(self, wordlist: str):
         with open(wordlist, "r") as f:
@@ -201,9 +201,10 @@ class Orchestrator:
 
     def ruuuuuunnn(self):
         for hash in self.hashes:
+            (rounds, hashbytes) = hash
             passwd_found = False
-            logging.info(f"Cracking hash: {hash.hex()}")
-            self.setup_nodes(5000, hash)
+            logging.info(f"Cracking hash: {hashbytes.hex()}")
+            self.setup_nodes(rounds, hashbytes)
             for salz in self.salts:
                 if passwd_found == True:
                     break

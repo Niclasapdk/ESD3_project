@@ -18,7 +18,7 @@ def main():
     inp = sys.stdin.read()
 
     result = sha256_n_times(inp, args.rounds)
-    print(result)
+    print(f"{args.rounds}${result}")
 
 if __name__ == "__main__":
     main()

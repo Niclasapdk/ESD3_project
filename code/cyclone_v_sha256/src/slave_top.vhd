@@ -18,6 +18,7 @@ entity slave_top is
         -- outputs
         cores_running : out std_logic_vector(0 to N_CORES-1);
         flags_out     : out std_logic_vector(5 downto 0);
+        led_7_segment : out std_logic_vector(41 downto 0);
         blink         : out std_logic -- sign-of-life
         );
 end slave_top;
@@ -49,6 +50,12 @@ begin
     port map(
                 clk => clk,
                 blink => blink
+            );
+
+    HAHA : entity work.led_7_segment
+    port map(
+                clk => clk,
+                led_7_segment => led_7_segment
             );
 
     SLAVE : entity work.slave

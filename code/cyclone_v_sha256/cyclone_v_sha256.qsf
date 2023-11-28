@@ -144,6 +144,7 @@ set_global_assignment -name ADVANCED_PHYSICAL_OPTIMIZATION OFF
 set_global_assignment -name ENABLE_BENEFICIAL_SKEW_OPTIMIZATION OFF
 set_global_assignment -name OPTIMIZE_HOLD_TIMING OFF
 set_global_assignment -name OPTIMIZE_TIMING OFF
+set_global_assignment -name VHDL_FILE src/led_7_segment.vhd
 set_global_assignment -name VHDL_FILE src/rounds_expander.vhd
 set_global_assignment -name VHDL_FILE src/hash_expander.vhd
 set_global_assignment -name VHDL_FILE src/slave.vhd

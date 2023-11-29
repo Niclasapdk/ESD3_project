@@ -1,0 +1,27 @@
+@startuml
+!theme plain
+
+skin rose
+
+title Message Sender
+
+state RUNNING {
+IDLE:Awaiting password.
+START:Transmit start delimiter.
+DATA:Transmit message byte.\nGo to next byte if orchestrator reads from this node.
+STOP:Transmit stop delimiter.
+  IDLE -l-> IDLE: else
+  IDLE ---> START:if password_valid_latch = 1
+  START <--- START : else
+  START --> DATA
+  DATA -u-> STOP: if end of buffer
+  DATA -u-> STOP: if next byte = start of padding
+  DATA <-u- DATA: else
+  STOP -u-> IDLE
+}
+[*] --> IDLE
+
+RESET:
+RUNNING -l-> RESET: if reset = 1
+RESET -l-> IDLE
+@enduml

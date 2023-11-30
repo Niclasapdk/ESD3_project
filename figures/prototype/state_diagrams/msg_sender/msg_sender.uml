@@ -15,7 +15,7 @@ STOP:Transmit stop delimiter.
   START <--- START : else
   START --> DATA
   DATA -u-> STOP: if end of buffer
-  DATA -u-> STOP: if next byte = start of padding
+  DATA -u-> STOP: if next byte =\nstart of padding
   DATA <-u- DATA: else
   STOP -u-> IDLE
 }

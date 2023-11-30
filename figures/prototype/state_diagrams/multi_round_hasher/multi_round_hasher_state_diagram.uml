@@ -1,0 +1,27 @@
+@startuml
+!theme plain
+
+skin rose
+
+title Multi Round Hasher
+IDLE_RESET:
+state RUNNING {
+START_CORE:
+RUNNING_CORE_READY:Intiate core.
+RUNNING_CORE_WAIT: Increment wait counter until overflow to\nintroduce small delay.
+DONE:
+DONE_CORE_WAIT: Increment wait counter until overflow to\nintroduce small delay.
+IDLE_RESET <- IDLE_RESET: else
+START_CORE --> RUNNING_CORE_WAIT
+RUNNING_CORE_WAIT --> DONE_CORE_WAIT: if rounds_internal = rounds_ctr
+RUNNING_CORE_WAIT --> RUNNING_CORE_READY: elsif core_done =\n1 and wait_ctr = 000
+RUNNING_CORE_WAIT <- RUNNING_CORE_WAIT: else
+RUNNING_CORE_READY -> RUNNING_CORE_WAIT
+DONE_CORE_WAIT --> DONE: if core_done = 1 and wait_ctr 000
+DONE_CORE_WAIT <- DONE_CORE_WAIT: else
+DONE --> DONE
+}
+[*] --> IDLE_RESET
+IDLE_RESET --> START_CORE: if start = 1
+RUNNING --> IDLE_RESET: if reset = 1
+@enduml

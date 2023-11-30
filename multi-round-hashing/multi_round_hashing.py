@@ -2,10 +2,11 @@
 import sys
 import argparse
 import hashlib
+from tqdm import tqdm
 
 def sha256_n_times(input_string, n):
     hashed_value = input_string.encode('utf-8')  # Convert the input string to bytes
-    for _ in range(n):
+    for _ in tqdm(range(n)):
         hashed_value = hashlib.sha256(hashed_value).digest()
     return hashed_value.hex()
 

@@ -14,7 +14,7 @@ except:
     log = False
 
 # Define constants
-n_rounds = 5000
+n_rounds = 1
 f_clk = 100e6
 passwd_len = 39
 hash_cycles = 71

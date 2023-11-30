@@ -1,0 +1,2526 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg2"
+   width="774.71997"
+   height="988.15997"
+   viewBox="0 0 774.71997 988.15997"
+   sodipodi:docname="system-overview.pdf"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs6">
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath16">
+      <path
+         d="M 0,0 H 2420.8333 V 3087.0085 H 0 Z"
+         clip-rule="evenodd"
+         id="path14" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath28">
+      <path
+         d="M 0,0 H 2420.8333 V 3078.0864 H 0 Z"
+         clip-rule="evenodd"
+         id="path26" />
+    </clipPath>
+  </defs>
+  <sodipodi:namedview
+     id="namedview4"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1" />
+  <g
+     id="g8"
+     inkscape:groupmode="layer"
+     inkscape:label="system-overview"
+     transform="matrix(0.31999998,0,0,0.31999998,0,2.4704e-5)">
+    <g
+       id="g10">
+      <g
+         id="g12"
+         clip-path="url(#clipPath16)">
+        <g
+           id="g18"
+           transform="scale(2.9739966)">
+          <path
+             d="M 0,0 H 814 V 1038 H 0 Z"
+             style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path20" />
+        </g>
+      </g>
+    </g>
+    <g
+       id="g22">
+      <g
+         id="g24"
+         clip-path="url(#clipPath28)">
+        <g
+           id="g30"
+           transform="matrix(2.9739966,0,0,2.9739966,1.4869983,1.4869983)">
+          <path
+             d="M 266,26 V 6 h 540.01001 v 20"
+             style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path32" />
+          <path
+             d="M 266,26 V 6 h 540.01001 v 20"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path34" />
+          <path
+             d="M 266,26 V 326 H 806.01001 V 26"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path36" />
+          <path
+             d="M 266,26 H 806.01001"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path38" />
+        </g>
+        <g
+           id="g40"
+           transform="scale(2.9739966)">
+          <text
+             xml:space="preserve"
+             transform="translate(516,21)"
+             style="font-variant:normal;font-weight:bold;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans-Bold;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text44"><tspan
+               x="0 8.6660156 15.996094 23.326172 30 33.333984"
+               y="0"
+               sodipodi:role="line"
+               id="tspan42">Node 1</tspan></text>
+        </g>
+        <g
+           id="g46"
+           transform="matrix(2.9739966,0,0,2.9739966,1.4869983,1.4869983)">
+          <path
+             d="M 476,36 H 596 V 316 H 476 Z"
+             style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path48" />
+          <path
+             d="M 476,36 H 596 V 316 H 476 Z"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path50" />
+        </g>
+        <g
+           id="g52"
+           transform="scale(2.9740264)">
+          <text
+             xml:space="preserve"
+             transform="translate(490.57813,182)"
+             style="font-variant:normal;font-weight:normal;font-size:15px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text56"><tspan
+               x="0 10.83252 21.665039 32.497559 36.665039 49.160156 57.502441 69.997559 78.339844 83.334961"
+               y="0"
+               sodipodi:role="line"
+               id="tspan54">DDR Memory</tspan></text>
+        </g>
+        <g
+           id="g58"
+           transform="matrix(2.9739966,0,0,2.9739966,1.4869983,1.4869983)">
+          <path
+             d="M 276,36 H 396 V 316 H 276 Z"
+             style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path60" />
+          <path
+             d="M 276,36 H 396 V 316 H 276 Z"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path62" />
+        </g>
+        <g
+           id="g64"
+           transform="scale(2.9740264)">
+          <text
+             xml:space="preserve"
+             transform="translate(283.89063,173)"
+             style="font-variant:normal;font-weight:normal;font-size:15px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text68"><tspan
+               x="0 10.83252 19.174805 31.669922 44.165039 52.507324 60.849609 64.182129 71.682129 80.024414 84.191895 87.524414 95.866699"
+               y="0"
+               sodipodi:role="line"
+               id="tspan66">Communication</tspan></text>
+          <text
+             xml:space="preserve"
+             transform="translate(303.48438,191)"
+             style="font-variant:normal;font-weight:normal;font-size:15px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text72"><tspan
+               x="0 10.83252 19.174805 27.51709 31.68457 36.679688 45.021973 48.354492 51.687012 60.029297"
+               y="0"
+               sodipodi:role="line"
+               id="tspan70">Controller</tspan></text>
+        </g>
+        <g
+           id="g74"
+           transform="matrix(2.9739966,0,0,2.9739966,1.4869983,1.4869983)">
+          <path
+             d="M 676.01001,59 V 36 h 120 v 23"
+             style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path76" />
+          <path
+             d="M 676.01001,59 V 36 h 120 v 23"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path78" />
+          <path
+             d="m 676.01001,59 v 257 h 120 V 59"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path80" />
+          <path
+             d="m 676.01001,59 h 120"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path82" />
+        </g>
+        <g
+           id="g84"
+           transform="scale(2.9740264)">
+          <text
+             xml:space="preserve"
+             transform="translate(719.32813,52)"
+             style="font-variant:normal;font-weight:bold;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans-Bold;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text88"><tspan
+               x="0 7.3300781 15.333984 24.667969"
+               y="0"
+               sodipodi:role="line"
+               id="tspan86">FPGA</tspan></text>
+        </g>
+        <g
+           id="g90"
+           transform="matrix(2.9739966,0,0,2.9739966,1.4869983,1.4869983)">
+          <path
+             d="M 686.01001,89 V 66 h 100 v 23"
+             style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path92" />
+          <path
+             d="M 686.01001,89 V 66 h 100 v 23"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path94" />
+          <path
+             d="m 686.01001,89 v 217 h 100 V 89"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path96" />
+          <path
+             d="m 686.01001,89 h 100"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path98" />
+        </g>
+        <g
+           id="g100"
+           transform="scale(2.9740264)">
+          <text
+             xml:space="preserve"
+             transform="translate(691.98438,82)"
+             style="font-variant:normal;font-weight:bold;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans-Bold;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text104"><tspan
+               x="0 8.6660156 15.996094 20.666016 27.339844 30.673828 39.339844 46.669922 54 57.996094 62.666016 69.996094 73.330078 76.664062 83.337891"
+               y="0"
+               sodipodi:role="line"
+               id="tspan102">Core Controller</tspan></text>
+        </g>
+        <g
+           id="g106"
+           transform="matrix(2.9739966,0,0,2.9739966,1.4869983,1.4869983)">
+          <path
+             d="m 696.01001,106 h 40 v 30 h -40 z"
+             style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path108" />
+          <path
+             d="m 696.01001,106 h 40 v 30 h -40 z"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path110" />
+        </g>
+        <g
+           id="g112"
+           transform="scale(2.9740264)">
+          <text
+             xml:space="preserve"
+             transform="translate(701.98438,118)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text116"><tspan
+               x="0 8.6660156 15.339844 21.339844"
+               y="0"
+               sodipodi:role="line"
+               id="tspan114">Hash</tspan></text>
+          <text
+             xml:space="preserve"
+             transform="translate(697.98438,133)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text120"><tspan
+               x="0 8.6660156 15.339844 19.335938 26.009766 29.34375"
+               y="0"
+               sodipodi:role="line"
+               id="tspan118">Core 1</tspan></text>
+        </g>
+        <g
+           id="g122"
+           transform="matrix(2.9739966,0,0,2.9739966,1.4869983,1.4869983)">
+          <path
+             d="m 736.01001,106 h 40 v 30 h -40 z"
+             style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path124" />
+          <path
+             d="m 736.01001,106 h 40 v 30 h -40 z"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path126" />
+        </g>
+        <g
+           id="g128"
+           transform="scale(2.9740264)">
+          <text
+             xml:space="preserve"
+             transform="translate(741.98438,118)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text132"><tspan
+               x="0 8.6660156 15.339844 21.339844"
+               y="0"
+               sodipodi:role="line"
+               id="tspan130">Hash</tspan></text>
+          <text
+             xml:space="preserve"
+             transform="translate(737.98438,133)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text136"><tspan
+               x="0 8.6660156 15.339844 19.335938 26.009766 29.34375"
+               y="0"
+               sodipodi:role="line"
+               id="tspan134">Core 2</tspan></text>
+        </g>
+        <g
+           id="g138"
+           transform="matrix(2.9739966,0,0,2.9739966,1.4869983,1.4869983)">
+          <path
+             d="m 696.01001,136 h 40 v 30 h -40 z"
+             style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path140" />
+          <path
+             d="m 696.01001,136 h 40 v 30 h -40 z"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path142" />
+        </g>
+        <g
+           id="g144"
+           transform="scale(2.9740264)">
+          <text
+             xml:space="preserve"
+             transform="translate(701.98438,148)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text148"><tspan
+               x="0 8.6660156 15.339844 21.339844"
+               y="0"
+               sodipodi:role="line"
+               id="tspan146">Hash</tspan></text>
+          <text
+             xml:space="preserve"
+             transform="translate(697.98438,163)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text152"><tspan
+               x="0 8.6660156 15.339844 19.335938 26.009766 29.34375 32.677734"
+               y="0"
+               sodipodi:role="line"
+               id="tspan150">Core ..</tspan></text>
+        </g>
+        <g
+           id="g154"
+           transform="matrix(2.9739966,0,0,2.9739966,1.4869983,1.4869983)">
+          <path
+             d="m 736.01001,136 h 40 v 30 h -40 z"
+             style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path156" />
+          <path
+             d="m 736.01001,136 h 40 v 30 h -40 z"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path158" />
+        </g>
+        <g
+           id="g160"
+           transform="scale(2.9740264)">
+          <text
+             xml:space="preserve"
+             transform="translate(741.98438,148)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text164"><tspan
+               x="0 8.6660156 15.339844 21.339844"
+               y="0"
+               sodipodi:role="line"
+               id="tspan162">Hash</tspan></text>
+          <text
+             xml:space="preserve"
+             transform="translate(737.98438,163)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text168"><tspan
+               x="0 8.6660156 15.339844 19.335938 26.009766 29.34375 32.677734"
+               y="0"
+               sodipodi:role="line"
+               id="tspan166">Core ..</tspan></text>
+        </g>
+        <g
+           id="g170"
+           transform="matrix(2.9739966,0,0,2.9739966,1.4869983,1.4869983)">
+          <path
+             d="m 696.01001,166 h 40 v 30 h -40 z"
+             style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path172" />
+          <path
+             d="m 696.01001,166 h 40 v 30 h -40 z"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path174" />
+        </g>
+        <g
+           id="g176"
+           transform="scale(2.9740264)">
+          <text
+             xml:space="preserve"
+             transform="translate(701.98438,178)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text180"><tspan
+               x="0 8.6660156 15.339844 21.339844"
+               y="0"
+               sodipodi:role="line"
+               id="tspan178">Hash</tspan></text>
+          <text
+             xml:space="preserve"
+             transform="translate(697.98438,193)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text184"><tspan
+               x="0 8.6660156 15.339844 19.335938 26.009766 29.34375 32.677734"
+               y="0"
+               sodipodi:role="line"
+               id="tspan182">Core ..</tspan></text>
+        </g>
+        <g
+           id="g186"
+           transform="matrix(2.9739966,0,0,2.9739966,1.4869983,1.4869983)">
+          <path
+             d="m 736.01001,166 h 40 v 30 h -40 z"
+             style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path188" />
+          <path
+             d="m 736.01001,166 h 40 v 30 h -40 z"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path190" />
+        </g>
+        <g
+           id="g192"
+           transform="scale(2.9740264)">
+          <text
+             xml:space="preserve"
+             transform="translate(741.98438,178)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text196"><tspan
+               x="0 8.6660156 15.339844 21.339844"
+               y="0"
+               sodipodi:role="line"
+               id="tspan194">Hash</tspan></text>
+          <text
+             xml:space="preserve"
+             transform="translate(737.98438,193)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text200"><tspan
+               x="0 8.6660156 15.339844 19.335938 26.009766 29.34375 32.677734"
+               y="0"
+               sodipodi:role="line"
+               id="tspan198">Core ..</tspan></text>
+        </g>
+        <g
+           id="g202"
+           transform="matrix(2.9739966,0,0,2.9739966,1.4869983,1.4869983)">
+          <path
+             d="m 696.01001,196 h 40 v 30 h -40 z"
+             style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path204" />
+          <path
+             d="m 696.01001,196 h 40 v 30 h -40 z"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path206" />
+        </g>
+        <g
+           id="g208"
+           transform="scale(2.9740264)">
+          <text
+             xml:space="preserve"
+             transform="translate(701.98438,208)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text212"><tspan
+               x="0 8.6660156 15.339844 21.339844"
+               y="0"
+               sodipodi:role="line"
+               id="tspan210">Hash</tspan></text>
+          <text
+             xml:space="preserve"
+             transform="translate(697.98438,223)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text216"><tspan
+               x="0 8.6660156 15.339844 19.335938 26.009766 29.34375 32.677734"
+               y="0"
+               sodipodi:role="line"
+               id="tspan214">Core ..</tspan></text>
+        </g>
+        <g
+           id="g218"
+           transform="matrix(2.9739966,0,0,2.9739966,1.4869983,1.4869983)">
+          <path
+             d="m 736.01001,196 h 40 v 30 h -40 z"
+             style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path220" />
+          <path
+             d="m 736.01001,196 h 40 v 30 h -40 z"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path222" />
+        </g>
+        <g
+           id="g224"
+           transform="scale(2.9740264)">
+          <text
+             xml:space="preserve"
+             transform="translate(741.98438,208)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text228"><tspan
+               x="0 8.6660156 15.339844 21.339844"
+               y="0"
+               sodipodi:role="line"
+               id="tspan226">Hash</tspan></text>
+          <text
+             xml:space="preserve"
+             transform="translate(737.98438,223)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text232"><tspan
+               x="0 8.6660156 15.339844 19.335938 26.009766 29.34375 32.677734"
+               y="0"
+               sodipodi:role="line"
+               id="tspan230">Core ..</tspan></text>
+        </g>
+        <g
+           id="g234"
+           transform="matrix(2.9739966,0,0,2.9739966,1.4869983,1.4869983)">
+          <path
+             d="m 696.01001,226 h 40 v 30 h -40 z"
+             style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path236" />
+          <path
+             d="m 696.01001,226 h 40 v 30 h -40 z"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path238" />
+        </g>
+        <g
+           id="g240"
+           transform="scale(2.9740264)">
+          <text
+             xml:space="preserve"
+             transform="translate(701.98438,238)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text244"><tspan
+               x="0 8.6660156 15.339844 21.339844"
+               y="0"
+               sodipodi:role="line"
+               id="tspan242">Hash</tspan></text>
+          <text
+             xml:space="preserve"
+             transform="translate(697.98438,253)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text248"><tspan
+               x="0 8.6660156 15.339844 19.335938 26.009766 29.34375 32.677734"
+               y="0"
+               sodipodi:role="line"
+               id="tspan246">Core ..</tspan></text>
+        </g>
+        <g
+           id="g250"
+           transform="matrix(2.9739966,0,0,2.9739966,1.4869983,1.4869983)">
+          <path
+             d="m 736.01001,226 h 40 v 30 h -40 z"
+             style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path252" />
+          <path
+             d="m 736.01001,226 h 40 v 30 h -40 z"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path254" />
+        </g>
+        <g
+           id="g256"
+           transform="scale(2.9740264)">
+          <text
+             xml:space="preserve"
+             transform="translate(741.98438,238)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text260"><tspan
+               x="0 8.6660156 15.339844 21.339844"
+               y="0"
+               sodipodi:role="line"
+               id="tspan258">Hash</tspan></text>
+          <text
+             xml:space="preserve"
+             transform="translate(737.98438,253)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text264"><tspan
+               x="0 8.6660156 15.339844 19.335938 26.009766 29.34375 32.677734"
+               y="0"
+               sodipodi:role="line"
+               id="tspan262">Core ..</tspan></text>
+        </g>
+        <g
+           id="g266"
+           transform="matrix(2.9739966,0,0,2.9739966,1.4869983,1.4869983)">
+          <path
+             d="m 696.01001,256 h 40 v 30 h -40 z"
+             style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path268" />
+          <path
+             d="m 696.01001,256 h 40 v 30 h -40 z"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path270" />
+        </g>
+        <g
+           id="g272"
+           transform="scale(2.9740264)">
+          <text
+             xml:space="preserve"
+             transform="translate(701.98438,268)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text276"><tspan
+               x="0 8.6660156 15.339844 21.339844"
+               y="0"
+               sodipodi:role="line"
+               id="tspan274">Hash</tspan></text>
+          <text
+             xml:space="preserve"
+             transform="translate(697.98438,283)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text280"><tspan
+               x="0 8.6660156 15.339844 19.335938 26.009766 29.34375 32.677734"
+               y="0"
+               sodipodi:role="line"
+               id="tspan278">Core ..</tspan></text>
+        </g>
+        <g
+           id="g282"
+           transform="matrix(2.9739966,0,0,2.9739966,1.4869983,1.4869983)">
+          <path
+             d="m 736.01001,256 h 40 v 30 h -40 z"
+             style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path284" />
+          <path
+             d="m 736.01001,256 h 40 v 30 h -40 z"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path286" />
+        </g>
+        <g
+           id="g288"
+           transform="scale(2.9740264)">
+          <text
+             xml:space="preserve"
+             transform="translate(741.98438,268)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text292"><tspan
+               x="0 8.6660156 15.339844 21.339844"
+               y="0"
+               sodipodi:role="line"
+               id="tspan290">Hash</tspan></text>
+          <text
+             xml:space="preserve"
+             transform="translate(737.98438,283)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text296"><tspan
+               x="0 8.6660156 15.339844 19.335938 26.009766 29.34375"
+               y="0"
+               sodipodi:role="line"
+               id="tspan294">Core n</tspan></text>
+        </g>
+        <g
+           id="g298"
+           transform="matrix(2.9739966,0,0,2.9739966,1.4869983,1.4869983)">
+          <path
+             d="m 596.01001,106 h 83.63"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path300" />
+          <path
+             d="m 684.89001,106 -7,3.5 1.75,-3.5 -1.75,-3.5 z"
+             style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path302" />
+          <path
+             d="m 684.89001,106 -7,3.5 1.75,-3.5 -1.75,-3.5 z"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path304" />
+          <path
+             d="M 686.01001,175.7 602.37,175.59"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path306" />
+          <path
+             d="m 597.12,175.58 7.01,-3.49 -1.76,3.5 1.75,3.5 z"
+             style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path308" />
+          <path
+             d="m 597.12,175.58 7.01,-3.49 -1.76,3.5 1.75,3.5 z"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path310" />
+        </g>
+        <g
+           id="g312"
+           transform="scale(2.9740264)">
+          <text
+             xml:space="preserve"
+             transform="translate(620.98438,71)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text316"><tspan
+               x="0 8.0039062 14.677734 17.34375 20.677734 26.677734"
+               y="0"
+               sodipodi:role="line"
+               id="tspan314">Salts,</tspan></text>
+          <text
+             xml:space="preserve"
+             transform="translate(613.98438,85)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text320"><tspan
+               x="0 8.6660156 15.339844 21.339844 28.013672 34.6875 40.6875"
+               y="0"
+               sodipodi:role="line"
+               id="tspan318">Hashes.</tspan></text>
+          <text
+             xml:space="preserve"
+             transform="translate(606.65625,100)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text324"><tspan
+               x="0 8.0039062 14.677734 20.677734 26.677734 35.34375 42.017578 46.013672 52.6875"
+               y="0"
+               sodipodi:role="line"
+               id="tspan322">Passwords</tspan></text>
+          <text
+             xml:space="preserve"
+             transform="translate(606.98438,148)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text328"><tspan
+               x="0 8.0039062 14.677734 20.677734 26.677734 33.351562 39.351562 45.351562 48.685547 55.359375"
+               y="0"
+               sodipodi:role="line"
+               id="tspan326">Successful</tspan></text>
+          <text
+             xml:space="preserve"
+             transform="translate(606.65625,163)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text332"><tspan
+               x="0 8.0039062 14.677734 20.677734 26.677734 35.34375 42.017578 46.013672 52.6875"
+               y="0"
+               sodipodi:role="line"
+               id="tspan330">Passwords</tspan></text>
+        </g>
+        <g
+           id="g334"
+           transform="matrix(2.9739966,0,0,2.9739966,1.4869983,1.4869983)">
+          <path
+             d="m 396,86 h 73.64001"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path336" />
+          <path
+             d="m 474.89001,86 -7,3.5 1.75,-3.5 -1.75,-3.5 z"
+             style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path338" />
+          <path
+             d="m 474.89001,86 -7,3.5 1.75,-3.5 -1.75,-3.5 z"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path340" />
+          <path
+             d="M 476,216 H 402.37"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path342" />
+          <path
+             d="m 397.12,216 7,-3.5 -1.75,3.5 1.75,3.5 z"
+             style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path344" />
+          <path
+             d="m 397.12,216 7,-3.5 -1.75,3.5 1.75,3.5 z"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path346" />
+        </g>
+        <g
+           id="g348"
+           transform="scale(2.9740264)">
+          <text
+             xml:space="preserve"
+             transform="translate(411.98438,58)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text352"><tspan
+               x="0 3.9960938 10.669922 14.666016 18 26.003906 32.677734 35.34375 38.677734 44.677734"
+               y="0"
+               sodipodi:role="line"
+               id="tspan350">(1) Salts,</tspan></text>
+          <text
+             xml:space="preserve"
+             transform="translate(413.96875,73)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text356"><tspan
+               x="0 8.6660156 15.339844 21.339844 28.013672 34.6875 40.6875"
+               y="0"
+               sodipodi:role="line"
+               id="tspan354">Hashes.</tspan></text>
+          <text
+             xml:space="preserve"
+             transform="translate(406.98438,188)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text360"><tspan
+               x="0 8.0039062 14.677734 20.677734 26.677734 33.351562 39.351562 45.351562 48.685547 55.359375"
+               y="0"
+               sodipodi:role="line"
+               id="tspan358">Successful</tspan></text>
+          <text
+             xml:space="preserve"
+             transform="translate(406.65625,203)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text364"><tspan
+               x="0 8.0039062 14.677734 20.677734 26.677734 35.34375 42.017578 46.013672 52.6875"
+               y="0"
+               sodipodi:role="line"
+               id="tspan362">Passwords</tspan></text>
+        </g>
+        <g
+           id="g366"
+           transform="matrix(2.9739966,0,0,2.9739966,1.4869983,1.4869983)">
+          <path
+             d="m 396,136 h 73.64001"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path368" />
+          <path
+             d="m 474.89001,136 -7,3.5 1.75,-3.5 -1.75,-3.5 z"
+             style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path370" />
+          <path
+             d="m 474.89001,136 -7,3.5 1.75,-3.5 -1.75,-3.5 z"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path372" />
+        </g>
+        <g
+           id="g374"
+           transform="scale(2.9740264)">
+          <text
+             xml:space="preserve"
+             transform="translate(428.65625,108)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text378"><tspan
+               x="0 3.9960938 10.669922"
+               y="0"
+               sodipodi:role="line"
+               id="tspan376">(2)</tspan></text>
+          <text
+             xml:space="preserve"
+             transform="translate(406.65625,123)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text382"><tspan
+               x="0 8.0039062 14.677734 20.677734 26.677734 35.34375 42.017578 46.013672 52.6875"
+               y="0"
+               sodipodi:role="line"
+               id="tspan380">Passwords</tspan></text>
+        </g>
+        <g
+           id="g384"
+           transform="matrix(2.9739966,0,0,2.9739966,1.4869983,1.4869983)">
+          <path
+             d="m 266,376 v -20 h 540.01001 v 20"
+             style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path386" />
+          <path
+             d="m 266,376 v -20 h 540.01001 v 20"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path388" />
+          <path
+             d="M 266,376 V 676.01001 H 806.01001 V 376"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path390" />
+          <path
+             d="M 266,376 H 806.01001"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path392" />
+        </g>
+        <g
+           id="g394"
+           transform="scale(2.9739966)">
+          <text
+             xml:space="preserve"
+             transform="translate(516,371)"
+             style="font-variant:normal;font-weight:bold;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans-Bold;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text398"><tspan
+               x="0 8.6660156 15.996094 23.326172 30 33.333984 36.667969"
+               y="0"
+               sodipodi:role="line"
+               id="tspan396">Node ..</tspan></text>
+        </g>
+        <g
+           id="g400"
+           transform="matrix(2.9739966,0,0,2.9739966,1.4869983,1.4869983)">
+          <path
+             d="M 476,386 H 596 V 666 H 476 Z"
+             style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path402" />
+          <path
+             d="M 476,386 H 596 V 666 H 476 Z"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path404" />
+        </g>
+        <g
+           id="g406"
+           transform="scale(2.9740264)">
+          <text
+             xml:space="preserve"
+             transform="translate(490.57813,532)"
+             style="font-variant:normal;font-weight:normal;font-size:15px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text410"><tspan
+               x="0 10.83252 21.665039 32.497559 36.665039 49.160156 57.502441 69.997559 78.339844 83.334961"
+               y="0"
+               sodipodi:role="line"
+               id="tspan408">DDR Memory</tspan></text>
+        </g>
+        <g
+           id="g412"
+           transform="matrix(2.9739966,0,0,2.9739966,1.4869983,1.4869983)">
+          <path
+             d="M 276,386 H 396 V 666 H 276 Z"
+             style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path414" />
+          <path
+             d="M 276,386 H 396 V 666 H 276 Z"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path416" />
+        </g>
+        <g
+           id="g418"
+           transform="scale(2.9740264)">
+          <text
+             xml:space="preserve"
+             transform="translate(283.89063,523)"
+             style="font-variant:normal;font-weight:normal;font-size:15px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text422"><tspan
+               x="0 10.83252 19.174805 31.669922 44.165039 52.507324 60.849609 64.182129 71.682129 80.024414 84.191895 87.524414 95.866699"
+               y="0"
+               sodipodi:role="line"
+               id="tspan420">Communication</tspan></text>
+          <text
+             xml:space="preserve"
+             transform="translate(303.48438,541)"
+             style="font-variant:normal;font-weight:normal;font-size:15px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text426"><tspan
+               x="0 10.83252 19.174805 27.51709 31.68457 36.679688 45.021973 48.354492 51.687012 60.029297"
+               y="0"
+               sodipodi:role="line"
+               id="tspan424">Controller</tspan></text>
+        </g>
+        <g
+           id="g428"
+           transform="matrix(2.9739966,0,0,2.9739966,1.4869983,1.4869983)">
+          <path
+             d="m 676.01001,409 v -23 h 120 v 23"
+             style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path430" />
+          <path
+             d="m 676.01001,409 v -23 h 120 v 23"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path432" />
+          <path
+             d="m 676.01001,409 v 257.01001 h 120 V 409"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path434" />
+          <path
+             d="m 676.01001,409 h 120"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path436" />
+        </g>
+        <g
+           id="g438"
+           transform="scale(2.9740264)">
+          <text
+             xml:space="preserve"
+             transform="translate(719.32813,402)"
+             style="font-variant:normal;font-weight:bold;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans-Bold;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text442"><tspan
+               x="0 7.3300781 15.333984 24.667969"
+               y="0"
+               sodipodi:role="line"
+               id="tspan440">FPGA</tspan></text>
+        </g>
+        <g
+           id="g444"
+           transform="matrix(2.9739966,0,0,2.9739966,1.4869983,1.4869983)">
+          <path
+             d="m 686.01001,439 v -23 h 100 v 23"
+             style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path446" />
+          <path
+             d="m 686.01001,439 v -23 h 100 v 23"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path448" />
+          <path
+             d="m 686.01001,439 v 217.01001 h 100 V 439"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path450" />
+          <path
+             d="m 686.01001,439 h 100"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path452" />
+        </g>
+        <g
+           id="g454"
+           transform="scale(2.9740264)">
+          <text
+             xml:space="preserve"
+             transform="translate(691.98438,432)"
+             style="font-variant:normal;font-weight:bold;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans-Bold;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text458"><tspan
+               x="0 8.6660156 15.996094 20.666016 27.339844 30.673828 39.339844 46.669922 54 57.996094 62.666016 69.996094 73.330078 76.664062 83.337891"
+               y="0"
+               sodipodi:role="line"
+               id="tspan456">Core Controller</tspan></text>
+        </g>
+        <g
+           id="g460"
+           transform="matrix(2.9739966,0,0,2.9739966,1.4869983,1.4869983)">
+          <path
+             d="m 696.01001,456 h 40 v 30 h -40 z"
+             style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path462" />
+          <path
+             d="m 696.01001,456 h 40 v 30 h -40 z"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path464" />
+        </g>
+        <g
+           id="g466"
+           transform="scale(2.9740264)">
+          <text
+             xml:space="preserve"
+             transform="translate(701.98438,468)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text470"><tspan
+               x="0 8.6660156 15.339844 21.339844"
+               y="0"
+               sodipodi:role="line"
+               id="tspan468">Hash</tspan></text>
+          <text
+             xml:space="preserve"
+             transform="translate(697.98438,483)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text474"><tspan
+               x="0 8.6660156 15.339844 19.335938 26.009766 29.34375"
+               y="0"
+               sodipodi:role="line"
+               id="tspan472">Core 1</tspan></text>
+        </g>
+        <g
+           id="g476"
+           transform="matrix(2.9739966,0,0,2.9739966,1.4869983,1.4869983)">
+          <path
+             d="m 736.01001,456 h 40 v 30 h -40 z"
+             style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path478" />
+          <path
+             d="m 736.01001,456 h 40 v 30 h -40 z"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path480" />
+        </g>
+        <g
+           id="g482"
+           transform="scale(2.9740264)">
+          <text
+             xml:space="preserve"
+             transform="translate(741.98438,468)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text486"><tspan
+               x="0 8.6660156 15.339844 21.339844"
+               y="0"
+               sodipodi:role="line"
+               id="tspan484">Hash</tspan></text>
+          <text
+             xml:space="preserve"
+             transform="translate(737.98438,483)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text490"><tspan
+               x="0 8.6660156 15.339844 19.335938 26.009766 29.34375"
+               y="0"
+               sodipodi:role="line"
+               id="tspan488">Core 2</tspan></text>
+        </g>
+        <g
+           id="g492"
+           transform="matrix(2.9739966,0,0,2.9739966,1.4869983,1.4869983)">
+          <path
+             d="m 696.01001,486 h 40 v 30 h -40 z"
+             style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path494" />
+          <path
+             d="m 696.01001,486 h 40 v 30 h -40 z"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path496" />
+        </g>
+        <g
+           id="g498"
+           transform="scale(2.9740264)">
+          <text
+             xml:space="preserve"
+             transform="translate(701.98438,498)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text502"><tspan
+               x="0 8.6660156 15.339844 21.339844"
+               y="0"
+               sodipodi:role="line"
+               id="tspan500">Hash</tspan></text>
+          <text
+             xml:space="preserve"
+             transform="translate(697.98438,513)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text506"><tspan
+               x="0 8.6660156 15.339844 19.335938 26.009766 29.34375 32.677734"
+               y="0"
+               sodipodi:role="line"
+               id="tspan504">Core ..</tspan></text>
+        </g>
+        <g
+           id="g508"
+           transform="matrix(2.9739966,0,0,2.9739966,1.4869983,1.4869983)">
+          <path
+             d="m 736.01001,486 h 40 v 30 h -40 z"
+             style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path510" />
+          <path
+             d="m 736.01001,486 h 40 v 30 h -40 z"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path512" />
+        </g>
+        <g
+           id="g514"
+           transform="scale(2.9740264)">
+          <text
+             xml:space="preserve"
+             transform="translate(741.98438,498)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text518"><tspan
+               x="0 8.6660156 15.339844 21.339844"
+               y="0"
+               sodipodi:role="line"
+               id="tspan516">Hash</tspan></text>
+          <text
+             xml:space="preserve"
+             transform="translate(737.98438,513)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text522"><tspan
+               x="0 8.6660156 15.339844 19.335938 26.009766 29.34375 32.677734"
+               y="0"
+               sodipodi:role="line"
+               id="tspan520">Core ..</tspan></text>
+        </g>
+        <g
+           id="g524"
+           transform="matrix(2.9739966,0,0,2.9739966,1.4869983,1.4869983)">
+          <path
+             d="m 696.01001,516.01001 h 40 v 30 h -40 z"
+             style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path526" />
+          <path
+             d="m 696.01001,516.01001 h 40 v 30 h -40 z"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path528" />
+        </g>
+        <g
+           id="g530"
+           transform="scale(2.9740264)">
+          <text
+             xml:space="preserve"
+             transform="translate(701.98438,528)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text534"><tspan
+               x="0 8.6660156 15.339844 21.339844"
+               y="0"
+               sodipodi:role="line"
+               id="tspan532">Hash</tspan></text>
+          <text
+             xml:space="preserve"
+             transform="translate(697.98438,543)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text538"><tspan
+               x="0 8.6660156 15.339844 19.335938 26.009766 29.34375 32.677734"
+               y="0"
+               sodipodi:role="line"
+               id="tspan536">Core ..</tspan></text>
+        </g>
+        <g
+           id="g540"
+           transform="matrix(2.9739966,0,0,2.9739966,1.4869983,1.4869983)">
+          <path
+             d="m 736.01001,516.01001 h 40 v 30 h -40 z"
+             style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path542" />
+          <path
+             d="m 736.01001,516.01001 h 40 v 30 h -40 z"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path544" />
+        </g>
+        <g
+           id="g546"
+           transform="scale(2.9740264)">
+          <text
+             xml:space="preserve"
+             transform="translate(741.98438,528)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text550"><tspan
+               x="0 8.6660156 15.339844 21.339844"
+               y="0"
+               sodipodi:role="line"
+               id="tspan548">Hash</tspan></text>
+          <text
+             xml:space="preserve"
+             transform="translate(737.98438,543)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text554"><tspan
+               x="0 8.6660156 15.339844 19.335938 26.009766 29.34375 32.677734"
+               y="0"
+               sodipodi:role="line"
+               id="tspan552">Core ..</tspan></text>
+        </g>
+        <g
+           id="g556"
+           transform="matrix(2.9739966,0,0,2.9739966,1.4869983,1.4869983)">
+          <path
+             d="m 696.01001,546.01001 h 40 v 30 h -40 z"
+             style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path558" />
+          <path
+             d="m 696.01001,546.01001 h 40 v 30 h -40 z"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path560" />
+        </g>
+        <g
+           id="g562"
+           transform="scale(2.9740264)">
+          <text
+             xml:space="preserve"
+             transform="translate(701.98438,558)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text566"><tspan
+               x="0 8.6660156 15.339844 21.339844"
+               y="0"
+               sodipodi:role="line"
+               id="tspan564">Hash</tspan></text>
+          <text
+             xml:space="preserve"
+             transform="translate(697.98438,573)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text570"><tspan
+               x="0 8.6660156 15.339844 19.335938 26.009766 29.34375 32.677734"
+               y="0"
+               sodipodi:role="line"
+               id="tspan568">Core ..</tspan></text>
+        </g>
+        <g
+           id="g572"
+           transform="matrix(2.9739966,0,0,2.9739966,1.4869983,1.4869983)">
+          <path
+             d="m 736.01001,546.01001 h 40 v 30 h -40 z"
+             style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path574" />
+          <path
+             d="m 736.01001,546.01001 h 40 v 30 h -40 z"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path576" />
+        </g>
+        <g
+           id="g578"
+           transform="scale(2.9740264)">
+          <text
+             xml:space="preserve"
+             transform="translate(741.98438,558)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text582"><tspan
+               x="0 8.6660156 15.339844 21.339844"
+               y="0"
+               sodipodi:role="line"
+               id="tspan580">Hash</tspan></text>
+          <text
+             xml:space="preserve"
+             transform="translate(737.98438,573)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text586"><tspan
+               x="0 8.6660156 15.339844 19.335938 26.009766 29.34375 32.677734"
+               y="0"
+               sodipodi:role="line"
+               id="tspan584">Core ..</tspan></text>
+        </g>
+        <g
+           id="g588"
+           transform="matrix(2.9739966,0,0,2.9739966,1.4869983,1.4869983)">
+          <path
+             d="m 696.01001,576.01001 h 40 v 30 h -40 z"
+             style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path590" />
+          <path
+             d="m 696.01001,576.01001 h 40 v 30 h -40 z"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path592" />
+        </g>
+        <g
+           id="g594"
+           transform="scale(2.9740264)">
+          <text
+             xml:space="preserve"
+             transform="translate(701.98438,588)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text598"><tspan
+               x="0 8.6660156 15.339844 21.339844"
+               y="0"
+               sodipodi:role="line"
+               id="tspan596">Hash</tspan></text>
+          <text
+             xml:space="preserve"
+             transform="translate(697.98438,603)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text602"><tspan
+               x="0 8.6660156 15.339844 19.335938 26.009766 29.34375 32.677734"
+               y="0"
+               sodipodi:role="line"
+               id="tspan600">Core ..</tspan></text>
+        </g>
+        <g
+           id="g604"
+           transform="matrix(2.9739966,0,0,2.9739966,1.4869983,1.4869983)">
+          <path
+             d="m 736.01001,576.01001 h 40 v 30 h -40 z"
+             style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path606" />
+          <path
+             d="m 736.01001,576.01001 h 40 v 30 h -40 z"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path608" />
+        </g>
+        <g
+           id="g610"
+           transform="scale(2.9740264)">
+          <text
+             xml:space="preserve"
+             transform="translate(741.98438,588)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text614"><tspan
+               x="0 8.6660156 15.339844 21.339844"
+               y="0"
+               sodipodi:role="line"
+               id="tspan612">Hash</tspan></text>
+          <text
+             xml:space="preserve"
+             transform="translate(737.98438,603)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text618"><tspan
+               x="0 8.6660156 15.339844 19.335938 26.009766 29.34375 32.677734"
+               y="0"
+               sodipodi:role="line"
+               id="tspan616">Core ..</tspan></text>
+        </g>
+        <g
+           id="g620"
+           transform="matrix(2.9739966,0,0,2.9739966,1.4869983,1.4869983)">
+          <path
+             d="m 696.01001,606.01001 h 40 v 30 h -40 z"
+             style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path622" />
+          <path
+             d="m 696.01001,606.01001 h 40 v 30 h -40 z"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path624" />
+        </g>
+        <g
+           id="g626"
+           transform="scale(2.9740264)">
+          <text
+             xml:space="preserve"
+             transform="translate(701.98438,618)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text630"><tspan
+               x="0 8.6660156 15.339844 21.339844"
+               y="0"
+               sodipodi:role="line"
+               id="tspan628">Hash</tspan></text>
+          <text
+             xml:space="preserve"
+             transform="translate(697.98438,633)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text634"><tspan
+               x="0 8.6660156 15.339844 19.335938 26.009766 29.34375 32.677734"
+               y="0"
+               sodipodi:role="line"
+               id="tspan632">Core ..</tspan></text>
+        </g>
+        <g
+           id="g636"
+           transform="matrix(2.9739966,0,0,2.9739966,1.4869983,1.4869983)">
+          <path
+             d="m 736.01001,606.01001 h 40 v 30 h -40 z"
+             style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path638" />
+          <path
+             d="m 736.01001,606.01001 h 40 v 30 h -40 z"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path640" />
+        </g>
+        <g
+           id="g642"
+           transform="scale(2.9740264)">
+          <text
+             xml:space="preserve"
+             transform="translate(741.98438,618)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text646"><tspan
+               x="0 8.6660156 15.339844 21.339844"
+               y="0"
+               sodipodi:role="line"
+               id="tspan644">Hash</tspan></text>
+          <text
+             xml:space="preserve"
+             transform="translate(737.98438,633)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text650"><tspan
+               x="0 8.6660156 15.339844 19.335938 26.009766 29.34375"
+               y="0"
+               sodipodi:role="line"
+               id="tspan648">Core n</tspan></text>
+        </g>
+        <g
+           id="g652"
+           transform="matrix(2.9739966,0,0,2.9739966,1.4869983,1.4869983)">
+          <path
+             d="m 596.01001,456 h 83.63"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path654" />
+          <path
+             d="m 684.89001,456 -7,3.5 1.75,-3.5 -1.75,-3.5 z"
+             style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path656" />
+          <path
+             d="m 684.89001,456 -7,3.5 1.75,-3.5 -1.75,-3.5 z"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path658" />
+          <path
+             d="M 686.01001,525.71002 602.37,525.59003"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path660" />
+          <path
+             d="m 597.12,525.59003 7.01,-3.49005 -1.76,3.49005 1.75,3.50995 z"
+             style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path662" />
+          <path
+             d="m 597.12,525.59003 7.01,-3.49005 -1.76,3.49005 1.75,3.50995 z"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path664" />
+        </g>
+        <g
+           id="g666"
+           transform="scale(2.9740264)">
+          <text
+             xml:space="preserve"
+             transform="translate(620.98438,421)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text670"><tspan
+               x="0 8.0039062 14.677734 17.34375 20.677734 26.677734"
+               y="0"
+               sodipodi:role="line"
+               id="tspan668">Salts,</tspan></text>
+          <text
+             xml:space="preserve"
+             transform="translate(613.98438,435)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text674"><tspan
+               x="0 8.6660156 15.339844 21.339844 28.013672 34.6875 40.6875"
+               y="0"
+               sodipodi:role="line"
+               id="tspan672">Hashes.</tspan></text>
+          <text
+             xml:space="preserve"
+             transform="translate(606.65625,450)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text678"><tspan
+               x="0 8.0039062 14.677734 20.677734 26.677734 35.34375 42.017578 46.013672 52.6875"
+               y="0"
+               sodipodi:role="line"
+               id="tspan676">Passwords</tspan></text>
+          <text
+             xml:space="preserve"
+             transform="translate(606.98438,498)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text682"><tspan
+               x="0 8.0039062 14.677734 20.677734 26.677734 33.351562 39.351562 45.351562 48.685547 55.359375"
+               y="0"
+               sodipodi:role="line"
+               id="tspan680">Successful</tspan></text>
+          <text
+             xml:space="preserve"
+             transform="translate(606.65625,513)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text686"><tspan
+               x="0 8.0039062 14.677734 20.677734 26.677734 35.34375 42.017578 46.013672 52.6875"
+               y="0"
+               sodipodi:role="line"
+               id="tspan684">Passwords</tspan></text>
+        </g>
+        <g
+           id="g688"
+           transform="matrix(2.9739966,0,0,2.9739966,1.4869983,1.4869983)">
+          <path
+             d="m 396,436 h 73.64001"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path690" />
+          <path
+             d="m 474.89001,436 -7,3.5 1.75,-3.5 -1.75,-3.5 z"
+             style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path692" />
+          <path
+             d="m 474.89001,436 -7,3.5 1.75,-3.5 -1.75,-3.5 z"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path694" />
+          <path
+             d="M 476,566.01001 H 402.37"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path696" />
+          <path
+             d="m 397.12,566.01001 7,-3.5 -1.75,3.5 1.75,3.5 z"
+             style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path698" />
+          <path
+             d="m 397.12,566.01001 7,-3.5 -1.75,3.5 1.75,3.5 z"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path700" />
+        </g>
+        <g
+           id="g702"
+           transform="scale(2.9740264)">
+          <text
+             xml:space="preserve"
+             transform="translate(411.98438,408)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text706"><tspan
+               x="0 3.9960938 10.669922 14.666016 18 26.003906 32.677734 35.34375 38.677734 44.677734"
+               y="0"
+               sodipodi:role="line"
+               id="tspan704">(1) Salts,</tspan></text>
+          <text
+             xml:space="preserve"
+             transform="translate(413.96875,423)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text710"><tspan
+               x="0 8.6660156 15.339844 21.339844 28.013672 34.6875 40.6875"
+               y="0"
+               sodipodi:role="line"
+               id="tspan708">Hashes.</tspan></text>
+          <text
+             xml:space="preserve"
+             transform="translate(406.98438,538)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text714"><tspan
+               x="0 8.0039062 14.677734 20.677734 26.677734 33.351562 39.351562 45.351562 48.685547 55.359375"
+               y="0"
+               sodipodi:role="line"
+               id="tspan712">Successful</tspan></text>
+          <text
+             xml:space="preserve"
+             transform="translate(406.65625,553)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text718"><tspan
+               x="0 8.0039062 14.677734 20.677734 26.677734 35.34375 42.017578 46.013672 52.6875"
+               y="0"
+               sodipodi:role="line"
+               id="tspan716">Passwords</tspan></text>
+        </g>
+        <g
+           id="g720"
+           transform="matrix(2.9739966,0,0,2.9739966,1.4869983,1.4869983)">
+          <path
+             d="m 396,486 h 73.64001"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path722" />
+          <path
+             d="m 474.89001,486 -7,3.5 1.75,-3.5 -1.75,-3.5 z"
+             style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path724" />
+          <path
+             d="m 474.89001,486 -7,3.5 1.75,-3.5 -1.75,-3.5 z"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path726" />
+        </g>
+        <g
+           id="g728"
+           transform="scale(2.9740264)">
+          <text
+             xml:space="preserve"
+             transform="translate(428.65625,458)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text732"><tspan
+               x="0 3.9960938 10.669922"
+               y="0"
+               sodipodi:role="line"
+               id="tspan730">(2)</tspan></text>
+          <text
+             xml:space="preserve"
+             transform="translate(406.65625,473)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text736"><tspan
+               x="0 8.0039062 14.677734 20.677734 26.677734 35.34375 42.017578 46.013672 52.6875"
+               y="0"
+               sodipodi:role="line"
+               id="tspan734">Passwords</tspan></text>
+        </g>
+        <g
+           id="g738"
+           transform="matrix(2.9739966,0,0,2.9739966,1.4869983,1.4869983)">
+          <path
+             d="m 266,726.01001 v -20 h 540.01001 v 20"
+             style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path740" />
+          <path
+             d="m 266,726.01001 v -20 h 540.01001 v 20"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path742" />
+          <path
+             d="M 266,726.01001 V 1026.01 H 806.01001 V 726.01001"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path744" />
+          <path
+             d="M 266,726.01001 H 806.01001"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path746" />
+        </g>
+        <g
+           id="g748"
+           transform="scale(2.9739966)">
+          <text
+             xml:space="preserve"
+             transform="translate(514,721)"
+             style="font-variant:normal;font-weight:bold;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans-Bold;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text752"><tspan
+               x="0 8.6660156 15.996094 23.326172 30 33.333984"
+               y="0"
+               sodipodi:role="line"
+               id="tspan750">Node m</tspan></text>
+        </g>
+        <g
+           id="g754"
+           transform="matrix(2.9739966,0,0,2.9739966,1.4869983,1.4869983)">
+          <path
+             d="M 476,736.01001 H 596 V 1016.01 H 476 Z"
+             style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path756" />
+          <path
+             d="M 476,736.01001 H 596 V 1016.01 H 476 Z"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path758" />
+        </g>
+        <g
+           id="g760"
+           transform="scale(2.9740264)">
+          <text
+             xml:space="preserve"
+             transform="translate(490.57813,882)"
+             style="font-variant:normal;font-weight:normal;font-size:15px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text764"><tspan
+               x="0 10.83252 21.665039 32.497559 36.665039 49.160156 57.502441 69.997559 78.339844 83.334961"
+               y="0"
+               sodipodi:role="line"
+               id="tspan762">DDR Memory</tspan></text>
+        </g>
+        <g
+           id="g766"
+           transform="matrix(2.9739966,0,0,2.9739966,1.4869983,1.4869983)">
+          <path
+             d="M 276,736.01001 H 396 V 1016.01 H 276 Z"
+             style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path768" />
+          <path
+             d="M 276,736.01001 H 396 V 1016.01 H 276 Z"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path770" />
+        </g>
+        <g
+           id="g772"
+           transform="scale(2.9740264)">
+          <text
+             xml:space="preserve"
+             transform="translate(283.89063,873)"
+             style="font-variant:normal;font-weight:normal;font-size:15px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text776"><tspan
+               x="0 10.83252 19.174805 31.669922 44.165039 52.507324 60.849609 64.182129 71.682129 80.024414 84.191895 87.524414 95.866699"
+               y="0"
+               sodipodi:role="line"
+               id="tspan774">Communication</tspan></text>
+          <text
+             xml:space="preserve"
+             transform="translate(303.48438,891)"
+             style="font-variant:normal;font-weight:normal;font-size:15px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text780"><tspan
+               x="0 10.83252 19.174805 27.51709 31.68457 36.679688 45.021973 48.354492 51.687012 60.029297"
+               y="0"
+               sodipodi:role="line"
+               id="tspan778">Controller</tspan></text>
+        </g>
+        <g
+           id="g782"
+           transform="matrix(2.9739966,0,0,2.9739966,1.4869983,1.4869983)">
+          <path
+             d="m 676.01001,759.01001 v -23 h 120 v 23"
+             style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path784" />
+          <path
+             d="m 676.01001,759.01001 v -23 h 120 v 23"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path786" />
+          <path
+             d="M 676.01001,759.01001 V 1016.01 h 120 V 759.01001"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path788" />
+          <path
+             d="m 676.01001,759.01001 h 120"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path790" />
+        </g>
+        <g
+           id="g792"
+           transform="scale(2.9740264)">
+          <text
+             xml:space="preserve"
+             transform="translate(719.32813,752)"
+             style="font-variant:normal;font-weight:bold;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans-Bold;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text796"><tspan
+               x="0 7.3300781 15.333984 24.667969"
+               y="0"
+               sodipodi:role="line"
+               id="tspan794">FPGA</tspan></text>
+        </g>
+        <g
+           id="g798"
+           transform="matrix(2.9739966,0,0,2.9739966,1.4869983,1.4869983)">
+          <path
+             d="m 686.01001,789.01001 v -23 h 100 v 23"
+             style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path800" />
+          <path
+             d="m 686.01001,789.01001 v -23 h 100 v 23"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path802" />
+          <path
+             d="M 686.01001,789.01001 V 1006.01 h 100 V 789.01001"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path804" />
+          <path
+             d="m 686.01001,789.01001 h 100"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path806" />
+        </g>
+        <g
+           id="g808"
+           transform="scale(2.9740264)">
+          <text
+             xml:space="preserve"
+             transform="translate(691.98438,782)"
+             style="font-variant:normal;font-weight:bold;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans-Bold;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text812"><tspan
+               x="0 8.6660156 15.996094 20.666016 27.339844 30.673828 39.339844 46.669922 54 57.996094 62.666016 69.996094 73.330078 76.664062 83.337891"
+               y="0"
+               sodipodi:role="line"
+               id="tspan810">Core Controller</tspan></text>
+        </g>
+        <g
+           id="g814"
+           transform="matrix(2.9739966,0,0,2.9739966,1.4869983,1.4869983)">
+          <path
+             d="m 696.01001,806.01001 h 40 v 30 h -40 z"
+             style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path816" />
+          <path
+             d="m 696.01001,806.01001 h 40 v 30 h -40 z"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path818" />
+        </g>
+        <g
+           id="g820"
+           transform="scale(2.9740264)">
+          <text
+             xml:space="preserve"
+             transform="translate(701.98438,818)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text824"><tspan
+               x="0 8.6660156 15.339844 21.339844"
+               y="0"
+               sodipodi:role="line"
+               id="tspan822">Hash</tspan></text>
+          <text
+             xml:space="preserve"
+             transform="translate(697.98438,833)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text828"><tspan
+               x="0 8.6660156 15.339844 19.335938 26.009766 29.34375"
+               y="0"
+               sodipodi:role="line"
+               id="tspan826">Core 1</tspan></text>
+        </g>
+        <g
+           id="g830"
+           transform="matrix(2.9739966,0,0,2.9739966,1.4869983,1.4869983)">
+          <path
+             d="m 736.01001,806.01001 h 40 v 30 h -40 z"
+             style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path832" />
+          <path
+             d="m 736.01001,806.01001 h 40 v 30 h -40 z"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path834" />
+        </g>
+        <g
+           id="g836"
+           transform="scale(2.9740264)">
+          <text
+             xml:space="preserve"
+             transform="translate(741.98438,818)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text840"><tspan
+               x="0 8.6660156 15.339844 21.339844"
+               y="0"
+               sodipodi:role="line"
+               id="tspan838">Hash</tspan></text>
+          <text
+             xml:space="preserve"
+             transform="translate(737.98438,833)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text844"><tspan
+               x="0 8.6660156 15.339844 19.335938 26.009766 29.34375"
+               y="0"
+               sodipodi:role="line"
+               id="tspan842">Core 2</tspan></text>
+        </g>
+        <g
+           id="g846"
+           transform="matrix(2.9739966,0,0,2.9739966,1.4869983,1.4869983)">
+          <path
+             d="m 696.01001,836.01001 h 40 v 30 h -40 z"
+             style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path848" />
+          <path
+             d="m 696.01001,836.01001 h 40 v 30 h -40 z"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path850" />
+        </g>
+        <g
+           id="g852"
+           transform="scale(2.9740264)">
+          <text
+             xml:space="preserve"
+             transform="translate(701.98438,848)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text856"><tspan
+               x="0 8.6660156 15.339844 21.339844"
+               y="0"
+               sodipodi:role="line"
+               id="tspan854">Hash</tspan></text>
+          <text
+             xml:space="preserve"
+             transform="translate(697.98438,863)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text860"><tspan
+               x="0 8.6660156 15.339844 19.335938 26.009766 29.34375 32.677734"
+               y="0"
+               sodipodi:role="line"
+               id="tspan858">Core ..</tspan></text>
+        </g>
+        <g
+           id="g862"
+           transform="matrix(2.9739966,0,0,2.9739966,1.4869983,1.4869983)">
+          <path
+             d="m 736.01001,836.01001 h 40 v 30 h -40 z"
+             style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path864" />
+          <path
+             d="m 736.01001,836.01001 h 40 v 30 h -40 z"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path866" />
+        </g>
+        <g
+           id="g868"
+           transform="scale(2.9740264)">
+          <text
+             xml:space="preserve"
+             transform="translate(741.98438,848)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text872"><tspan
+               x="0 8.6660156 15.339844 21.339844"
+               y="0"
+               sodipodi:role="line"
+               id="tspan870">Hash</tspan></text>
+          <text
+             xml:space="preserve"
+             transform="translate(737.98438,863)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text876"><tspan
+               x="0 8.6660156 15.339844 19.335938 26.009766 29.34375 32.677734"
+               y="0"
+               sodipodi:role="line"
+               id="tspan874">Core ..</tspan></text>
+        </g>
+        <g
+           id="g878"
+           transform="matrix(2.9739966,0,0,2.9739966,1.4869983,1.4869983)">
+          <path
+             d="m 696.01001,866.01001 h 40 v 30 h -40 z"
+             style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path880" />
+          <path
+             d="m 696.01001,866.01001 h 40 v 30 h -40 z"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path882" />
+        </g>
+        <g
+           id="g884"
+           transform="scale(2.9740264)">
+          <text
+             xml:space="preserve"
+             transform="translate(701.98438,878)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text888"><tspan
+               x="0 8.6660156 15.339844 21.339844"
+               y="0"
+               sodipodi:role="line"
+               id="tspan886">Hash</tspan></text>
+          <text
+             xml:space="preserve"
+             transform="translate(697.98438,893)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text892"><tspan
+               x="0 8.6660156 15.339844 19.335938 26.009766 29.34375 32.677734"
+               y="0"
+               sodipodi:role="line"
+               id="tspan890">Core ..</tspan></text>
+        </g>
+        <g
+           id="g894"
+           transform="matrix(2.9739966,0,0,2.9739966,1.4869983,1.4869983)">
+          <path
+             d="m 736.01001,866.01001 h 40 v 30 h -40 z"
+             style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path896" />
+          <path
+             d="m 736.01001,866.01001 h 40 v 30 h -40 z"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path898" />
+        </g>
+        <g
+           id="g900"
+           transform="scale(2.9740264)">
+          <text
+             xml:space="preserve"
+             transform="translate(741.98438,878)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text904"><tspan
+               x="0 8.6660156 15.339844 21.339844"
+               y="0"
+               sodipodi:role="line"
+               id="tspan902">Hash</tspan></text>
+          <text
+             xml:space="preserve"
+             transform="translate(737.98438,893)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text908"><tspan
+               x="0 8.6660156 15.339844 19.335938 26.009766 29.34375 32.677734"
+               y="0"
+               sodipodi:role="line"
+               id="tspan906">Core ..</tspan></text>
+        </g>
+        <g
+           id="g910"
+           transform="matrix(2.9739966,0,0,2.9739966,1.4869983,1.4869983)">
+          <path
+             d="m 696.01001,896.01001 h 40 v 30 h -40 z"
+             style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path912" />
+          <path
+             d="m 696.01001,896.01001 h 40 v 30 h -40 z"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path914" />
+        </g>
+        <g
+           id="g916"
+           transform="scale(2.9740264)">
+          <text
+             xml:space="preserve"
+             transform="translate(701.98438,908)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text920"><tspan
+               x="0 8.6660156 15.339844 21.339844"
+               y="0"
+               sodipodi:role="line"
+               id="tspan918">Hash</tspan></text>
+          <text
+             xml:space="preserve"
+             transform="translate(697.98438,923)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text924"><tspan
+               x="0 8.6660156 15.339844 19.335938 26.009766 29.34375 32.677734"
+               y="0"
+               sodipodi:role="line"
+               id="tspan922">Core ..</tspan></text>
+        </g>
+        <g
+           id="g926"
+           transform="matrix(2.9739966,0,0,2.9739966,1.4869983,1.4869983)">
+          <path
+             d="m 736.01001,896.01001 h 40 v 30 h -40 z"
+             style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path928" />
+          <path
+             d="m 736.01001,896.01001 h 40 v 30 h -40 z"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path930" />
+        </g>
+        <g
+           id="g932"
+           transform="scale(2.9740264)">
+          <text
+             xml:space="preserve"
+             transform="translate(741.98438,908)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text936"><tspan
+               x="0 8.6660156 15.339844 21.339844"
+               y="0"
+               sodipodi:role="line"
+               id="tspan934">Hash</tspan></text>
+          <text
+             xml:space="preserve"
+             transform="translate(737.98438,923)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text940"><tspan
+               x="0 8.6660156 15.339844 19.335938 26.009766 29.34375 32.677734"
+               y="0"
+               sodipodi:role="line"
+               id="tspan938">Core ..</tspan></text>
+        </g>
+        <g
+           id="g942"
+           transform="matrix(2.9739966,0,0,2.9739966,1.4869983,1.4869983)">
+          <path
+             d="m 696.01001,926.01001 h 40 v 30 h -40 z"
+             style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path944" />
+          <path
+             d="m 696.01001,926.01001 h 40 v 30 h -40 z"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path946" />
+        </g>
+        <g
+           id="g948"
+           transform="scale(2.9740264)">
+          <text
+             xml:space="preserve"
+             transform="translate(701.98438,938)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text952"><tspan
+               x="0 8.6660156 15.339844 21.339844"
+               y="0"
+               sodipodi:role="line"
+               id="tspan950">Hash</tspan></text>
+          <text
+             xml:space="preserve"
+             transform="translate(697.98438,953)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text956"><tspan
+               x="0 8.6660156 15.339844 19.335938 26.009766 29.34375 32.677734"
+               y="0"
+               sodipodi:role="line"
+               id="tspan954">Core ..</tspan></text>
+        </g>
+        <g
+           id="g958"
+           transform="matrix(2.9739966,0,0,2.9739966,1.4869983,1.4869983)">
+          <path
+             d="m 736.01001,926.01001 h 40 v 30 h -40 z"
+             style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path960" />
+          <path
+             d="m 736.01001,926.01001 h 40 v 30 h -40 z"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path962" />
+        </g>
+        <g
+           id="g964"
+           transform="scale(2.9740264)">
+          <text
+             xml:space="preserve"
+             transform="translate(741.98438,938)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text968"><tspan
+               x="0 8.6660156 15.339844 21.339844"
+               y="0"
+               sodipodi:role="line"
+               id="tspan966">Hash</tspan></text>
+          <text
+             xml:space="preserve"
+             transform="translate(737.98438,953)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text972"><tspan
+               x="0 8.6660156 15.339844 19.335938 26.009766 29.34375 32.677734"
+               y="0"
+               sodipodi:role="line"
+               id="tspan970">Core ..</tspan></text>
+        </g>
+        <g
+           id="g974"
+           transform="matrix(2.9739966,0,0,2.9739966,1.4869983,1.4869983)">
+          <path
+             d="m 696.01001,956.01001 h 40 v 30 h -40 z"
+             style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path976" />
+          <path
+             d="m 696.01001,956.01001 h 40 v 30 h -40 z"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path978" />
+        </g>
+        <g
+           id="g980"
+           transform="scale(2.9740264)">
+          <text
+             xml:space="preserve"
+             transform="translate(701.98438,968)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text984"><tspan
+               x="0 8.6660156 15.339844 21.339844"
+               y="0"
+               sodipodi:role="line"
+               id="tspan982">Hash</tspan></text>
+          <text
+             xml:space="preserve"
+             transform="translate(697.98438,983)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text988"><tspan
+               x="0 8.6660156 15.339844 19.335938 26.009766 29.34375 32.677734"
+               y="0"
+               sodipodi:role="line"
+               id="tspan986">Core ..</tspan></text>
+        </g>
+        <g
+           id="g990"
+           transform="matrix(2.9739966,0,0,2.9739966,1.4869983,1.4869983)">
+          <path
+             d="m 736.01001,956.01001 h 40 v 30 h -40 z"
+             style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path992" />
+          <path
+             d="m 736.01001,956.01001 h 40 v 30 h -40 z"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path994" />
+        </g>
+        <g
+           id="g996"
+           transform="scale(2.9740264)">
+          <text
+             xml:space="preserve"
+             transform="translate(741.98438,968)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text1000"><tspan
+               x="0 8.6660156 15.339844 21.339844"
+               y="0"
+               sodipodi:role="line"
+               id="tspan998">Hash</tspan></text>
+          <text
+             xml:space="preserve"
+             transform="translate(737.98438,983)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text1004"><tspan
+               x="0 8.6660156 15.339844 19.335938 26.009766 29.34375"
+               y="0"
+               sodipodi:role="line"
+               id="tspan1002">Core n</tspan></text>
+        </g>
+        <g
+           id="g1006"
+           transform="matrix(2.9739966,0,0,2.9739966,1.4869983,1.4869983)">
+          <path
+             d="m 596.01001,806.01001 h 83.63"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path1008" />
+          <path
+             d="m 684.89001,806.01001 -7,3.5 1.75,-3.5 -1.75,-3.5 z"
+             style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path1010" />
+          <path
+             d="m 684.89001,806.01001 -7,3.5 1.75,-3.5 -1.75,-3.5 z"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path1012" />
+          <path
+             d="M 686.01001,875.71002 602.37,875.59998"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path1014" />
+          <path
+             d="m 597.12,875.59003 7.01,-3.49005 -1.76,3.5 1.75,3.5 z"
+             style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path1016" />
+          <path
+             d="m 597.12,875.59003 7.01,-3.49005 -1.76,3.5 1.75,3.5 z"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path1018" />
+        </g>
+        <g
+           id="g1020"
+           transform="scale(2.9740264)">
+          <text
+             xml:space="preserve"
+             transform="translate(620.98438,771)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text1024"><tspan
+               x="0 8.0039062 14.677734 17.34375 20.677734 26.677734"
+               y="0"
+               sodipodi:role="line"
+               id="tspan1022">Salts,</tspan></text>
+          <text
+             xml:space="preserve"
+             transform="translate(613.98438,785)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text1028"><tspan
+               x="0 8.6660156 15.339844 21.339844 28.013672 34.6875 40.6875"
+               y="0"
+               sodipodi:role="line"
+               id="tspan1026">Hashes.</tspan></text>
+          <text
+             xml:space="preserve"
+             transform="translate(606.65625,800)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text1032"><tspan
+               x="0 8.0039062 14.677734 20.677734 26.677734 35.34375 42.017578 46.013672 52.6875"
+               y="0"
+               sodipodi:role="line"
+               id="tspan1030">Passwords</tspan></text>
+          <text
+             xml:space="preserve"
+             transform="translate(606.98438,848)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text1036"><tspan
+               x="0 8.0039062 14.677734 20.677734 26.677734 33.351562 39.351562 45.351562 48.685547 55.359375"
+               y="0"
+               sodipodi:role="line"
+               id="tspan1034">Successful</tspan></text>
+          <text
+             xml:space="preserve"
+             transform="translate(606.65625,863)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text1040"><tspan
+               x="0 8.0039062 14.677734 20.677734 26.677734 35.34375 42.017578 46.013672 52.6875"
+               y="0"
+               sodipodi:role="line"
+               id="tspan1038">Passwords</tspan></text>
+        </g>
+        <g
+           id="g1042"
+           transform="matrix(2.9739966,0,0,2.9739966,1.4869983,1.4869983)">
+          <path
+             d="m 396,786.01001 h 73.64001"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path1044" />
+          <path
+             d="m 474.89001,786.01001 -7,3.5 1.75,-3.5 -1.75,-3.5 z"
+             style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path1046" />
+          <path
+             d="m 474.89001,786.01001 -7,3.5 1.75,-3.5 -1.75,-3.5 z"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path1048" />
+          <path
+             d="M 476,916.01001 H 402.37"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path1050" />
+          <path
+             d="m 397.12,916.01001 7,-3.5 -1.75,3.5 1.75,3.5 z"
+             style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path1052" />
+          <path
+             d="m 397.12,916.01001 7,-3.5 -1.75,3.5 1.75,3.5 z"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path1054" />
+        </g>
+        <g
+           id="g1056"
+           transform="scale(2.9740264)">
+          <text
+             xml:space="preserve"
+             transform="translate(411.98438,758)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text1060"><tspan
+               x="0 3.9960938 10.669922 14.666016 18 26.003906 32.677734 35.34375 38.677734 44.677734"
+               y="0"
+               sodipodi:role="line"
+               id="tspan1058">(1) Salts,</tspan></text>
+          <text
+             xml:space="preserve"
+             transform="translate(413.96875,773)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text1064"><tspan
+               x="0 8.6660156 15.339844 21.339844 28.013672 34.6875 40.6875"
+               y="0"
+               sodipodi:role="line"
+               id="tspan1062">Hashes.</tspan></text>
+          <text
+             xml:space="preserve"
+             transform="translate(406.98438,888)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text1068"><tspan
+               x="0 8.0039062 14.677734 20.677734 26.677734 33.351562 39.351562 45.351562 48.685547 55.359375"
+               y="0"
+               sodipodi:role="line"
+               id="tspan1066">Successful</tspan></text>
+          <text
+             xml:space="preserve"
+             transform="translate(406.65625,903)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text1072"><tspan
+               x="0 8.0039062 14.677734 20.677734 26.677734 35.34375 42.017578 46.013672 52.6875"
+               y="0"
+               sodipodi:role="line"
+               id="tspan1070">Passwords</tspan></text>
+        </g>
+        <g
+           id="g1074"
+           transform="matrix(2.9739966,0,0,2.9739966,1.4869983,1.4869983)">
+          <path
+             d="m 396,836.01001 h 73.64001"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path1076" />
+          <path
+             d="m 474.89001,836.01001 -7,3.5 1.75,-3.5 -1.75,-3.5 z"
+             style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path1078" />
+          <path
+             d="m 474.89001,836.01001 -7,3.5 1.75,-3.5 -1.75,-3.5 z"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path1080" />
+        </g>
+        <g
+           id="g1082"
+           transform="scale(2.9740264)">
+          <text
+             xml:space="preserve"
+             transform="translate(428.65625,808)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text1086"><tspan
+               x="0 3.9960938 10.669922"
+               y="0"
+               sodipodi:role="line"
+               id="tspan1084">(2)</tspan></text>
+          <text
+             xml:space="preserve"
+             transform="translate(406.65625,823)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text1090"><tspan
+               x="0 8.0039062 14.677734 20.677734 26.677734 35.34375 42.017578 46.013672 52.6875"
+               y="0"
+               sodipodi:role="line"
+               id="tspan1088">Passwords</tspan></text>
+        </g>
+        <g
+           id="g1092"
+           transform="matrix(2.9739966,0,0,2.9739966,1.4869983,1.4869983)">
+          <path
+             d="M 96,506.01001 V 467.37"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path1094" />
+          <path
+             d="m 96,462.12 3.5,7 -3.5,-1.75 -3.5,1.75 z"
+             style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path1096" />
+          <path
+             d="m 96,462.12 3.5,7 -3.5,-1.75 -3.5,1.75 z"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path1098" />
+          <path
+             d="m 6,506.01001 h 120 v 60 H 6 Z"
+             style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path1100" />
+          <path
+             d="m 6,506.01001 h 120 v 60 H 6 Z"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path1102" />
+        </g>
+        <g
+           id="g1104"
+           transform="scale(2.9740264)">
+          <text
+             xml:space="preserve"
+             transform="translate(10.421875,544)"
+             style="font-variant:normal;font-weight:normal;font-size:20px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text1108"><tspan
+               x="0 15.556641 22.216797 32.216797 43.339844 54.462891 64.462891 70.019531 76.679688 87.802734 93.359375 104.48242"
+               y="0"
+               sodipodi:role="line"
+               id="tspan1106">Orchestrator</tspan></text>
+        </g>
+        <g
+           id="g1110"
+           transform="matrix(2.9739966,0,0,2.9739966,1.4869983,1.4869983)">
+          <path
+             d="M 176,6 V 1026.01"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path1112" />
+        </g>
+        <g
+           id="g1114"
+           transform="scale(2.9740264)">
+          <text
+             xml:space="preserve"
+             transform="translate(21.46875,231)"
+             style="font-variant:normal;font-weight:normal;font-size:18px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text1118"><tspan
+               x="0 14.000977 19.995117 28.995117 39.005859 49.016602 58.016602 63.017578 69.011719 79.022461 84.023438 94.03418 100.02832 106.02246 119.02148 129.03223 139.04297"
+               y="0"
+               sodipodi:role="line"
+               id="tspan1116">Orchestrator-Node</tspan></text>
+          <text
+             xml:space="preserve"
+             transform="translate(80.484375,253)"
+             style="font-variant:normal;font-weight:normal;font-size:18px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text1122"><tspan
+               x="0 12.005859 22.016602"
+               y="0"
+               sodipodi:role="line"
+               id="tspan1120">Bus</tspan></text>
+        </g>
+        <g
+           id="g1124"
+           transform="matrix(2.9739966,0,0,2.9739966,1.4869983,1.4869983)">
+          <path
+             d="m 126,521.01001 h 43.63"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path1126" />
+          <path
+             d="m 174.88,521.01001 -7,3.5 1.75,-3.5 -1.75,-3.5 z"
+             style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path1128" />
+          <path
+             d="m 174.88,521.01001 -7,3.5 1.75,-3.5 -1.75,-3.5 z"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path1130" />
+          <path
+             d="M 176,551.01001 H 132.36999"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path1132" />
+          <path
+             d="m 127.12,551.01001 6.99999,-3.5 -1.75,3.5 1.75,3.5 z"
+             style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path1134" />
+          <path
+             d="m 127.12,551.01001 6.99999,-3.5 -1.75,3.5 1.75,3.5 z"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path1136" />
+          <path
+             d="m 176,456 h 93.63"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path1138" />
+          <path
+             d="m 274.88,456 -7,3.5 1.75,-3.5 -1.75,-3.5 z"
+             style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path1140" />
+          <path
+             d="m 274.88,456 -7,3.5 1.75,-3.5 -1.75,-3.5 z"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path1142" />
+          <path
+             d="M 276,445.92001 182.37,446"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path1144" />
+          <path
+             d="m 177.12,446 7,-3.5 -1.75,3.5 1.75,3.5 z"
+             style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path1146" />
+          <path
+             d="m 177.12,446 7,-3.5 -1.75,3.5 1.75,3.5 z"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path1148" />
+          <path
+             d="m 176,806.01001 h 93.63"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path1150" />
+          <path
+             d="m 274.88,806.01001 -7,3.5 1.75,-3.5 -1.75,-3.5 z"
+             style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path1152" />
+          <path
+             d="m 274.88,806.01001 -7,3.5 1.75,-3.5 -1.75,-3.5 z"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path1154" />
+          <path
+             d="M 276,795.92999 182.37,796"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path1156" />
+          <path
+             d="m 177.12,796.01001 7,-3.51001 -1.75,3.5 1.75,3.5 z"
+             style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path1158" />
+          <path
+             d="m 177.12,796.01001 7,-3.51001 -1.75,3.5 1.75,3.5 z"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path1160" />
+          <path
+             d="m 176,106 h 93.63"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path1162" />
+          <path
+             d="m 274.88,106 -7,3.5 1.75,-3.5 -1.75,-3.5 z"
+             style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path1164" />
+          <path
+             d="m 274.88,106 -7,3.5 1.75,-3.5 -1.75,-3.5 z"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path1166" />
+          <path
+             d="M 276,95.919998 182.37,96"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path1168" />
+          <path
+             d="m 177.12,96 7,-3.510002 L 182.37,96 l 1.75,3.489998 z"
+             style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path1170" />
+          <path
+             d="m 177.12,96 7,-3.510002 L 182.37,96 l 1.75,3.489998 z"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path1172" />
+          <path
+             d="m 36,461 v 38.64001"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path1174" />
+          <path
+             d="m 36,504.89001 -3.5,-7 3.5,1.75 3.5,-1.75 z"
+             style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path1176" />
+          <path
+             d="m 36,504.89001 -3.5,-7 3.5,1.75 3.5,-1.75 z"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path1178" />
+          <path
+             d="m 6,401 h 120 v 60 H 6 Z"
+             style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path1180" />
+          <path
+             d="m 6,401 h 120 v 60 H 6 Z"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path1182" />
+        </g>
+        <g
+           id="g1184"
+           transform="scale(2.9740264)">
+          <text
+             xml:space="preserve"
+             transform="translate(19.859375,439)"
+             style="font-variant:normal;font-weight:normal;font-size:20px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text1188"><tspan
+               x="0 14.443359 24.443359 35.566406 42.226562 47.783203 53.339844 64.462891 75.585938 86.708984"
+               y="0"
+               sodipodi:role="line"
+               id="tspan1186">User Input</tspan></text>
+        </g>
+        <g
+           id="g1190"
+           transform="matrix(2.9739966,0,0,2.9739966,1.4869983,1.4869983)">
+          <path
+             d="m 156,276 40,-40"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path1192" />
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

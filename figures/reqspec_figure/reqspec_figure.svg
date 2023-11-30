@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg2"
+   width="592"
+   height="267.84"
+   viewBox="0 0 592 267.84"
+   sodipodi:docname="reqspec_figure.pdf"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs6">
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath16">
+      <path
+         d="M 0,0 H 1849.9999 V 836.05762 H 0 Z"
+         clip-rule="evenodd"
+         id="path14" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath28">
+      <path
+         d="M 0,0 H 1849.9999 V 836.05762 H 0 Z"
+         clip-rule="evenodd"
+         id="path26" />
+    </clipPath>
+  </defs>
+  <sodipodi:namedview
+     id="namedview4"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1" />
+  <g
+     id="g8"
+     inkscape:groupmode="layer"
+     inkscape:label="reqspec_figure"
+     transform="matrix(0.31999998,0,0,0.31999998,0,1.0029333e-5)">
+    <g
+       id="g10">
+      <g
+         id="g12"
+         clip-path="url(#clipPath16)">
+        <g
+           id="g18"
+           transform="scale(2.9647434)">
+          <path
+             d="M 0,0 H 624 V 284 H 0 Z"
+             style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path20" />
+        </g>
+      </g>
+    </g>
+    <g
+       id="g22">
+      <g
+         id="g24"
+         clip-path="url(#clipPath28)">
+        <g
+           id="g30"
+           transform="matrix(2.9647434,0,0,2.9647434,1.4823717,1.4823717)">
+          <path
+             d="M 126,236 H 264.63"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path32" />
+          <path
+             d="m 269.88,236 -7,3.5 1.75,-3.5 -1.75,-3.5 z"
+             style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path34" />
+          <path
+             d="m 269.88,236 -7,3.5 1.75,-3.5 -1.75,-3.5 z"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path36" />
+          <path
+             d="m 6,206 h 120 v 60 H 6 Z"
+             style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path38" />
+          <path
+             d="m 6,206 h 120 v 60 H 6 Z"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path40" />
+        </g>
+        <g
+           id="g42"
+           transform="scale(2.9647732)">
+          <text
+             xml:space="preserve"
+             transform="translate(10.625,233)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text46"><tspan
+               x="0 6.6738281 9.3398438 15.339844 18.673828 22.007812 30.673828 33.339844 36.673828 43.347656 46.681641 55.347656 62.021484 68.021484 74.695312 81.369141 87.369141 90.703125 97.376953 104.05078"
+               y="0"
+               sodipodi:role="line"
+               id="tspan44">List with Hashes and</tspan></text>
+          <text
+             xml:space="preserve"
+             transform="translate(52.65625,248)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text50"><tspan
+               x="0 8.0039062 14.677734 17.34375 20.677734"
+               y="0"
+               sodipodi:role="line"
+               id="tspan48">Salts</tspan></text>
+        </g>
+        <g
+           id="g52"
+           transform="matrix(2.9647434,0,0,2.9647434,1.4823717,1.4823717)">
+          <path
+             d="M 351,237 H 489.64001"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path54" />
+          <path
+             d="m 494.89001,237 -7,3.5 1.75,-3.5 -1.75,-3.5 z"
+             style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path56" />
+          <path
+             d="m 494.89001,237 -7,3.5 1.75,-3.5 -1.75,-3.5 z"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path58" />
+          <path
+             d="m 271,196 h 80 v 80 h -80 z"
+             style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path60" />
+          <path
+             d="m 271,196 h 80 v 80 h -80 z"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path62" />
+        </g>
+        <g
+           id="g64"
+           transform="scale(2.9647732)">
+          <text
+             xml:space="preserve"
+             transform="translate(272.98438,233)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text68"><tspan
+               x="0 8.6660156 15.339844 21.339844 28.013672 31.347656 37.347656 41.34375 48.017578 54.017578 60.017578 62.683594 69.357422"
+               y="0"
+               sodipodi:role="line"
+               id="tspan66">Hash cracking</tspan></text>
+          <text
+             xml:space="preserve"
+             transform="translate(293.32813,248)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text72"><tspan
+               x="0 6 8.6660156 15.339844 21.339844 24.673828 31.347656"
+               y="0"
+               sodipodi:role="line"
+               id="tspan70">cluster</tspan></text>
+        </g>
+        <g
+           id="g74"
+           transform="matrix(2.9647434,0,0,2.9647434,1.4823717,1.4823717)">
+          <path
+             d="m 496,207 h 120 v 60 H 496 Z"
+             style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path76" />
+          <path
+             d="m 496,207 h 120 v 60 H 496 Z"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path78" />
+        </g>
+        <g
+           id="g80"
+           transform="scale(2.9647732)">
+          <text
+             xml:space="preserve"
+             transform="translate(502.64063,241)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text84"><tspan
+               x="0 8.6660156 12.662109 19.335938 25.335938 31.335938 38.009766 44.683594 48.017578 56.021484 62.695312 68.695312 74.695312 83.361328 90.035156 94.03125 100.70508"
+               y="0"
+               sodipodi:role="line"
+               id="tspan82">Cracked Passwords</tspan></text>
+        </g>
+        <g
+           id="g86"
+           transform="matrix(2.9647434,0,0,2.9647434,1.4823717,1.4823717)">
+          <path
+             d="M 311,66 V 189.63"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path88" />
+          <path
+             d="m 311,194.88 -3.5,-7 3.5,1.75 3.5,-1.75 z"
+             style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path90" />
+          <path
+             d="m 311,194.88 -3.5,-7 3.5,1.75 3.5,-1.75 z"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path92" />
+          <path
+             d="M 251,6 H 371 V 66 H 251 Z"
+             style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path94" />
+          <path
+             d="M 251,6 H 371 V 66 H 251 Z"
+             style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+             id="path96" />
+        </g>
+        <g
+           id="g98"
+           transform="scale(2.9647732)">
+          <text
+             xml:space="preserve"
+             transform="translate(289.4375,40)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text102"><tspan
+               x="0 11.109375 17.783203 21.779297 28.453125 31.119141 33.785156 39.785156"
+               y="0"
+               sodipodi:role="line"
+               id="tspan100">Wordlist</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

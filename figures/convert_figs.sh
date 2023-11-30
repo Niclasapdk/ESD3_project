@@ -8,7 +8,6 @@ for file in $drawios; do
     inkscape "${rawname}.pdf" -o "${rawname}.svg"
     rm "${rawname}.pdf"
 done;
-exit
 
 umls=$(find . -name "*.uml")
 for file in $umls; do

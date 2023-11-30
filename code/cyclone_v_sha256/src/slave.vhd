@@ -55,7 +55,7 @@ begin
                 falling_trig => falling_trig
             );
 
-    DL : entity work.data_link
+    PBSC : entity work.plusbus_slave_controller
     generic map(ADDR         => slave_addr)
     port map(
                 clk          => clk,
@@ -71,7 +71,7 @@ begin
     reset <= '1' when data_rx = PLUSBUS_RST and escape_glob = '0' else '0';
     escape_glob <= escape_pe or escape_he or escape_re;
 
-    HE : entity work.hash_expander
+    HP : entity work.hash_parser
     port map(
                 clk          => clk,
                 rising_trig  => rising_trig,
@@ -82,7 +82,7 @@ begin
                 reset        => reset
             );
 
-    RE : entity work.rounds_expander
+    RP : entity work.rounds_parser
     port map(
                 clk          => clk,
                 rising_trig  => rising_trig,
@@ -93,7 +93,7 @@ begin
                 reset        => reset
             );
 
-    PE : entity work.passwd_expander
+    PP : entity work.passwd_parser
     port map(
                 clk          => clk,
                 rising_trig  => rising_trig,

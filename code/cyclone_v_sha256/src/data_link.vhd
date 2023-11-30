@@ -2,7 +2,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 -- use IEEE.NUMERIC_STD.ALL;
 
-entity data_link is
+entity plusbus_slave_controller is
     -- Constants
     generic(ADDR : STD_LOGIC_VECTOR(1 downto 0) := "00");
     port(
@@ -19,9 +19,9 @@ entity data_link is
         tx_success : inout std_logic; -- flag to show if data was sent
         data_rx  : out STD_LOGIC_VECTOR(7 downto 0)
         );
-end data_link;
+end plusbus_slave_controller;
 
-architecture Behavioral of data_link is
+architecture Behavioral of plusbus_slave_controller is
     signal addr_latch : std_logic_vector(1 downto 0);
     signal r_nw_latch : std_logic;
     signal drive_data : std_logic := '0';

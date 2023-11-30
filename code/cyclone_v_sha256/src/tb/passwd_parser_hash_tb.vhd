@@ -2,10 +2,10 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
 
-entity passwd_expander_hash_tb is
-end passwd_expander_hash_tb;
+entity passwd_parser_hash_tb is
+end passwd_parser_hash_tb;
 
-architecture Behavioral of passwd_expander_hash_tb is
+architecture Behavioral of passwd_parser_hash_tb is
     signal clk  : STD_LOGIC := '0';
     signal com_clk  : STD_LOGIC := '0';
     signal reset : std_logic := '0';
@@ -44,7 +44,7 @@ begin
                 falling_trig => falling_trig
             );
 
-    DL : entity work.data_link
+    PBSC : entity work.plusbus_slave_controller
     generic map(ADDR         => "10")
     port map(
                 clk          => clk,
@@ -58,7 +58,7 @@ begin
                 tx_success   => tx_success
             );
 
-    PE : entity work.passwd_expander
+    PP : entity work.passwd_parser
     port map(
                 clk          => clk,
                 rising_trig  => rising_trig,

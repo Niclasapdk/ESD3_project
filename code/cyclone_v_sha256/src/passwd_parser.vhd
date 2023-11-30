@@ -3,7 +3,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
 use work.plusbus_pkg.ALL;
 
-entity passwd_expander is
+entity passwd_parser is
     port(
             -- Outputs
             passwd : out std_logic_vector(0 to 511);
@@ -17,12 +17,12 @@ entity passwd_expander is
             falling_trig : in std_logic;
             reset : in std_logic
         );
-end passwd_expander;
+end passwd_parser;
 
-architecture Behaviorial of passwd_expander is
-    type passwd_expander_state_type is (IDLE, STOP, START, ESCAPE, DATA);
-    signal current_state : passwd_expander_state_type := IDLE;
-    signal next_state : passwd_expander_state_type := IDLE;
+architecture Behaviorial of passwd_parser is
+    type passwd_parser_state_type is (IDLE, STOP, START, ESCAPE, DATA);
+    signal current_state : passwd_parser_state_type := IDLE;
+    signal next_state : passwd_parser_state_type := IDLE;
 
 begin
 

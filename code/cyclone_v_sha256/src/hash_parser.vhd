@@ -3,10 +3,10 @@ use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
 use work.plusbus_pkg.ALL;
 
-entity rounds_expander is
+entity hash_parser is
     port(
             -- Outputs
-            rounds : out unsigned(31 downto 0);
+            hash : out std_logic_vector(0 to 255);
             esc : out std_logic;
 
             -- Inputs
@@ -16,12 +16,12 @@ entity rounds_expander is
             falling_trig : in std_logic;
             reset : in std_logic
         );
-end rounds_expander;
+end hash_parser;
 
-architecture Behaviorial of rounds_expander is
-    type rounds_expander_state_type is (IDLE, STOP, START, ESCAPE, DATA);
-    signal current_state : rounds_expander_state_type := IDLE;
-    signal next_state : rounds_expander_state_type := IDLE;
+architecture Behaviorial of hash_parser is
+    type hash_parser_state_type is (IDLE, STOP, START, ESCAPE, DATA);
+    signal current_state : hash_parser_state_type := IDLE;
+    signal next_state : hash_parser_state_type := IDLE;
 
 begin
 
@@ -30,13 +30,13 @@ begin
     begin
         case current_state is
             when IDLE =>
-                if (data_in = PLUSBUS_RDS) then
+                if (data_in = PLUSBUS_HSH) then
                     next_state <= START;
                 else
                     next_state <= IDLE;
                 end if;
             when STOP =>
-                if (data_in = PLUSBUS_RDS) then
+                if (data_in = PLUSBUS_HSH) then
                     next_state <= START;
                 else
                     next_state <= STOP;
@@ -61,7 +61,7 @@ begin
 
     -- Combinatorial and current state logic
     process(clk, rising_trig, current_state, next_state, data_in) is
-        variable idx : unsigned(4 downto 0) := (others => '0');
+        variable idx : unsigned(7 downto 0) := (others => '0');
     begin
         if rising_edge(clk) then
             -- com_clk rising edge
@@ -70,17 +70,17 @@ begin
                 case current_state is
                     when START =>
                         idx := (others => '0');
-                        rounds(to_integer(idx)+7 downto to_integer(idx)) <= unsigned(data_in);
+                        hash(to_integer(idx) to to_integer(idx)+7) <= data_in;
                         idx := idx + 8;
                     when DATA =>
-                        if (idx /= "00000") then
+                        if (idx /= "00000000") then
                             if (data_in /= PLUSBUS_DLE) then
-                                rounds(to_integer(idx)+7 downto to_integer(idx)) <= unsigned(data_in);
+                                hash(to_integer(idx) to to_integer(idx)+7) <= data_in;
                                 idx := idx + 8;
                             end if;
                         end if;
                     when ESCAPE =>
-                        rounds(to_integer(idx)+7 downto to_integer(idx)) <= unsigned(data_in);
+                        hash(to_integer(idx) to to_integer(idx)+7) <= data_in;
                         idx := idx + 8;
                     when others =>
                 end case;

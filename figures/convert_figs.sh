@@ -1,11 +1,14 @@
 #!/usr/bin/env bash
 
-pdfs=$(find . -name "*.pdf")
-for file in $pdfs; do
-    newname="${file%.pdf}.svg"
-    echo "$file --> $newname"
-    inkscape "$file" -o "$newname"
+drawios=$(find . -name "*.drawio")
+for file in $drawios; do
+    rawname="${file%.drawio}"
+    echo "$file --> ${rawname}.svg"
+    drawio --crop -b 5 -x -o "${rawname}.pdf" "$file"
+    inkscape "${rawname}.pdf" -o "${rawname}.svg"
+    rm "${rawname}.pdf"
 done;
+exit
 
 umls=$(find . -name "*.uml")
 for file in $umls; do

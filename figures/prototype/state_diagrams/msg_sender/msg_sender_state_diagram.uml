@@ -13,7 +13,10 @@ STOP:Transmit stop delimiter.
   IDLE -l-> IDLE: else
   IDLE ---> START:if password_valid_latch = 1
   START <--- START : else
-  START --> DATA
+  START --> DATA: if tx_succes = 1
+  note on link
+  if orchestrator reads from this note
+  end note
   DATA -u-> STOP: if end of buffer
   DATA -u-> STOP: if next byte =\nstart of padding
   DATA <-u- DATA: else

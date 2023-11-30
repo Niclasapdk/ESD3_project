@@ -12,3 +12,9 @@ The [hash list](hashlist.txt) is computed using different number of rounds and h
 # hash list generation
 ROUNDS=100000; while read -r line; do echo -n "${line}abcdefghjiklmnop" | ../../multi-round-hashing/multi_round_hashing.py -r $ROUNDS; done < wordlist.txt
 ```
+
+To performance test a hash core.
+```sh
+# Performance test (single core)
+./hasher_cracker.py -p /dev/ttyUSB0 --perf-test | tee results.txt
+```

@@ -4,6 +4,7 @@ import argparse
 import struct
 import logging
 from time import time, sleep
+from datetime import datetime
 
 BR_PKT_LEN = 5
 BR_DATA_IDX = 3
@@ -94,7 +95,7 @@ class Orchestrator:
     def read_from_node(self, node_addr):
         if not self.noserial:
             data = None
-            disc = self.serial.read(size=self.serial.out_waiting) # silencio? ;>
+            disc = self.serial.read(size=self.serial.out_waiting) # silencio?
             if len(disc) != 0:
                 logging.debug(f"Discarding output buffer: {disc}")
             txpkt = self.prep_pkt(self.proto_spec["read"], str(node_addr).encode(), b"\xff")
@@ -175,7 +176,7 @@ class Orchestrator:
         logging.info(f"Waiting {t} s for nodes to finish")
         tstart = time()
         while time() - tstart < t:
-            sleep(t/10)
+            sleep(0.1)
             for node in self.nodes:
                 if self.receive_passwd(node) is not None:
                     return
@@ -196,7 +197,7 @@ class Orchestrator:
             passwd += bytes([data])
             data = self.read_from_node(node_addr)
         passwd = passwd[:-16] # Remove salt from received passwd
-        logging.info(f"\033[92m\U0001F9a7Password found: {passwd.decode()}\033[0m")
+        logging.info(f"\033[92m\U0001F9a7Password found: {passwd.decode()}\033[0m") #]]
         return passwd
 
     def ruuuuuunnn(self):
@@ -216,7 +217,40 @@ class Orchestrator:
                         break
                     self.schick_passwort(node, p, salz)
                 if not passwd_found:
-                    self.wait_for_nodes(5)
+                    self.wait_for_nodes(round(rounds * 4e-6, 2))
+
+    def print_perftest_results(self, rounds, t_start, t_stop):
+        logging.info(f"Performance test finished")
+        t_diff = t_stop-t_start
+        print(f"Start time: {t_start} s")
+        print(f"Stop time: {t_stop} s")
+        print(f"Time difference: {t_diff} s")
+        f = rounds/t_diff
+        print(f"Hash frequency: {round(f/1e3, 3)} KH/s")
+
+    def perftest(self):
+        passwd = b"NiclasErSej"
+        #rounds = 100000000
+        #hash = bytes.fromhex("6c34143607d27f4317536f81ad96b341bfa7203761231b4a7912a478aa13083b")
+        #rounds = 1000000
+        #hash = bytes.fromhex("f0b8e974674b8011bc99b0a3b23fe9af547214a2648827dfc77cb787c5418ae7")
+        rounds = 1000000000
+        hash = bytes.fromhex("856343c8a1a4ffcba38a758a0a4bcdcef7549d20864da8dbb44c0508a1d5d5b7")
+
+        self.passwds = [passwd]
+        self.hashes = [(rounds, hash)]
+        logging.info(f"Running single-core performance test with {rounds:e} iterations")
+        print("Performance test results")
+        print(f"Date/Time: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+        print("Cores: 1")
+        print(f"Iterations: {rounds:e}")
+        print(f"Hash: {hash.hex()}")
+        print(f"Passwd: {passwd.decode()}")
+        print(f"Salt: {self.salts[0].decode()}")
+        t_start = time()
+        self.ruuuuuunnn()
+        t_stop = time()
+        self.print_perftest_results(rounds, t_start, t_stop)
 
 def main():
     parser = argparse.ArgumentParser(description="PlusBUS Inc. hasher cracker orchestrator 9000")
@@ -227,12 +261,16 @@ def main():
     parser.add_argument("-l", "--loglevel", help="log level", required=False, choices=['DEBUG', 'INFO', 'WARNING', 'ERROR', 'CRITICAL'], default='INFO')
     parser.add_argument("-c", "--ceiling", help="txQueue wait ceiling in bytes (default: 10)", default=10, type=int)
     parser.add_argument("-a", "--addrs", nargs="*", help="Slave addresses (default: 2)", default=[2], type=int)
+    parser.add_argument("--perf-test", help="Run performance test", action="store_const", dest="perftest", const=True)
 
     args = parser.parse_args()
 
     logging.basicConfig(level=args.loglevel)
     orch = Orchestrator(args.port, args.baudrate, proto_spec, args.wordlist, args.hashlist, args.ceiling, args.addrs)
-    orch.ruuuuuunnn()
+    if args.perftest:
+        orch.perftest()
+    else:
+        orch.ruuuuuunnn()
 
 if __name__ == "__main__":
     main()

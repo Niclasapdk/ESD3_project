@@ -67,39 +67,39 @@
    <wvobject type="group" fp_name="group140">
       <obj_property name="label">Data Link</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <wvobject type="logic" fp_name="/slave_tb/DUT/DL/r_nw">
+      <wvobject type="logic" fp_name="/slave_tb/DUT/PBSC/r_nw">
          <obj_property name="ElementShortName">r_nw</obj_property>
          <obj_property name="ObjectShortName">r_nw</obj_property>
       </wvobject>
-      <wvobject type="logic" fp_name="/slave_tb/DUT/DL/r_nw_latch">
+      <wvobject type="logic" fp_name="/slave_tb/DUT/PBSC/r_nw_latch">
          <obj_property name="ElementShortName">r_nw_latch</obj_property>
          <obj_property name="ObjectShortName">r_nw_latch</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="/slave_tb/DUT/DL/addr_bus">
+      <wvobject type="array" fp_name="/slave_tb/DUT/PBSC/addr_bus">
          <obj_property name="ElementShortName">addr_bus[1:0]</obj_property>
          <obj_property name="ObjectShortName">addr_bus[1:0]</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="/slave_tb/DUT/DL/addr_latch">
+      <wvobject type="array" fp_name="/slave_tb/DUT/PBSC/addr_latch">
          <obj_property name="ElementShortName">addr_latch[1:0]</obj_property>
          <obj_property name="ObjectShortName">addr_latch[1:0]</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="/slave_tb/DUT/DL/data_bus">
+      <wvobject type="array" fp_name="/slave_tb/DUT/PBSC/data_bus">
          <obj_property name="ElementShortName">data_bus[7:0]</obj_property>
          <obj_property name="ObjectShortName">data_bus[7:0]</obj_property>
       </wvobject>
-      <wvobject type="logic" fp_name="/slave_tb/DUT/DL/drive_data">
+      <wvobject type="logic" fp_name="/slave_tb/DUT/PBSC/drive_data">
          <obj_property name="ElementShortName">drive_data</obj_property>
          <obj_property name="ObjectShortName">drive_data</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="/slave_tb/DUT/DL/data_rx">
+      <wvobject type="array" fp_name="/slave_tb/DUT/PBSC/data_rx">
          <obj_property name="ElementShortName">data_rx[7:0]</obj_property>
          <obj_property name="ObjectShortName">data_rx[7:0]</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="/slave_tb/DUT/DL/data_tx">
+      <wvobject type="array" fp_name="/slave_tb/DUT/PBSC/data_tx">
          <obj_property name="ElementShortName">data_tx[7:0]</obj_property>
          <obj_property name="ObjectShortName">data_tx[7:0]</obj_property>
       </wvobject>
-      <wvobject type="logic" fp_name="/slave_tb/DUT/DL/tx_success">
+      <wvobject type="logic" fp_name="/slave_tb/DUT/PBSC/tx_success">
          <obj_property name="ElementShortName">tx_success</obj_property>
          <obj_property name="ObjectShortName">tx_success</obj_property>
       </wvobject>
@@ -107,31 +107,31 @@
    <wvobject type="group" fp_name="group170">
       <obj_property name="label">Hash Expander</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <wvobject type="other" fp_name="/slave_tb/DUT/HE/current_state">
+      <wvobject type="other" fp_name="/slave_tb/DUT/HP/current_state">
          <obj_property name="ElementShortName">current_state</obj_property>
          <obj_property name="ObjectShortName">current_state</obj_property>
       </wvobject>
-      <wvobject type="other" fp_name="/slave_tb/DUT/HE/next_state">
+      <wvobject type="other" fp_name="/slave_tb/DUT/HP/next_state">
          <obj_property name="ElementShortName">next_state</obj_property>
          <obj_property name="ObjectShortName">next_state</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="/slave_tb/DUT/HE/data_in">
+      <wvobject type="array" fp_name="/slave_tb/DUT/HP/data_in">
          <obj_property name="ElementShortName">data_in[7:0]</obj_property>
          <obj_property name="ObjectShortName">data_in[7:0]</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="/slave_tb/DUT/HE/hash">
+      <wvobject type="array" fp_name="/slave_tb/DUT/HP/hash">
          <obj_property name="ElementShortName">hash[0:255]</obj_property>
          <obj_property name="ObjectShortName">hash[0:255]</obj_property>
       </wvobject>
-      <wvobject type="logic" fp_name="/slave_tb/DUT/HE/esc">
+      <wvobject type="logic" fp_name="/slave_tb/DUT/HP/esc">
          <obj_property name="ElementShortName">esc</obj_property>
          <obj_property name="ObjectShortName">esc</obj_property>
       </wvobject>
-      <wvobject type="logic" fp_name="/slave_tb/DUT/HE/rising_trig">
+      <wvobject type="logic" fp_name="/slave_tb/DUT/HP/rising_trig">
          <obj_property name="ElementShortName">rising_trig</obj_property>
          <obj_property name="ObjectShortName">rising_trig</obj_property>
       </wvobject>
-      <wvobject type="logic" fp_name="/slave_tb/DUT/HE/falling_trig">
+      <wvobject type="logic" fp_name="/slave_tb/DUT/HP/falling_trig">
          <obj_property name="ElementShortName">falling_trig</obj_property>
          <obj_property name="ObjectShortName">falling_trig</obj_property>
       </wvobject>
@@ -139,31 +139,31 @@
    <wvobject type="group" fp_name="group263">
       <obj_property name="label">Rounds Expander</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <wvobject type="other" fp_name="/slave_tb/DUT/RE/current_state">
+      <wvobject type="other" fp_name="/slave_tb/DUT/RP/current_state">
          <obj_property name="ElementShortName">current_state</obj_property>
          <obj_property name="ObjectShortName">current_state</obj_property>
       </wvobject>
-      <wvobject type="other" fp_name="/slave_tb/DUT/RE/next_state">
+      <wvobject type="other" fp_name="/slave_tb/DUT/RP/next_state">
          <obj_property name="ElementShortName">next_state</obj_property>
          <obj_property name="ObjectShortName">next_state</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="/slave_tb/DUT/RE/data_in">
+      <wvobject type="array" fp_name="/slave_tb/DUT/RP/data_in">
          <obj_property name="ElementShortName">data_in[7:0]</obj_property>
          <obj_property name="ObjectShortName">data_in[7:0]</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="/slave_tb/DUT/RE/rounds">
+      <wvobject type="array" fp_name="/slave_tb/DUT/RP/rounds">
          <obj_property name="ElementShortName">rounds[0:31]</obj_property>
          <obj_property name="ObjectShortName">rounds[0:31]</obj_property>
       </wvobject>
-      <wvobject type="logic" fp_name="/slave_tb/DUT/RE/esc">
+      <wvobject type="logic" fp_name="/slave_tb/DUT/RP/esc">
          <obj_property name="ElementShortName">esc</obj_property>
          <obj_property name="ObjectShortName">esc</obj_property>
       </wvobject>
-      <wvobject type="logic" fp_name="/slave_tb/DUT/RE/rising_trig">
+      <wvobject type="logic" fp_name="/slave_tb/DUT/RP/rising_trig">
          <obj_property name="ElementShortName">rising_trig</obj_property>
          <obj_property name="ObjectShortName">rising_trig</obj_property>
       </wvobject>
-      <wvobject type="logic" fp_name="/slave_tb/DUT/RE/falling_trig">
+      <wvobject type="logic" fp_name="/slave_tb/DUT/RP/falling_trig">
          <obj_property name="ElementShortName">falling_trig</obj_property>
          <obj_property name="ObjectShortName">falling_trig</obj_property>
       </wvobject>
@@ -171,19 +171,19 @@
    <wvobject type="group" fp_name="group145">
       <obj_property name="label">Passwd Expander</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <wvobject type="other" fp_name="/slave_tb/DUT/PE/current_state">
+      <wvobject type="other" fp_name="/slave_tb/DUT/PP/current_state">
          <obj_property name="ElementShortName">current_state</obj_property>
          <obj_property name="ObjectShortName">current_state</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="/slave_tb/DUT/PE/data_in">
+      <wvobject type="array" fp_name="/slave_tb/DUT/PP/data_in">
          <obj_property name="ElementShortName">data_in[7:0]</obj_property>
          <obj_property name="ObjectShortName">data_in[7:0]</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="/slave_tb/DUT/PE/passwd">
+      <wvobject type="array" fp_name="/slave_tb/DUT/PP/passwd">
          <obj_property name="ElementShortName">passwd[0:511]</obj_property>
          <obj_property name="ObjectShortName">passwd[0:511]</obj_property>
       </wvobject>
-      <wvobject type="logic" fp_name="/slave_tb/DUT/PE/output_valid">
+      <wvobject type="logic" fp_name="/slave_tb/DUT/PP/output_valid">
          <obj_property name="ElementShortName">output_valid</obj_property>
          <obj_property name="ObjectShortName">output_valid</obj_property>
       </wvobject>

@@ -1,0 +1,34 @@
+@startuml
+!theme plain
+skin rose
+
+class Orchestrator {
+  + serial: Serial
+  + proto_spec: dict
+  + passwds: list
+  + hashes: list
+  + salts: list
+  + txQueueCeiling: int
+  + nodes: list
+
+  + reset_nodes(): void
+  + setup_nodes(rounds: int, hash: bytes): void
+  + read_hashlist(hashlist: str): list
+  + read_wordlist(wordlist: str): list
+  + prep_pkt(action: bytes, addr: bytes, data: bytes): bytes
+  + txQueueMsgsWaiting(): int
+  + send_to_node(node_addr: int, data: bytes): void
+  + read_from_node(node_addr: int): bytes
+  + sha256_pad(passwd: bytes): bytes
+  + fuck(): void
+  + cmp_byte_with_data(x: bytes, y: bytes): bool
+  + escape_l3(data: bytes): bytes
+  + schick_passwort(node_addr: int, passwd: bytes, salz: bytes): void
+  + schick_hash(node_addr: int, hash: bytes): void
+  + schick_rounds(node_addr: int, rounds: int): void
+  + check_flags_and_find_ready_node(): int
+  + wait_for_nodes(t: int): void
+  + receive_passwd(node_addr: int): bytes
+  + ruuuuuunnn(): void
+}
+@enduml

@@ -1,0 +1,11 @@
+Performance test results
+Date/Time: 2023-12-01 09:54:07
+Cores: 1
+Iterations: 1.000000e+09
+Hash: 856343c8a1a4ffcba38a758a0a4bcdcef7549d20864da8dbb44c0508a1d5d5b7
+Passwd: NiclasErSej
+Salt: abcdefghjiklmnop
+Start time: 1701420847.3630478 s
+Stop time: 1701423809.0832865 s
+Time difference: 2961.720238685608 s
+Hash frequency: 337.642 KH/s

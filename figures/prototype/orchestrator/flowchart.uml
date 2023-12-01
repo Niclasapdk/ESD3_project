@@ -1,0 +1,19 @@
+@startuml
+!theme plain
+start
+:Initialize Orchestrator;
+while (Hashes to Crack Exist?) is (yes)
+  :Setup Nodes;
+  while (Salts Exist?) is (yes)
+    while (Passwords Exist?) is (yes)
+      :Check Flags & Find Ready Node;
+      if (Node Ready for Password?) then (yes)
+        :Send Salted Password;
+      else (no)
+        :Wait for Nodes;
+      endif
+    endwhile (no)
+  endwhile (no)
+endwhile (no)
+stop
+@enduml

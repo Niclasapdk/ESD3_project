@@ -90,7 +90,7 @@ architecture Behavioral of sha256_core is
         X"00000000", X"00000000", X"00000000", X"00000000"
     );
 
-    type sha256_core_state_type is (IDLE_RESET, READ_MSG, PREP_MSG_0, PREP_MSG_1, PREP_MSG_2, PREP_MSG_3, HASH_1, HASH_2, HASH_2b, HASH_3, DONE);
+    type sha256_core_state_type is (IDLE_RESET, READ_MSG, PREP_MSG_0, PREP_MSG_1, PREP_MSG_2, PREP_MSG_3, HASH_0, HASH_1, HASH_1b, HASH_2, DONE);
     signal current_state : sha256_core_state_type := IDLE_RESET;
     signal next_state : sha256_core_state_type := IDLE_RESET;
 
@@ -126,16 +126,16 @@ begin
             when PREP_MSG_2 =>
                 next_state <= PREP_MSG_3;
             when PREP_MSG_3 =>
+                next_state <= HASH_0;
+            when HASH_0 =>
                 next_state <= HASH_1;
             when HASH_1 =>
-                next_state <= HASH_2;
-            when HASH_2 =>
                 if(compression_counter = 63) then
-                    next_state <= HASH_3;
-                else
                     next_state <= HASH_2;
+                else
+                    next_state <= HASH_1;
                 end if;
-            when HASH_3 =>
+            when HASH_2 =>
                 next_state <= DONE;
             when DONE =>
                 if (start = '1') then
@@ -188,7 +188,7 @@ begin
                     w(32 to 47) <= w_buf(32 to 47);
                 when PREP_MSG_3 =>
                     w(48 to 63) <= w_buf(48 to 63);
-                when HASH_1 =>
+                when HASH_0 =>
                     a <= h0;
                     b <= h1;
                     c <= h2;
@@ -205,7 +205,7 @@ begin
                     tmp_f := h5;
                     tmp_g := h6;
                     tmp_h := h7;
-                when HASH_2 =>
+                when HASH_1 =>
                     tmp_a := a;
                     tmp_b := b;
                     tmp_c := c;
@@ -237,7 +237,7 @@ begin
                     else
                         compression_counter <= compression_counter + 1;
                     end if;
-                when HASH_3 =>
+                when HASH_2 =>
                     h0 <= std_logic_vector(unsigned(h0) + unsigned(a));
                     h1 <= std_logic_vector(unsigned(h1) + unsigned(b));
                     h2 <= std_logic_vector(unsigned(h2) + unsigned(c));

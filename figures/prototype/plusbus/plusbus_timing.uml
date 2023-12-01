@@ -1,0 +1,32 @@
+startuml
+
+clock "PlusBUS clock" as com_clk with period 2
+binary "R/not_W" as r_nw
+concise "Address bus" as ab
+concise "Data bus" as db
+
+
+@0
+ab is "0x00"
+db is "0x00"
+r_nw is 0
+
+@3
+ab is "0x03"
+r_nw is 0
+
+@4
+db is "0x41"
+r_nw -> db@+1 : write
+
+@5
+r_nw is 1
+
+@6
+db is "0x55"
+r_nw -> db@+1 : read
+
+@7
+ab is "0x00"
+
+@enduml

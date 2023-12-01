@@ -158,7 +158,7 @@ set_global_assignment -name VHDL_FILE src/multi_round_hasher.vhd
 set_global_assignment -name VHDL_FILE src/core_controller.vhd
 set_global_assignment -name VHDL_FILE src/plusbus_pkg.vhd
 set_global_assignment -name VHDL_FILE src/passwd_parser.vhd
-set_global_assignment -name VHDL_FILE src/data_link.vhd
+set_global_assignment -name VHDL_FILE src/plusbus_slave_controller.vhd
 set_global_assignment -name SDC_FILE cyclone_v_sha256.out.sdc
 set_global_assignment -name VHDL_FILE src/sha256_core.vhd
 set_global_assignment -name VHDL_FILE src/sha256_pkg.vhd

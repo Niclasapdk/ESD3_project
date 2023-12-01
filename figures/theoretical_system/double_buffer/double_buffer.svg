@@ -166,13 +166,13 @@
                id="tspan74">Hash1...Hashn</tspan></text>
           <text
              xml:space="preserve"
-             transform="translate(195.48438,33)"
+             transform="translate(191.46875,33)"
              style="font-variant:normal;font-weight:bold;font-size:24px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans-Bold;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
              id="text80"><tspan
-               x="0 17.332031 31.992188 41.332031 54.679688 61.347656 74.695312 89.355469 104.01562 112.00781 121.34766 136.00781 142.67578 149.34375 162.69141"
+               x="0 16.007812 30.667969 44.015625 53.355469 66.703125 81.363281 88.03125 108.02344 121.37109 142.71094 157.37109 166.71094"
                y="0"
                sodipodi:role="line"
-               id="tspan78">Core controller</tspan></text>
+               id="tspan78">Shared Memory</tspan></text>
           <text
              xml:space="preserve"
              transform="translate(202.5,73)"
@@ -209,13 +209,13 @@
            transform="scale(2.9625001)">
           <text
              xml:space="preserve"
-             transform="translate(464.09375,150)"
-             style="font-variant:normal;font-weight:normal;font-size:14px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             transform="translate(455.3125,149)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
              id="text100"><tspan
-               x="0 10.110352 17.896484 24.896484 32.682617 36.572266 43.572266 51.358398 56.020508"
+               x="0 8.6660156 15.339844 19.335938 26.009766 29.34375 38.009766 44.683594 51.357422 54.691406 58.6875 65.361328 68.027344 70.693359 77.367188"
                y="0"
                sodipodi:role="line"
-               id="tspan98">Hash core</tspan></text>
+               id="tspan98">Core Controller</tspan></text>
         </g>
         <g
            id="g102"
@@ -246,29 +246,78 @@
            transform="scale(2.9625001)">
           <text
              xml:space="preserve"
-             transform="translate(20.640625,139)"
+             transform="translate(24.3125,132)"
              style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
              id="text118"><tspan
-               x="0 8.0039062 14.003906 17.337891 24.011719 28.007812 34.681641 41.355469 44.021484 47.355469 57.351562 64.025391 74.021484 80.695312 84.691406"
+               x="0 8.6660156 15.339844 25.335938 35.332031 42.005859 48.679688 51.345703 57.345703 64.019531 67.353516 70.019531 76.693359"
                y="0"
                sodipodi:role="line"
-               id="tspan116">External Memory</tspan></text>
+               id="tspan116">Communication</tspan></text>
+          <text
+             xml:space="preserve"
+             transform="translate(39.984375,147)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text122"><tspan
+               x="0 8.6660156 15.339844 22.013672 25.347656 29.34375 36.017578 38.683594 41.349609 48.023438"
+               y="0"
+               sodipodi:role="line"
+               id="tspan120">Controller</tspan></text>
         </g>
         <g
-           id="g120"
+           id="g124"
            transform="matrix(2.9624705,0,0,2.9624705,1.4812353,1.4812353)">
           <path
              d="m 126,135 54.31,-27.15"
              style="fill:none;stroke:#82b366;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-             id="path122" />
+             id="path126" />
           <path
              d="m 185,105.5 -4.69,6.26 v -3.91 l -3.13001,-2.35 z"
              style="fill:#82b366;fill-opacity:1;fill-rule:nonzero;stroke:none"
-             id="path124" />
+             id="path128" />
           <path
              d="m 185,105.5 -4.69,6.26 v -3.91 l -3.13001,-2.35 z"
              style="fill:none;stroke:#82b366;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-             id="path126" />
+             id="path130" />
+        </g>
+        <g
+           id="g132"
+           transform="scale(2.9625001)">
+          <text
+             xml:space="preserve"
+             transform="translate(118.64063,94)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text136"><tspan
+               x="0 8.0039062 11.337891 18.011719 24.685547 28.019531"
+               y="0"
+               sodipodi:role="line"
+               id="tspan134">Step 1</tspan></text>
+          <text
+             xml:space="preserve"
+             transform="translate(408.64063,194)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text140"><tspan
+               x="0 8.0039062 11.337891 18.011719 24.685547 28.019531"
+               y="0"
+               sodipodi:role="line"
+               id="tspan138">Step 1</tspan></text>
+          <text
+             xml:space="preserve"
+             transform="translate(118.64063,184)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text144"><tspan
+               x="0 8.0039062 11.337891 18.011719 24.685547 28.019531"
+               y="0"
+               sodipodi:role="line"
+               id="tspan142">Step 2</tspan></text>
+          <text
+             xml:space="preserve"
+             transform="translate(408.64063,104)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text148"><tspan
+               x="0 8.0039062 11.337891 18.011719 24.685547 28.019531"
+               y="0"
+               sodipodi:role="line"
+               id="tspan146">Step 2</tspan></text>
         </g>
       </g>
     </g>

@@ -1,4 +1,4 @@
-startuml
+@startuml
 
 clock "PlusBUS clock" as com_clk with period 2
 binary "R/not_W" as r_nw

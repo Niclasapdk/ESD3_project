@@ -8,12 +8,12 @@ concise "Data bus" as db
 
 
 @0
-ab is "0x00"
-db is "0x00"
+ab is "0x0/NOP"
+db is "0xFF"
 r_nw is 0
 
 @3
-ab is "0x03"
+ab is "0x2"
 r_nw is 0
 
 @4
@@ -28,6 +28,9 @@ db is "0x55"
 r_nw -> db@+1 : read
 
 @7
-ab is "0x00"
+ab is "0x0/NOP"
+
+@8
+db is "0xFF"
 
 @enduml

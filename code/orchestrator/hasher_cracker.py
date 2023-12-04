@@ -35,6 +35,10 @@ proto_spec = {
         "nop":   b"\x12",
         }
 
+def panic(dm="Youuusa make big fuck up"):
+    logging.critical(dm)
+    exit(-69)
+
 class Orchestrator:
     def __init__(self, port: str, baudrate: int, proto_spec: dict, wordlist: str, hashlist: str, ceiling: int, nodes: list):
         self.noserial = True if port == "/dev/null" else False
@@ -56,8 +60,8 @@ class Orchestrator:
     def setup_nodes(self, rounds, hash):
         self.reset_nodes()
         for node in self.nodes:
-            self.schick_hash(node, hash)
-            self.schick_rounds(node, rounds)
+            self.send_hash(node, hash)
+            self.send_rounds(node, rounds)
 
     def read_hashlist(self, hashlist: str):
         # TODO: parse hashlist
@@ -116,10 +120,6 @@ class Orchestrator:
         k_bytes = k//8
         return passwd + b"\x80" + b"\x00"*k_bytes + struct.pack(">Q", l)
 
-    def fuck(self, dm="Youuusa make big dooo doo this time"):
-        logging.critical(dm)
-        exit(-69)
-
     def cmp_byte_with_data(self, x, y):
         if isinstance(x, bytes):
             x = ord(x)
@@ -136,7 +136,7 @@ class Orchestrator:
         data = data.replace(self.proto_spec["rst"], self.proto_spec["dle"] + self.proto_spec["rst"])
         return data
 
-    def schick_passwort(self, node_addr: int, passwd: bytes, salz: bytes):
+    def send_passwd(self, node_addr: int, passwd: bytes, salz: bytes):
         if len(passwd) > 39 or len(salz) != 16:
             logging.error("Too long password oder du hasst salz")
             return
@@ -146,12 +146,12 @@ class Orchestrator:
         logging.info(f"Sending password packet: {passwd_pkt.hex()} to node {node_addr}")
         self.send_to_node(node_addr, passwd_pkt)
 
-    def schick_hash(self, node_addr: int, hash: bytes):
+    def send_hash(self, node_addr: int, hash: bytes):
         pkt = self.proto_spec["hsh"] + self.escape_l3(hash) + self.proto_spec["etx"]
         logging.info(f"Sending hash packet: {pkt.hex()} to node {node_addr}")
         self.send_to_node(node_addr, pkt)
 
-    def schick_rounds(self, node_addr: int, rounds: int):
+    def send_rounds(self, node_addr: int, rounds: int):
         pkt = self.proto_spec["rds"] + self.escape_l3(int.to_bytes(rounds, 4)[::-1]) + self.proto_spec["etx"]
         logging.info(f"Sending rounds packet: {pkt.hex()} to node {node_addr}")
         self.send_to_node(node_addr, pkt)
@@ -193,14 +193,14 @@ class Orchestrator:
             if data < 0x20 or data > 0x7f:
                 return None
             if self.cmp_byte_with_data(data, 0x80) or data is None:
-                self.fuck("pls reset fpga cuz it's acting up")
+                panic("pls reset fpga cuz it's acting up")
             passwd += bytes([data])
             data = self.read_from_node(node_addr)
         passwd = passwd[:-16] # Remove salt from received passwd
         logging.info(f"\033[92m\U0001F9a7Password found: {passwd.decode()}\033[0m") #]]
         return passwd
 
-    def ruuuuuunnn(self):
+    def run(self):
         for hash in self.hashes:
             (rounds, hashbytes) = hash
             passwd_found = False
@@ -215,7 +215,7 @@ class Orchestrator:
                     if node == -1:
                         passwd_found = True
                         break
-                    self.schick_passwort(node, p, salz)
+                    self.send_passwd(node, p, salz)
                 if not passwd_found:
                     self.wait_for_nodes(round(rounds * 4e-6, 2))
 
@@ -248,7 +248,7 @@ class Orchestrator:
         print(f"Passwd: {passwd.decode()}")
         print(f"Salt: {self.salts[0].decode()}")
         t_start = time()
-        self.ruuuuuunnn()
+        self.run()
         t_stop = time()
         self.print_perftest_results(rounds, t_start, t_stop)
 
@@ -270,7 +270,7 @@ def main():
     if args.perftest:
         orch.perftest()
     else:
-        orch.ruuuuuunnn()
+        orch.run()
 
 if __name__ == "__main__":
     main()

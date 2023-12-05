@@ -4,9 +4,9 @@
 <svg
    version="1.1"
    id="svg2"
-   width="294.72"
-   height="315.84"
-   viewBox="0 0 294.72 315.84"
+   width="346.55997"
+   height="345.28"
+   viewBox="0 0 346.55997 345.28"
    sodipodi:docname="plus_bus_pinout.pdf"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -18,7 +18,7 @@
        clipPathUnits="userSpaceOnUse"
        id="clipPath16">
       <path
-         d="M 0,0 H 920.83331 V 985.5564 H 0 Z"
+         d="M 0,0 H 1083.3333 V 1077.4457 H 0 Z"
          clip-rule="evenodd"
          id="path14" />
     </clipPath>
@@ -26,7 +26,7 @@
        clipPathUnits="userSpaceOnUse"
        id="clipPath28">
       <path
-         d="M 0,0 H 920.83331 V 982.61444 H 0 Z"
+         d="M 0,0 H 1083.3333 V 1071.558 H 0 Z"
          clip-rule="evenodd"
          id="path26" />
     </clipPath>
@@ -44,7 +44,7 @@
      id="g8"
      inkscape:groupmode="layer"
      inkscape:label="plus_bus_pinout"
-     transform="matrix(0.31999998,0,0,0.31999998,0,1.1229333e-5)">
+     transform="matrix(0.31999998,0,0,0.31999998,0,1.1965333e-5)">
     <g
        id="g10">
       <g
@@ -52,9 +52,9 @@
          clip-path="url(#clipPath16)">
         <g
            id="g18"
-           transform="scale(2.9419594)">
+           transform="scale(2.9438405)">
           <path
-             d="M 0,0 H 313 V 335 H 0 Z"
+             d="M 0,0 H 368 V 366 H 0 Z"
              style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
              id="path20" />
         </g>
@@ -67,70 +67,70 @@
          clip-path="url(#clipPath28)">
         <g
            id="g30"
-           transform="matrix(2.9419594,0,0,2.9419594,1.4709797,1.4709797)">
+           transform="matrix(2.9438405,0,0,2.9438405,1.4719202,1.4719202)">
           <path
-             d="M 225,325 V 45"
+             d="M 280,355 V 45"
              style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
              id="path32" />
           <path
-             d="M 65,285 H 225"
+             d="M 120,315 H 280"
              style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
              id="path34" />
           <path
-             d="M 65,225 H 225"
+             d="M 120,239.66 H 280"
              style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
              id="path36" />
           <path
-             d="M 65,245 H 225"
+             d="M 120,259.66 H 280"
              style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
              id="path38" />
           <path
-             d="M 65,265 H 225"
+             d="M 120,284.31 H 280"
              style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
              id="path40" />
           <path
-             d="M 65,205 H 225"
+             d="M 120,219.66 H 280"
              style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
              id="path42" />
           <path
-             d="M 65,185 H 225"
+             d="M 120,199.66 H 280"
              style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
              id="path44" />
           <path
-             d="M 65,165 H 225"
+             d="M 120,179.66 H 280"
              style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
              id="path46" />
           <path
-             d="M 65,145 H 225"
+             d="M 120,159.66 H 280"
              style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
              id="path48" />
           <path
-             d="M 65,125 H 225"
+             d="M 120,139.66 H 280"
              style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
              id="path50" />
           <path
-             d="M 65,65 H 225"
+             d="M 120,79.660004 H 280"
              style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
              id="path52" />
           <path
-             d="M 65,85 H 225"
+             d="M 120,99.660004 H 280"
              style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
              id="path54" />
           <path
-             d="M 65,105 H 225"
+             d="M 120,119.66 H 280"
              style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
              id="path56" />
           <path
-             d="M 65,305 H 225"
+             d="M 120,345 H 280"
              style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
              id="path58" />
         </g>
         <g
            id="g60"
-           transform="scale(2.9419594)">
+           transform="scale(2.9438405)">
           <text
              xml:space="preserve"
-             transform="translate(73.84375,29)"
+             transform="translate(123.84375,29)"
              style="font-variant:normal;font-weight:normal;font-size:20px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
              id="text64"><tspan
                x="0 13.339844 17.783203 28.90625 38.90625 52.246094 66.689453 80.029297 85.585938 98.925781 103.36914 114.49219 125.61523 136.73828"
@@ -139,7 +139,7 @@
                id="tspan62">PlusBUS Pinout</tspan></text>
           <text
              xml:space="preserve"
-             transform="translate(23.984375,65)"
+             transform="translate(183.98438,75)"
              style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
              id="text68"><tspan
                x="0 8.6660156 12 18.673828"
@@ -148,7 +148,7 @@
                id="tspan66">D[0]</tspan></text>
           <text
              xml:space="preserve"
-             transform="translate(23.984375,85)"
+             transform="translate(183.98438,95)"
              style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
              id="text72"><tspan
                x="0 8.6660156 12 18.673828"
@@ -157,7 +157,7 @@
                id="tspan70">D[1]</tspan></text>
           <text
              xml:space="preserve"
-             transform="translate(23.984375,105)"
+             transform="translate(183.98438,115)"
              style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
              id="text76"><tspan
                x="0 8.6660156 12 18.673828"
@@ -166,7 +166,7 @@
                id="tspan74">D[2]</tspan></text>
           <text
              xml:space="preserve"
-             transform="translate(23.984375,125)"
+             transform="translate(183.98438,135)"
              style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
              id="text80"><tspan
                x="0 8.6660156 12 18.673828"
@@ -175,7 +175,7 @@
                id="tspan78">D[3]</tspan></text>
           <text
              xml:space="preserve"
-             transform="translate(23.984375,145)"
+             transform="translate(183.98438,155)"
              style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
              id="text84"><tspan
                x="0 8.6660156 12 18.673828"
@@ -184,7 +184,7 @@
                id="tspan82">D[4]</tspan></text>
           <text
              xml:space="preserve"
-             transform="translate(23.984375,165)"
+             transform="translate(183.98438,175)"
              style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
              id="text88"><tspan
                x="0 8.6660156 12 18.673828"
@@ -193,7 +193,7 @@
                id="tspan86">D[5]</tspan></text>
           <text
              xml:space="preserve"
-             transform="translate(23.984375,205)"
+             transform="translate(183.98438,215)"
              style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
              id="text92"><tspan
                x="0 8.6660156 12 18.673828"
@@ -202,7 +202,7 @@
                id="tspan90">D[7]</tspan></text>
           <text
              xml:space="preserve"
-             transform="translate(23.984375,185)"
+             transform="translate(183.98438,195)"
              style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
              id="text96"><tspan
                x="0 8.6660156 12 18.673828"
@@ -211,7 +211,7 @@
                id="tspan94">D[6]</tspan></text>
           <text
              xml:space="preserve"
-             transform="translate(24.3125,225)"
+             transform="translate(184.3125,235)"
              style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
              id="text100"><tspan
                x="0 8.0039062 11.337891 18.011719"
@@ -220,7 +220,7 @@
                id="tspan98">A[0]</tspan></text>
           <text
              xml:space="preserve"
-             transform="translate(24.3125,245)"
+             transform="translate(184.3125,255)"
              style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
              id="text104"><tspan
                x="0 8.0039062 11.337891 18.011719"
@@ -229,7 +229,7 @@
                id="tspan102">A[1]</tspan></text>
           <text
              xml:space="preserve"
-             transform="translate(21.65625,265)"
+             transform="translate(171.65625,275)"
              style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
              id="text108"><tspan
                x="0 8.6660156 15.339844 22.013672 28.6875 32.021484 35.355469"
@@ -238,148 +238,282 @@
                id="tspan106">R_not/W</tspan></text>
           <text
              xml:space="preserve"
-             transform="translate(21.65625,305)"
+             transform="translate(283.3125,105)"
              style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
              id="text112"><tspan
-               x="0 9.3339844 18"
+               x="0 6.6738281"
                y="0"
                sodipodi:role="line"
-               id="tspan110">GND</tspan></text>
+               id="tspan110">39</tspan></text>
           <text
              xml:space="preserve"
-             transform="translate(23.328125,285)"
+             transform="translate(283.3125,125)"
              style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
              id="text116"><tspan
-               x="0 8.6660156 15.339844"
+               x="0 6.6738281"
                y="0"
                sodipodi:role="line"
-               id="tspan114">CLK</tspan></text>
+               id="tspan114">38</tspan></text>
           <text
              xml:space="preserve"
-             transform="translate(238.3125,85)"
+             transform="translate(283.3125,145)"
              style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
              id="text120"><tspan
                x="0 6.6738281"
                y="0"
                sodipodi:role="line"
-               id="tspan118">39</tspan></text>
+               id="tspan118">37</tspan></text>
           <text
              xml:space="preserve"
-             transform="translate(238.3125,105)"
+             transform="translate(283.3125,165)"
              style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
              id="text124"><tspan
                x="0 6.6738281"
                y="0"
                sodipodi:role="line"
-               id="tspan122">38</tspan></text>
+               id="tspan122">36</tspan></text>
           <text
              xml:space="preserve"
-             transform="translate(238.3125,125)"
+             transform="translate(283.3125,185)"
              style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
              id="text128"><tspan
                x="0 6.6738281"
                y="0"
                sodipodi:role="line"
-               id="tspan126">37</tspan></text>
+               id="tspan126">35</tspan></text>
           <text
              xml:space="preserve"
-             transform="translate(238.3125,145)"
+             transform="translate(283.3125,225)"
              style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
              id="text132"><tspan
                x="0 6.6738281"
                y="0"
                sodipodi:role="line"
-               id="tspan130">36</tspan></text>
+               id="tspan130">33</tspan></text>
           <text
              xml:space="preserve"
-             transform="translate(238.3125,165)"
+             transform="translate(283.3125,205)"
              style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
              id="text136"><tspan
                x="0 6.6738281"
                y="0"
                sodipodi:role="line"
-               id="tspan134">35</tspan></text>
+               id="tspan134">34</tspan></text>
           <text
              xml:space="preserve"
-             transform="translate(238.3125,205)"
+             transform="translate(283.3125,245)"
              style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
              id="text140"><tspan
                x="0 6.6738281"
                y="0"
                sodipodi:role="line"
-               id="tspan138">33</tspan></text>
+               id="tspan138">28</tspan></text>
           <text
              xml:space="preserve"
-             transform="translate(238.3125,185)"
+             transform="translate(283.3125,265)"
              style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
              id="text144"><tspan
                x="0 6.6738281"
                y="0"
                sodipodi:role="line"
-               id="tspan142">34</tspan></text>
+               id="tspan142">27</tspan></text>
           <text
              xml:space="preserve"
-             transform="translate(238.3125,225)"
+             transform="translate(283.3125,285)"
              style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
              id="text148"><tspan
                x="0 6.6738281"
                y="0"
                sodipodi:role="line"
-               id="tspan146">28</tspan></text>
+               id="tspan146">26</tspan></text>
           <text
              xml:space="preserve"
-             transform="translate(238.3125,245)"
+             transform="translate(283.3125,345)"
              style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
              id="text152"><tspan
                x="0 6.6738281"
                y="0"
                sodipodi:role="line"
-               id="tspan150">27</tspan></text>
+               id="tspan150">12</tspan></text>
           <text
              xml:space="preserve"
-             transform="translate(238.3125,265)"
+             transform="translate(283.3125,315)"
              style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
              id="text156"><tspan
                x="0 6.6738281"
                y="0"
                sodipodi:role="line"
-               id="tspan154">26</tspan></text>
+               id="tspan154">25</tspan></text>
           <text
              xml:space="preserve"
-             transform="translate(238.3125,305)"
+             transform="translate(283.3125,85)"
              style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
              id="text160"><tspan
                x="0 6.6738281"
                y="0"
                sodipodi:role="line"
-               id="tspan158">12</tspan></text>
+               id="tspan158">40</tspan></text>
           <text
              xml:space="preserve"
-             transform="translate(238.3125,285)"
+             transform="translate(287.3125,65)"
              style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
              id="text164"><tspan
-               x="0 6.6738281"
-               y="0"
-               sodipodi:role="line"
-               id="tspan162">25</tspan></text>
-          <text
-             xml:space="preserve"
-             transform="translate(238.3125,65)"
-             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-             id="text168"><tspan
-               x="0 6.6738281"
-               y="0"
-               sodipodi:role="line"
-               id="tspan166">40</tspan></text>
-          <text
-             xml:space="preserve"
-             transform="translate(232.3125,45)"
-             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-             id="text172"><tspan
                x="0 7.3300781 15.333984 24.667969 32.009766 35.34375 44.677734 52.681641 56.015625"
                y="0"
                sodipodi:role="line"
-               id="tspan170">FPGA GPIO</tspan></text>
+               id="tspan162">FPGA GPIO</tspan></text>
+          <text
+             xml:space="preserve"
+             transform="translate(71.65625,105)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text168"><tspan
+               x="0 9.3339844 17.337891 20.671875 30.005859"
+               y="0"
+               sodipodi:role="line"
+               id="tspan166">GPIO8</tspan></text>
+          <text
+             xml:space="preserve"
+             transform="translate(71.65625,125)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text172"><tspan
+               x="0 9.3339844 17.337891 20.671875 30.005859"
+               y="0"
+               sodipodi:role="line"
+               id="tspan170">GPIO7</tspan></text>
+          <text
+             xml:space="preserve"
+             transform="translate(71.65625,145)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text176"><tspan
+               x="0 9.3339844 17.337891 20.671875 30.005859"
+               y="0"
+               sodipodi:role="line"
+               id="tspan174">GPIO6</tspan></text>
+          <text
+             xml:space="preserve"
+             transform="translate(71.65625,165)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text180"><tspan
+               x="0 9.3339844 17.337891 20.671875 30.005859"
+               y="0"
+               sodipodi:role="line"
+               id="tspan178">GPIO5</tspan></text>
+          <text
+             xml:space="preserve"
+             transform="translate(71.65625,185)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text184"><tspan
+               x="0 9.3339844 17.337891 20.671875 30.005859"
+               y="0"
+               sodipodi:role="line"
+               id="tspan182">GPIO4</tspan></text>
+          <text
+             xml:space="preserve"
+             transform="translate(68.3125,225)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text188"><tspan
+               x="0 9.3339844 17.337891 20.671875 30.005859 36.679688"
+               y="0"
+               sodipodi:role="line"
+               id="tspan186">GPIO19</tspan></text>
+          <text
+             xml:space="preserve"
+             transform="translate(68.3125,205)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text192"><tspan
+               x="0 9.3339844 17.337891 20.671875 30.005859 36.679688"
+               y="0"
+               sodipodi:role="line"
+               id="tspan190">GPIO18</tspan></text>
+          <text
+             xml:space="preserve"
+             transform="translate(71.65625,245)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text196"><tspan
+               x="0 9.3339844 17.337891 20.671875 30.005859"
+               y="0"
+               sodipodi:role="line"
+               id="tspan194">GPIO1</tspan></text>
+          <text
+             xml:space="preserve"
+             transform="translate(71.65625,265)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text200"><tspan
+               x="0 9.3339844 17.337891 20.671875 30.005859"
+               y="0"
+               sodipodi:role="line"
+               id="tspan198">GPIO0</tspan></text>
+          <text
+             xml:space="preserve"
+             transform="translate(71.65625,285)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text204"><tspan
+               x="0 9.3339844 17.337891 20.671875 30.005859"
+               y="0"
+               sodipodi:role="line"
+               id="tspan202">GPIO3</tspan></text>
+          <text
+             xml:space="preserve"
+             transform="translate(76.65625,345)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text208"><tspan
+               x="0 9.3339844 18"
+               y="0"
+               sodipodi:role="line"
+               id="tspan206">GND</tspan></text>
+          <text
+             xml:space="preserve"
+             transform="translate(71.65625,315)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text212"><tspan
+               x="0 9.3339844 17.337891 20.671875 30.005859"
+               y="0"
+               sodipodi:role="line"
+               id="tspan210">GPIO2</tspan></text>
+          <text
+             xml:space="preserve"
+             transform="translate(72.984375,85)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text216"><tspan
+               x="0 9.3339844 17.337891 20.671875 27.345703"
+               y="0"
+               sodipodi:role="line"
+               id="tspan214">GPI09</tspan></text>
+        </g>
+        <g
+           id="g218"
+           transform="scale(2.9438701)">
+          <text
+             xml:space="preserve"
+             transform="translate(40.3125,64)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text222"><tspan
+               x="0 8.0039062 16.007812 24.011719 30.685547 37.359375 40.693359 48.697266 52.03125 60.697266 64.03125 73.365234 82.03125"
+               y="0"
+               sodipodi:role="line"
+               id="tspan220">ESP32 PIN OUT</tspan></text>
+        </g>
+        <g
+           id="g224"
+           transform="scale(2.9438405)">
+          <text
+             xml:space="preserve"
+             transform="translate(183.32813,305)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text228"><tspan
+               x="0 8.6660156 15.339844"
+               y="0"
+               sodipodi:role="line"
+               id="tspan226">CLK</tspan></text>
+          <text
+             xml:space="preserve"
+             transform="translate(181.65625,335)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text232"><tspan
+               x="0 9.3339844 18"
+               y="0"
+               sodipodi:role="line"
+               id="tspan230">GND</tspan></text>
         </g>
       </g>
     </g>

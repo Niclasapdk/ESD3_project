@@ -36,8 +36,8 @@ QueueHandle_t txQueue, rxQueue;
 TimerHandle_t txQueueHealthTimer;
 TimerHandle_t timer;
 
-#define TX_Q_LEN 40000
-#define RX_Q_LEN 100
+#define TX_Q_LEN 1024
+#define RX_Q_LEN 128
 
 typedef struct msg {
     uint8_t data;
@@ -86,10 +86,6 @@ void setupPlusBus() {
 // Timer callback function
 void timerCallback(TimerHandle_t xTimer) {
     xSemaphoreGive(timerSemaphore);
-}
-
-void txQueueHealthTimerCallback(TimerHandle_t xTimer) {
-    xSemaphoreGive(txQueueHealthTimerSemaphore);
 }
 
 // Task function
@@ -150,20 +146,6 @@ void sendSlaveMsg(msg_t *msg) {
     buf[3] = msg->data;
     buf[4] = BR_STOP;
     Serial.print(buf);
-}
-
-// Sends number of free spaces
-void txQueueHealthCheckTask(void *pvParameters)  {
-    (void)pvParameters;
-
-    uint32_t txMsgsWaiting;
-    while (1) {
-        if (xSemaphoreTake(txQueueHealthTimerSemaphore, portMAX_DELAY) == pdTRUE) {
-            txMsgsWaiting = uxQueueMessagesWaiting(txQueue);
-            Serial.print("txMsgsWaiting: ");
-            Serial.println(txMsgsWaiting);
-        }
-    }
 }
 
 void bridgeTask(void *pvParameters) {
@@ -227,7 +209,6 @@ void bridgeTask(void *pvParameters) {
 void setup() {
     // Create a timer semaphore
     timerSemaphore = xSemaphoreCreateBinary();
-//    txQueueHealthTimerSemaphore = xSemaphoreCreateBinary();
 
     txQueue = xQueueCreate(TX_Q_LEN, sizeof(msg_t));
     rxQueue = xQueueCreate(RX_Q_LEN, sizeof(msg_t));
@@ -252,18 +233,6 @@ void setup() {
             NULL                 // Task handle (not used)
             );
 
-    // Creates the task for sending data back to orchestrator
-
-//    // Create a FreeRTOS task
-//    xTaskCreate(
-//            txQueueHealthCheckTask,
-//            "txQueueHealthCheckTask",
-//            1000,
-//            NULL,
-//            1,
-//            NULL
-//            );
-
     // Create a timer to trigger the semaphore every second
     timer = xTimerCreate(
             "Timer",                    // Timer name (not required)
@@ -273,25 +242,13 @@ void setup() {
             timerCallback               // Timer callback function
             );
 
-//    // Create a timer to trigger the semaphore every second
-//    txQueueHealthTimer = xTimerCreate(
-//            "Timer",                    // Timer name (not required)
-//            100,                        // Timer period in ticks
-//            pdTRUE,                     // Auto-reload timer
-//            0,                          // Timer ID (not required)
-//            txQueueHealthTimerCallback  // Timer callback function
-//            );
-
     // Start the timer
     xTimerStart(timer, 0);
-    //xTimerStart(txQueueHealthTimer, 0);
-
 
     Serial.begin(115200);
 }
 
 void loop() {
-    // Your code here (if any)
 }
 
 void app_main() {

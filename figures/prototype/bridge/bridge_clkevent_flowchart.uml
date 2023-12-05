@@ -1,7 +1,7 @@
 @startuml
 !theme plain
+title "Clock event task flowchart"
 start
-:clkEventTask;
 if (PlusBUS clock Edge?) then (Rising)
   if (Read/Write) then (Read)
     :Set data bus to passive state\n(external pull-up);

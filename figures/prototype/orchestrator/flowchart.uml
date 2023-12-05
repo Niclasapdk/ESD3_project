@@ -1,5 +1,6 @@
 @startuml
 !theme plain
+title "Orchestrator"
 start
 :Initialize Orchestrator;
 while (Hashes to Crack Exist?) is (yes)

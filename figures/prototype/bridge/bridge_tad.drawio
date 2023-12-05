@@ -1,9 +1,33 @@
-<mxfile host="app.diagrams.net" modified="2023-12-04T13:41:15.304Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" version="22.1.5" etag="NHqN5SF8tpc5FeJpsXh3" type="github">
+<mxfile host="app.diagrams.net" modified="2023-12-05T09:57:34.910Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="H5rUxQa3DOlo7P94F4uJ" version="22.1.5" type="github">
   <diagram name="Page-1" id="sj20qpy9dUrBrJG6zrOo">
-    <mxGraphModel>
+    <mxGraphModel dx="987" dy="559" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="8OPEm1P3YLut7ZHr5c5U-1" value="bridgeTask" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="280" y="280" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="8OPEm1P3YLut7ZHr5c5U-2" value="clkEventTask" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="520" y="280" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="8OPEm1P3YLut7ZHr5c5U-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="8OPEm1P3YLut7ZHr5c5U-12" target="8OPEm1P3YLut7ZHr5c5U-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8OPEm1P3YLut7ZHr5c5U-12" value="txQueue" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=#232F3E;fillColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.queue;points=[[0,0.5,0,0,0],[1,0.5,0,0,0]];" vertex="1" parent="1">
+          <mxGeometry x="430" y="230" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="8OPEm1P3YLut7ZHr5c5U-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="8OPEm1P3YLut7ZHr5c5U-1" target="8OPEm1P3YLut7ZHr5c5U-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8OPEm1P3YLut7ZHr5c5U-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="8OPEm1P3YLut7ZHr5c5U-17" target="8OPEm1P3YLut7ZHr5c5U-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8OPEm1P3YLut7ZHr5c5U-17" value="rxQueue" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=#232F3E;fillColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.queue;points=[[0,0.5,0,0,0],[1,0.5,0,0,0]];" vertex="1" parent="1">
+          <mxGeometry x="430" y="340" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="8OPEm1P3YLut7ZHr5c5U-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="8OPEm1P3YLut7ZHr5c5U-2" target="8OPEm1P3YLut7ZHr5c5U-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>

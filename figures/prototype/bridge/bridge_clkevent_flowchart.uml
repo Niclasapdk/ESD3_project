@@ -1,0 +1,19 @@
+@startuml
+!theme plain
+start
+:clkEventTask;
+if (PlusBUS clock Edge?) then (Rising)
+  if (Read/Write) then (Read)
+    :Set data bus to passive state\n(external pull-up);
+  else (Write)
+    :Write to data bus;
+  endif
+else (Falling)
+  if (Read/Write) then (Read)
+    :Latch data bus and send to rxQueue;
+  else (Write)
+  endif
+  :Setup control lines and address bus\nfor next clock cycle;
+endif
+stop
+@enduml

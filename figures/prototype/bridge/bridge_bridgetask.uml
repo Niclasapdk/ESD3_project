@@ -1,0 +1,25 @@
+@startuml
+!theme plain
+
+title "Bridge task state machine"
+
+state Idle
+state "Read/Write" as RW : Get Read/Write byte
+state Address : Get node address
+state Data : Get data byte
+state Stop : Send byte to txQueue
+
+[*] --> Idle
+
+Idle --> RW : start condition
+RW --> Address : valid R/W
+RW --> Idle : invalid R/W
+Address --> Data : valid address
+Address --> Idle : invalid address
+Data --> Stop
+Stop --> Idle : stop condition
+Stop --> Idle : not stop condition
+
+Idle --> Idle
+
+@enduml

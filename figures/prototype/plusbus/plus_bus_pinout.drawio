@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-12-05T09:32:25.554Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:120.0) Gecko/20100101 Firefox/120.0" etag="wKg14bDcw6jeyPf4FgVB" version="22.1.5" type="github">
+<mxfile host="app.diagrams.net" modified="2023-12-05T09:58:42.787Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:120.0) Gecko/20100101 Firefox/120.0" etag="YIv-YahawP8dXfW1q-Xx" version="22.1.5" type="github">
   <diagram name="Page-1" id="XdD06npJ6FDNxbPIpV9C">
-    <mxGraphModel dx="662" dy="345" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="794" dy="414" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -166,52 +166,52 @@
         <mxCell id="F0K0sA_qymcrU-x6hYdx-71" value="FPGA GPIO" style="text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="480" y="160" width="80" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="OMzUeSU9DZHnrROkdwqZ-1" value="GPIO8" style="text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+        <mxCell id="OMzUeSU9DZHnrROkdwqZ-1" value="GPIO8" style="text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="260" y="200" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="OMzUeSU9DZHnrROkdwqZ-2" value="GPIO7" style="text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+        <mxCell id="OMzUeSU9DZHnrROkdwqZ-2" value="GPIO7" style="text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="260" y="220" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="OMzUeSU9DZHnrROkdwqZ-3" value="GPIO6" style="text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+        <mxCell id="OMzUeSU9DZHnrROkdwqZ-3" value="GPIO6" style="text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="260" y="240" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="OMzUeSU9DZHnrROkdwqZ-4" value="GPIO5" style="text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+        <mxCell id="OMzUeSU9DZHnrROkdwqZ-4" value="GPIO5" style="text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="260" y="260" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="OMzUeSU9DZHnrROkdwqZ-5" value="GPIO4" style="text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+        <mxCell id="OMzUeSU9DZHnrROkdwqZ-5" value="GPIO4" style="text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="260" y="280" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="OMzUeSU9DZHnrROkdwqZ-6" value="GPIO19" style="text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+        <mxCell id="OMzUeSU9DZHnrROkdwqZ-6" value="GPIO19" style="text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="260" y="320" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="OMzUeSU9DZHnrROkdwqZ-7" value="GPIO18" style="text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+        <mxCell id="OMzUeSU9DZHnrROkdwqZ-7" value="GPIO18" style="text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="260" y="300" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="OMzUeSU9DZHnrROkdwqZ-8" value="GPIO1" style="text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+        <mxCell id="OMzUeSU9DZHnrROkdwqZ-8" value="GPIO1" style="text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="260" y="340" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="OMzUeSU9DZHnrROkdwqZ-9" value="GPIO0" style="text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+        <mxCell id="OMzUeSU9DZHnrROkdwqZ-9" value="GPIO0" style="text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="260" y="360" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="OMzUeSU9DZHnrROkdwqZ-10" value="GPIO3" style="text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+        <mxCell id="OMzUeSU9DZHnrROkdwqZ-10" value="GPIO3" style="text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="260" y="380" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="OMzUeSU9DZHnrROkdwqZ-11" value="GND" style="text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+        <mxCell id="OMzUeSU9DZHnrROkdwqZ-11" value="GND" style="text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="260" y="440" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="OMzUeSU9DZHnrROkdwqZ-12" value="GPIO2" style="text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+        <mxCell id="OMzUeSU9DZHnrROkdwqZ-12" value="GPIO2" style="text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="260" y="410" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="OMzUeSU9DZHnrROkdwqZ-13" value="GPI09" style="text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+        <mxCell id="OMzUeSU9DZHnrROkdwqZ-13" value="GPI09" style="text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="260" y="180" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="OMzUeSU9DZHnrROkdwqZ-14" value="&lt;div&gt;ESP32 PIN OUT&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+        <mxCell id="OMzUeSU9DZHnrROkdwqZ-14" value="&lt;div&gt;ESP32 Pinout&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="205" y="160" width="160" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="OMzUeSU9DZHnrROkdwqZ-15" value="CLK" style="text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+        <mxCell id="OMzUeSU9DZHnrROkdwqZ-15" value="CLK" style="text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="365" y="400" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="OMzUeSU9DZHnrROkdwqZ-18" value="GND" style="text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+        <mxCell id="OMzUeSU9DZHnrROkdwqZ-18" value="GND" style="text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="365" y="430" width="60" height="30" as="geometry" />
         </mxCell>
       </root>

@@ -485,13 +485,13 @@
            transform="scale(2.9438701)">
           <text
              xml:space="preserve"
-             transform="translate(40.3125,64)"
+             transform="translate(47.640625,64)"
              style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
              id="text222"><tspan
-               x="0 8.0039062 16.007812 24.011719 30.685547 37.359375 40.693359 48.697266 52.03125 60.697266 64.03125 73.365234 82.03125"
+               x="0 8.0039062 16.007812 24.011719 30.685547 37.359375 40.693359 48.697266 51.363281 58.037109 64.710938 71.384766"
                y="0"
                sodipodi:role="line"
-               id="tspan220">ESP32 PIN OUT</tspan></text>
+               id="tspan220">ESP32 Pinout</tspan></text>
         </g>
         <g
            id="g224"

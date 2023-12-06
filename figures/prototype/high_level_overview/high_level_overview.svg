@@ -568,6 +568,19 @@
              style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
              id="path270" />
         </g>
+        <g
+           id="g272"
+           transform="scale(2.9629924)">
+          <text
+             xml:space="preserve"
+             transform="translate(11.453125,42)"
+             style="font-variant:normal;font-weight:bold;font-size:18px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans-Bold;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text276"><tspan
+               x="0 12.005859 22.016602 32.027344 38.021484 48.032227 64.037109 69.038086 83.039062 93.049805 103.06055 110.06543 120.07617 125.07715 135.08789"
+               y="0"
+               sodipodi:role="line"
+               id="tspan274">System Overview</tspan></text>
+        </g>
       </g>
     </g>
   </g>

@@ -5,8 +5,8 @@
    version="1.1"
    id="svg2"
    width="346.55997"
-   height="345.28"
-   viewBox="0 0 346.55997 345.28"
+   height="336"
+   viewBox="0 0 346.55997 336"
    sodipodi:docname="plus_bus_pinout.pdf"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -18,7 +18,7 @@
        clipPathUnits="userSpaceOnUse"
        id="clipPath16">
       <path
-         d="M 0,0 H 1083.3333 V 1077.4457 H 0 Z"
+         d="M 0,0 H 1083.3333 V 1048.0072 H 0 Z"
          clip-rule="evenodd"
          id="path14" />
     </clipPath>
@@ -26,7 +26,7 @@
        clipPathUnits="userSpaceOnUse"
        id="clipPath28">
       <path
-         d="M 0,0 H 1083.3333 V 1071.558 H 0 Z"
+         d="M 0,0 H 1083.3333 V 1042.1195 H 0 Z"
          clip-rule="evenodd"
          id="path26" />
     </clipPath>
@@ -44,7 +44,7 @@
      id="g8"
      inkscape:groupmode="layer"
      inkscape:label="plus_bus_pinout"
-     transform="matrix(0.31999998,0,0,0.31999998,0,1.1965333e-5)">
+     transform="matrix(0.31999998,0,0,0.31999998,0,8.4e-6)">
     <g
        id="g10">
       <g
@@ -54,7 +54,7 @@
            id="g18"
            transform="scale(2.9438405)">
           <path
-             d="M 0,0 H 368 V 366 H 0 Z"
+             d="M 0,0 H 368 V 356 H 0 Z"
              style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
              id="path20" />
         </g>
@@ -69,59 +69,59 @@
            id="g30"
            transform="matrix(2.9438405,0,0,2.9438405,1.4719202,1.4719202)">
           <path
-             d="M 280,355 V 45"
+             d="M 280,345 V 35"
              style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
              id="path32" />
           <path
-             d="M 120,315 H 280"
+             d="M 120,305 H 280"
              style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
              id="path34" />
           <path
-             d="M 120,239.66 H 280"
+             d="M 120,229.66 H 280"
              style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
              id="path36" />
           <path
-             d="M 120,259.66 H 280"
+             d="M 120,249.66 H 280"
              style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
              id="path38" />
           <path
-             d="M 120,284.31 H 280"
+             d="M 120,274.31 H 280"
              style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
              id="path40" />
           <path
-             d="M 120,219.66 H 280"
+             d="M 120,209.66 H 280"
              style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
              id="path42" />
           <path
-             d="M 120,199.66 H 280"
+             d="M 120,189.66 H 280"
              style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
              id="path44" />
           <path
-             d="M 120,179.66 H 280"
+             d="M 120,169.66 H 280"
              style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
              id="path46" />
           <path
-             d="M 120,159.66 H 280"
+             d="M 120,149.66 H 280"
              style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
              id="path48" />
           <path
-             d="M 120,139.66 H 280"
+             d="M 120,129.66 H 280"
              style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
              id="path50" />
           <path
-             d="M 120,79.660004 H 280"
+             d="M 120,69.660004 H 280"
              style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
              id="path52" />
           <path
-             d="M 120,99.660004 H 280"
+             d="M 120,89.660004 H 280"
              style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
              id="path54" />
           <path
-             d="M 120,119.66 H 280"
+             d="M 120,109.66 H 280"
              style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
              id="path56" />
           <path
-             d="M 120,345 H 280"
+             d="M 120,335 H 280"
              style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
              id="path58" />
         </g>
@@ -130,16 +130,16 @@
            transform="scale(2.9438405)">
           <text
              xml:space="preserve"
-             transform="translate(123.84375,29)"
-             style="font-variant:normal;font-weight:normal;font-size:20px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             transform="translate(126.48438,28)"
+             style="font-variant:normal;font-weight:bold;font-size:18px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans-Bold;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
              id="text64"><tspan
-               x="0 13.339844 17.783203 28.90625 38.90625 52.246094 66.689453 80.029297 85.585938 98.925781 103.36914 114.49219 125.61523 136.73828"
+               x="0 12.005859 17.006836 28.001953 38.012695 51.011719 64.010742 76.016602 81.017578 93.023438 98.024414 109.01953 120.01465 131.00977"
                y="0"
                sodipodi:role="line"
                id="tspan62">PlusBUS Pinout</tspan></text>
           <text
              xml:space="preserve"
-             transform="translate(183.98438,75)"
+             transform="translate(183.98438,65)"
              style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
              id="text68"><tspan
                x="0 8.6660156 12 18.673828"
@@ -148,7 +148,7 @@
                id="tspan66">D[0]</tspan></text>
           <text
              xml:space="preserve"
-             transform="translate(183.98438,95)"
+             transform="translate(183.98438,85)"
              style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
              id="text72"><tspan
                x="0 8.6660156 12 18.673828"
@@ -157,7 +157,7 @@
                id="tspan70">D[1]</tspan></text>
           <text
              xml:space="preserve"
-             transform="translate(183.98438,115)"
+             transform="translate(183.98438,105)"
              style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
              id="text76"><tspan
                x="0 8.6660156 12 18.673828"
@@ -166,7 +166,7 @@
                id="tspan74">D[2]</tspan></text>
           <text
              xml:space="preserve"
-             transform="translate(183.98438,135)"
+             transform="translate(183.98438,125)"
              style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
              id="text80"><tspan
                x="0 8.6660156 12 18.673828"
@@ -175,7 +175,7 @@
                id="tspan78">D[3]</tspan></text>
           <text
              xml:space="preserve"
-             transform="translate(183.98438,155)"
+             transform="translate(183.98438,145)"
              style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
              id="text84"><tspan
                x="0 8.6660156 12 18.673828"
@@ -184,7 +184,7 @@
                id="tspan82">D[4]</tspan></text>
           <text
              xml:space="preserve"
-             transform="translate(183.98438,175)"
+             transform="translate(183.98438,165)"
              style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
              id="text88"><tspan
                x="0 8.6660156 12 18.673828"
@@ -193,7 +193,7 @@
                id="tspan86">D[5]</tspan></text>
           <text
              xml:space="preserve"
-             transform="translate(183.98438,215)"
+             transform="translate(183.98438,205)"
              style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
              id="text92"><tspan
                x="0 8.6660156 12 18.673828"
@@ -202,7 +202,7 @@
                id="tspan90">D[7]</tspan></text>
           <text
              xml:space="preserve"
-             transform="translate(183.98438,195)"
+             transform="translate(183.98438,185)"
              style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
              id="text96"><tspan
                x="0 8.6660156 12 18.673828"
@@ -211,7 +211,7 @@
                id="tspan94">D[6]</tspan></text>
           <text
              xml:space="preserve"
-             transform="translate(184.3125,235)"
+             transform="translate(184.3125,225)"
              style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
              id="text100"><tspan
                x="0 8.0039062 11.337891 18.011719"
@@ -220,7 +220,7 @@
                id="tspan98">A[0]</tspan></text>
           <text
              xml:space="preserve"
-             transform="translate(184.3125,255)"
+             transform="translate(184.3125,245)"
              style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
              id="text104"><tspan
                x="0 8.0039062 11.337891 18.011719"
@@ -229,7 +229,7 @@
                id="tspan102">A[1]</tspan></text>
           <text
              xml:space="preserve"
-             transform="translate(171.65625,275)"
+             transform="translate(171.65625,265)"
              style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
              id="text108"><tspan
                x="0 8.6660156 15.339844 22.013672 28.6875 32.021484 35.355469"
@@ -238,7 +238,7 @@
                id="tspan106">R_not/W</tspan></text>
           <text
              xml:space="preserve"
-             transform="translate(283.3125,105)"
+             transform="translate(283.3125,95)"
              style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
              id="text112"><tspan
                x="0 6.6738281"
@@ -247,7 +247,7 @@
                id="tspan110">39</tspan></text>
           <text
              xml:space="preserve"
-             transform="translate(283.3125,125)"
+             transform="translate(283.3125,115)"
              style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
              id="text116"><tspan
                x="0 6.6738281"
@@ -256,7 +256,7 @@
                id="tspan114">38</tspan></text>
           <text
              xml:space="preserve"
-             transform="translate(283.3125,145)"
+             transform="translate(283.3125,135)"
              style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
              id="text120"><tspan
                x="0 6.6738281"
@@ -265,7 +265,7 @@
                id="tspan118">37</tspan></text>
           <text
              xml:space="preserve"
-             transform="translate(283.3125,165)"
+             transform="translate(283.3125,155)"
              style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
              id="text124"><tspan
                x="0 6.6738281"
@@ -274,7 +274,7 @@
                id="tspan122">36</tspan></text>
           <text
              xml:space="preserve"
-             transform="translate(283.3125,185)"
+             transform="translate(283.3125,175)"
              style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
              id="text128"><tspan
                x="0 6.6738281"
@@ -283,7 +283,7 @@
                id="tspan126">35</tspan></text>
           <text
              xml:space="preserve"
-             transform="translate(283.3125,225)"
+             transform="translate(283.3125,215)"
              style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
              id="text132"><tspan
                x="0 6.6738281"
@@ -292,7 +292,7 @@
                id="tspan130">33</tspan></text>
           <text
              xml:space="preserve"
-             transform="translate(283.3125,205)"
+             transform="translate(283.3125,195)"
              style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
              id="text136"><tspan
                x="0 6.6738281"
@@ -301,7 +301,7 @@
                id="tspan134">34</tspan></text>
           <text
              xml:space="preserve"
-             transform="translate(283.3125,245)"
+             transform="translate(283.3125,235)"
              style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
              id="text140"><tspan
                x="0 6.6738281"
@@ -310,7 +310,7 @@
                id="tspan138">28</tspan></text>
           <text
              xml:space="preserve"
-             transform="translate(283.3125,265)"
+             transform="translate(283.3125,255)"
              style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
              id="text144"><tspan
                x="0 6.6738281"
@@ -319,7 +319,7 @@
                id="tspan142">27</tspan></text>
           <text
              xml:space="preserve"
-             transform="translate(283.3125,285)"
+             transform="translate(283.3125,275)"
              style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
              id="text148"><tspan
                x="0 6.6738281"
@@ -328,7 +328,7 @@
                id="tspan146">26</tspan></text>
           <text
              xml:space="preserve"
-             transform="translate(283.3125,345)"
+             transform="translate(283.3125,335)"
              style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
              id="text152"><tspan
                x="0 6.6738281"
@@ -337,7 +337,7 @@
                id="tspan150">12</tspan></text>
           <text
              xml:space="preserve"
-             transform="translate(283.3125,315)"
+             transform="translate(283.3125,305)"
              style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
              id="text156"><tspan
                x="0 6.6738281"
@@ -346,7 +346,7 @@
                id="tspan154">25</tspan></text>
           <text
              xml:space="preserve"
-             transform="translate(283.3125,85)"
+             transform="translate(283.3125,75)"
              style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
              id="text160"><tspan
                x="0 6.6738281"
@@ -355,7 +355,7 @@
                id="tspan158">40</tspan></text>
           <text
              xml:space="preserve"
-             transform="translate(287.3125,65)"
+             transform="translate(287.3125,55)"
              style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
              id="text164"><tspan
                x="0 7.3300781 15.333984 24.667969 32.009766 35.34375 44.677734 52.681641 56.015625"
@@ -364,7 +364,7 @@
                id="tspan162">FPGA GPIO</tspan></text>
           <text
              xml:space="preserve"
-             transform="translate(71.65625,105)"
+             transform="translate(71.65625,95)"
              style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
              id="text168"><tspan
                x="0 9.3339844 17.337891 20.671875 30.005859"
@@ -373,7 +373,7 @@
                id="tspan166">GPIO8</tspan></text>
           <text
              xml:space="preserve"
-             transform="translate(71.65625,125)"
+             transform="translate(71.65625,115)"
              style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
              id="text172"><tspan
                x="0 9.3339844 17.337891 20.671875 30.005859"
@@ -382,7 +382,7 @@
                id="tspan170">GPIO7</tspan></text>
           <text
              xml:space="preserve"
-             transform="translate(71.65625,145)"
+             transform="translate(71.65625,135)"
              style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
              id="text176"><tspan
                x="0 9.3339844 17.337891 20.671875 30.005859"
@@ -391,7 +391,7 @@
                id="tspan174">GPIO6</tspan></text>
           <text
              xml:space="preserve"
-             transform="translate(71.65625,165)"
+             transform="translate(71.65625,155)"
              style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
              id="text180"><tspan
                x="0 9.3339844 17.337891 20.671875 30.005859"
@@ -400,7 +400,7 @@
                id="tspan178">GPIO5</tspan></text>
           <text
              xml:space="preserve"
-             transform="translate(71.65625,185)"
+             transform="translate(71.65625,175)"
              style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
              id="text184"><tspan
                x="0 9.3339844 17.337891 20.671875 30.005859"
@@ -409,7 +409,7 @@
                id="tspan182">GPIO4</tspan></text>
           <text
              xml:space="preserve"
-             transform="translate(68.3125,225)"
+             transform="translate(68.3125,215)"
              style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
              id="text188"><tspan
                x="0 9.3339844 17.337891 20.671875 30.005859 36.679688"
@@ -418,7 +418,7 @@
                id="tspan186">GPIO19</tspan></text>
           <text
              xml:space="preserve"
-             transform="translate(68.3125,205)"
+             transform="translate(68.3125,195)"
              style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
              id="text192"><tspan
                x="0 9.3339844 17.337891 20.671875 30.005859 36.679688"
@@ -427,7 +427,7 @@
                id="tspan190">GPIO18</tspan></text>
           <text
              xml:space="preserve"
-             transform="translate(71.65625,245)"
+             transform="translate(71.65625,235)"
              style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
              id="text196"><tspan
                x="0 9.3339844 17.337891 20.671875 30.005859"
@@ -436,7 +436,7 @@
                id="tspan194">GPIO1</tspan></text>
           <text
              xml:space="preserve"
-             transform="translate(71.65625,265)"
+             transform="translate(71.65625,255)"
              style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
              id="text200"><tspan
                x="0 9.3339844 17.337891 20.671875 30.005859"
@@ -445,7 +445,7 @@
                id="tspan198">GPIO0</tspan></text>
           <text
              xml:space="preserve"
-             transform="translate(71.65625,285)"
+             transform="translate(71.65625,275)"
              style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
              id="text204"><tspan
                x="0 9.3339844 17.337891 20.671875 30.005859"
@@ -454,7 +454,7 @@
                id="tspan202">GPIO3</tspan></text>
           <text
              xml:space="preserve"
-             transform="translate(76.65625,345)"
+             transform="translate(76.65625,335)"
              style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
              id="text208"><tspan
                x="0 9.3339844 18"
@@ -463,7 +463,7 @@
                id="tspan206">GND</tspan></text>
           <text
              xml:space="preserve"
-             transform="translate(71.65625,315)"
+             transform="translate(71.65625,305)"
              style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
              id="text212"><tspan
                x="0 9.3339844 17.337891 20.671875 30.005859"
@@ -472,7 +472,7 @@
                id="tspan210">GPIO2</tspan></text>
           <text
              xml:space="preserve"
-             transform="translate(72.984375,85)"
+             transform="translate(72.984375,75)"
              style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
              id="text216"><tspan
                x="0 9.3339844 17.337891 20.671875 27.345703"
@@ -485,7 +485,7 @@
            transform="scale(2.9438701)">
           <text
              xml:space="preserve"
-             transform="translate(47.640625,64)"
+             transform="translate(47.640625,54)"
              style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
              id="text222"><tspan
                x="0 8.0039062 16.007812 24.011719 30.685547 37.359375 40.693359 48.697266 51.363281 58.037109 64.710938 71.384766"
@@ -498,7 +498,7 @@
            transform="scale(2.9438405)">
           <text
              xml:space="preserve"
-             transform="translate(183.32813,305)"
+             transform="translate(183.32813,295)"
              style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
              id="text228"><tspan
                x="0 8.6660156 15.339844"
@@ -507,7 +507,7 @@
                id="tspan226">CLK</tspan></text>
           <text
              xml:space="preserve"
-             transform="translate(181.65625,335)"
+             transform="translate(181.65625,325)"
              style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
              id="text232"><tspan
                x="0 9.3339844 18"

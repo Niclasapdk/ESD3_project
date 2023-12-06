@@ -232,10 +232,10 @@
              transform="translate(171.65625,265)"
              style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
              id="text108"><tspan
-               x="0 8.6660156 15.339844 22.013672 28.6875 32.021484 35.355469"
+               x="0 8.6660156 12 18.673828 25.347656 28.681641 35.355469"
                y="0"
                sodipodi:role="line"
-               id="tspan106">R_not/W</tspan></text>
+               id="tspan106">R/not_W</tspan></text>
           <text
              xml:space="preserve"
              transform="translate(283.3125,95)"

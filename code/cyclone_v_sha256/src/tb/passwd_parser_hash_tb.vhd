@@ -26,7 +26,7 @@ architecture Behavioral of passwd_parser_hash_tb is
     constant COM_CLK_PERIOD : time := 1 ms;
     signal hash : std_logic_vector(255 downto 0) := (others => '0');
     signal hash_done : std_logic := '0';
-    signal rounds : unsigned(31 downto 0) := x"00000002";
+    signal rounds : unsigned(31 downto 0) := x"00001388";
     signal pidx : unsigned(0 downto 0) := "0";
     signal cur_pkt : std_logic_vector(0 to 527);
     -- Clock Synchronization

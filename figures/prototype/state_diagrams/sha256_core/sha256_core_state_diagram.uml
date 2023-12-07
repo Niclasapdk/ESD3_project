@@ -16,15 +16,15 @@ PREP_MSG_2:
 PREP_MSG_1 -> PREP_MSG_2
 PREP_MSG_3:
 PREP_MSG_2 -> PREP_MSG_3
+HASH_0:
+PREP_MSG_3 -> HASH_0
 HASH_1:
-PREP_MSG_3 -> HASH_1
+HASH_0 -> HASH_1
 HASH_2:
-HASH_1 -> HASH_2
-HASH_3:
-HASH_2 --> HASH_2: counter = counter + 1
-HASH_2 -u-> HASH_3 : if counter = 63
+HASH_1 --> HASH_1: counter = counter + 1
+HASH_1 -u-> HASH_2 : if counter = 63
 DONE:
-HASH_3 -u-> DONE
+HASH_2 -u-> DONE
 RESET:
 DONE -u-> RESET: if reset = 1
 RESET --> IDLE

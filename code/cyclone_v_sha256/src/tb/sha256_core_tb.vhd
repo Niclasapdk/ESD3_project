@@ -12,7 +12,6 @@ architecture Behavioral of sha256_core_tb is
     signal passwd       : std_logic_vector(511 downto 0) := x"4a6f686e2073746f70206c696674696e6720746f206d696c6420646973636f6d666f72742c20646f20736d7468207520646f6e6b6579218000000000000001b8";
     signal hash         : std_logic_vector(255 downto 0);
     signal done         : std_logic;
-    signal rounds       : unsigned(31 downto 0) := x"00000002";
     -- Expected hash: 8963cc0afd622cc7574ac2011f93a3059b3d65548a77542a1559e3d202e6ab00
     signal reset        : std_logic := '0';
 begin

@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
-      <ZoomEndTime time="82.251 ns"></ZoomEndTime>
-      <Cursor1Time time="3.350 ns"></Cursor1Time>
+      <ZoomStartTime time="623.384 ns"></ZoomStartTime>
+      <ZoomEndTime time="722.635 ns"></ZoomEndTime>
+      <Cursor1Time time="722.534 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="287"></NameColumnWidth>
-      <ValueColumnWidth column_width="157"></ValueColumnWidth>
+      <ValueColumnWidth column_width="151"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="10" />
+   <WVObjectSize size="9" />
    <wvobject type="logic" fp_name="/sha256_core_tb/clk">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -43,10 +43,6 @@
    <wvobject type="array" fp_name="/sha256_core_tb/hash">
       <obj_property name="ElementShortName">hash[255:0]</obj_property>
       <obj_property name="ObjectShortName">hash[255:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/sha256_core_tb/rounds">
-      <obj_property name="ElementShortName">rounds[31:0]</obj_property>
-      <obj_property name="ObjectShortName">rounds[31:0]</obj_property>
    </wvobject>
    <wvobject type="other" fp_name="/sha256_core_tb/DUT/current_state">
       <obj_property name="ElementShortName">current_state</obj_property>

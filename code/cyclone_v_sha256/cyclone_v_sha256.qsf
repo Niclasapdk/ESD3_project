@@ -153,7 +153,7 @@ set_global_assignment -name VHDL_FILE src/tb/sha256_core_tb.vhd
 set_global_assignment -name VHDL_FILE src/tb/passwd_parser_hash_tb.vhd
 set_global_assignment -name VHDL_FILE src/clock_sync_mod.vhd
 set_global_assignment -name VHDL_FILE src/tb/multi_round_hasher_tb.vhd
-set_global_assignment -name VHDL_FILE src/passwd_sender.vhd
+set_global_assignment -name VHDL_FILE src/msg_sender.vhd
 set_global_assignment -name VHDL_FILE src/multi_round_hasher.vhd
 set_global_assignment -name VHDL_FILE src/core_controller.vhd
 set_global_assignment -name VHDL_FILE src/plusbus_pkg.vhd

@@ -123,7 +123,7 @@ begin
     flags_out(1) <= passwd_found;
     flags_out(2) <= reset;
 
-    PS : entity work.passwd_sender
+    MS : entity work.msg_sender
     port map(
                 clk              => clk,
                 rising_trig      => rising_trig,

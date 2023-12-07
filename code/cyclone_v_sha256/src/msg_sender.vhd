@@ -3,7 +3,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
 use work.plusbus_pkg.ALL;
 
-entity passwd_sender is
+entity msg_sender is
     port(
         -- Inputs
         clk : in std_logic;
@@ -20,12 +20,12 @@ entity passwd_sender is
         -- Outputs
         data_tx : out std_logic_vector(7 downto 0)
         );
-end passwd_sender;
+end msg_sender;
 
-architecture Behavioral of passwd_sender is
-    type passwd_sender_state_t is (IDLE, RST, START, DATA, STOP);
-    signal current_state : passwd_sender_state_t := IDLE;
-    signal next_state : passwd_sender_state_t := IDLE;
+architecture Behavioral of msg_sender is
+    type msg_sender_state_t is (IDLE, RST, START, DATA, STOP);
+    signal current_state : msg_sender_state_t := IDLE;
+    signal next_state : msg_sender_state_t := IDLE;
 
     signal passwd_valid_latch : std_logic := '0';
     signal passwd_buf : std_logic_vector(0 to 439) := (others => '0');

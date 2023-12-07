@@ -22,8 +22,8 @@ architecture Behavioral of passwd_parser_hash_tb is
         x"024170706c6561626364656667686a696b6c6d6e6f70800000000000000000000000000000000000000000000000000000000000000000000000000000000000a803",
         x"0249636520637265616d61626364656667686a696b6c6d6e6f708000000000000000000000000000000000000000000000000000000000000000000000000000c803"
     );
-    constant CLK_PERIOD : time := 10 ns;
-    constant COM_CLK_PERIOD : time := 1 us;
+    constant CLK_PERIOD : time := 40 ns;
+    constant COM_CLK_PERIOD : time := 1 ms;
     signal hash : std_logic_vector(255 downto 0) := (others => '0');
     signal hash_done : std_logic := '0';
     signal rounds : unsigned(31 downto 0) := x"00000002";

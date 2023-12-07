@@ -24,8 +24,8 @@ architecture Behavioral of slave_tb is
         x"02436f6666656561626364656667686a696b6c6d6e6f708000000000000000000000000000000000000000000000000000000000000000000000000000000000b003",
         x"024170706c6561626364656667686a696b6c6d6e6f70800000000000000000000000000000000000000000000000000000000000000000000000000000000000a803"
     );
-    constant CLK_PERIOD : time := 333 ns;
-    constant COM_CLK_PERIOD : time := 1000 us;
+    constant CLK_PERIOD : time := 40 ns;
+    constant COM_CLK_PERIOD : time := 1 ms;
     constant N_CORES : integer := 3;
     signal cores_running : std_logic_vector(0 to N_CORES-1);
     signal flags_out : std_logic_vector(5 downto 0);

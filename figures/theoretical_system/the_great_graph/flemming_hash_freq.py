@@ -3,9 +3,9 @@ import numpy as np
 import sys
 
 LINEWIDTH = 2
-FONTSIZE = 14
-FONTSIZEPLUS = 16
-TITLEFONTSIZE = 20
+FONTSIZE = 18
+FONTSIZEPLUS = 20
+TITLEFONTSIZE = 24
 TITLE = "Le Graphe De Fleming - Speed Edition"
 
 try:

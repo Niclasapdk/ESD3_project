@@ -6,7 +6,7 @@ LINEWIDTH = 2
 FONTSIZE = 14
 FONTSIZEPLUS = 16
 TITLEFONTSIZE = 20
-TITLE = "Le Graphe De Fleming"
+TITLE = "Le Graphe De Fleming - Speed Edition"
 
 try:
     if sys.argv[1] == 'log':
@@ -33,15 +33,11 @@ def calculate_values(n, c, d_bus):
     return s_p, mem
 
 # Create the figure and subplots
-fig, (ax1_n, ax1_f) = plt.subplots(2, 1, linewidth=LINEWIDTH)
-
-# Create a twin axes that shares the same x-axis
-ax2_n = ax1_n.twinx()
-plt.title(TITLE, fontsize = TITLEFONTSIZE)
-plt.grid()
+fig, ax1_f = plt.subplots(1, 1, linewidth=LINEWIDTH)
 
 # Create a twin axes for the top axis
 ax2_f = ax1_f.twinx()
+plt.title(TITLE, fontsize = TITLEFONTSIZE)
 plt.grid()
 
 # Define the range of n values
@@ -54,28 +50,16 @@ for bus_name, bus_speed in busses.items():
         s_p_values, mem_values = zip(*[calculate_values(n, c, bus_speed) for n in n_values])
 
         if log:
-            # Plot s_p on the left axis
-            ax1_n.loglog(n_values, s_p_values, label=f'{bus_name}, {c} cores', linewidth=LINEWIDTH)
-            
-            # Plot mem on the right axis
-            ax2_n.loglog(n_values, mem_values, linestyle='--', linewidth=LINEWIDTH)
-
             if i == 1:
-                f_target_values = n_values * c * (f_clk/71)
+                f_target_values = n_values * c * (f_clk/hash_cycles)
                 # Plot s_p on the left axis
                 ax1_f.loglog(f_target_values, s_p_values, label=f'{bus_name}', linewidth=LINEWIDTH)
                 
                 # Plot mem on the right axis
                 ax2_f.loglog(f_target_values, mem_values, linestyle='--', linewidth=LINEWIDTH)
         else:
-            # Plot s_p on the left axis
-            ax1_n.plot(n_values, s_p_values, label=f'{bus_name}, {c} cores', linewidth=LINEWIDTH)
-            
-            # Plot mem on the right axis
-            ax2_n.plot(n_values, mem_values, linestyle='--', linewidth=LINEWIDTH)
-
             if i == 1:
-                f_target_values = n_values * c * (f_clk/71)
+                f_target_values = n_values * c * (f_clk/hash_cycles)
                 # Plot s_p on the left axis
                 ax1_f.plot(f_target_values, s_p_values, label=f'{bus_name}', linewidth=LINEWIDTH)
                 
@@ -83,22 +67,15 @@ for bus_name, bus_speed in busses.items():
                 ax2_f.plot(f_target_values, mem_values, linestyle='--', linewidth=LINEWIDTH)
 
 # Set labels for the axes
-ax1_n.set_xlabel('Number of nodes, $n$',fontsize=FONTSIZEPLUS)
-ax1_n.set_ylabel('Salts required for \nmaximum utilization\n$s_p$',fontsize=FONTSIZEPLUS)
-ax2_n.set_ylabel('Memory required for \nhashes struct array\n[Bytes]',fontsize=FONTSIZEPLUS)
 ax1_f.set_xlabel('Hashing frequency\n$f_{hashing}$ [H/s]',fontsize=FONTSIZEPLUS)
 ax1_f.set_ylabel('Salts required for \nmaximum utilization\n$s_p$',fontsize=FONTSIZEPLUS)
 ax2_f.set_ylabel('Memory required for \nhashes struct array\n[Bytes]',fontsize=FONTSIZEPLUS)
 
-ax1_n.tick_params(axis='both', which='both', labelsize=FONTSIZE)
-ax2_n.tick_params(axis='both', which='both', labelsize=FONTSIZE)
 ax1_f.tick_params(axis='both', which='both', labelsize=FONTSIZE)
 ax2_f.tick_params(axis='both', which='both', labelsize=FONTSIZE)
 
 # Add legends
-lines, labels = ax1_n.get_legend_handles_labels()
 lines_f, labels_f = ax1_f.get_legend_handles_labels()
-ax1_n.legend(lines, labels, loc='upper left', bbox_to_anchor=(0, 1.1), fontsize=FONTSIZE,ncol = 2)
 ax1_f.legend(lines_f, labels_f, loc='upper left',fontsize=FONTSIZE)
 
 # Show the plot

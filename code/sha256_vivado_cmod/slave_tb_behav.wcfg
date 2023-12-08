@@ -12,12 +12,12 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="126,999,865.500 ns"></ZoomStartTime>
-      <ZoomEndTime time="127,000,685.001 ns"></ZoomEndTime>
-      <Cursor1Time time="127,000,608.500 ns"></Cursor1Time>
+      <ZoomStartTime time="341.200140000 ms"></ZoomStartTime>
+      <ZoomEndTime time="362.470140001 ms"></ZoomEndTime>
+      <Cursor1Time time="358.060140000 ms"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="359"></NameColumnWidth>
+      <NameColumnWidth column_width="283"></NameColumnWidth>
       <ValueColumnWidth column_width="91"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="10" />
@@ -38,7 +38,6 @@
    <wvobject type="group" fp_name="group674">
       <obj_property name="label">Clock Sync Mod</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="isExpanded"></obj_property>
       <wvobject type="logic" fp_name="/slave_tb/DUT/CSM/sys_clk">
          <obj_property name="ElementShortName">sys_clk</obj_property>
          <obj_property name="ObjectShortName">sys_clk</obj_property>
@@ -76,6 +75,7 @@
    <wvobject type="group" fp_name="group140">
       <obj_property name="label">Data Link</obj_property>
       <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
       <wvobject type="logic" fp_name="/slave_tb/DUT/PBSC/r_nw">
          <obj_property name="ElementShortName">r_nw</obj_property>
          <obj_property name="ObjectShortName">r_nw</obj_property>
@@ -114,7 +114,7 @@
       </wvobject>
    </wvobject>
    <wvobject type="group" fp_name="group170">
-      <obj_property name="label">Hash Expander</obj_property>
+      <obj_property name="label">Hash Parser</obj_property>
       <obj_property name="DisplayName">label</obj_property>
       <wvobject type="other" fp_name="/slave_tb/DUT/HP/current_state">
          <obj_property name="ElementShortName">current_state</obj_property>
@@ -136,17 +136,9 @@
          <obj_property name="ElementShortName">esc</obj_property>
          <obj_property name="ObjectShortName">esc</obj_property>
       </wvobject>
-      <wvobject type="logic" fp_name="/slave_tb/DUT/HP/rising_trig">
-         <obj_property name="ElementShortName">rising_trig</obj_property>
-         <obj_property name="ObjectShortName">rising_trig</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/slave_tb/DUT/HP/falling_trig">
-         <obj_property name="ElementShortName">falling_trig</obj_property>
-         <obj_property name="ObjectShortName">falling_trig</obj_property>
-      </wvobject>
    </wvobject>
    <wvobject type="group" fp_name="group263">
-      <obj_property name="label">Rounds Expander</obj_property>
+      <obj_property name="label">Rounds Parser</obj_property>
       <obj_property name="DisplayName">label</obj_property>
       <wvobject type="other" fp_name="/slave_tb/DUT/RP/current_state">
          <obj_property name="ElementShortName">current_state</obj_property>
@@ -168,17 +160,9 @@
          <obj_property name="ElementShortName">esc</obj_property>
          <obj_property name="ObjectShortName">esc</obj_property>
       </wvobject>
-      <wvobject type="logic" fp_name="/slave_tb/DUT/RP/rising_trig">
-         <obj_property name="ElementShortName">rising_trig</obj_property>
-         <obj_property name="ObjectShortName">rising_trig</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/slave_tb/DUT/RP/falling_trig">
-         <obj_property name="ElementShortName">falling_trig</obj_property>
-         <obj_property name="ObjectShortName">falling_trig</obj_property>
-      </wvobject>
    </wvobject>
    <wvobject type="group" fp_name="group145">
-      <obj_property name="label">Passwd Expander</obj_property>
+      <obj_property name="label">Passwd Parser</obj_property>
       <obj_property name="DisplayName">label</obj_property>
       <wvobject type="other" fp_name="/slave_tb/DUT/PP/current_state">
          <obj_property name="ElementShortName">current_state</obj_property>
@@ -243,7 +227,6 @@
       <wvobject type="group" fp_name="group161">
          <obj_property name="label">Core Signals</obj_property>
          <obj_property name="DisplayName">label</obj_property>
-         <obj_property name="isExpanded"></obj_property>
          <wvobject type="array" fp_name="/slave_tb/DUT/CC/core_start_flags">
             <obj_property name="ElementShortName">core_start_flags[0:2]</obj_property>
             <obj_property name="ObjectShortName">core_start_flags[0:2]</obj_property>
@@ -363,16 +346,8 @@
       </wvobject>
    </wvobject>
    <wvobject type="group" fp_name="group197">
-      <obj_property name="label">Passwd Sender</obj_property>
+      <obj_property name="label">Message Sender</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <wvobject type="logic" fp_name="/slave_tb/DUT/MS/rising_trig">
-         <obj_property name="ElementShortName">rising_trig</obj_property>
-         <obj_property name="ObjectShortName">rising_trig</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/slave_tb/DUT/MS/falling_trig">
-         <obj_property name="ElementShortName">falling_trig</obj_property>
-         <obj_property name="ObjectShortName">falling_trig</obj_property>
-      </wvobject>
       <wvobject type="other" fp_name="/slave_tb/DUT/MS/current_state">
          <obj_property name="ElementShortName">current_state</obj_property>
          <obj_property name="ObjectShortName">current_state</obj_property>

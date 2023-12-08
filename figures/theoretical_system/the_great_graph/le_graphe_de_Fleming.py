@@ -15,7 +15,7 @@ except:
 
 # Define constants
 n_rounds = 1
-f_clk = 100e6
+f_clk = 25e6
 passwd_len = 39
 hash_cycles = 71
 

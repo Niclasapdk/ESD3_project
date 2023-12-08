@@ -230,15 +230,15 @@
            id="g108"
            transform="matrix(2.9754663,0,0,2.9754663,1.4877331,1.4877331)">
           <path
-             d="m 226,157 56.53,134.13"
+             d="m 236,157 46.89999,133.98999"
              style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
              id="path110" />
           <path
-             d="m 284.57001,295.97 -5.95001,-5.09 3.91,0.25 2.54999,-2.97 z"
+             d="m 284.63,295.95001 -5.61001,-5.45001 3.88,0.48999 2.72001,-2.81 z"
              style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
              id="path112" />
           <path
-             d="m 284.57001,295.97 -5.95001,-5.09 3.91,0.25 2.54999,-2.97 z"
+             d="m 284.63,295.95001 -5.61001,-5.45001 3.88,0.48999 2.72001,-2.81 z"
              style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
              id="path114" />
         </g>
@@ -594,19 +594,19 @@
              style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
              id="path278" />
           <path
-             d="M 106,47 V 27 h 120 v 20"
+             d="M 106,47 V 27 h 130 v 20"
              style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
              id="path280" />
           <path
-             d="M 106,47 V 27 h 120 v 20"
+             d="M 106,47 V 27 h 130 v 20"
              style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
              id="path282" />
           <path
-             d="M 106,47 V 267 H 226 V 47"
+             d="M 106,47 V 267 H 236 V 47"
              style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
              id="path284" />
           <path
-             d="M 106,47 H 226"
+             d="M 106,47 H 236"
              style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
              id="path286" />
         </g>
@@ -615,7 +615,7 @@
            transform="scale(2.9754663)">
           <text
              xml:space="preserve"
-             transform="translate(142.98437,42)"
+             transform="translate(147.98437,42)"
              style="font-variant:normal;font-weight:bold;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans-Bold;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
              id="text292"><tspan
                x="0 9.9960938 16.669922 27.339844 34.669922 39.339844"
@@ -627,19 +627,19 @@
            id="g294"
            transform="matrix(2.9754663,0,0,2.9754663,1.4877331,1.4877331)">
           <path
-             d="M 106,67 V 47 h 120 v 20"
+             d="M 106,67 V 47 h 130 v 20"
              style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
              id="path296" />
           <path
-             d="M 106,67 V 47 h 120 v 20"
+             d="M 106,67 V 47 h 130 v 20"
              style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
              id="path298" />
           <path
-             d="M 106,67 V 267 H 226 V 67"
+             d="M 106,67 V 267 H 236 V 67"
              style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
              id="path300" />
           <path
-             d="M 106,67 H 226"
+             d="M 106,67 H 236"
              style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
              id="path302" />
         </g>
@@ -648,13 +648,13 @@
            transform="scale(2.9754663)">
           <text
              xml:space="preserve"
-             transform="translate(107.96875,62)"
+             transform="translate(108.96875,62)"
              style="font-variant:normal;font-weight:bold;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans-Bold;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
              id="text308"><tspan
-               x="0 8.0039062 14.677734 21.351562 28.025391 37.359375 44.689453 49.359375 56.689453 60.023438 64.019531 70.693359 77.367188 80.701172 88.03125 94.705078 98.701172 105.375 112.04883"
+               x="0 8.6660156 15.339844 22.669922 30 33.333984 40.664062 47.337891 51.333984 58.007812 64.681641 68.015625 72.011719 78.685547 85.359375 88.693359 96.023438 102.69727 106.69336 113.36719 120.04102"
                y="0"
                sodipodi:role="line"
-               id="tspan306">Password (40 bytes)</tspan></text>
+               id="tspan306">Candidates (40 bytes)</tspan></text>
           <text
              xml:space="preserve"
              transform="translate(134.64062,105)"

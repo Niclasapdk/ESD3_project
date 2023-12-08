@@ -12,18 +12,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="236.466231026 ms"></ZoomStartTime>
-      <ZoomEndTime time="277.108627195 ms"></ZoomEndTime>
-      <Cursor1Time time="270.334894500 ms"></Cursor1Time>
+      <ZoomStartTime time="126,999,865.500 ns"></ZoomStartTime>
+      <ZoomEndTime time="127,000,685.001 ns"></ZoomEndTime>
+      <Cursor1Time time="127,000,608.500 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="359"></NameColumnWidth>
-      <ValueColumnWidth column_width="97"></ValueColumnWidth>
+      <ValueColumnWidth column_width="91"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="9" />
-   <wave_markers>
-      <marker label="" time="132555000" />
-   </wave_markers>
+   <WVObjectSize size="10" />
    <wvobject type="logic" fp_name="/slave_tb/DUT/CC/clk">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -32,9 +29,16 @@
       <obj_property name="ElementShortName">reset</obj_property>
       <obj_property name="ObjectShortName">reset</obj_property>
    </wvobject>
+   <wvobject type="logic" fp_name="/slave_tb/DUT/CSM/sync_clk">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">sync_clk</obj_property>
+      <obj_property name="ObjectShortName">sync_clk</obj_property>
+      <obj_property name="label">com_clk</obj_property>
+   </wvobject>
    <wvobject type="group" fp_name="group674">
       <obj_property name="label">Clock Sync Mod</obj_property>
       <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
       <wvobject type="logic" fp_name="/slave_tb/DUT/CSM/sys_clk">
          <obj_property name="ElementShortName">sys_clk</obj_property>
          <obj_property name="ObjectShortName">sys_clk</obj_property>
@@ -51,17 +55,22 @@
          <obj_property name="ElementShortName">falling_trig</obj_property>
          <obj_property name="ObjectShortName">falling_trig</obj_property>
       </wvobject>
-      <wvobject type="logic" fp_name="/slave_tb/DUT/CSM/r1_sync_clk">
-         <obj_property name="ElementShortName">r1_sync_clk</obj_property>
-         <obj_property name="ObjectShortName">r1_sync_clk</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/slave_tb/DUT/CSM/r2_sync_clk">
-         <obj_property name="ElementShortName">r2_sync_clk</obj_property>
-         <obj_property name="ObjectShortName">r2_sync_clk</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/slave_tb/DUT/CSM/r3_sync_clk">
-         <obj_property name="ElementShortName">r3_sync_clk</obj_property>
-         <obj_property name="ObjectShortName">r3_sync_clk</obj_property>
+      <wvobject type="group" fp_name="group143">
+         <obj_property name="label">samples</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject type="logic" fp_name="/slave_tb/DUT/CSM/r1_sync_clk">
+            <obj_property name="ElementShortName">r1_sync_clk</obj_property>
+            <obj_property name="ObjectShortName">r1_sync_clk</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/slave_tb/DUT/CSM/r2_sync_clk">
+            <obj_property name="ElementShortName">r2_sync_clk</obj_property>
+            <obj_property name="ObjectShortName">r2_sync_clk</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/slave_tb/DUT/CSM/r3_sync_clk">
+            <obj_property name="ElementShortName">r3_sync_clk</obj_property>
+            <obj_property name="ObjectShortName">r3_sync_clk</obj_property>
+         </wvobject>
       </wvobject>
    </wvobject>
    <wvobject type="group" fp_name="group140">
@@ -152,8 +161,8 @@
          <obj_property name="ObjectShortName">data_in[7:0]</obj_property>
       </wvobject>
       <wvobject type="array" fp_name="/slave_tb/DUT/RP/rounds">
-         <obj_property name="ElementShortName">rounds[0:31]</obj_property>
-         <obj_property name="ObjectShortName">rounds[0:31]</obj_property>
+         <obj_property name="ElementShortName">rounds[31:0]</obj_property>
+         <obj_property name="ObjectShortName">rounds[31:0]</obj_property>
       </wvobject>
       <wvobject type="logic" fp_name="/slave_tb/DUT/RP/esc">
          <obj_property name="ElementShortName">esc</obj_property>

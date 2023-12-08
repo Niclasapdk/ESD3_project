@@ -3,7 +3,10 @@ import numpy as np
 import sys
 
 LINEWIDTH = 2
-TITLE = "The Great Graph"
+FONTSIZE = 14
+FONTSIZEPLUS = 16
+TITLEFONTSIZE = 20
+TITLE = "Le Graphe De Fleming"
 
 try:
     if sys.argv[1] == 'log':
@@ -34,7 +37,7 @@ fig, (ax1_n, ax1_f) = plt.subplots(2, 1, linewidth=LINEWIDTH)
 
 # Create a twin axes that shares the same x-axis
 ax2_n = ax1_n.twinx()
-plt.title(TITLE)
+plt.title(TITLE, fontsize = TITLEFONTSIZE)
 plt.grid()
 
 # Create a twin axes for the top axis
@@ -80,18 +83,23 @@ for bus_name, bus_speed in busses.items():
                 ax2_f.plot(f_target_values, mem_values, linestyle='--', linewidth=LINEWIDTH)
 
 # Set labels for the axes
-ax1_n.set_xlabel('number of nodes, $n$')
-ax1_n.set_ylabel('salts required for maximum utilization\n$s_p$')
-ax2_n.set_ylabel('memory required for hashes struct array\n[Bytes]')
-ax1_f.set_xlabel('Hashing frequency\n$f_{hashing}$ [H/s]')
-ax1_f.set_ylabel('salts required for maximum utilization\n$s_p$')
-ax2_f.set_ylabel('memory required for hashes struct array\n[Bytes]')
+ax1_n.set_xlabel('Number of nodes, $n$',fontsize=FONTSIZEPLUS)
+ax1_n.set_ylabel('Salts required for \nmaximum utilization\n$s_p$',fontsize=FONTSIZEPLUS)
+ax2_n.set_ylabel('Memory required for \nhashes struct array\n[Bytes]',fontsize=FONTSIZEPLUS)
+ax1_f.set_xlabel('Hashing frequency\n$f_{hashing}$ [H/s]',fontsize=FONTSIZEPLUS)
+ax1_f.set_ylabel('Salts required for \nmaximum utilization\n$s_p$',fontsize=FONTSIZEPLUS)
+ax2_f.set_ylabel('Memory required for \nhashes struct array\n[Bytes]',fontsize=FONTSIZEPLUS)
+
+ax1_n.tick_params(axis='both', which='both', labelsize=FONTSIZE)
+ax2_n.tick_params(axis='both', which='both', labelsize=FONTSIZE)
+ax1_f.tick_params(axis='both', which='both', labelsize=FONTSIZE)
+ax2_f.tick_params(axis='both', which='both', labelsize=FONTSIZE)
 
 # Add legends
 lines, labels = ax1_n.get_legend_handles_labels()
 lines_f, labels_f = ax1_f.get_legend_handles_labels()
-ax1_n.legend(lines, labels, loc='upper left', bbox_to_anchor=(0, 1.1))
-ax1_f.legend(lines_f, labels_f, loc='upper left')
+ax1_n.legend(lines, labels, loc='upper left', bbox_to_anchor=(0, 1.1), fontsize=FONTSIZE,ncol = 2)
+ax1_f.legend(lines_f, labels_f, loc='upper left',fontsize=FONTSIZE)
 
 # Show the plot
 plt.show()

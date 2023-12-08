@@ -102,243 +102,225 @@
            transform="scale(2.9625001)">
           <text
              xml:space="preserve"
-             transform="translate(217.29688,102)"
+             transform="translate(222.625,109)"
              style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
              id="text50"><tspan
-               x="0 8.0039062 14.677734 20.677734 26.677734 35.34375 42.017578 46.013672 52.6875 56.021484 59.355469 67.359375 74.033203 76.699219 80.033203 86.707031 90.041016 93.375 96.708984 104.71289 111.38672 114.05273 117.38672 124.06055"
+               x="0 8.0039062 14.677734 20.677734 26.677734 35.34375 42.017578 46.013672 52.6875 56.021484 64.6875 71.361328 78.035156 84.708984 87.375 94.048828 100.72266 104.05664 110.73047"
                y="0"
                sodipodi:role="line"
-               id="tspan48">Password, Salt1...Saltn,</tspan></text>
-          <text
-             xml:space="preserve"
-             transform="translate(241.29688,117)"
-             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-             id="text54"><tspan
-               x="0 8.6660156 15.339844 21.339844 28.013672 34.6875 38.021484 41.355469 44.689453 53.355469 60.029297 66.029297 72.703125"
-               y="0"
-               sodipodi:role="line"
-               id="tspan52">Hash1...Hashn</tspan></text>
+               id="tspan48">Password Candidates</tspan></text>
         </g>
         <g
-           id="g56"
+           id="g52"
            transform="matrix(2.9624705,0,0,2.9624705,1.4812353,1.4812353)">
           <path
              d="m 376,185 54.70999,-36.47"
              style="fill:none;stroke:#82b366;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-             id="path58" />
+             id="path54" />
           <path
              d="M 435.07001,145.61999 431.19,152.42 430.70999,148.53 427.31,146.59 Z"
              style="fill:#82b366;fill-opacity:1;fill-rule:nonzero;stroke:none"
-             id="path60" />
+             id="path56" />
           <path
              d="M 435.07001,145.61999 431.19,152.42 430.70999,148.53 427.31,146.59 Z"
              style="fill:none;stroke:#82b366;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-             id="path62" />
+             id="path58" />
           <path
              d="m 186,165 h 190 v 40 H 186 Z"
              style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
-             id="path64" />
+             id="path60" />
           <path
              d="m 186,165 h 190 v 40 H 186 Z"
              style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-             id="path66" />
+             id="path62" />
         </g>
         <g
-           id="g68"
+           id="g64"
            transform="scale(2.9625001)">
           <text
              xml:space="preserve"
-             transform="translate(217.29688,182)"
+             transform="translate(222.625,189)"
              style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-             id="text72"><tspan
-               x="0 8.0039062 14.677734 20.677734 26.677734 35.34375 42.017578 46.013672 52.6875 56.021484 59.355469 67.359375 74.033203 76.699219 80.033203 86.707031 90.041016 93.375 96.708984 104.71289 111.38672 114.05273 117.38672 124.06055"
+             id="text68"><tspan
+               x="0 8.0039062 14.677734 20.677734 26.677734 35.34375 42.017578 46.013672 52.6875 56.021484 64.6875 71.361328 78.035156 84.708984 87.375 94.048828 100.72266 104.05664 110.73047"
                y="0"
                sodipodi:role="line"
-               id="tspan70">Password, Salt1...Saltn,</tspan></text>
-          <text
-             xml:space="preserve"
-             transform="translate(241.29688,197)"
-             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-             id="text76"><tspan
-               x="0 8.6660156 15.339844 21.339844 28.013672 34.6875 38.021484 41.355469 44.689453 53.355469 60.029297 66.029297 72.703125"
-               y="0"
-               sodipodi:role="line"
-               id="tspan74">Hash1...Hashn</tspan></text>
+               id="tspan66">Password Candidates</tspan></text>
         </g>
         <g
-           id="g78"
+           id="g70"
            transform="scale(2.9624705)">
           <text
              xml:space="preserve"
              transform="translate(238.3125,70)"
              style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-             id="text82"><tspan
+             id="text74"><tspan
                x="0 8.0039062 14.677734 21.351562 25.347656 32.021484 38.695312 42.029297 52.025391 58.699219 68.695312 75.369141 79.365234"
                y="0"
                sodipodi:role="line"
-               id="tspan80">Shared Memory</tspan></text>
+               id="tspan72">Shared Memory</tspan></text>
           <text
              xml:space="preserve"
              transform="translate(185.09375,80)"
              style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-             id="text86"><tspan
+             id="text78"><tspan
                x="0 8.0039062 14.677734 17.794922 21.128906 27.802734 31.798828 35.132812"
                y="0"
                sodipodi:role="line"
-               id="tspan84">Buffer 1</tspan></text>
+               id="tspan76">Buffer 1</tspan></text>
         </g>
         <g
-           id="g88"
+           id="g80"
            transform="matrix(2.9624705,0,0,2.9624705,1.4812353,1.4812353)">
           <path
              d="m 436,115 h 120 v 60 H 436 Z"
              style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
-             id="path90" />
+             id="path82" />
           <path
              d="m 436,115 h 120 v 60 H 436 Z"
              style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-             id="path92" />
+             id="path84" />
         </g>
         <g
-           id="g94"
+           id="g86"
            transform="scale(2.9625001)">
           <text
              xml:space="preserve"
              transform="translate(455.3125,149)"
              style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-             id="text98"><tspan
+             id="text90"><tspan
                x="0 8.6660156 15.339844 19.335938 26.009766 29.34375 38.009766 44.683594 51.357422 54.691406 58.6875 65.361328 68.027344 70.693359 77.367188"
                y="0"
                sodipodi:role="line"
-               id="tspan96">Core Controller</tspan></text>
+               id="tspan88">Core Controller</tspan></text>
         </g>
         <g
-           id="g100"
+           id="g92"
            transform="matrix(2.9624705,0,0,2.9624705,1.4812353,1.4812353)">
           <path
              d="m 126,135 55.11,45.92999"
              style="fill:none;stroke:#c73500;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-             id="path102" />
+             id="path94" />
           <path
              d="m 185.14,184.28999 -7.62,-1.79998 3.59,-1.56002 0.89999,-3.80999 z"
              style="fill:#c73500;fill-opacity:1;fill-rule:nonzero;stroke:none"
-             id="path104" />
+             id="path96" />
           <path
              d="m 185.14,184.28999 -7.62,-1.79998 3.59,-1.56002 0.89999,-3.80999 z"
              style="fill:none;stroke:#c73500;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-             id="path106" />
+             id="path98" />
           <path
              d="m 6,105 h 120 v 60 H 6 Z"
              style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
-             id="path108" />
+             id="path100" />
           <path
              d="m 6,105 h 120 v 60 H 6 Z"
              style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-             id="path110" />
+             id="path102" />
         </g>
         <g
-           id="g112"
+           id="g104"
            transform="scale(2.9625001)">
           <text
              xml:space="preserve"
              transform="translate(24.3125,132)"
              style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-             id="text116"><tspan
+             id="text108"><tspan
                x="0 8.6660156 15.339844 25.335938 35.332031 42.005859 48.679688 51.345703 57.345703 64.019531 67.353516 70.019531 76.693359"
                y="0"
                sodipodi:role="line"
-               id="tspan114">Communication</tspan></text>
+               id="tspan106">Communication</tspan></text>
           <text
              xml:space="preserve"
              transform="translate(39.984375,147)"
              style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-             id="text120"><tspan
+             id="text112"><tspan
                x="0 8.6660156 15.339844 22.013672 25.347656 29.34375 36.017578 38.683594 41.349609 48.023438"
                y="0"
                sodipodi:role="line"
-               id="tspan118">Controller</tspan></text>
+               id="tspan110">Controller</tspan></text>
         </g>
         <g
-           id="g122"
+           id="g114"
            transform="matrix(2.9624705,0,0,2.9624705,1.4812353,1.4812353)">
           <path
              d="m 126,135 54.31,-27.15"
              style="fill:none;stroke:#82b366;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-             id="path124" />
+             id="path116" />
           <path
              d="m 185,105.5 -4.69,6.26 v -3.91 l -3.13001,-2.35 z"
              style="fill:#82b366;fill-opacity:1;fill-rule:nonzero;stroke:none"
-             id="path126" />
+             id="path118" />
           <path
              d="m 185,105.5 -4.69,6.26 v -3.91 l -3.13001,-2.35 z"
              style="fill:none;stroke:#82b366;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-             id="path128" />
+             id="path120" />
         </g>
         <g
-           id="g130"
+           id="g122"
            transform="scale(2.9625001)">
           <text
              xml:space="preserve"
              transform="translate(118.64063,94)"
              style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text126"><tspan
+               x="0 8.0039062 11.337891 18.011719 24.685547 28.019531"
+               y="0"
+               sodipodi:role="line"
+               id="tspan124">Step 1</tspan></text>
+          <text
+             xml:space="preserve"
+             transform="translate(408.64063,194)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text130"><tspan
+               x="0 8.0039062 11.337891 18.011719 24.685547 28.019531"
+               y="0"
+               sodipodi:role="line"
+               id="tspan128">Step 1</tspan></text>
+          <text
+             xml:space="preserve"
+             transform="translate(118.64063,184)"
+             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
              id="text134"><tspan
                x="0 8.0039062 11.337891 18.011719 24.685547 28.019531"
                y="0"
                sodipodi:role="line"
-               id="tspan132">Step 1</tspan></text>
+               id="tspan132">Step 2</tspan></text>
           <text
              xml:space="preserve"
-             transform="translate(408.64063,194)"
+             transform="translate(408.64063,104)"
              style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
              id="text138"><tspan
                x="0 8.0039062 11.337891 18.011719 24.685547 28.019531"
                y="0"
                sodipodi:role="line"
-               id="tspan136">Step 1</tspan></text>
-          <text
-             xml:space="preserve"
-             transform="translate(118.64063,184)"
-             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-             id="text142"><tspan
-               x="0 8.0039062 11.337891 18.011719 24.685547 28.019531"
-               y="0"
-               sodipodi:role="line"
-               id="tspan140">Step 2</tspan></text>
-          <text
-             xml:space="preserve"
-             transform="translate(408.64063,104)"
-             style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-             id="text146"><tspan
-               x="0 8.0039062 11.337891 18.011719 24.685547 28.019531"
-               y="0"
-               sodipodi:role="line"
-               id="tspan144">Step 2</tspan></text>
+               id="tspan136">Step 2</tspan></text>
         </g>
         <g
-           id="g148"
+           id="g140"
            transform="scale(2.9624705)">
           <text
              xml:space="preserve"
              transform="translate(185.09375,160)"
              style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-             id="text152"><tspan
+             id="text144"><tspan
                x="0 8.0039062 14.677734 17.794922 21.128906 27.802734 31.798828 35.132812"
                y="0"
                sodipodi:role="line"
-               id="tspan150">Buffer 2</tspan></text>
+               id="tspan142">Buffer 2</tspan></text>
         </g>
         <g
-           id="g154"
+           id="g146"
            transform="scale(2.9625001)">
           <text
              xml:space="preserve"
              transform="translate(222,26)"
              style="font-variant:normal;font-weight:bold;font-size:18px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans-Bold;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-             id="text158"><tspan
+             id="text150"><tspan
                x="0 12.999023 23.994141 34.989258 45.984375 50.985352 60.996094 65.99707 78.996094 89.991211 95.985352 101.97949 111.99023"
                y="0"
                sodipodi:role="line"
-               id="tspan156">Double Buffer</tspan></text>
+               id="tspan148">Double Buffer</tspan></text>
         </g>
       </g>
     </g>

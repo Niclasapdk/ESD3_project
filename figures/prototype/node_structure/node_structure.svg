@@ -1073,7 +1073,7 @@
                id="tspan510">2</tspan></text>
           <text
              xml:space="preserve"
-             transform="translate(238.82813,479)"
+             transform="translate(228.82813,479)"
              style="font-variant:normal;font-weight:normal;font-size:24px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
              id="text516"><tspan
                x="0"
@@ -1469,6 +1469,24 @@
                y="0"
                sodipodi:role="line"
                id="tspan702">440</tspan></text>
+          <text
+             xml:space="preserve"
+             transform="translate(282.15625,329)"
+             style="font-variant:normal;font-weight:normal;font-size:24px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text708"><tspan
+               x="0 13.347656"
+               y="0"
+               sodipodi:role="line"
+               id="tspan706">10</tspan></text>
+          <text
+             xml:space="preserve"
+             transform="translate(223.04688,759)"
+             style="font-variant:normal;font-weight:normal;font-size:24px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="text712"><tspan
+               x="0 11.566406"
+               y="0"
+               sodipodi:role="line"
+               id="tspan710">11</tspan></text>
         </g>
       </g>
     </g>

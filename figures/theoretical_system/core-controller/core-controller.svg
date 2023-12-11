@@ -280,13 +280,13 @@
            transform="scale(2.9754663)">
           <text
              xml:space="preserve"
-             transform="translate(578,42)"
+             transform="translate(552.65625,42)"
              style="font-variant:normal;font-weight:bold;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans-Bold;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
              id="text136"><tspan
-               x="0 9.9960938 16.669922 27.339844 34.669922 39.339844"
+               x="0 8.0039062 14.677734 18.673828 25.347656 30.017578 37.347656 44.021484 47.355469 50.689453 60.685547 67.359375 78.029297 85.359375 90.029297"
                y="0"
                sodipodi:role="line"
-               id="tspan134">Memory</tspan></text>
+               id="tspan134">External Memory</tspan></text>
         </g>
         <g
            id="g138"
@@ -615,13 +615,13 @@
            transform="scale(2.9754663)">
           <text
              xml:space="preserve"
-             transform="translate(147.98437,42)"
+             transform="translate(122.64063,42)"
              style="font-variant:normal;font-weight:bold;font-size:12px;font-family:'Liberation Sans';-inkscape-font-specification:LiberationSans-Bold;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
              id="text292"><tspan
-               x="0 9.9960938 16.669922 27.339844 34.669922 39.339844"
+               x="0 8.0039062 14.677734 18.673828 25.347656 30.017578 37.347656 44.021484 47.355469 50.689453 60.685547 67.359375 78.029297 85.359375 90.029297"
                y="0"
                sodipodi:role="line"
-               id="tspan290">Memory</tspan></text>
+               id="tspan290">External Memory</tspan></text>
         </g>
         <g
            id="g294"

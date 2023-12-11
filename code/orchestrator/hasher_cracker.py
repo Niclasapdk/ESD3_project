@@ -15,17 +15,13 @@ FLAGS_IDENTIFIER = 0x80
 READY_FOR_PASSWD_MASK = 0x20
 
 proto_spec = {
-        # L2
+        # Bridge protocol
         "start": b"A",
         "stop":  b"Z",
-        # Action signals: Orchestrator -> Bridge
         "read":  b"R",
         "write": b"W",
-        # Action signals: Bridge -> Orchestrator
-        "bridge": b"B", # bridge data
-        "slave": b"S", # slave data
 
-        # L3
+        # PlusBUS protocol
         "stx":   b"\x02",
         "hsh":   b"\x1a",
         "rds":   b"\x07",

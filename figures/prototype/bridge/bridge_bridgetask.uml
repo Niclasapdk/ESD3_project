@@ -17,8 +17,7 @@ RW --> Idle : invalid R/W
 Address --> Data : valid address
 Address --> Idle : invalid address
 Data --> Stop
-Stop --> Idle : stop condition
-Stop --> Idle : not stop condition
+Stop --> Idle
 
 Idle --> Idle
 

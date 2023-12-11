@@ -1,0 +1,34 @@
+@startuml
+
+clock clk with period 2
+binary "sync_clk" as sync_clk
+binary "r1_sync_clk" as r1_sync_clk
+binary "r2_sync_clk" as r2_sync_clk
+binary "r3_sync_clk" as r3_sync_clk
+binary "falling_tris" as falling_tris
+
+@0
+sync_clk is High
+r1_sync_clk is High
+r2_sync_clk is High
+r3_sync_clk is High
+
+@3
+sync_clk is Low
+
+@4
+r1_sync_clk is Low
+
+@6
+r2_sync_clk is Low
+
+@8
+r3_sync_clk is Low
+falling_tris is High
+
+@10
+falling_tris is Low
+
+@12
+
+@enduml

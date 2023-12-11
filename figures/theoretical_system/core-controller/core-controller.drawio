@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-12-08T09:58:14.495Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:120.0) Gecko/20100101 Firefox/120.0" etag="M2Z2FSZMl_m4WDYvmRo7" version="22.1.7" type="github">
+<mxfile host="app.diagrams.net" modified="2023-12-11T13:15:41.113Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:120.0) Gecko/20100101 Firefox/120.0" etag="gukh9yozP3Z3a87JCpb7" version="22.1.7" type="github">
   <diagram name="Page-1" id="oHbBpfMNV7-MWkwOHZMf">
     <mxGraphModel dx="1050" dy="654" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -57,7 +57,7 @@
         <mxCell id="EGrysA47NTrs74HKjs9L-11" value="Password(P)" style="text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="360" y="415" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="EGrysA47NTrs74HKjs9L-18" value="Memory" style="swimlane;childLayout=stackLayout;resizeParent=1;resizeParentMax=0;startSize=20;" parent="1" vertex="1">
+        <mxCell id="EGrysA47NTrs74HKjs9L-18" value="External Memory" style="swimlane;childLayout=stackLayout;resizeParent=1;resizeParentMax=0;startSize=20;" parent="1" vertex="1">
           <mxGeometry x="610" y="160" width="290" height="240" as="geometry">
             <mxRectangle x="60" y="20" width="70" height="30" as="alternateBounds" />
           </mxGeometry>
@@ -125,7 +125,7 @@
             <mxPoint x="939" y="340" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="EGrysA47NTrs74HKjs9L-36" value="Memory" style="swimlane;childLayout=stackLayout;resizeParent=1;resizeParentMax=0;startSize=20;" parent="1" vertex="1">
+        <mxCell id="EGrysA47NTrs74HKjs9L-36" value="External Memory" style="swimlane;childLayout=stackLayout;resizeParent=1;resizeParentMax=0;startSize=20;" parent="1" vertex="1">
           <mxGeometry x="260" y="160" width="130" height="240" as="geometry" />
         </mxCell>
         <mxCell id="EGrysA47NTrs74HKjs9L-37" value="Candidates (40 bytes)" style="swimlane;startSize=20;" parent="EGrysA47NTrs74HKjs9L-36" vertex="1">

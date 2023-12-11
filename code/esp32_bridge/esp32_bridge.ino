@@ -207,6 +207,9 @@ void bridgeTask(void *pvParameters) {
 }
 
 void setup() {
+    // Initialize UART
+    Serial.begin(1500000);
+
     // Create a timer semaphore
     timerSemaphore = xSemaphoreCreateBinary();
 
@@ -244,8 +247,6 @@ void setup() {
 
     // Start the timer
     xTimerStart(timer, 0);
-
-    Serial.begin(115200);
 }
 
 void loop() {

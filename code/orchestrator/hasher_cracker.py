@@ -255,7 +255,7 @@ class Orchestrator:
 def main():
     parser = argparse.ArgumentParser(description="PlusBUS Inc. hasher cracker orchestrator 9000")
     parser.add_argument("-p", "--port", required=True, help="Serial port name (e.g., COM1 or /dev/ttyUSB0)")
-    parser.add_argument("-b", "--baudrate", type=int, default=115200, help="Baud rate (default: 115200)")
+    parser.add_argument("-b", "--baudrate", type=int, default=1500000, help="Baud rate (default: 1500000)")
     parser.add_argument("-w", "--wordlist", required=False, default="wordlist.txt", help="Wordlist (e.g., rockyou.txt)")
     parser.add_argument("-t", "--hashlist", required=False, default="hashlist.txt", help="File containing list of hashes")
     parser.add_argument("-l", "--loglevel", help="log level", required=False, choices=['DEBUG', 'INFO', 'WARNING', 'ERROR', 'CRITICAL'], default='INFO')

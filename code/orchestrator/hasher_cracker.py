@@ -147,7 +147,7 @@ class Orchestrator:
         self.send_to_node(node_addr, pkt)
 
     def send_rounds(self, node_addr: int, rounds: int):
-        pkt = self.proto_spec["rds"] + self.escape_l3(int.to_bytes(rounds, 4)[::-1]) + self.proto_spec["etx"]
+        pkt = self.proto_spec["rds"] + self.escape_l3(rounds.to_bytes(4, "little")) + self.proto_spec["etx"]
         logging.info(f"Sending rounds packet: {pkt.hex()} to node {node_addr}")
         self.send_to_node(node_addr, pkt)
 

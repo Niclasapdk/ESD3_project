@@ -20,6 +20,7 @@ proto_spec = {
         "stop":  b"Z",
         "read":  b"R",
         "write": b"W",
+        "slave": b"S",
 
         # PlusBUS protocol
         "stx":   b"\x02",

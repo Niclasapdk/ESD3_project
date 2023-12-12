@@ -60,7 +60,6 @@ class Orchestrator:
             self.send_rounds(node, rounds)
 
     def read_hashlist(self, hashlist: str):
-        # TODO: parse hashlist
         with open(hashlist, "r") as f:
             return list(map(lambda x: (int(x.split("$")[0]), bytes.fromhex(x.split("$")[1].strip())), f.readlines()))
 

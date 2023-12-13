@@ -8,7 +8,6 @@ class Orchestrator {
   + passwds: list
   + hashes: list
   + salts: list
-  + txQueueCeiling: int
   + nodes: list
 
   + reset_nodes(): void
@@ -16,12 +15,11 @@ class Orchestrator {
   + read_hashlist(hashlist: str): list
   + read_wordlist(wordlist: str): list
   + prep_pkt(action: bytes, addr: bytes, data: bytes): bytes
-  + txQueueMsgsWaiting(): int
   + send_to_node(node_addr: int, data: bytes): void
   + read_from_node(node_addr: int): bytes
   + sha256_pad(passwd: bytes): bytes
   + cmp_byte_with_data(x: bytes, y: bytes): bool
-  + escape_l3(data: bytes): bytes
+  + escape_plusbus(data: bytes): bytes
   + send_passwd(node_addr: int, passwd: bytes, salt: bytes): void
   + send_hash(node_addr: int, hash: bytes): void
   + send_rounds(node_addr: int, rounds: int): void

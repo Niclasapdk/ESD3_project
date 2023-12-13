@@ -37,7 +37,7 @@ def panic(dm="Youuusa make big fuck up"):
     exit(-69)
 
 class Orchestrator:
-    def __init__(self, port: str, baudrate: int, proto_spec: dict, wordlist: str, hashlist: str, ceiling: int, nodes: list):
+    def __init__(self, port: str, baudrate: int, proto_spec: dict, wordlist: str, hashlist: str, nodes: list):
         self.noserial = True if port == "/dev/null" else False
         if not self.noserial:
             self.serial = serial.Serial(port, baudrate=baudrate, timeout=0.5)
@@ -45,7 +45,6 @@ class Orchestrator:
         self.passwds = self.read_wordlist(wordlist)
         self.hashes = self.read_hashlist(hashlist)
         self.salts = [b"abcdefghjiklmnop"]
-        self.txQueueCeiling = ceiling
         self.nodes = nodes
 
     def reset_nodes(self):
@@ -74,15 +73,6 @@ class Orchestrator:
     # data: byte string of 1 byte. Example b"A"
     def prep_pkt(self, action: bytes, addr: bytes, data: bytes):
         return self.proto_spec["start"] + action + addr + data + self.proto_spec["stop"]
-
-    def txQueueMsgsWaiting(self):
-        if self.noserial:
-            return 0
-        data = self.serial.readline().decode().strip().split(": ")
-        if data[0] == "txMsgsWaiting":
-            return int(data[1])
-        else:
-            return 10**9
 
     def send_to_node(self, node_addr: int, data: bytes):
         for b in data:
@@ -123,7 +113,7 @@ class Orchestrator:
             y = ord(y)
         return x == y
 
-    def escape_l3(self, data: bytes):
+    def escape_plusbus(self, data: bytes):
         data = data.replace(self.proto_spec["dle"], self.proto_spec["dle"] + self.proto_spec["dle"])
         data = data.replace(self.proto_spec["stx"], self.proto_spec["dle"] + self.proto_spec["stx"])
         data = data.replace(self.proto_spec["etx"], self.proto_spec["dle"] + self.proto_spec["etx"])
@@ -137,18 +127,18 @@ class Orchestrator:
             logging.error("Too long password oder du hasst salz")
             return
         padded_passwd = self.sha256_pad(passwd+salz)
-        passwd_pkt = self.proto_spec["stx"] + self.escape_l3(padded_passwd) + self.proto_spec["etx"]
+        passwd_pkt = self.proto_spec["stx"] + self.escape_plusbus(padded_passwd) + self.proto_spec["etx"]
         logging.info(f"Trying salted passwd: {padded_passwd}, {len(padded_passwd)}")
         logging.info(f"Sending password packet: {passwd_pkt.hex()} to node {node_addr}")
         self.send_to_node(node_addr, passwd_pkt)
 
     def send_hash(self, node_addr: int, hash: bytes):
-        pkt = self.proto_spec["hsh"] + self.escape_l3(hash) + self.proto_spec["etx"]
+        pkt = self.proto_spec["hsh"] + self.escape_plusbus(hash) + self.proto_spec["etx"]
         logging.info(f"Sending hash packet: {pkt.hex()} to node {node_addr}")
         self.send_to_node(node_addr, pkt)
 
     def send_rounds(self, node_addr: int, rounds: int):
-        pkt = self.proto_spec["rds"] + self.escape_l3(rounds.to_bytes(4, "little")) + self.proto_spec["etx"]
+        pkt = self.proto_spec["rds"] + self.escape_plusbus(rounds.to_bytes(4, "little")) + self.proto_spec["etx"]
         logging.info(f"Sending rounds packet: {pkt.hex()} to node {node_addr}")
         self.send_to_node(node_addr, pkt)
 
@@ -255,14 +245,13 @@ def main():
     parser.add_argument("-w", "--wordlist", required=False, default="wordlist.txt", help="Wordlist (e.g., rockyou.txt)")
     parser.add_argument("-t", "--hashlist", required=False, default="hashlist.txt", help="File containing list of hashes")
     parser.add_argument("-l", "--loglevel", help="log level", required=False, choices=['DEBUG', 'INFO', 'WARNING', 'ERROR', 'CRITICAL'], default='INFO')
-    parser.add_argument("-c", "--ceiling", help="txQueue wait ceiling in bytes (default: 10)", default=10, type=int)
     parser.add_argument("-a", "--addrs", nargs="*", help="Slave addresses (default: 2)", default=[2], type=int)
     parser.add_argument("--perf-test", help="Run performance test", action="store_const", dest="perftest", const=True)
 
     args = parser.parse_args()
 
     logging.basicConfig(level=args.loglevel)
-    orch = Orchestrator(args.port, args.baudrate, proto_spec, args.wordlist, args.hashlist, args.ceiling, args.addrs)
+    orch = Orchestrator(args.port, args.baudrate, proto_spec, args.wordlist, args.hashlist, args.addrs)
     if args.perftest:
         orch.perftest()
     else:

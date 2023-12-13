@@ -1,4 +1,5 @@
 @startuml
+!theme plain
 
 clock "sys_clk" as clk with period 2
 binary "sync_clk" as sync_clk
